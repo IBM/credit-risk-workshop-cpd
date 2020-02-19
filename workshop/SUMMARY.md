@@ -3,9 +3,8 @@
 ### Getting Started
 
 * [Pre-work](pre-work/README.md)
-* [Git integration (using GitLab)](gitIntegration/README.md)
 
-### Telco Workshop
+### Finane Workshop
 
 * [Data Connection and Virtualization for Admins](db-connection-and-virtualization/README.md)
 * [Import Data to Project](addData/README.md)
