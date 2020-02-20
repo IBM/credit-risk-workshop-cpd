@@ -4,12 +4,12 @@
 
 * [Pre-work](pre-work/README.md)
 
-### Finane Workshop
+### Finance Workshop
 
 * [Data Connection and Virtualization for Admins](db-connection-and-virtualization/README.md)
 * [Import Data to Project](addData/README.md)
 * [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md)
-* [Machine Learning with Jupyter](machine-learning-in-Jupyter-notebook/README.md)
+* [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md)
 * [Machine Learning with AutoAI](autoai/README.md)
 * [Monitoring models with OpenScale](monitoring-models-with-openscale-gui/README.md)
 * [(Optional) Run OpenScale notebook code](openscale-notebook/README.md)
