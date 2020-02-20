@@ -38,7 +38,7 @@ This file has the following attributes:
 * LoanPurpose
 * LoanAmount
 
-### **[non_financial_data.csv](../../data/split/non_financial_data.csv**
+### **[non_financial_data.csv](../../data/split/non_financial_data.csv)**
 
 This file has the following attributes:
 
