@@ -6,9 +6,31 @@
 
 For this section we'll now use the Data Virtualization tool to import the data from Db2 Warehouse, which is now exposed as an Connection in Cloud Pak for Data.
 
+## Create an IBM Cloud instance of DB2 Warehouse
+
+It is suggested to use [DB2 Warehouse on IBM Cloud](https://cloud.ibm.com/catalog/services/db2-warehouse) in order to conserve resources on the CPD cluster. IF you wish to use the local DB2 on the cluster, skip to the next section.
+
+Provision an instance of DB2 Warehouse on the IBM Cloud.
+
+Go to `Service Credentials` and click `New credential +`. Open `View credentials` and copy the credentials for use later:
+
+![Get DB2 Warehouse credentials](../.gitbook/assets/images/dv/dv-get-cloud-db2-credentials.png)
+
+Now go to `Manage` and click `Open Console`:
+
+![DB2 Warehouse Cloud open console](../.gitbook/assets/images/dv/dv-manage-db2-warehouse-cloud.png)
+
+From the upper-left (☰) hamburger menu click `Load` -> `Load data`:
+
+![DB2 Warehouse Cloud load data](../.gitbook/assets/images/dv/dv-cloud-load-data.png)
+
+Choose `Browse file` and navigate to where you cloned this repository, then to `data/split/` and choose `billing.csv`, then click `Next`.
+Choose Schema `NULLIDRA` and click `+ New table`. Under "New Table Name" type "BILLING" and click `Create`, then `Next`. Accept the defaults and click `Next`. Click `Begin Load`.
+Repeat for the `products.csv` file, naming the table `PRODUCTS` and the `customer-service.csv` file, naming the table `CUSTOMERS`.
+
 ## Load Data into Local DB2 Warehouse
 
-These instructions are for loading the data into the local CP4D version of DB2 Warehouse. They will be similar for the IBM Cloud version.
+These instructions are for loading the data into the local CP4D version of DB2 Warehouse. If you've used the IBM Cloud instance of DB2 Warehouse, you can skip to the next section.
 
 You will need to already have done the `Provision instance` for DB2 Warehouse.
 Got to `Services` and click on `DB2 Warehouse` and click `Open`:
@@ -27,6 +49,12 @@ Repeat for the `products.csv` file, naming the table `PERSONAL` and the `custome
 
 For Cloud Pak for Data to read our Db2 Warehouse data we need to add a new *Data Source* to Cloud Pak for Data. This requires inputting the usual JDBC details.
 
+#### Get IBM Cloud DB2 connection info
+
+If you didn't already copy this when you provisioned the IBM Cloud DB2 instance above, go back and get the credentials as instructed.
+
+#### Get local DB2 connection info
+
 To get the connection info for you local DB2 Warehouse, go to the (☰) menu and click on the *My Instances* option.
 
 ![(☰) Menu -> My Instances](../.gitbook/assets/images/dv/dv-menu-my-instances.png)
@@ -38,6 +66,8 @@ In *My instances* go to the *Provisioned instances* tab. Highlight you local DB2
 Either keep this window open in a separate tab, or copy the required Connection info: *Host*, *Port*, *Database name*, *Username*, and *Password*. You can get the port from the *JDBC Connection URL*, i.e for the URL `jdbc:db2://os-workshop-nov22worker-05.vz-cpd-nov22.com:30290/BLUDB` the port is the number after the colin in the URL `30290`:
 
 ![DB2 Connection credentials](../.gitbook/assets/images/dv/dv-local-db2-details.png)
+
+#### Add DB2 as new data source
 
 To add a new data source, go to the (☰) menu and click on the *Connections* option.
 
