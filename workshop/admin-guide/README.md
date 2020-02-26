@@ -28,6 +28,20 @@ Choose `Browse file` and navigate to where you cloned this repository, then to `
 Choose Schema `NULLIDRA` and click `+ New table`. Under "New Table Name" type "FINANCIAL" and click `Create`, then `Next`. Accept the defaults and click `Next`. Click `Begin Load`.
 Repeat for the `personal_data_id.csv` file, naming the table `PERSONAL` and the `non_financial_data.csv` file, naming the table `NONFIN`.
 
+### Get IBM Cloud DB2 SSL cert
+
+You will need an SSL cert for Cloud Pak for Data to use the IBM Cloud DB2 Warehouse instance.
+
+In the DB2 Warehouse console, from the upper-left (☰) hamburger menu click `Connection Info` -> `Connection Information`. Then click `Download SSL Certificate`:
+
+![DB2 get SSL certificate](../.gitbook/assets/images/dv/dv-db2-cloud-get-ssl-cert.png)
+
+You'll need to convert the SSL certificate from `.crt` to a `.pem` file using [openssl](https://www.openssl.org/). Run the following command:
+
+```bash
+openssl x509 -in DigiCertGlobalRootCA.crt -out DigiCertGlobalRootCA.pem -outform PEM -inform DER
+```
+
 ## Load Data into Local DB2 Warehouse
 
 These instructions are for loading the data into the local CP4D version of DB2 Warehouse. If you've used the IBM Cloud instance of DB2 Warehouse, you can skip to the next section.
@@ -77,7 +91,11 @@ At the overview, click *Add connection*.
 
 ![Overview page](../.gitbook/assets/images/connections/conn-overview-empty.png)
 
-Start by giving your new *Connection* a name and select *Db2 Warehouse on Cloud* as your connection type. More fields should apper. Fill the new fields with the same credentials for your own Db2 Warehouse connection from the previous section . Click `Test Connection` and, after that succeeds, click `Add`.
+Start by giving your new *Connection* a name and select *Db2 Warehouse on Cloud* as your connection type. More fields should apper. Fill the new fields with the same credentials for your own Db2 Warehouse connection from the previous section .
+
+Click the check box for `Use SSL`. Next click `Select file` and navigate to where you converted the SSL certificate for DB2 Warehouse form a `.crt` file to a `.pem` file (probably called DigiCertGlobalRootCA.pem).
+
+Click `Test Connection` and, after that succeeds, click `Add`.
 
 ![Add a Db2 Warehouse on Cloud connection](../.gitbook/assets/images/connections/conn-details.png)
 
