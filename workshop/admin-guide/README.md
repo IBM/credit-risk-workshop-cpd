@@ -24,9 +24,9 @@ From the upper-left (☰) hamburger menu click `Load` -> `Load data`:
 
 ![DB2 Warehouse Cloud load data](../.gitbook/assets/images/dv/dv-cloud-load-data.png)
 
-Choose `Browse file` and navigate to where you cloned this repository, then to `data/split/` and choose `billing.csv`, then click `Next`.
-Choose Schema `NULLIDRA` and click `+ New table`. Under "New Table Name" type "BILLING" and click `Create`, then `Next`. Accept the defaults and click `Next`. Click `Begin Load`.
-Repeat for the `products.csv` file, naming the table `PRODUCTS` and the `customer-service.csv` file, naming the table `CUSTOMERS`.
+Choose `Browse file` and navigate to where you cloned this repository, then to `data/split/` and choose `financial_data.csv`, then click `Next`.
+Choose Schema `NULLIDRA` and click `+ New table`. Under "New Table Name" type "FINANCIAL" and click `Create`, then `Next`. Accept the defaults and click `Next`. Click `Begin Load`.
+Repeat for the `personal_data_id.csv` file, naming the table `PERSONAL` and the `non_financial_data.csv` file, naming the table `NONFIN`.
 
 ## Load Data into Local DB2 Warehouse
 
@@ -41,9 +41,9 @@ Under `Menu` choose `Load` and `Load Data`:
 
 ![Menu Load Data](../.gitbook/assets/images/dv/dv-db2-load-data.png)
 
-Choose `Browse file` and navigate to where you cloned this repository, then to `data/split/` and choose `billing.csv`, then click `Next`.
+Choose `Browse file` and navigate to where you cloned this repository, then to `data/split/` and choose `financial_data.csv`, then click `Next`.
 Choose Schema `NULLIDRA` and click `+ New table`. Under "New Table Name" type "FINANCIAL" and click `Create`, then `Next`. Accept the defaults and click `Next`. Click `Begin Load`.
-Repeat for the `products.csv` file, naming the table `PERSONAL` and the `customer-service.csv` file, naming the table `NONFIN`.
+Repeat for the `personal_data_id.csv` file, naming the table `PERSONAL` and the `non_financial_data.csv` file, naming the table `NONFIN`.
 
 ### Add DB Connections & Virtualization prep
 
@@ -123,7 +123,7 @@ In this section, since we now have access to the Db2 Warehouse data, we can virt
 
 ![Menu -> Virtualize](../.gitbook/assets/images/dv/dv-virtualize-menu.png)
 
-Several tables will appear (many are created as sample data when a Db2 Warehouse instance is provisioned) in the table. Find the tables you created earlier, the instructions suggested naming them: `CUSTOMER`, `PRODUCT` and `FINANCIAL`. Once selected click on *Add to cart* and then on *View Cart*.
+Several tables will appear (many are created as sample data when a Db2 Warehouse instance is provisioned) in the table. Find the tables you created earlier, the instructions suggested naming them: `FINANCIAL`, `PERSONAL`, and `NONFIN`. Once selected click on *Add to cart* and then on *View Cart*.
 You can search for the Schema `NULLIDRA` and they should show up:
 
 ![Choose the tables to virtualize](../.gitbook/assets/images/dv/dv-virtualize-tables.png)
