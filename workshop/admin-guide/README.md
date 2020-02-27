@@ -4,7 +4,7 @@
 
 ## Virtualize Db2 data with Data Virtualization
 
-For this section we'll now use the Data Virtualization tool to import the data from Db2 Warehouse, which is now exposed as an Connection in Cloud Pak for Data.
+For this section we'll now use the Data Virtualization tool to import the data from Db2 Warehouse, which is now exposed as a Connection in Cloud Pak for Data.
 
 ## Create an IBM Cloud instance of DB2 Warehouse
 
@@ -104,20 +104,6 @@ The new connection will be listed in the overview.
 ![Connection has been added!](../.gitbook/assets/images/connections/conn-overview-db2.png)
 
 ## 2. Add a Data Source to Data Virtualization
-
-At the empty overview, click *Add* and choose *Add data source*.
-
-![No data sources, yet](../.gitbook/assets/images/dv/dv-data-sources-empty.png)
-
-Select the data source we made in the previous step, and click *Next*.
-
-![Add the Db2 Warehouse connection](../.gitbook/assets/images/dv/dv-data-sources-add.png)
-
-The new connection will be listed as a data source for data virtualization.
-
-![Db2 Warehouse connection is now associated with Data Virtualization](../.gitbook/assets/images/dv/dv-data-sources-shown.png)
-
-### Add a Data Source to Data Virtualization
 
 To launch the data virtualization tool, go the (☰) menu and click `Collect` and then `Data Virtualization`.
 
