@@ -38,7 +38,7 @@ When the Jupyter notebook is loaded and the kernel is ready then we can start ex
 
 ![Stop kernel](../.gitbook/assets/images/wml/wml-jupyter-stop-kernel.png)
 
-Spend an minute looking through the sections of the notebook to get an overview. You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook. While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
+Spend a minute looking through the sections of the notebook to get an overview. You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook. While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
 
 ### Get transactions for Explainability
 
