@@ -18,7 +18,7 @@ This section is broken up into the following steps:
 
 * From the project overview page, click on the `Assets` tab to open the assets page where your project assets are stored and organized. You can load a local dataset using the interface on the right.
 
-* Click `browse` to find and upload the [german-credit-data.csv](../dataset/Telco-Customer-Churn.csv) dataset from your machine:
+* Click `browse` to find and upload the [german-credit-data.csv](../../data/german_credit_data.csv) dataset from your machine:
 
 ![Upload dataset](../.gitbook/assets/images/autoai/autoai-upload-data-set.png)
 

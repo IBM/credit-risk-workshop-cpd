@@ -10,7 +10,7 @@
 * [Import Data to Project](addData/README.md)
 * [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md)
 * [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md)
-* [Machine Learning with AutoAI](autoai/README.md)
+* [Machine Learning with AutoAI](machine-learning-autoai/README.md)
 * [Monitoring models with OpenScale](monitoring-models-with-openscale-gui/README.md)
 * [(Optional) Run OpenScale notebook code](openscale-notebook/README.md)
 
