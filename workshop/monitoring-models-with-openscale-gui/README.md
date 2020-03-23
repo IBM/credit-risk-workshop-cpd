@@ -1,15 +1,10 @@
 # Trust in AI & Watson OpenScale
 
----
-description: >-
-  This lab will guide you through building a machine learning model and
-  connecting it with Watson OpenScale to monitor the models performance and
-  potential bias.
----
+This lab will guide you through building a machine learning model and connecting it with Watson OpenScale to monitor the models performance and potential bias.
 
 ## Steps
 
-This section contains the following steps:
+The lab contains the following steps:
 
 1. [Introduction](#1-introduction)
 1. [Begin to Explore the Watson OpenScale UI](#2-begin-to-explore-the-watson-openscale-ui)
@@ -48,59 +43,23 @@ In this lab will walk through the process of deploying a credit risk model and t
 
 It is assumed that an admin has already connected a database to OpenScale, and associated a Machine Learning Provider (in our case, Watson Machine Learning on Cloud Pak for Data).
 
-#### Provide a set of sample data to your model
+You have already provided a set of sample data to your model when you tested your deployed ML model in an earlier model of the workshop.
 
-You have already done this when you tested your deployed ML model in an earlier module of this workshop.
-
-For example, using the UI to test the deployed model, or using cURL or the Python app.
-
-#### Project Setup
-
-#TODO: move the section below elsewhere. Zip file should be on the CPD system (so in admin-guide) and importing the files to start the project should go in the pre-work.
-
-# Project Setup
-
-## Download Project
-
-Download the following zip file:
-
-{% file src="../.gitbook/assets/openscalelab.zip" %}
-
-## Import Project
-
-1. Open your web browser and proceed to [Watson Studio](https://dataplatform.ibm.com) \(login if necessary\)
-2. From the home page, click on the _**Create a Project**_ card    ![](../.gitbook/assets/screen-shot-2019-10-27-at-7.05.18-am.png)
-3. Select the _**Create a project from a sample or file**_ option
-4. ![](../.gitbook/assets/screen-shot-2019-10-27-at-7.12.39-am.png)
-5. Browse for the project zip file you downloaded earlier and provide a name for the new project \(i.e. _OpenScale-workshop_\)   ![](../.gitbook/assets/screen-shot-2019-10-27-at-3.02.44-pm.png)
-6. Once the import completes, click on the _**'View new project'**_ button and proceed to the next lab section.
-
-### Download Project
-
-Download the following zip file:
-
-{% file src="../.gitbook/assets/openscalelab.zip" %}
-
-### Import Project
-
-1. Open your web browser and proceed to [Watson Studio](https://dataplatform.ibm.com) \(login if necessary\)
-2. From the home page, click on the _**Create a Project**_ card    ![](../.gitbook/assets/screen-shot-2019-10-27-at-7.05.18-am.png)
-3. Select the _**Create a project from a sample or file**_ option
-4. ![](../.gitbook/assets/screen-shot-2019-10-27-at-7.12.39-am.png)
-5. Browse for the project zip file you downloaded earlier and provide a name for the new project \(i.e. _OpenScale-workshop_\)   ![](../.gitbook/assets/screen-shot-2019-10-27-at-3.02.44-pm.png)
-6. Once the import completes, click on the _**'View new project'**_ button and proceed to the next lab section.
+For example, using the UI to test the deployed model, or using cURL or the Python app. Do this now if you have not already run a test.
 
 ## Begin to Explore the Watson OpenScale UI
 
 Now that you have created a machine learning model and configured OpenScale, you can utilize the OpenScale dashboard to monitor the model. Although we have not enabled any type of monitoring yet, with the deployment approach we are using for this lab \( Watson Machine Learning as the model engine \), we will be able to see payload and some performance information out of the box.
 
-* Open the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com) in the same browser \(but separate tab\) as you used to run the Watson Studio notebook.
+* In the same browser \(but a separate tab\), open the `Services` tab by clicking the icon in the upper right. Go to the `OpenScale` tile under the `AI` category and click `Open`:
+
+![Deploy OpenScale](../.gitbook/assets/images/aios/aios-deploy-service.png)
+
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the one deployment you configured in the previous section.
 
 ![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-model-monitors.png)
 
 Do not worry if the name you see does not match exactly with the screenshot. The deployment name you see will correspond to the variable used in the Jupyter notebook
-{% endhint %}
 
 ### Throughput
 
@@ -126,9 +85,7 @@ You can also use the OpenScale dashboard to visualize the confidence of the mode
 
 * You will see the number of 'Risk' and 'No Risk' predictions for each confidence range.
 
-{% hint style="success" %}
-If you see payload information you have successfully subscribed Watson OpenScale to the deployed machine learning model. You're ready to continue to the next section to enable different model monitors.
-{% endhint %}
+> NOTE: If you see payload information you have successfully subscribed Watson OpenScale to the deployed machine learning model. You're ready to continue to the next section to enable different model monitors.
 
 ## Monitor Models
 
@@ -147,16 +104,9 @@ For many of these monitors, OpenScale will make use of the following data:
 * Transaction data \(input/request and output/response information\) going to the deployed models which is stored in the payload table of the data mart.
 * Feedback data with labeled predictions to measure the effectiveness of predictions and when retraining is needed which is stored in the feedback table of the data mart.
 
-{% hint style="info" %}
 For this lab since our model is deployed in Watson Machine Learning, the scoring payload is automatically sent to Watson OpenScale and stored in its data mart when you score the model.
-{% endhint %}
 
-{% hint style="info" %}
 To emulate the monitoring of a model in production, in addition to making scoring/prediction requests to the actual model, you will also inject historical data into the OpenScale data mart.
-{% endhint %}
-
-# TODO figure out combination of [OpenScale Doc version](https://cloud.ibm.com/docs/services/ai-openscale?topic=ai-openscale-mo-config) or [Javier version](https://github.com/jrtorres/openscale-lab/blob/master/workshop/monitor-model/quality-application-kpis.md)
-for "Configuring OpenScale monitors" and/or "Quality and Explainability" below
 
 ## Quality and Explainability
 
@@ -166,8 +116,13 @@ Quality \(performance\) monitors allow users to track performance of production 
 
 #### Open Notebook
 
-* In [Watson Studio](https://dataplatform.cloud.ibm.com), select the project that you previously imported and click on the 'Assets' tab on the top of the project page.
+* From your project page, go to `Notebooks`:
+
+![Project open notebook](../.gitbook/assets/images/openscale-config/openscale-config-project-open-notebook.png)
+
 * Under the 'Notebooks' section, _**Click**_ on the _**'quality-explainability-monitors'**_ notebook and then click on the pencil icon to enable you to edit / run the notebook.
+
+![Click pencil to edit notebook](../.gitbook/assets/images/openscale-config/openscale-config-click-pencil-to-edit.png)
 
 #### Update Credentials
 
@@ -181,11 +136,9 @@ After the notebook environment starts up, scroll down to the section titled _**'
 
 Go back to the first cell in the notebook and run the notebook. You can run the cells individually by clicking on each cell and then click the `Run` button at the top of the notebook.
 
-{% hint style="info" %}
 While the cell is running, an asterisk \(`[*]`\) will show up to the left of the cell. When that cell has finished executing a sequential number will show up. Generally, you want to wait until the cell finished executing before running the subsequent cells.
 
 Alternatively, you can elect to run all the cells by clicking the **'Run All'** option
-{% endhint %}
 
 #### Explore the Watson OpenScale UI
 
@@ -193,9 +146,8 @@ Alternatively, you can elect to run all the cells by clicking the **'Run All'** 
 
 The quality monitor scans the requests sent to your model deployment \(i.e the payload\) to let you know how well your model predicts outcomes. Quality metrics are calculated hourly, when OpenScale sends manually labeled feedback data set to the deployed model.
 
-# TODO fix instructions to get to the dashboard
+* From your project page, go to `Notebooks`.
 
-* Open the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com).
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the one deployment you configured in the previous section.
 
 ![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-model-monitors.png)
@@ -245,29 +197,29 @@ The fairness monitor scans the requests sent to your model deployment \(i.e the 
 
 * **Click** on **'Configure monitors'**
 
-![](../.gitbook/assets/screen-shot-2019-10-30-at-9.46.07-pm.png)
+![Click configure monitors](../.gitbook/assets/images/openscale-config/openscale-config-click-configure-monitors.png)
 
 * **Click** on 'Fairness' on the left panel and then on the 'Begin' button.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-1.07.22-am.png)
+![Dashboard configure fairness](../.gitbook/assets/images/openscale-config/openscale-config-dashboard-configure-fairness.png)
 
 * The first thing we define when configuring fairness, is what outcome \(i.e. prediction\) is favorable vs unfavorable. In the risk model, a favorable outcome is a 'No Risk' prediction as this prediction may lead to the application receiving a loan, and an unfavorable outcome is a 'Risk' prediction. Go ahead and drag and drop the two label values to the corresponding favorable/unfavorable values, then click the 'Next' button
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-1.15.58-am.png)
+![Fairness specify favorable and no risk](../.gitbook/assets/images/openscale-config/openscale-config-specify-favorable-no-risk.png)
 
 * OpenScale will actually analyze the training data and recommend which feature to monitor for fairness. We want to monitor for fairness for the 'Sex' and 'Age' features, ensure those two tiles are selected and click the 'Next' button.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-1.21.56-am.png)
+![Fairness select sex and age](../.gitbook/assets/images/openscale-config/openscale-config-select-sex-age.png)
 
 * Next, we want to specify which is the majority group and which the minority group for the 'Sex' feature. In our model, we want to ensure there is no bias towards female loan applicants vs males, and towards younger applicants. OpenScale will recommend the values for you, click the 'Next' button
   * **Majority** groups are values of that feature that we expect to receive a higher percentage of favorable outcomes
   * **Minority** groups are values of that feature that we expect to receive a higher percentage of unfavorable outcomes
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-1.25.26-am.png)
+![Fairness choose reference and monitored](../.gitbook/assets/images/openscale-config/openscale-config-choose-referenced-and-monitored.png)
 
 * Next we configure at what point we want OpenScale to display an alert if the fairness measurement falls below a certain threshold. If the rate at which the minority/protected group receives favorable outcomes relative to the majority/reference group, falls below this threshold an alert will be triggered \(the model is biased\). For the lab, set the threshold to  95%.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-1.32.40-am.png)
+![Fairness alert threshold](../.gitbook/assets/images/openscale-config/openscale-config-fairness-alert-threshold.png)
 
 * Complete the same configuration for the 'Age' feature. For this feature we want
   * The Reference \(majority\) group is 26 - 75
@@ -275,7 +227,7 @@ The fairness monitor scans the requests sent to your model deployment \(i.e the 
   * The fairness alert threshold should be 95%
 * Finally, we have to specify a minimum number of records \(scoring requests\) that need to be received before calculating fairness. Set it to 200 for the lab and click the 'Next' button
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-1.41.01-am.png)
+![fairness minimum sample size](../.gitbook/assets/images/openscale-config/openscale-config-fairness-minimum-sample-size.png)
 
 * **Click** the 'Save' button on the summary page.
 
@@ -285,18 +237,18 @@ The drift monitor scans the requests sent to your model deployment \(i.e the pay
 
 * Continuing from the configure monitors page, **Click** on 'Drift' on the left panel and then on the 'Begin' button.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-1.49.28-am.png)
+![Begin drift configure](../.gitbook/assets/images/openscale-config/openscale-config-drift-begin.png)
 
 * In order to train this internal drift detection model, OpenScale will use the training data. Since we provided a connection to our training data \(and its under the size limit\), we can have OpenScale train the model. Select the tile on the left and click the 'Next' button.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-1.52.48-am.png)
+![Drift train in OpenScale](../.gitbook/assets/images/openscale-config/openscale-config-train-in-openscale.png)
 
 * We next set a threshold as percent of degradation in performance before an alert is triggered. Set the threshold to **10%** and click the 'Next button.
 * Finally, we have to specify a minimum number of records \(scoring requests\) that are used to  calculate drift. Set it to **100** for the lab and click the 'Next' button.
 * Click the 'Save' button.
 * The drift model will take a bit of time to train. While it trains, proceed to the next section of the lab below.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-10.57.37-pm.png)
+![Drift config in progress](../.gitbook/assets/images/openscale-config/openscale-config-drift-in-progress.png)
 
 ### 2. Run Scoring Requests
 
@@ -304,20 +256,19 @@ Now that we have enabled a couple of monitors, we are ready to "use" the model a
 
 To do this, we have a Jupyter notebook that will run enough scoring requests to your deployed model to exceed the monitor thresholds we configured above.
 
-{% hint style="warning" %}
 If you are waiting for your drift monitor to finish configuring, you can start executing parts of the notebook. Just ensure you do not execute the cell that makes the scoring calls until the drift model is ready \(state is "Monitor ready"\)
-{% endhint %}
 
 #### Open Notebook
 
-# TODO: fix this for CPD
+* From your project page, go to `Notebooks`:
 
-* In [Watson Studio](https://dataplatform.cloud.ibm.com), select the project that you previously imported and click on the 'Assets' tab on the top of the project page.
+![Project open notebook](../.gitbook/assets/images/openscale-config/openscale-config-project-open-notebook.png)
+
 * Under the 'Notebooks' section, _**Click**_ on the _**'model-scoring-requests'**_ notebook and then click on the pencil icon to enable you to edit / run the notebook.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-2.08.35-am.png)
-
 #### Update Credentials
+
+# TODO: determine proper credentials for CPD
 
 After the notebook environment starts up, scroll down to the section titled _**'Configure Service Credentials'**_.  Copy and Paste the Watson Machine Learning service credentials you saved to a text editor earlier.
 
@@ -327,13 +278,9 @@ After the notebook environment starts up, scroll down to the section titled _**'
 
 Go back to the first cell in the notebook and run the notebook. You can run the cells individually by clicking on each cell and then click the `Run` button at the top of the notebook.
 
-{% hint style="info" %}
 While the cell is running, an asterisk \(`[*]`\) will show up to the left of the cell. When that cell has finished executing a sequential number will show up. Generally, you want to wait until the cell finished executing before running the subsequent cells.
-{% endhint %}
 
-{% hint style="success" %}
 The last cell in the notebook should report that you have received 200 responses for your scoring requests.
-{% endhint %}
 
 ### Trigger Monitor Checks
 
@@ -345,11 +292,9 @@ The fairness and drift monitors we configured will automatically be checked ever
 * Click on 'Sex' under Fairness and then click on the 'Check fairness now link on the right.
 * When the evaluation completes, the page will refresh with bias metrics.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-2.23.38-am.png)
+![Check fairness now](../.gitbook/assets/images/openscale-config/openscale-config-check-fairness-now.png)
 
-{% hint style="info" %}
 You can also trigger the monitor evaluations programmatically. The notebook called 'dataload-queries-monitortriggers' contains examples on invoking these monitor runs.
-{% endhint %}
 
 ### Explore the Watson OpenScale UI
 
@@ -359,36 +304,28 @@ Now that we have configured fairness and submitted some scoring requests to our 
 
 * Go back to the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com).
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the one deployment you configured in the previous section.
-
-![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-model-monitors.png)
-![](../.gitbook/assets/screen-shot-2019-10-31-at-11.07.16-pm.png)
-
 * We see there is an alert that the model is exhibiting bias. In this case, we have gone beyond the threshold we set to specify an acceptable difference between the percentage of Favorable outcomes for the Monitored group as compared to the percentage of Favorable outcomes for the Reference group \(Favorable % for monitored group / Favorable % for reference group \* 100 \)
 * _**Click**_ on the tile for the model deployment to view details for the deployment.
 
-![](../.gitbook/assets/screen-shot-2019-10-26-at-9.14.31-pm.png)
+![View fairness details](../.gitbook/assets/images/openscale-config/openscale-config-view-fairness-details.png)
 
 * You can see the fairness threshold is not met for the 'Sex' attribute.  We are monitoring a female group for fairness by comparing it to the male group \(the reference group\)
   * On the right panel, under ‘ fairness score for Sex’. The fairness score is calculated by comparing 'No Risk' predictions for the female group compared to the male group. You can also see when the last evaluation was conducted.
   * On the graph we can see fairness over time \(which is calculated hourly as predictions are made by the model\).
 
-{% hint style="warning" %}
-You must exceed the minimum number of records in the payload table for the fairness calculations to run. If there is not enough new payload data, the graph will show metrics from the last successful evaluation.
-{% endhint %}
+> NOTE: You must exceed the minimum number of records in the payload table for the fairness calculations to run. If there is not enough new payload data, the graph will show metrics from the last successful evaluation.
 
 #### Fairness Alert Details
 
-{% hint style="info" %}
-The screenshots and metrics numbers may not match your model/deployment. Since we submitted 200 random requests, the data will vary.
-{% endhint %}
+> NOTE: The screenshots and metrics numbers may not match your model/deployment. Since we submitted 200 random requests, the data will vary.
 
 We can now dive deeper into the fairness alert, move your mouse pointer over the graph to one of the blue points below the red threshold line \(you will see a 'view details' pop up\)
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-2.33.57-am.png)
+![Fairness alert view detail](../.gitbook/assets/images/openscale-config/openscale-config-fairness-alert-view-detail.png)
 
 **Click** on that point to bring up the details.
 
-![](../.gitbook/assets/screen-shot-2019-10-26-at-9.15.06-pm.png)
+![Fairness transaction details](../.gitbook/assets/images/openscale-config/openscale-config-fairness-transaction-details.png)
 
 * From the details page, we can see that the monitored group is receiving favorable outcomes 73%, while the reference group is at 78%.  The default view has the **'Payload + Perturbed'** radio button selected.
   * This displays the fairness outcomes computed by using the actual payload + perturbed data \(synthesized data obtained by flipping the monitored values, male-to-female and female-to-male\).
@@ -400,13 +337,9 @@ We can now dive deeper into the fairness alert, move your mouse pointer over the
   * Note that this debiased model has a scoring endpoint that can be put into production and used by clients, but the debiasing of one feature can negatively impact other features.
 * _**Click**_ the 'Monitored Feature' drop down and select Age, to view fairness details for different age ranges.
 
-{% hint style="info" %}
 In the debiased view, the **after** accuracy is computed by taking feedback data and sending it to the active debiasing API. The **before** accuracy is computed by taking feedback data and sending it to the production model.
-{% endhint %}
 
-{% hint style="info" %}
 Watson OpenScale supports bias detection for models using structured data in its feature vector. It requires scoring requests to be logged, which is automatic for Watson Machine Learning engines.
-{% endhint %}
 
 #### Transaction Explanation
 
@@ -415,67 +348,50 @@ For both regulatory and business reasons, lenders need to be able to understand 
 * _**Click**_ the 'Monitored Feature' drop down and select 'Sex', to view fairness details for gender.
 * You can  explain the transactions associated to the fairness metrics, from the 'Payload + Perturbed' screen, **Click** on the **View transactions** button in the fairness details chart.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-2.38.06-am.png)
+![Fairness payload perturbed transactions](../.gitbook/assets/images/openscale-config/openscale-config-payload-perturbed-transactions.png)
 
 We want to explore on the transaction that was considered biased. Click on the 'Biased transactions' radio button and then click on 'Explain' for one of the transactions in the table.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-2.40.46-am.png)
+![Biased transactions explain](../.gitbook/assets/images/openscale-config/openscale-config-bias-transactions-explain.png)
 
-{% hint style="info" %}
-Note that the 'Explain a transaction' view can take some to generate as OpenScale is building the contrastive explanations by perturbing data and submitting scoring requests.
-{% endhint %}
+> NOTE: The 'Explain a transaction' view can take some to generate as OpenScale is building the contrastive explanations by perturbing data and submitting scoring requests.
 
 From the transaction explanation page, you can see a breakdown of the features contributing to either "Risk" or "No Risk" outcome. We can also see advanced explanations, which show:
 
 * The minimum set of changes in feature values to generate a different prediction. Each feature value is changed so that it moves towards its median value in the training data.
 * The maximum changes that can occur in feature values that will not cause the prediction to change. Each feature value is changed so that it moves towards its median value in the training data.
 
-![](../.gitbook/assets/screen-shot-2019-10-31-at-2.48.30-am.png)
+![Maximum changes for no change](../.gitbook/assets/images/openscale-config/openscale-config-max-changes-no-change.png)
 
-{% hint style="warning" %}
-Advanced explanations are not available for regression, image, and unstructured text models.
-{% endhint %}
+> NOTE: Advanced explanations are not available for regression, image, and unstructured text models.
 
-{% hint style="info" %}
 You can generate explanations for any transaction by clicking on the 'Explain a transaction' icon on the left panel and enter one of the transaction IDs .
-{% endhint %}
 
 ### 4.2 Check Model Drift
 
 Over time, the data coming into our model from the initial training data, impacting the both the accuracy of our model and the business processes using the model. Watson OpenScale analyzes transactions to detect drift in model accuracy as well as drift in data.
 
-{% hint style="info" %}
 * Drift in model accuracy happens if there is an increase in transactions that are similar to those that the model did not evaluate correctly in the training data.
 * Drift in data estimates the drop in consistency of the data at runtime as compared to the characteristics of the data at training time.
-{% endhint %}
 
 * Go back to the [Watson OpenScale dashboard](https://aiopenscale.cloud.ibm.com).
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the one deployment you configured in the previous section.
 
-![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-model-monitors.png)
-![](../.gitbook/assets/screen-shot-2019-10-26-at-9.11.48-pm.png)
-
 * _**Click**_ on the _**'Drop in accuracy'**_ option on the left panel to show the model drift visualization.
 
-![](../.gitbook/assets/screen-shot-2019-10-28-at-12.11.48-am.png)
+![Drop in accuracy](../.gitbook/assets/images/openscale-config/openscale-config-drop-in-accuracy.png)
 
 * We can see the model has an estimated drop of 2% and that 12% of the transaction data \(scoring requests\) are inconsistent compared to the training data.
 * _**Click**_ on a data point in the 'Drop in accuracy' graph \(blue line in screenshot above\) to view drift details.
 
-{% hint style="info" %}
-Note that the screenshots above may not match exactly what you see in your dashboard. The monitors are using the payload \(scoring requests\) that were sent to the model, which were randomly selected.
+> NOTE: The screenshots above may not match exactly what you see in your dashboard. The monitors are using the payload \(scoring requests\) that were sent to the model, which were randomly selected.
 
 In some cases, you may not see a drop in accuracy from model drift. If you do not see anything in your dashboard, you can always submit a new set of requests to the model and trigger the drift evaluation again.
-{% endhint %}
 
-![](../.gitbook/assets/screen-shot-2019-10-28-at-12.17.45-am.png)
+![Drift responsible transactions](../.gitbook/assets/images/openscale-config/openscale-config-drift-responsible-transactions.png)
 
 * From here you can explore the transactions that lead to drift in accuracy as well as drifts in data consistency.
 
-{% hint style="warning" %}
-If you explore a transaction, note that it may take some time to generate transaction explanations as OpenScale makes multiple requests to the deployed model.
-{% endhint %}
+> NOTE: If you explore a transaction, it may take some time to generate transaction explanations as OpenScale makes multiple requests to the deployed model.
 
-{% hint style="info" %}
-Drift is supported for structured data only and regression models only support data drift.
-{% endhint %}
+> NOTE: Drift is supported for structured data only and regression models only support data drift.
