@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 Initial planning:
-- [ ] - [ ]Get Proposed dates from client
+- [ ] Get Proposed dates from client
 - [ ] Workshop presenters are available on Scheduled date
 - [ ] Video streaming team is available on Scheduled date
 - [ ] Get module request  Account team
