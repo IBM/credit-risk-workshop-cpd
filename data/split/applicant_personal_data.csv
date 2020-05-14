@@ -1,4 +1,10 @@
 CUSTOMERID,EMPLOYMENTDURATION,SEX,CURRENTRESIDENCEDURATION,OWNSPROPERTY,AGE,HOUSING,JOB,DEPENDENTS,TELEPHONE,FOREIGNWORKER,FIRSTNAME,LASTNAME,EMAIL,STREETADDRESS,CITY,STATE,POSTALCODE
+e97fa77b-48da-4907-a4fa-ede36c1e968f,1_to_4,male,4,savings_insurance,40,own,skilled,1,none,yes,John,Villan,JVillan90@young.net,,,WA,98188
+5e9a606e-c657-49fa-a725-0bd796b003db,1_to_4,male,2,savings_insurance,36,own,skilled,1,yes,yes,David,Moe,DMoe2@contreras.biz,,,CT,6118
+713a336c-a255-4e2d-9d57-90b3e99e2f06,less_1,female,3,savings_insurance,32,own,skilled,1,none,yes,Stephanie,Reynolds,SReynolds54@yahoo.com,396 Reyes Dam Apt. 721,Lake Troymouth,TX,73301
+140b363f-a3fe-4828-a33f-7284dfdb3969,1_to_4,female,2,savings_insurance,37,own,skilled,1,none,yes,Christina,Howard,CHoward41@hotmail.com,5061 Eric Cliff,South Jaime,NV,89482
+43b7b51d-5eda-4860-b461-ebef3d3436f4,1_to_4,male,3,real_estate,28,own,skilled,1,yes,no,Dennis,Sutton,DSutton83@mullins.com,84435 Kerr Islands Apt. 442,North Johnstad,WY,82585
+f40eaf08-e6d1-4765-ab20-c5f7faca1635,greater_7,male,2,savings_insurance,32,own,skilled,1,none,yes,Gary,Baxter,GBaxter75@bond.com,3029 Jennifer Burg Apt. 886,New Allison,WA,98977
 713a336c-a255-4e2d-9d57-90b3e99e2f06,less_1,female,3,savings_insurance,32,own,skilled,1,none,yes,Stephanie,Reynolds,SReynolds54@yahoo.com,396 Reyes Dam Apt. 721,Lake Troymouth,TX,73301
 140b363f-a3fe-4828-a33f-7284dfdb3969,1_to_4,female,2,savings_insurance,37,own,skilled,1,none,yes,Christina,Howard,CHoward41@hotmail.com,5061 Eric Cliff,South Jaime,NV,89482
 43b7b51d-5eda-4860-b461-ebef3d3436f4,1_to_4,male,3,real_estate,28,own,skilled,1,yes,no,Dennis,Sutton,DSutton83@mullins.com,84435 Kerr Islands Apt. 442,North Johnstad,WY,82585
@@ -74,6 +80,7 @@ bac83a19-b90d-4a52-bfb0-dda8f6e8b20e,1_to_4,female,2,unknown,37,own,skilled,1,ye
 b5adfc49-a8bf-4d51-9d64-c81609ae0c96,1_to_4,female,3,real_estate,39,own,unskilled,1,yes,yes,Gina,Burton,GBurton56@hotmail.com,01368 David Ridge,South Dustin,CT,6363
 f2b71d96-b66d-4a3a-bdfc-018862e5fdb7,1_to_4,female,2,car_other,36,rent,skilled,1,none,yes,Debra,Melendez,DMelendez46@hotmail.com,7995 Ryan Hollow Suite 227,Lake Markberg,WV,25713
 85a934b8-f2b9-4274-bd14-ea9b4c80613b,1_to_4,male,4,real_estate,35,own,management_self-employed,1,yes,yes,Kristopher,Mcdaniel,KMcdaniel49@yahoo.com,10580 Baker Loaf,Laurafort,TX,73301
+4efbdfc5-4e14-46c3-ab87-9b4d2c7d2e60,greater_7,male,3,savings_insurance,47,own,skilled,1,none,yes,Michael,Sullivan,MSullivan33@hotmail.com,54294 Janet Isle,East Monica,DC,20001
 4efbdfc5-4e14-46c3-ab87-9b4d2c7d2e60,greater_7,male,3,savings_insurance,47,own,skilled,1,none,yes,Michael,Sullivan,MSullivan33@hotmail.com,54294 Janet Isle,East Monica,DC,20001
 96429d21-7471-4610-9ed6-0b4713615fb9,greater_7,female,4,unknown,37,own,skilled,2,yes,yes,Heather,Thompson,HThompson18@hamilton.com,40737 Lisa Via,North Robert,OK,73086
 5dcccf9d-b365-4876-b025-ce3ffaad8f1e,1_to_4,male,3,unknown,46,own,unskilled,2,yes,yes,Elijah,Palmer,EPalmer23@jackson.com,301 Zhang Passage,East Malik,AL,35717
@@ -243,6 +250,7 @@ eabd1f78-579c-4ba3-863a-c7092f03eaee,unemployed,female,3,car_other,28,rent,skill
 0d6d3d9a-cbc6-4a76-a469-0a2761b72817,greater_7,male,4,savings_insurance,48,free,skilled,2,yes,yes,Melvin,Torres,MTorres39@hotmail.com,93256 Robinson Ridge Apt. 718,Mayerstad,AK,99745
 07b3443c-5f77-4f80-b617-a8241f536b39,greater_7,male,5,savings_insurance,56,free,skilled,1,yes,yes,James,Hardy,JHardy7@davis-miller.com,71624 Aaron Loaf,North Troy,MN,55977
 50f97126-9076-4078-964f-84ae64b84dd5,greater_7,male,3,car_other,54,own,skilled,1,yes,yes,Tim,Herring,THerring75@gmail.com,735 Wells Route,North Brian,HI,96840
+50f97126-9076-4078-964f-84ae64b84dd5,greater_7,male,3,car_other,54,own,skilled,1,yes,yes,Tim,Herring,THerring75@gmail.com,735 Wells Route,North Brian,HI,96840
 4185a6f5-f78d-4227-b73a-c555f8fc8387,4_to_7,male,2,savings_insurance,19,rent,unemployed,1,none,yes,Ralph,Gardner,RGardner80@ortega.net,72041 Davis Skyway,West Sarah,GA,31652
 cbd03f91-65c6-40a9-94f3-7faf42efff90,4_to_7,female,3,savings_insurance,45,rent,skilled,1,none,yes,Amanda,Underwood,AUnderwood86@yahoo.com,2951 Black Passage Apt. 968,West Joseph,MT,59157
 19852feb-e34e-4d03-81df-79e256d8f127,1_to_4,male,2,real_estate,32,own,skilled,1,none,yes,Mark,Werner,MWerner39@yahoo.com,8435 Lisa Brook,Andersonmouth,VT,5183
@@ -394,6 +402,7 @@ c16503fc-f193-49ca-9ab2-2b50542b3a88,1_to_4,female,2,savings_insurance,36,rent,u
 39156bad-5d67-4b05-8891-99b36c2294e2,less_1,male,5,car_other,31,own,management_self-employed,1,none,yes,Jason,Brooks,JBrooks53@mahoney.net,21625 Melissa Courts,Leeside,TX,73301
 e2ca6604-7ce5-4b32-bab3-7596b4cd8bc7,4_to_7,male,5,unknown,49,own,skilled,1,yes,yes,Daniel,Gallagher,DGallagher19@holt-clark.com,60577 Duncan Passage Suite 464,New Deniseport,IN,46622
 8ec7b95a-9a6f-44b4-a339-22297d0f28c5,4_to_7,male,5,car_other,32,own,management_self-employed,2,yes,yes,Oscar,Miller,OMiller100@ellis-levy.info,86478 Young Station Apt. 344,Allisonview,MO,63885
+d616a9e0-1a98-4ecb-ba90-8452dc226d4f,4_to_7,male,3,savings_insurance,36,rent,unemployed,1,none,yes,Kyle,Walker,KWalker31@horn.com,5882 Amy Extensions Suite 554,Kaylamouth,WI,54669
 d616a9e0-1a98-4ecb-ba90-8452dc226d4f,4_to_7,male,3,savings_insurance,36,rent,unemployed,1,none,yes,Kyle,Walker,KWalker31@horn.com,5882 Amy Extensions Suite 554,Kaylamouth,WI,54669
 ff32573c-a6cd-46f1-af70-25705b0e39d5,unemployed,male,2,real_estate,19,rent,skilled,1,none,yes,Edward,Nelson,ENelson64@hotmail.com,999 Simpson Villages Apt. 951,Oliverberg,ID,83835
 9b6b2612-9ad4-48fa-bddb-4ce72683cc55,4_to_7,female,4,car_other,45,own,skilled,1,yes,yes,Heather,Haynes,HHaynes47@yahoo.com,2857 Moore Vista Suite 941,South Jacob,VA,20041
@@ -1240,6 +1249,7 @@ ab6a85ae-ca8b-41a7-9252-3fe8881305b4,greater_7,male,4,car_other,55,own,skilled,2
 c5dbebd5-acf6-440e-8842-035f435e2531,1_to_4,female,1,car_other,34,own,unskilled,1,none,yes,Ellen,Dennis,EDennis15@hotmail.com,685 Webster Motorway Suite 722,South Codymouth,DE,19880
 c716ff06-21a3-4ead-aa45-470b6fb47ca1,1_to_4,male,3,savings_insurance,33,rent,unskilled,1,none,yes,Robert,Richards,RRichards5@yahoo.com,9238 Moore Parks,New Erin,MT,59930
 07ead398-d903-4dc8-bba0-1b0a9f8a8346,1_to_4,male,1,real_estate,19,rent,skilled,1,none,yes,Nathan,Reed,NReed3@gmail.com,959 Michael Isle Apt. 400,Whiteshire,UT,84413
+f9dd2ee5-8e51-4b35-b910-3b86b0429dcd,4_to_7,male,3,savings_insurance,34,own,skilled,1,none,yes,Randy,Tran,RTran73@lozano-mccall.org,522 Tara Street,Pamelaville,HI,96736
 f9dd2ee5-8e51-4b35-b910-3b86b0429dcd,4_to_7,male,3,savings_insurance,34,own,skilled,1,none,yes,Randy,Tran,RTran73@lozano-mccall.org,522 Tara Street,Pamelaville,HI,96736
 d1ff273f-411a-4e5b-beab-2a500cdbfb5f,4_to_7,male,3,unknown,31,own,skilled,1,none,yes,Justin,Velasquez,JVelasquez22@thompson.com,204 Gabrielle Row Apt. 245,South Samuel,CA,94898
 7d41ca55-15b1-46eb-93f4-b6808eb8f5d4,greater_7,male,2,savings_insurance,43,own,skilled,1,none,yes,Kevin,Burgess,KBurgess87@stephens-alexander.biz,8199 Bruce Haven Apt. 948,Port David,DE,19875
@@ -2193,6 +2203,7 @@ f3525afb-ae97-4701-a6f0-563afc632c03,less_1,male,2,savings_insurance,20,rent,uns
 f18b7736-3103-4b6b-b24f-f65bc92ba209,greater_7,male,3,car_other,46,free,skilled,1,yes,yes,Victor,Calderon,VCalderon78@payne.com,9773 Emily Streets Suite 380,Anthonymouth,KS,66356
 55acd53d-f55d-48d4-a7a4-0c1d0728a853,4_to_7,male,2,savings_insurance,34,rent,unskilled,1,yes,yes,Brett,Bennett,BBennett57@hotmail.com,16460 Kevin Shoal,Shellyfurt,CA,91632
 821121d3-c14c-439f-a613-dc819b767d98,1_to_4,female,3,car_other,41,own,skilled,1,yes,yes,Miranda,Cook,MCook88@hale.com,36409 Burke Pine,Port Jonathanchester,MI,48166
+5c48474e-0fa0-4969-b25d-41952efda05b,unemployed,female,2,savings_insurance,19,own,skilled,1,none,yes,Victoria,Jones,VJones69@hotmail.com,568 Wilson Shore,Jonesville,MD,20331
 5c48474e-0fa0-4969-b25d-41952efda05b,unemployed,female,2,savings_insurance,19,own,skilled,1,none,yes,Victoria,Jones,VJones69@hotmail.com,568 Wilson Shore,Jonesville,MD,20331
 7622d15c-60ef-4bce-8b78-9c02ad151b8a,1_to_4,female,3,car_other,46,own,skilled,1,none,yes,Sheila,Martin,SMartin42@gmail.com,177 Compton Brook Suite 885,New Michellechester,PA,15048
 285298e9-8254-4a77-aa61-d2005fb4dbcc,1_to_4,female,3,savings_insurance,28,own,skilled,1,none,yes,Gabrielle,Newton,GNewton21@yahoo.com,831 Anthony Inlet,North Matthew,FL,33574
@@ -3883,6 +3894,7 @@ de5eb4d0-6d15-419a-86d8-acd44cd3ae35,1_to_4,female,3,real_estate,22,rent,skilled
 160ceb40-8520-4608-a9f7-0236b00474d6,4_to_7,male,3,real_estate,45,own,unskilled,1,yes,yes,Kenneth,Jones,KJones90@stokes.com,9088 White Trail Apt. 625,West Brandon,NH,3558
 3a07fe8e-d341-4112-a09a-827e1073b704,less_1,male,2,car_other,23,own,unskilled,2,yes,yes,Nicholas,Rasmussen,NRasmussen97@hotmail.com,42881 Hayes Freeway,Smithfurt,WV,26440
 5a4c44f7-733a-4bb7-bb42-36cdfb0bb9e6,1_to_4,male,3,car_other,34,own,skilled,1,none,yes,Travis,Tapia,TTapia54@smith.com,868 Brown Brook Suite 536,Johnland,MI,49682
+5a4c44f7-733a-4bb7-bb42-36cdfb0bb9e6,1_to_4,male,3,car_other,34,own,skilled,1,none,yes,Travis,Tapia,TTapia54@smith.com,868 Brown Brook Suite 536,Johnland,MI,49682
 d0bcf9d7-f3a8-4385-8617-420ff0cbc428,less_1,female,2,savings_insurance,19,rent,skilled,1,none,yes,Amanda,Hobbs,AHobbs70@hotmail.com,5197 Kathryn Parkway,Tinashire,VT,5053
 7d0440e3-ecce-4553-b939-51bb50743825,1_to_4,male,4,savings_insurance,33,own,skilled,1,none,yes,Thomas,Williams,TWilliams62@howard.com,233 David Lake,Karenmouth,VA,20041
 5cec0ffd-4d1b-4f9c-8121-6f30ea756c11,4_to_7,male,2,savings_insurance,42,own,skilled,1,yes,yes,James,Gentry,JGentry56@lopez.info,118 Stanley Plaza,Thomasberg,CA,94666
@@ -4999,3 +5011,5 @@ e77fa77b-78da-4607-a2fa-ede36c1e968f,1_to_4,male,4,savings_insurance,40,own,skil
 db501d22-e0c9-4f38-bf05-7f2c1df35395,greater_7,male,5,unknown,54,own,unskilled,2,yes,yes,Todd,Jones,TJones45@williams.com,18536 April Village Suite 841,West Christophertown,NH,3148
 802055d6-6aa7-4532-bf1c-0b8b114b483d,greater_7,female,3,savings_insurance,27,own,skilled,1,none,yes,Patricia,Short,PShort26@gmail.com,2474 Gregory Square Suite 545,New Brianberg,RI,2927
 53094239-82f4-4b14-b2e9-7a0355a10839,1_to_4,male,3,savings_insurance,29,own,skilled,1,none,yes,Ronald,Harris,RHarris23@gmail.com,95187 Carlson Squares,Marcusport,PA,15749
+e97fa77b-48da-4907-a4fa-ede36c1e968f,1_to_4,male,4,savings_insurance,40,own,skilled,1,none,yes,John,Villan,JVillan90@young.net,,,WA,98188
+5e9a606e-c657-49fa-a725-0bd796b003db,1_to_4,male,2,savings_insurance,36,own,skilled,1,yes,yes,David,Moe,DMoe2@contreras.biz,,,CT,6118
