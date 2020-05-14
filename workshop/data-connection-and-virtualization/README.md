@@ -43,11 +43,11 @@ Now we're going to **join** the tables we previously virtualized, so we have a f
 
 ![Choose to join two tables](../.gitbook/assets/images/dv/dv-data-join-overview.png)
 
-* To join the tables we need to pick a key that is common to both data sets. Here we choose to map `customerID` from the first table to `customerID` on the second table. Do this by clicking on one and dragging it to another. When the line is drawn click on *Join*.
+* To join the tables we need to pick a key that is common to both data sets. Here we choose to map `CUSTOMERID` from the first table to `CUSTOMERID` on the second table. Do this by clicking on one and dragging it to another. When the line is drawn click on *Join*.
 
 ![Map the two customerID keys](../.gitbook/assets/images/dv/dv-data-join-columns.png)
 
-* In the next panel we'll give our joined data a unique name (to be consistent with SQL standards, pick an all uppercase name), I chose `XXXAPPLICANTFINANCIALPERSONALDATA` (where `XXX` is my *All Upper Case* user ID), then review the joined table to ensure all columns are present and only one `customerID` column exists. Click *Next* to continue.
+* In the next panel we'll give our joined data a unique name (to be consistent with SQL standards, pick an all uppercase name), I chose `XXXAPPLICANTFINANCIALPERSONALDATA` (where `XXX` is my *All Upper Case* user ID), then review the joined table to ensure all columns are present and only one `CUSTOMERID` column exists. Click *Next* to continue.
 
 ![Review the proposed joined table](../.gitbook/assets/images/dv/dv-data-join-review.png)
 
@@ -63,11 +63,11 @@ Now we're going to **join** the tables we previously virtualized, so we have a f
 
 ![Join final tables](../.gitbook/assets/images/dv/dv-data-join-overview-final.png)
 
-* To join the tables we need to pick a key that is common to both data sets. Again, choose to map `customerID` from the first table to `customerID` on the second table. Do this by clicking on one and dragging it to another. This time, also deselect the `ID` column from the `LOAN` table. Click on the *Join* button.
+* To join the tables we need to pick a key that is common to both data sets. Again, choose to map `CUSTOMERID` from the first table to `CUSTOMERID` on the second table. Do this by clicking on one and dragging it to another. This time, also deselect the `ID` column from the `LOAN` table. Click on the *Join* button.
 
 ![Map the two customerID keys](../.gitbook/assets/images/dv/dv-data-join-columns-final.png)
 
-* As before, on the next panel we'll give our joined data a unique name (to be consistent with SQL standards, pick an all uppercase name), for example `XXXAPPLICANTFINANCIALPERSONALDATALOANS` (where `XXX` is my *All Upper Case* user ID), then review the joined table to ensure all columns are present and only one `customerID` column exists. Click *Next* to continue.
+* As before, on the next panel we'll give our joined data a unique name (to be consistent with SQL standards, pick an all uppercase name), for example `XXXAPPLICANTFINANCIALPERSONALDATALOANS` (where `XXX` is my *All Upper Case* user ID), then review the joined table to ensure all columns are present and only one `CUSTOMERID` column exists. Click *Next* to continue.
 
 * On the next screen we choose where to assign the joined view we created, select the `My virtualized data` radio button. If there is a `Submit to catalog` checkbox on the top right, unselect it and finally click the *`Create view`* button to add the virtualized aggregate table to your data.
 
