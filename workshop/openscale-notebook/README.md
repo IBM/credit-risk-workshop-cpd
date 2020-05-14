@@ -12,7 +12,7 @@ This lab is comprised of the following steps:
 
 ## 1. Open the notebook
 
-If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) using the [Customer-Churn-Project.zip](https://github.com/IBM/cloudpakfordata-telco-churn-workshop/blob/master/projects/Customer-Churn-Project.zip) file, your notebook will be present in that project, under the `Assets` tab:
+If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) using the [CreditRiskProject.zip](https://github.ibm.com/IBMDeveloper/cp4d-workshop-credit-risk/blob/master/projects/CreditRiskProject.zip) file, your notebook will be present in that project, under the `Assets` tab:
 
 ![Project from zip assets tab](../.gitbook/assets/images/aios/aios-notebook-zip-file-asset.png)
 
@@ -22,7 +22,7 @@ You may now skip to the next step [Update credentials](#2-update-credentials)
 
 > NOTE: You should probably not need this step, and should only perform it if instructed to.
 
-If, for some reason, you are not using the [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) step in the Pre-work to import [Customer-Churn-Project.zip](https://github.com/IBM/cloudpakfordata-telco-churn-workshop/blob/master/projects/Customer-Churn-Project.zip), then you will need to import the notebook file by itself. Use the following steps for that.
+If, for some reason, you are not using the [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) step in the Pre-work to import [CreditRiskProject.zip](https://github.ibm.com/IBMDeveloper/cp4d-workshop-credit-risk/blob/master/projects/CreditRiskProject.zip), then you will need to import the notebook file by itself. Use the following steps for that.
 
 At the project overview click the *New Asset* button, and choose *Add notebook*.
 
