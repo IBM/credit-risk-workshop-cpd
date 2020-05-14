@@ -73,7 +73,7 @@ This file has the following attributes:
 |   |   |
 | - | - |
 | [Pre-work](pre-work/README.md) | Creating a project, downloading the data set, seeding a database |
-| [Data Connection and Virtualization](db-connection-and-virtualization/README.md) | Creating a new connection, virtualizing the data, importing the data into the project |
+| [Data Connection and Virtualization](data-connection-and-virtualization/README.md) | Creating a new connection, virtualizing the data, importing the data into the project |
 | [Import Data to Project](addData/README.md) | Import the data into your project |
 | [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) | Refining the data, vizualizing and profiling the data |
 | [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md) | Use and Enterprise data catalog to search, manage, and protect data |

@@ -1,4 +1,4 @@
-CustomerID,CheckingStatus,CreditHistory,ExistingSavings,InstallmentPlans,ExistingCreditsCount
+CUSTOMERID,CHECKINGSTATUS,CREDITHISTORY,EXISTINGSAVINGS,INSTALLMENTPLANS,EXISTINGCREDITSCOUNT
 713a336c-a255-4e2d-9d57-90b3e99e2f06,0_to_200,credits_paid_to_date,100_to_500,none,1
 140b363f-a3fe-4828-a33f-7284dfdb3969,less_0,credits_paid_to_date,less_100,stores,2
 43b7b51d-5eda-4860-b461-ebef3d3436f4,less_0,prior_payments_delayed,less_100,none,2
