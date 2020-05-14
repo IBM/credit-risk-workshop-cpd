@@ -48,7 +48,7 @@ In Cloud Pak for Data, we use the concept of a project to collect / organize the
 
 ![Create project from file](../.gitbook/assets/images/prework/create-project-from-sample.png)
 
-* Navigate to where you cloned this repository, then to `projects/` and choose `CreditRisk-Project.zip`. Give the project a name and click the `Create` button:
+* Navigate to where you cloned this repository, then to `projects/` and choose `CreditRiskProject.zip`. Give the project a name and click the `Create` button:
 
 ![Browse for project files](../.gitbook/assets/images/prework/create-project-name.png)
 
