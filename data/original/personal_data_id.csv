@@ -1,4 +1,4 @@
-CustomerID,first_name,last_name,email,street_address,city,state,postal_code
+CUSTOMERID,FIRSTNAME,LASTNAME,EMAIL,STREETADDRESS,CITY,STATE,POSTALCODE
 713a336c-a255-4e2d-9d57-90b3e99e2f06,Stephanie,Reynolds,SReynolds54@yahoo.com,396 Reyes Dam Apt. 721,Lake Troymouth,TX,73301
 140b363f-a3fe-4828-a33f-7284dfdb3969,Christina,Howard,CHoward41@hotmail.com,5061 Eric Cliff,South Jaime,NV,89482
 43b7b51d-5eda-4860-b461-ebef3d3436f4,Dennis,Sutton,DSutton83@mullins.com,84435 Kerr Islands Apt. 442,North Johnstad,WY,82585
