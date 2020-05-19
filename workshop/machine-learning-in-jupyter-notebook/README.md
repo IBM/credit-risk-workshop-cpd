@@ -79,7 +79,7 @@ DEPLOYMENT_SPACE_NAME = "Name you used for deployment space"
 
 **We've successfully built and saved a machine learning model programmatically. Congratulations!**
 
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook so you can stop the kernel.*
+> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three dots under the Action column for the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook so you can stop the kernel.*
 > ![Stop kernel](../.gitbook/assets/images/wml/JupyterStopKernel.png)
 
 ## Conclusion
