@@ -6,6 +6,18 @@
 
 For this section we'll now use the Data Virtualization tool to import the data from Db2 Warehouse, which is now exposed as a Connection in Cloud Pak for Data.
 
+## Provision Data Virtualization
+
+Go to the `Services` tab. Under `Data sources` choose the `Data Virtualization` tile. Click the 3 vertical dots and choose `Deploy`.
+
+![Deploy DV service](../.gitbook/assets/images/dv/dv-deploy-service.png)
+
+Follow the instructions to deploy Data Virtualization.
+
+> For deployment using Managed OpenShift you must do the following:
+  IMPORTANT: Do NOT check the box for automatic semaphore configuration
+  IMPORTANT: Do NOT choose the defaults for storage. You must choose *ibmc-file-gold-gid* as the storage class
+
 ## Create an IBM Cloud instance of DB2 Warehouse
 
 It is suggested to use [DB2 Warehouse on IBM Cloud](https://cloud.ibm.com/catalog/services/db2-warehouse) in order to conserve resources on the CPD cluster. IF you wish to use the local DB2 on the cluster, skip to the next section.
@@ -181,3 +193,33 @@ Click on *Add user* and ensure all users have the *Steward* role.
 From the hamburger menu, click manage users, then add user!
 
 ![Add a user](../.gitbook/assets/images/manage/manage-add-users.png)
+
+## Watson Knowledge Catalog setup
+
+### Setup the Enterprise catalog
+
+* Unzip [CP4dExperienceOrganizeArtifacts.zip](../../data/wkc/CP4dExperienceOrganizeArtifacts.zip)
+
+* Perform the steps in `Organize-Experience-Runbook.docx` to setup the WKC Enterprise catalog.
+
+* Go to `Organize` -> `Data discovery` then click `Workspaces` and `Add workspace`. Name it *Enterprise*.
+
+* In your `Enterprise` Data discovery workspace, go to `Settings` -> `Users and groups` and add the CPD cluster users (your workshop attendees).
+
+### Setup Data Discovery
+
+* In `Data discovery` click on `New Discovery job` -> `Quick scan`.
+
+* Under `Select a connection` click your DB connection.
+
+* Under `Discovery root` drill down and check `CUSTOMER`, `INSURANCE`, and `MORTGAGE`.
+
+* Click all the options and choose `1000` for max number of records to scan.
+
+* Under `Select a workspace` choose `Enterprise`.
+
+* click the `Discover` button.
+
+### WKC for admins
+
+* To run the [WKC for admins](../watson-knowledge-catalog/README.md) module, the users will need CPD cluster admin role.
