@@ -22,7 +22,7 @@ This module is broken up into several sections that explore the different model 
 
 ## Online Model Deployment
 
-After a model has been created and saved / promoted to our deployment space, we will want to deploy the model so it can be used by others. For this section, we will be creating an online deployment. This type of deployment will make an instance of the model available to make predictions in real time via an API. Although will use the Cloud Pak for Data UI to deploy the model, the same can be done programmatically.
+After a model has been created and saved / promoted to our deployment space, we will want to deploy the model so it can be used by others. For this section, we will be creating an online deployment. This type of deployment will make an instance of the model available to make predictions in real time via an API. Although we will use the Cloud Pak for Data UI to deploy the model, the same can be done programmatically.
 
 * Navigate to the left-hand (☰) hamburger menu and choose `Analyze` -> `Analytics deployments`:
 
@@ -30,7 +30,7 @@ After a model has been created and saved / promoted to our deployment space, we 
 
 * Choose the deployment space you setup previously by clicking on the name of the space.
 
-* In your space overview, find the model name that you want to create a deployment for just built in the notebook and click the 3 dots under `Actions`, and choose `Deploy`:
+* In your space overview, find the model name for the model you previously built and now want to create a deployment against, then click the 3 dots under `Actions`, and choose `Deploy`:
 
 > Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.3` runtime.
 
@@ -162,7 +162,7 @@ The Jupyter notebook is already included as an asset in the project you imported
 
 When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
-Spend an minute looking through the sections of the notebook to get an overview. A notebook is composed of text (markdown or heading) cells and code cells. The markdown cells provide comments on what the code is designed to do.
+Spend a minute looking through the sections of the notebook to get an overview. A notebook is composed of text (markdown or heading) cells and code cells. The markdown cells provide comments on what the code is designed to do.
 
 You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook or hitting the keyboard short cut to run the cell (Shift + Enter but can vary based on platform). While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
 
