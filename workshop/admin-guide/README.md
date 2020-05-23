@@ -1,4 +1,4 @@
-# Admin guide
+# Admin Guide
 
 This section covers the setup and configuration of the Cloud Pak for Data cluster as well as supporting services necessary for the workshop. This involves the following steps:
 
