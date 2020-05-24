@@ -148,6 +148,28 @@ Next we will provision and load data into a MongoDB instance. There are several 
 
 ### Load Data and Create User
 
-With our MongoDB running and accessible, you can now load the data into a new DB and collection. You can do this with the tool of your choosing (i.e Compass, command line, APIs, etc)
+With MongoDB running and accessible, you can now load the data into a new DB and collection. You can use the tool of your choosing (i.e Compass, command line, APIs, etc), to load the final `applicant_loan.data.csv` file.
 
 * We have provided a sample python script to load data into MongoDB in the /scripts directory of this repository. Run the script to load the `applicant_loan_data.csv` data file into Mongo.
+
+* The script expects three parameters:
+
+  * data-csv-file = the full path to `applicant_loan_data.csv` file.
+  * db-name = name of the database, use the name `CP4DCREDIT`
+  * collection-name = name of collection where data will be stored, use the name `LOANS`
+
+* To run the script, install the python packages necessary (pymongo), then from a terminal run:
+
+   ```Bash
+   python load_mongodb.py -data-csv-file applicant_loan_data.csv -db-name CP4DCREDIT -collection-name LOANS
+   ```
+
+  ![MongoDB Script](../.gitbook/assets/images/admin/mongodb-loadscript.png)  
+
+* Once the database / collection has been created and the data has been loaded, we need to create a user in the database. To do so, you will need a mongo CLI client installed. From the client, run the following command:
+
+  ``` bash
+  db.createUser( { user: "mongodbuser", pwd: "REPLACE_WITH_YOUR_OWN_PASSWORD", roles: [ { role: "dbOwner", db: "CP4DCREDIT" } ] })
+  ```
+
+  ![MongoDB Create User](../.gitbook/assets/images/admin/mongodb-create-user.png)
