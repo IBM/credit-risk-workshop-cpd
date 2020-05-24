@@ -5,7 +5,11 @@ The workshop simulates the real world data connection process by having data res
 * Local: Provision / use the DB2, DB2 Warehouse and MongoDB instances directly inside of Cloud Pak for Data.
 * Remote: Provision / use the DB2, DB2 Warehouse and MongoDB instances externally on an IBM Cloud account.
 
-The deployment selected will be based on the workshop requirements, CP4D cluster size, etc. For the workshop, it is suggested to deploy databases remotely in order to conserve resources on the CP4D cluser.
+The deployment selected will be based on the workshop requirements, CP4D cluster size, etc. For the workshop, it is suggested to deploy databases remotely in order to conserve resources on the CP4D cluser. There are three databases we use in this workshop:
+
+1. [DB2 Warehouse](#create-and-load-db2-warehouse-instance)
+1. [MongoDB](#create-and-load-mongodb-instance)
+1. [DB2 Server](#create-db2-instance)
 
 ## Create and Load DB2 Warehouse Instance
 
@@ -47,9 +51,9 @@ You will need an SSL certificate for Cloud Pak for Data to use the IBM Cloud DB2
 
 * You'll need to convert the SSL certificate from `.crt` to a `.pem` file using [openssl](https://www.openssl.org/). Run the following command:
 
-```bash
-openssl x509 -in DigiCertGlobalRootCA.crt -out DigiCertGlobalRootCA.pem -outform PEM -inform DER
-```
+  ```bash
+  openssl x509 -in DigiCertGlobalRootCA.crt -out DigiCertGlobalRootCA.pem -outform PEM -inform DER
+  ```
 
 * Save this file for later use.
 
@@ -63,7 +67,7 @@ These instructions are for loading the data into the local CP4D version of DB2 W
 
    ![Open Service DB2 Warehouse](../.gitbook/assets/images/connections/db2whlocal-open-console.png)
 
-Under `Menu` choose `Load` and `Load Data`:
+* Under `Menu` choose `Load` and `Load Data`:
 
    ![Menu Load Data](../.gitbook/assets/images/connections/db2whlocal-load-data.png)
 
@@ -173,3 +177,17 @@ With MongoDB running and accessible, you can now load the data into a new DB and
   ```
 
   ![MongoDB Create User](../.gitbook/assets/images/admin/mongodb-create-user.png)
+
+## Create DB2 Instance
+
+If you are running the OpenScale Lab, you will need a DB2 Server instance (DB2 Warehouse is not supported but there are other databases that can be used in place of DB2). The DB2 instance can be local on CP4D or remote.
+
+### Remote DB2 Instance
+
+* Assuming you are logged in to an IBM Cloud account. Provision an instance of [DB2 Server from the catalog.](https://cloud.ibm.com/catalog/services/db2).
+
+* Once the service is provisioned, Go to `Service Credentials` and click `New credential +`. Open `View credentials` and copy the credentials for use later.
+
+   ![Get DB2 Warehouse credentials](../.gitbook/assets/images/connections/db2-server-credential.png)
+
+__THIS SECTION IS COMPLETE, GO BACK AND CONTINUE WITH THE ADMIN GUIDE__

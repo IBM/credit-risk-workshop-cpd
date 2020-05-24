@@ -3,9 +3,10 @@
 This section covers the setup and configuration of the Cloud Pak for Data cluster as well as supporting services necessary for the workshop. This involves the following steps:
 
 1. [Configure Cloud Pak for Data](#cloud-pak-for-data-environment-configuration)
-1. [Create Data Sources](#cloud-pak-for-data-environment-configuration)
-1. [Configure Data Connections](#cloud-pak-for-data-environment-configuration)
-1. [Setup Data Virtualization](#cloud-pak-for-data-environment-configuration)
+1. [Create Data Sources](#database-setup)
+1. [Configure Data Connections](#database-configuration)
+1. [Setup Data Virtualization](#data-virtualization-configuration)
+1. [Setup Watson Knowledge Catalog](#watson-knowledge-catalog-setup)
 
 > **NOTE**: Parts of this section requires the user running it to have `Admin` user access to the Cloud Pak for Data cluster.
 
@@ -31,73 +32,97 @@ Run through the instructions in the [Database Configuration Readme](DatabaseConf
 
 ## Database Configuration
 
-For Cloud Pak for Data to access our data sources (Db2 Warehouse, MongoDB, etd), we need to add a new *Data Source* to connect them via JDBC to Cloud Pak for Data. 
+For Cloud Pak for Data to access our data sources (Db2 Warehouse, MongoDB, etd), we need to add *Data Connections* to connect to them via JDBC to Cloud Pak for Data.
 
+### Add DB2 Warehouse Connection
+
+* To add a new data source, go to the (☰) menu and click on the *Connections* option.
+
+  ![(☰) Menu -> Collections](../.gitbook/assets/images/connections/conn-menu.png)
+
+* At the overview, click *Add connection*.
+
+  ![Overview page](../.gitbook/assets/images/connections/conn-overview-empty.png)
+
+* Start by giving your new *Connection* a name and select *Db2 Warehouse on Cloud* as your connection type. More fields should apper. Fill the new fields with the same credentials for your own Db2 Warehouse connection from the previous section .
+
+* Click the check box for `Use SSL`. Next click `Select file` and navigate to where you converted the SSL certificate for DB2 Warehouse form a `.crt` file to a `.pem` file (probably called DigiCertGlobalRootCA.pem).
+
+* Click `Test Connection` and, after that succeeds, click `Add`.
+
+  ![Add a Db2 Warehouse on Cloud connection](../.gitbook/assets/images/connections/conn-details.png)
+
+* The new connection will be listed in the overview.
+
+  ![Connection has been added!](../.gitbook/assets/images/connections/conn-overview-db2.png)
+
+### Add MongoDB Connection
+
+* To add a new data source, go to the (☰) menu and click on the *Connections* option.
+
+  ![(☰) Menu -> Collections](../.gitbook/assets/images/connections/conn-menu.png)
+
+* At the overview, click *Add connection*.
+
+  ![Overview page](../.gitbook/assets/images/connections/conn-overview-empty.png)
+
+* Start by giving your new *Connection* a name and select *Mongo* as your connection type. More fields should apper. Fill the new fields with the credentials you saved for the MongoDB connection from the previous section.
+
+  ![Mongo Connection](../.gitbook/assets/images/connections/mongodb-connection.png)
+
+* Click Save. The new connection will be listed in the overview.
 
 ## Data Virtualization Configuration
 
-To launch the data virtualization tool, go the (☰) menu and click `Collect` and then `Data Virtualization`.
+With the data connections created, we next add them as data sources that can be used in data virtualization.
 
-![(☰) Menu -> Collect -> Data Virtualization](../.gitbook/assets/images/dv/dv-menu.png)
+* To launch the data virtualization tool, go the (☰) menu and click `Collect` and then `Data Virtualization`.
 
-At the empty overview, click *Add* and choose *Add data source*.
+  ![(☰) Menu -> Collect -> Data Virtualization](../.gitbook/assets/images/dv/dv-menu.png)
 
-![No data sources, yet](../.gitbook/assets/images/dv/dv-data-sources-empty.png)
+* At the empty overview, click *Add* and choose *Add data source*. If you do not get to the `Data Sources` page. Click the `Menu` under 'Data virtualization' and selct `Data Sources`.
 
-Select the data source we made in the previous step, and click *Next*.
+  ![No data sources, yet](../.gitbook/assets/images/dv/dv-data-sources-empty.png)
 
-![Add the Db2 Warehouse connection](../.gitbook/assets/images/dv/dv-data-sources-add.png)
+* Select the data source we made in the previous step, and click *Next*.
 
-The new connection will be listed as a data source for data virtualization.
+  ![Add the Db2 Warehouse connection](../.gitbook/assets/images/dv/dv-data-sources-add.png)
 
-![Db2 Warehouse connection is now associated with Data Virtualization](../.gitbook/assets/images/dv/dv-data-sources-shown.png)
+* The new connection will be listed as a data source for data virtualization.
 
-### Start virtualizing data
+  ![Db2 Warehouse connection is now associated with Data Virtualization](../.gitbook/assets/images/dv/dv-data-sources-shown.png)
 
-In this section, since we now have access to the Db2 Warehouse data, we can virtualize the data to our Cloud Pak for Data project. Click on the *Menu* button and choose *Virtualize*.
+* Repeat the process to add the mongoDB instance.
 
-![Menu -> Virtualize](../.gitbook/assets/images/dv/dv-virtualize-menu.png)
+  ![Data Virtualization data sources](../.gitbook/assets/images/dv/dv-data-sources-complete.png)
 
-Several tables will appear (many are created as sample data when a Db2 Warehouse instance is provisioned) in the table. Find the tables you created earlier, the instructions suggested naming them: `FINANCIAL`, `PERSONAL`, and `NONFIN`. Once selected click on *Add to cart* and then on *View Cart*.
-You can search for the Schema `NULLIDRA` and they should show up:
+### Virtualizing Data
 
-![Choose the tables to virtualize](../.gitbook/assets/images/dv/dv-virtualize-tables.png)
+In this section, we will run through the data virtualization lab to create virtualized table views and joined table views. We will store these views in an `INSTRUCTOR` schema and share them with all Data Virtualization users. This is done as a backup in case there are any unexpected issues with any of the data sources.
 
-The next panel prompts the user to choose which project to assign the data to, choose the project you created in the previous exercise. Click *Virtualize* to start the process.
+* Run through the [Virtualize Data section of the data virtualization lab](../data-connection-and-virtualization/README.md). Note that before running through the lab, you are only running through the first section  (`Virtualize Data`, not assign `Grant Access to Virtualized Data`) and there are two key changes that you need to make from the lab instructions:
 
-![Add virtualized data to your project](../.gitbook/assets/images/dv/dv-virtualize-assign.png)
+  * When you virtualize the tables in the lab, specify `INSTRUCTOR` as the schema instead of accepting the default schema name (i.e USERXXXX).
 
-You'll be notified that the virtual tables have been created! Let's see the new virtualized data from the Data Virtualization tool by clicking *View my data*.
+    ![Add virtualized data to your project](../.gitbook/assets/images/dv/dv-virtualize-assign.png)
 
-![We've got virtualized data](../.gitbook/assets/images/dv/dv-virtualize-complete.png)
+  * When you are joining virtual objects, specify `INSTRUCTOR` as the schema instead of accepting the default schema name (i.e USERXXXX).
 
-### Join the virtualized data
+    ![Review the proposed joined table](../.gitbook/assets/images/dv/dv-data-join-review.png)
 
-Now we're going to **join** the tables we created so we have a merged set of data. It will be easier to do it here rather than in a notebook where we'd have to write code to handle three different data sets. Click on any two tables (`PERSONAL` and `FINANCIAL` for instance) and click the *Join view* button.
+### Grant Access to all Users
 
-![Choose to join two tables](../.gitbook/assets/images/dv/dv-data-join-overview.png)
+In order for all workshop participants to have access to the data that you just virtualized, you need to grant them access. Follow these steps to make your Virtualized data visible to them.
 
-To join the tables we need to pick a key that is common to both data sets. Here we choose to map `customerID` from the first table to `customerID` on the second table. Do this by clicking on one and dragging it to another. When the line is drawn click on *Join*.
+* Go to *Data Virtualization* option from the (☰) menu. Click on `Menu` -> `My virtualized data`.
 
-![Map the two customerID keys](../.gitbook/assets/images/dv/dv-data-join-columns.png)
+* Click on the virtualized data you've created, then click the 3 horizontal dots `...` to the right of one, and choose `Manage access`:
 
-In the next panel we'll give our joined data a name, I chose `FINANCIALPERSONAL`, then review the joined table to ensure all columns are present and only one `customerID` column exists. Click *Next* to continue.
+  ![Manage access to virtualized data](../.gitbook/assets/images/dv/dv-manage-access-menu.png)
 
-![Review the proposed joined table](../.gitbook/assets/images/dv/dv-data-join-review.png)
+* Click the `All data virtualization users` radio button and then the `Continue` button in the dialog window.
 
-Next we choose which project to assign the joined view to, choose the project you created in the previous exercise. Click *Create view* to start the process.
-
-![Add joined data tables to your project](../.gitbook/assets/images/dv/dv-data-join-assign.png)
-
-You'll be notified that the join has succeeded! Click on *View my data*. to repeat this again so we have all three tables.
-
-![The data join succeeded!](../.gitbook/assets/images/dv/dv-data-join-created.png)
-
-**IMPORTANT** Repeat the same steps as above, but this time choose to join the new joined view (`FINANCIALPERSONAL`) and the last virtualized table (`NONFIN`), to create a new joined view that has all three tables, let's call it `FINANCIALPERSONALNONFIN`. Switching to our project should show all three virtualized tables, and two joined tables. Do not go to the next section until this step is performed.
-
-![Our data sets at the end of this section](../.gitbook/assets/images/dv/dv-project-data-all.png)
-
-## Watson Knowledge Catalog setup
+## Watson Knowledge Catalog Setup
 
 ### Setup the Enterprise catalog
 

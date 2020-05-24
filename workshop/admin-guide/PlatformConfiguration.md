@@ -42,3 +42,5 @@ We need to add the CP4D user accounts to Data Virtualization, so attendees will 
 * Click on *Add user* and ensure all users have the *Steward* role.
 
 ![Manage users in Data Virtualization](../.gitbook/assets/images/admin/dv-steward-role.png)
+
+__THIS SECTION IS COMPLETE, GO BACK AND CONTINUE WITH THE ADMIN GUIDE__
