@@ -16,7 +16,7 @@ This module is broken up into several sections that explore the different model 
    * Create Batch Deployment
    * Create and Schedule a Job
 
-1. [(Coming Soon) Integrate Model to an External Application](#optional-integrate-model-to-python-flask-application)
+1. [(Optional) Integrate Model to an External Application](#optional-integrate-model-to-python-flask-application)
 
 >*Note: The lab instructions below assume you have completed one of the machine learning modules to promote a model to the deployment space. If not, follow the instructions in one of the machine learning modules to create and promote a machine learning model.*
 
@@ -196,6 +196,100 @@ With the notebook open, you will notice:
 > **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook so you can stop the kernel.*
 
 ![Stop kernel](../.gitbook/assets/images/wml/JupyterStopKernel.png)
+
+## (Optional) Integrate Model to Python Flask Application
+
+You can also access the online model deployment directly through the REST API. This allows you to use your model for inference in any of your apps. For this workshop we'll be using a Python Flask application to collect information, score it against the model, and show the results.
+
+### Install Dependencies
+
+The general recommendation for Python development is to use a virtual environment ([`venv`](https://docs.python.org/3/tutorial/venv.html)). To install and initialize a virtual environment, use the `venv` module on Python 3 (you install the virtualenv library for Python 2.7):
+
+* You should have already cloned the GitHub repository as part of the pre-work, if not, open a terminal to clone the repo.
+
+  ```bash
+  git clone https://github.com/IBM/cloudpakfordata-telco-churn-workshop
+  cd cloudpakfordata-telco-churn-workshop
+  ```
+
+* Initialize a virtual environment with [`venv`](https://docs.python.org/3/tutorial/venv.html).
+
+  ```bash
+  # Create the virtual environment using Python. Use one of the two commands depending on your Python version.
+  # Note, it may be named python3 on your system.
+  python -m venv venv       # Python 3.X
+  virtualenv venv           # Python 2.X
+
+  # Source the virtual environment. Use one of the two commands depending on your OS.
+  source venv/bin/activate  # Mac or Linux
+  ./venv/Scripts/activate   # Windows PowerShell
+  ```
+
+  > **TIP** To terminate the virtual environment use the `deactivate` command.
+
+* Finally, install the Python requirements.
+
+  ```bash
+  cd flaskapp
+  pip install -r requirements.txt
+  ```
+
+### Update Environment Variables
+
+It's best practice to store configurable information as environment variables, instead of hard-coding any important information. To reference our model and supply an API key, we'll pass these values in via a file that is read, the key-value pairs in this files are stored as environment variables.
+
+* Copy the `env.sample` file to `.env`.
+
+  ```bash
+  cp env.sample .env
+  ```
+
+* Edit `.env` to and fill in the `MODEL_URL` as well as the `AUTH_URL`, `AUTH_USERNAME`, and `AUTH_PASSWORD`.
+
+  * `MODEL_URL` is your web service URL for scoring which you got from the section above
+  * `AUTH_URL` is the preauth url of your CloudPak4Data and will look like this: `https://<cluster_url>/v1/preauth/validateAuth`
+  * `AUTH_USERNAME` is your username with which you login to the CloudPak4Data environment
+  * `AUTH_PASSWORD` is your password with which you login to the CloudPak4Data environment
+
+  >Note: Alternatively, you can fill in the `AUTH_TOKEN` instead of `AUTH_URL`, `AUTH_USERNAME`, and `AUTH_PASSWORD`. You will have generated this token in the section above. However, since tokens expire after a few hours and you would need to restart your app to update the token, this option is not suggested. Instead, if you use the username/password option, the app can generate a new token every time for you so it will always have a non-expired ones.
+
+* Here's an example of a completed lines of the .env file.
+
+  ```bash
+  # Required: Provide your web service URL for scoring.
+  # E.g., MODEL_URL=https://<cluster_url>/v4/deployments/<deployment_space_guid>/predictions
+  MODEL_URL=https://cp4d.cp4dworkshops.com/v4/deployments/5f939979-14c2-4538-a2af-a970aeb59abd/predictions
+
+  # Required: Please fill in EITHER section A OR B below:
+
+  # #### A: Authentication using username and password
+  #   Fill in the authntication url, your CloudPak4Data username, and CloudPak4Data password.
+  #   Example:
+  #     AUTH_URL=<cluster_url>/v1/preauth/validateAuth
+  #     AUTH_USERNAME=my_username
+  #     AUTH_PASSWORD=super_complex_password
+  AUTH_URL=https://cp4d.cp4dworkshops.com/v1/preauth/validateAuth
+  AUTH_USERNAME=username_001
+  AUTH_PASSWORD=my_secure_password_!
+  ```
+
+### Start Application
+
+* Start the flask server by running the following command:
+
+  ```bash
+  python telcochurn.py
+  ```
+
+* Use your browser to go to [http://0.0.0.0:5000](http://0.0.0.0:5000) and try it out.
+
+  > **TIP**: Use `ctrl`+`c` to stop the Flask server when you are done.
+
+#### Test the application
+
+* Either use the default values pre-filled in the input form, or modify the value and then click the `Submit` button. The python application will invoke the predictive model and a risk prediction & probability is returned:
+
+![Get the churn percentage as a result](../.gitbook/assets/images/deployment/flaskapp-output.png)
 
 ## Conclusion
 
