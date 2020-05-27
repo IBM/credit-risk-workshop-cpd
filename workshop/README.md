@@ -26,47 +26,47 @@ The credit risk model that we are exploring in this workshop uses a training dat
 
 This file has the following attributes:
 
-* CustomerID (hex number, used as Primary Key)
-* CheckingStatus
-* CreditHistory
-* ExistingSavings
-* InstallmentPlans
-* ExistingCreditsCount
+* CUSTOMERID (hex number, used as Primary Key)
+* CHECKINGSTATUS
+* CREDITHISTORY
+* EXISTINGSAVINGS
+* INSTALLMENTPLANS
+* EXISTINGCREDITSCOUNT
 
 ### **[Applicant Loan Data](../../data/split/applicant_loan_data.csv)**
 
 This file has the following attributes:
 
-* CustomerID
-* LoanDuration
-* LoanPurpose
-* LoanAmount
-* InstallmentPercent
-* OthersOnLoan
-* Risk
+* CUSTOMERID
+* LOANDURATION
+* LOANPURPOSE
+* LOANAMOUNT
+* INSTALLMENTPERCENT
+* OTHERSONLOAN
+* RISK
 
 ### **[Applicant Personal Data](../../data/split/applicant_personal_data.csv)**
 
 This file has the following attributes:
 
-* CustomerID
-* EmploymentDuration
-* Sex
-* CurrentResidenceDuration
-* OwnsProperty
-* Age
-* Housing
-* Job
-* Dependents
-* Telephone
-* ForeignWorker
-* first_name
-* last_name
-* email
-* street_address
-* city
-* state
-* postal_code
+* CUSTOMERID
+* EMPLOYMENTDURATION
+* SEX
+* CURRENTRESIDENCEDURATION
+* OWNSPROPERTY
+* AGE
+* HOUSING
+* JOB
+* DEPENDENTS
+* TELEPHONE
+* FOREIGNWORKER
+* FIRSTNAME
+* LASTNAME
+* EMAIL
+* STREETADDRESS
+* CITY
+* STATE
+* POSTALCODE
 
 ## Agenda
 
