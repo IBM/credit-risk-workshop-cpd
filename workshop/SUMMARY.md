@@ -3,21 +3,16 @@
 ## Getting Started
 
 * [Pre-work](pre-work/README.md)
-* [Git integration (using GitLab)](gitIntegration/README.md)
 
 ## Credit Risk Workshop
 
 * [Data Connection and Virtualization for Admins](data-connection-and-virtualization/README.md)
 * [Import Data to Project](addData/README.md)
-* [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md)
-* [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md)
-* [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md)
 * [Machine Learning with Jupyter](machine-learning-in-Jupyter-notebook/README.md)
 * [Machine Learning with AutoAI](machine-learning-autoai/README.md)
 * [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md)
 * [Monitoring models with OpenScale GUI (Fastpath Monitoring)](openscale-fastpath/README.md)
-* [Monitoring models with OpenScale GUI (Manual Config)](openscale-gui-manual-config/README.md)
-* [Monitoring models with OpenScale (Notebook)](openscale-notebook/README.md)
+* [(Optional) Monitoring models with OpenScale (Notebook)](openscale-notebook/README.md)
 
 ## Workshop Resources
 
