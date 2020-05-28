@@ -28,7 +28,7 @@ The workshop uses data stored in several data sources, these databases need to b
 * Loading data.
 * Gathering connection information.
 
-Run through the instructions in the [Database Configuration Readme](DatabaseConfiguration.md)
+Run through the instructions in the [Database Configuration Readme](DatasourceConfiguration.md)
 
 ## Database Configuration
 
