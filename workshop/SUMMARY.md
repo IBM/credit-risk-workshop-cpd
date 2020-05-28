@@ -8,7 +8,7 @@
 
 * [Data Connection and Virtualization for Admins](data-connection-and-virtualization/README.md)
 * [Import Data to Project](addData/README.md)
-* [Machine Learning with Jupyter](machine-learning-in-Jupyter-notebook/README.md)
+* [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md)
 * [Machine Learning with AutoAI](machine-learning-autoai/README.md)
 * [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md)
 * [Monitoring models with OpenScale GUI (Fastpath Monitoring)](openscale-fastpath/README.md)
