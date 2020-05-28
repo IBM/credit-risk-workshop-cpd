@@ -1,11 +1,11 @@
 # Admin Guide - Setup and Configure Data Sources
 
-The workshop simulates the real world data connection process by having data reside on one or more data sources which are then added as connection in Cloud Pak for Data. This workshop is using heterogeneous databases as its data sources as well as a couple of CSV files. Before delivering the workshop, you will need to set up a DB2 Warehouse instance and a MongoDB instance, then load them with data that will be consumed by participants. There are several deployment options available in this scenario:
+The workshop simulates the real world data connection process by having data reside on one or more data sources which are then added as connection in Cloud Pak for Data. This workshop is using heterogeneous databases as its data sources as well as a couple of CSV files. Before delivering the workshop, you will need to set up a DB2 Server instance, a DB2 Warehouse instance and a MongoDB instance, then load them with data that will be consumed by participants. There are several deployment options available in this scenario:
 
 * Local: Provision / use the DB2, DB2 Warehouse and MongoDB instances directly inside of Cloud Pak for Data.
 * Remote: Provision / use the DB2, DB2 Warehouse and MongoDB instances externally on an IBM Cloud account.
 
-The deployment selected will be based on the workshop requirements, CP4D cluster size, etc. For the workshop, it is suggested to deploy databases remotely in order to conserve resources on the CP4D cluser. There are three databases we use in this workshop:
+The deployment selected will be based on the workshop and client requirements, CP4D cluster size, etc. For most workshops, it is suggested to deploy databases remotely in order to conserve resources on the CP4D cluser. There are three databases we use in this workshop:
 
 1. [DB2 Warehouse](#create-and-load-db2-warehouse-instance)
 1. [MongoDB](#create-and-load-mongodb-instance)
@@ -13,7 +13,7 @@ The deployment selected will be based on the workshop requirements, CP4D cluster
 
 ## Create and Load DB2 Warehouse Instance
 
-You only need to create on DB2 Warehouse instance, follow the instructions for the Remote (cloud) instance or the local instance below.
+You only need to create one DB2 Warehouse instance, follow the instructions for either the Remote (cloud) instance or the local instance below.
 
 ### Remote DB2WhoC Instance
 
@@ -97,7 +97,7 @@ These instructions are for loading the data into the local CP4D version of DB2 W
 
 Next we will provision and load data into a MongoDB instance. There are several options to run MongoDB (locally on CP4D, remotely on a cloud, remotely on an accessible server, remotely on a kubernetes service, etc). At this point in time, only the remote option deployed to a kubernetes cluster has been used.
 
-> *Note: For the remote installation, the managed MongoDB service (i.e. Databases for MongoDB) may not be fully supported but check the CP4D documentation for current instructions.*
+> *Note: For the remote installation, the managed MongoDB service (i.e. Databases for MongoDB) may not be fully supported but check the CP4D documentation for the most current list of supported databases.*
 
 ### Create IBM Kubernetes cluster to host MongoDB
 
