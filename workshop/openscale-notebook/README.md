@@ -26,7 +26,7 @@ If, for some reason, you are not using the [Created the Project](https://ibm-dev
 
 At the project overview click the *New Asset* button, and choose *Add notebook*.
 
-![Add a new asset](../.gitbook/assets/images/wml/wml-1-add-asset.png)
+![Add a new asset](../.gitbook/assets/images/wml/wml-add-asset.png)
 
 On the next panel select the *From URL* tab, give your notebook a name, provide the following URL, and choose the Python 3.6 environment:
 
@@ -36,10 +36,10 @@ https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/
 
 > The notebook is hosted in the same repo as [the workshop](https://github.com/IBM/credit-risk-workshop-cpd)
 >
-> * **Notebook**: [ConfigureOpenScale.ipynb](https://github.com/IBM/credit-risk-workshop-cpd/blob/master/notebooks/ConfigureOpenScale.ipynb)
-> * **Notebook with output**: [with-output/ConfigureOpenScaleOutput.ipynb](https://github.com/IBM/credit-risk-workshop-cpd/blob/master/notebooks/with-output/credit-risk-notebook-with-output.ipynb)
+> * **Notebook**: [ConfigureOpenScale.ipynb](../../notebooks/ConfigureOpenScale.ipynb)
+> * **Notebook with output**: [with-output/ConfigureOpenScaleOutput.ipynb](../../notebooks/with-output/ConfigureOpenScale-with-output.ipynb)
 
-![Add notebook name and URL](../.gitbook/assets/images/wml/wml-2-add-name-and-url.png)
+![Add notebook name and URL](../.gitbook/assets/images/openscale/openscale-add-notebook-url.png)
 
 When the Jupyter notebook is loaded and the kernel is ready then we can start executing cells.
 
