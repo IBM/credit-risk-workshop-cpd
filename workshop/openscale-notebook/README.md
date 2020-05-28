@@ -48,7 +48,7 @@ When the Jupyter notebook is loaded and the kernel is ready then we can start ex
 ### 2. Update credentials
 
 * In the notebook section 1.2 you will add your ICP platform credentials for the `WOS_CREDENTIALS`.
-* For the `url` field, change `https://w.x.y.z` to use the URL your ICP cluster, i.e something like: `"url": "https://zen-cpd-zen.omid-cp4d-v5-2bef1f4b4097001da9502000c44fc2b2-0001.us-south.containers.appdomain.cloud"`.
+* For the `url` field, change `https://w.x.y.z` to use the URL your ICP cluster. For this workshop, the cluster URL is: `https://zen1-cpd-zen1.openshift-1-92a26a6836b50cf42316a1e5b41d8a13-0001.us-east.containers.appdomain.cloud/`
 * For the `username`, use your login username.
 * For the `password`, user your login password.
 
