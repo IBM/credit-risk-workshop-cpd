@@ -90,3 +90,7 @@ This file has the following attributes:
 This workshop has been tested on the following platforms:
 
 * **macOS**: Mojave (10.14), Catalina (10.15)
+  * Google Chrome version 81
+
+* **Microsoft**: Windows 10
+  * Google Chrome, Microsoft Edge
