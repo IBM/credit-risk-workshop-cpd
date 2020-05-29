@@ -201,24 +201,25 @@ With the notebook open, you will notice:
 
 You can also access the online model deployment directly through the REST API. This allows you to use your model for inference in any of your apps. For this workshop we'll be using a Python Flask application to collect information, score it against the model, and show the results.
 
+> **NOTE: This section requires Python 3.6 or later**
+
 ### Install Dependencies
 
-The general recommendation for Python development is to use a virtual environment ([`venv`](https://docs.python.org/3/tutorial/venv.html)). To install and initialize a virtual environment, use the `venv` module on Python 3 (you install the virtualenv library for Python 2.7):
+The general recommendation for Python development is to use a virtual environment ([`venv`](https://docs.python.org/3/tutorial/venv.html)). To install and initialize a virtual environment, use the `venv` module on Python 3:
 
 * You should have already cloned the GitHub repository as part of the pre-work, if not, open a terminal to clone the repo.
 
   ```bash
-  git clone https://github.com/IBM/cloudpakfordata-telco-churn-workshop
-  cd cloudpakfordata-telco-churn-workshop
+  git clone https://github.com/IBM/credit-risk-workshop-cpd.git
+  cd credit-risk-workshop-cpd
   ```
 
 * Initialize a virtual environment with [`venv`](https://docs.python.org/3/tutorial/venv.html).
 
   ```bash
-  # Create the virtual environment using Python. Use one of the two commands depending on your Python version.
+  # Create the virtual environment using Python.
   # Note, it may be named python3 on your system.
   python -m venv venv       # Python 3.X
-  virtualenv venv           # Python 2.X
 
   # Source the virtual environment. Use one of the two commands depending on your OS.
   source venv/bin/activate  # Mac or Linux
@@ -278,7 +279,7 @@ It's best practice to store configurable information as environment variables, i
 * Start the flask server by running the following command:
 
   ```bash
-  python telcochurn.py
+  python creditriskapp.py
   ```
 
 * Use your browser to go to [http://0.0.0.0:5000](http://0.0.0.0:5000) and try it out.
@@ -289,7 +290,7 @@ It's best practice to store configurable information as environment variables, i
 
 * Either use the default values pre-filled in the input form, or modify the value and then click the `Submit` button. The python application will invoke the predictive model and a risk prediction & probability is returned:
 
-![Get the churn percentage as a result](../.gitbook/assets/images/deployment/flaskapp-output.png)
+![Get the risk percentage as a result](../.gitbook/assets/images/deployment/flaskapp-output.png)
 
 ## Conclusion
 

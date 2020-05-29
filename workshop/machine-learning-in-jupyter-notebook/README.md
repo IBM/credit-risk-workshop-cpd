@@ -65,7 +65,7 @@ You will run cells individually by highlighting each cell, then either click the
 
 * We will be saving and deploying the model to the Watson Machine Learning service within our Cloud Pak for Data platform. In the next code cell, be sure to update the `wml_credentials` variable.
 
-  * The url should be the hostname of the Cloud Pak for Data instance.
+  * The url should be the full hostname of the Cloud Pak for Data instance, which you can copy from your browsers address bar (for example, it may look like this: `https://zen.clustername.us-east.containers.appdomain.cloud`)
   * The username and password should be the same credentials you used to log into Cloud Pak for Data.
 
 * You will update the `MODEL_NAME` and `DEPLOYMENT_SPACE_NAME` variables. Use a unique and easily identifiable model name.

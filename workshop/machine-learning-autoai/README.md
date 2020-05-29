@@ -75,10 +75,7 @@ You can review each pipeline and select to deploy the top performing pipeline fr
 
 * You receive a notification to indicate that your model is saved to your project. Go back to your project main page by clicking on the project name on the navigator on the top left:
 
-![Model notification](../.gitbook/assets/images/autoai/autoai-model-notification.png)
-
-old:
-![choose AI model](../.gitbook/assets/images/autoai/autoai-project-navigator.png)
+![Select Project](../.gitbook/assets/images/autoai/autoai-project-navigator.png)
 
 * You will see the new model under *Models* section of the *Assets* page:
 
@@ -98,14 +95,11 @@ old:
 
 * You should have already created a deployment space in the *pre-work* section of the workshop. Click on `Existing` and choose that deployment then click the `Associate` button.
 
-![Create Deployment Space](../.gitbook/assets/images/autoai/autoai-create-deployment-space.png)
-
-OLD:
-![deployment space](../.gitbook/assets/images/autoai/autoai-view-deployment.png)
-
 * From the model page, once again click on the `Promote to deployment space`.
 
 * This time you will see a notification that the model was promoted to the deployment space succesfully.
+
+![Create Deployment Space](../.gitbook/assets/images/autoai/autoai-view-deployment.png)
 
 **We've successfully built and saved a machine learning model using AutoAI. Congratulations!**
 
