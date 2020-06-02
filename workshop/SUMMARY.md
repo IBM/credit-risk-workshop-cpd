@@ -8,6 +8,8 @@
 
 * [Data Connection and Virtualization for Admins](data-connection-and-virtualization/README.md)
 * [Import Data to Project](addData/README.md)
+* [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md)
+* [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md)
 * [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md)
 * [Machine Learning with AutoAI](machine-learning-autoai/README.md)
 * [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md)
