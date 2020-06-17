@@ -6,6 +6,7 @@ We'll use several jupyter notebook and instructions:
 
 * [These instructions for basic OpenScale setup](./README.md)
 * [Fairness and Explainiblity monitors](./FAIRNESS-EXPLAINABILITY-README.md)
+* [Quality monitor and Feedback logging](./QUALITY-FEEDBACK-README.md)
 
 ## Steps for basic OpenScale setup
 
@@ -128,7 +129,6 @@ Now that you have created a machine learning model and configured OpenScale, you
 
 Do not worry if the name you see does not match exactly with the screenshot. The deployment name you see will correspond to the variable used in the Jupyter notebook
 
-### Confidence Distribution
 
 * From the 'Model Monitors' tab, click on the deployment tile you have created. You will a some *Analytics* data, with the Date Range set to *Today*. We've just configured OpenScale to monitor our deployment, and sent 1 scoring request, so there is not much here.
 
