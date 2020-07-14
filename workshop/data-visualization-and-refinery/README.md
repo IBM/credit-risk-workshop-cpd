@@ -43,11 +43,11 @@ We'll start out in the *Data* tab.
 
 ![Filter Operation](../.gitbook/assets/images/dr/dr-filter-operation.png)
 
-* We want to make sure that there are no empty values, and there may to be some for the *STREETADDRESS* column, so let's fix that. Click on `filter` and choose the *STREETADDRESS* column from the drop down, then the Operator *Is empty*, then `Apply`:
+* We want to make sure that there are no empty values, and there may to be some for the *StreetAddress* column, so let's fix that. Click on `filter` and choose the *StreetAddress* column from the drop down, then the Operator *Is empty*, then `Apply`:
 
 ![Filter is empty](../.gitbook/assets/images/dr/dr-filter-is-empty.png)
 
-If nothing shows up in this filter, it means that the 1000 rows we are previewing do not have any empty values for *STREETADDRESS*. On the other hand, we may see some empty values.
+If nothing shows up in this filter, it means that the 1000 rows we are previewing do not have any empty values for *StreetAddress*. On the other hand, we may see some empty values.
 
 * Now, click on the counter-clockwise "back" arrow, to remove the filter. Alternately, we can just remove the filter under the *Steps*:
 
@@ -55,11 +55,11 @@ If nothing shows up in this filter, it means that the 1000 rows we are previewin
 
 If the emtpy rows show up, you can remove them.
 
-* Choose the Operation *Remove empty rows*, select the *STREETADDRESS* column, and click `Apply`:
+* Choose the Operation *Remove empty rows*, select the *StreetAddress* column, and click `Apply`:
 
 ![Remove empty rows](../.gitbook/assets/images/dr/dr-remove-empty-rows.png)
 
-Let's say we've decide that there are features (columns) that we don't want to use later in our Machine Learning model. We'll remove the `FIRSTNAME,LASTNAME,EMAIL,STREETADDRESS,CITY,STATE,POSTALCODE` columns.
+Let's say we've decide that there are features (columns) that we don't want to use later in our Machine Learning model. We'll remove the `FirstName,LastName,Email,StreetAddress,City,State,PostalCode` columns.
 
 * For each columnn to be removed, go to `Operation` -> `Remove` and choose the column. Click `Next` and then `Apply`. The columns will be removed.
 
@@ -111,18 +111,18 @@ You can get insight into the data from the histograms:
 
 ### 6. Visualize with charts and graphs
 
-* Choose the *Visualizations* tab to bring up an option to choose which columns to visualize. Under *Columns to Visualize* choose *AGE* and click `Visualize data`:
+* Choose the *Visualizations* tab to bring up an option to choose which columns to visualize. Under *Columns to Visualize* choose *Age* and click `Visualize data`:
 
-![Visualize AGE column](../.gitbook/assets/images/dr/dr-vis-choose-column-age.png)
+![Visualize Age column](../.gitbook/assets/images/dr/dr-vis-choose-column-age.png)
 
 We first see the data in a histogram by default. Looking at the distribution can give us insights. For example, there is a large bulk of applicants in the 18-20 year old range. Hover over that bar in the histogram and you can see that it is exactly 82 people in this sample data set.
 The next histogram bar for 20-22 year olds is much smaller, with only 34 members in this cohort. These insights can help with finding gaps in our data, and aid in preventing bias and building a more accurate predictive model.
 
 * You can choose other chart types. We'll pick `Scatter plot` next by clicking on it:
 
-![Visualize AGE and LOANAMOUNT histogram](../.gitbook/assets/images/dr/dr-vis-scatter-plot.png)
+![Visualize Age and LoanAmount histogram](../.gitbook/assets/images/dr/dr-vis-scatter-plot.png)
 
-* In the scatter plot, choose *AGE* for the x-axis and *LOANAMOUNT* for the y-axis. Choose *AGE* for the Color map and *LOANAMONT* for the Size map. Give it a title and subtitle.
+* In the scatter plot, choose *Age* for the x-axis and *LoanAmount* for the y-axis. Choose *Age* for the Color map and *LoanAmount* for the Size map. Give it a title and subtitle.
 
 You can see an expected correlation between age and loan amount, with a nice graphic representation using color and size. Play around with the parameters, and feel free to choose other columns to visualize. You can also choose other Chart types.
 

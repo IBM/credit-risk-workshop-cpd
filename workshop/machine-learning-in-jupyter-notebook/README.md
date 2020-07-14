@@ -42,9 +42,9 @@ You will run cells individually by highlighting each cell, then either click the
   * For your dataset, Click `Insert to code` and choose `Insert Pandas DataFrame`. The code to bring the data into the notebook environment and create a Pandas DataFrame will be added to the cell below.
   * Run the cell and you will see the first five rows of our dataset.
 
-![Add the data as a Pandas DataFrame](../.gitbook/assets/images/wml/wml-4-add-dataframe.png)
+![Add the data as a Pandas DataFrame](../.gitbook/assets/images/wml/wml-add-dataframe.png)
 
-![Generated code to handle Pandas DataFrame](../.gitbook/assets/images/wml/wml-5-generated-code-dataframe.png)
+![Generated code to handle Pandas DataFrame](../.gitbook/assets/images/wml/wml-generated-code-dataframe.png)
 
 > **IMPORTANT**: Since we are using generated code to import the data, you will need to update the next cell to assign the `df` variable. Copy the variable that was generated in the previous cell ( it will look like `df=data_df_1`, `data_df_2`, etc) and assign it to the `df` variable (for example `df=df_data_1`).
 
