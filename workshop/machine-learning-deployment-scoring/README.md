@@ -60,7 +60,7 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 {
   "input_data": [
     {
-      "fields": [ "CHECKINGSTATUS", "LOANDURATION", "CREDITHISTORY", "LOANPURPOSE", "LOANAMOUNT", "EXISTINGSAVINGS", "EMPLOYMENTDURATION", "INSTALLMENTPERCENT", "SEX", "OTHERSONLOAN", "CURRENTRESIDENCEDURATION", "OWNSPROPERTY", "AGE", "INSTALLMENTPLANS", "HOUSING", "EXISTINGCREDITSCOUNT", "JOB", "DEPENDENTS", "TELEPHONE", "FOREIGNWORKER"],
+      "fields": [ "CheckingStatus", "LoanDuration", "CreditHistory", "LoanPurpose", "LoanAmount", "ExistingSavings", "EmploymentDuration", "InstallmentPercent", "Sex", "OthersOnLoan", "CurrentResidenceDuration", "OwnsProperty", "Age", "InstallmentPlans", "Housing", "ExistingCreditsCount", "Job", "Dependents", "Telephone", "ForeignWorker"],
       "values": [
         [ "no_checking", 13, "credits_paid_to_date", "car_new", 1343, "100_to_500", "1_to_4", 2, "female", "none", 3, "savings_insurance", 46, "none", "own", 2, "skilled", 1, "none", "yes"]
       ]
@@ -113,7 +113,7 @@ export URL=<value-of-endpoint>
 * Now run this curl command from a terminal to invoke the model with the same payload we used previousy:
 
 ```bash
-curl -k -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "Authorization: Bearer  $WML_AUTH_TOKEN" -d '{"input_data": [{"fields": [ "CHECKINGSTATUS", "LOANDURATION", "CREDITHISTORY", "LOANPURPOSE", "LOANAMOUNT", "EXISTINGSAVINGS", "EMPLOYMENTDURATION", "INSTALLMENTPERCENT", "SEX", "OTHERSONLOAN", "CURRENTRESIDENCEDURATION", "OWNSPROPERTY", "AGE", "INSTALLMENTPLANS", "HOUSING", "EXISTINGCREDITSCOUNT", "JOB", "DEPENDENTS", "TELEPHONE", "FOREIGNWORKER"],"values": [[ "no_checking", 13, "credits_paid_to_date", "car_new", 1343, "100_to_500", "1_to_4", 2, "female", "none", 3, "savings_insurance", 46, "none", "own", 2, "skilled", 1, "none", "yes"]]}]}' $URL
+curl -k -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "Authorization: Bearer  $WML_AUTH_TOKEN" -d '{"input_data": [{"fields": [ "CheckingStatus", "LoanDuration", "CreditHistory", "LoanPurpose", "LoanAmount", "ExistingSavings", "EmploymentDuration", "InstallmentPercent", "Sex", "OthersOnLoan", "CurrentResidenceDuration", "OwnsProperty", "Age", "InstallmentPlans", "Housing", "ExistingCreditsCount", "Job", "Dependents", "Telephone", "ForeignWorker"],"values": [[ "no_checking", 13, "credits_paid_to_date", "car_new", 1343, "100_to_500", "1_to_4", 2, "female", "none", 3, "savings_insurance", 46, "none", "own", 2, "skilled", 1, "none", "yes"]]}]}' $URL
 ```
 
 * A json string will be returned with the response, including a  prediction from the model (i.e a "Risk" or "No Risk" at the end indicating the prediction of this loan representing risk).
@@ -130,7 +130,7 @@ Lets start by creating the deployment:
 
 * Choose the deployment space you created previously by clicking on the name of the space.
 
-* In your space overview, select the model name that you want to create a deployment for just built in the notebook and click the 3 dots under `Actions`, and choose `Deploy`:
+* In your space overview, select the model name that you want to create a deployment for just built in the notebook and click the 3 dots under `Actions`, and choose `Deploy` (If you've already created an *Online* deployment for this model, click `+ New Deployment`):
 
 > Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.3` runtime.
 

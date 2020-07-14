@@ -1,4 +1,4 @@
-CUSTOMERID,LOANDURATION,LOANPURPOSE,LOANAMOUNT,INSTALLMENTPERCENT,OTHERSONLOAN,RISK
+CustomerID,LoanDuration,LoanPurpose,LoanAmount,InstallmentPercent,OthersOnLoan,Risk
 713a336c-a255-4e2d-9d57-90b3e99e2f06,31,other,1889,3,none,No Risk
 140b363f-a3fe-4828-a33f-7284dfdb3969,18,car_new,462,2,none,No Risk
 43b7b51d-5eda-4860-b461-ebef3d3436f4,15,furniture,250,2,none,No Risk
