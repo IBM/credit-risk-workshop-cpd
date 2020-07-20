@@ -1,4 +1,4 @@
-CUSTOMERID,EMPLOYMENTDURATION,SEX,CURRENTRESIDENCEDURATION,OWNSPROPERTY,AGE,HOUSING,JOB,DEPENDENTS,TELEPHONE,FOREIGNWORKER,FIRSTNAME,LASTNAME,EMAIL,STREETADDRESS,CITY,STATE,POSTALCODE
+CustomerID,EmploymentDuration,Sex,CurrentResidenceDuration,OwnsProperty,Age,Housing,Job,Dependents,Telephone,ForeignWorker,FirstName,LastName,Email,StreetAddress,City,State,PostalCode
 e97fa77b-48da-4907-a4fa-ede36c1e968f,1_to_4,male,4,savings_insurance,40,own,skilled,1,none,yes,John,Villan,JVillan90@young.net,,,WA,98188
 5e9a606e-c657-49fa-a725-0bd796b003db,1_to_4,male,2,savings_insurance,36,own,skilled,1,yes,yes,David,Moe,DMoe2@contreras.biz,,,CT,6118
 713a336c-a255-4e2d-9d57-90b3e99e2f06,less_1,female,3,savings_insurance,32,own,skilled,1,none,yes,Stephanie,Reynolds,SReynolds54@yahoo.com,396 Reyes Dam Apt. 721,Lake Troymouth,TX,73301
