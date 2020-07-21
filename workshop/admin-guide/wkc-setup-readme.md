@@ -11,7 +11,7 @@ This will all be done in a Db2 Warehouse on IBM Cloud. Other versions of DB2 cou
 
 ### Create the Schemas and Tables
 
-* Run the Organize Experience.sql script using the run sql feature of the Db2 Service Edition to create the tables.
+* Run the [OrganizeExperience.sql](scripts/OrganizeExperience.sql) script using the run sql feature of the Db2 Service Edition to create the tables.
 
 It will create 3 schemas - CUSTOMER, INSURANCE and MORTGAGE and 10 tables.
 
