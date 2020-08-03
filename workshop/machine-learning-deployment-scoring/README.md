@@ -136,7 +136,7 @@ Lets start by creating the deployment:
 
 ![Actions Deploy model](../.gitbook/assets/images/deployment/deploy-spark-model.png)
 
-* On the 'Configure and deploy' screen, choose `Batch` for the *Deployment Type*, give the Deployment a name and optional description. The default values for environment definitions, hardware definition and nodes can be left (in scenarios with large or frequent batch jobs, you may choose to scale these values up). Click `Create`:
+* On the 'Configure and deploy' screen, choose `Batch` for the *Deployment Type*, give the Deployment a name and optional description. The default values for environment definitions, and the smallest choice for hardware definition, can be used (in scenarios with large or frequent batch jobs, you may choose to scale the hardware up). Click `Create`:
 
 ![Batch Deployment Create](../.gitbook/assets/images/deployment/deploy-batch-deployment.png)
 
@@ -156,7 +156,7 @@ The Jupyter notebook is already included as an asset in the project you imported
 
 * From the project overview page, *click* on the `Assets` tab to open the assets page where your project assets are stored and organized.
 
-* Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `machinelearning-churn-batchscoring` notebook.
+* Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `machinelearning-creditrisk-batchscoring` notebook.
 
 ![Notebook Open](../.gitbook/assets/images/deployment/deploy_batch_open_nb.png)
 
