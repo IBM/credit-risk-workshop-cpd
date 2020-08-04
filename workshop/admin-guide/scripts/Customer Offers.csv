@@ -1,0 +1,420 @@
+ID,GENDER,STATUS,TOTAL_DOLLAR_VALUE_TRADED,TOTAL_UNITS_TRADED,OFFER_ACCEPTED,OFFER_COST
+1,F,M,29782.98,45,2 Free Trades,10
+3,M,S,26132.61,32,5 Free Trades and Consult,50
+8,M,S,9380.94,38,5 Free Trades,20
+10,F,M,17441.74,49,2 Free Trades,10
+24,F,S,21372.14,293,2 Free Trades,10
+25,M,M,0.00,0,5 Free Trades and Consult,50
+26,F,M,12371.24,163,2 Free Trades,10
+37,M,M,14221.42,10,5 Free Trades and Consult,50
+38,F,M,18851.89,31,5 Free Trades and Consult,50
+47,M,S,9370.94,11,5 Free Trades and Consult,50
+49,M,M,22862.29,16,5 Free Trades,20
+50,F,S,1900.19,25,5 Free Trades and Consult,50
+51,F,S,29442.94,104,2 Free Trades,10
+52,F,S,22382.24,40,5 Free Trades and Consult,50
+55,M,S,25532.55,179,2 Free Trades,10
+56,M,S,27972.80,58,2 Free Trades,10
+61,F,S,22152.22,34,5 Free Trades and Consult,50
+63,F,M,20592.06,112,5 Free Trades,20
+65,F,M,15541.55,12,5 Free Trades and Consult,50
+68,F,S,28522.85,161,5 Free Trades and Consult,50
+69,M,M,6110.61,58,5 Free Trades and Consult,50
+72,F,M,11551.16,15,2 Free Trades,10
+76,F,S,29922.99,8,2 Free Trades,10
+77,M,M,680.07,10,5 Free Trades,20
+79,F,M,11961.20,25,2 Free Trades,10
+80,M,M,16011.60,10,2 Free Trades,10
+83,M,M,29432.94,10,5 Free Trades,20
+86,F,S,11721.17,28,5 Free Trades and Consult,50
+88,F,M,21812.18,29,5 Free Trades and Consult,50
+98,M,S,24072.41,27,2 Free Trades,10
+99,F,M,25872.59,68,5 Free Trades and Consult,50
+100,F,M,15251.53,70,2 Free Trades,10
+105,F,S,2200.22,9,5 Free Trades,20
+112,F,M,17581.76,8,2 Free Trades,10
+113,F,M,13561.36,144,2 Free Trades,10
+114,M,M,10911.09,93,2 Free Trades,10
+118,F,M,25002.50,10,5 Free Trades and Consult,50
+122,M,M,0.00,0,5 Free Trades and Consult,50
+123,F,M,80.01,10,5 Free Trades,20
+127,F,S,20152.02,37,5 Free Trades and Consult,50
+128,M,M,21632.16,139,2 Free Trades,10
+145,F,S,20412.04,80,5 Free Trades and Consult,50
+148,M,S,22992.30,65,5 Free Trades and Consult,50
+149,M,S,12341.23,7,5 Free Trades and Consult,50
+156,F,S,22962.30,75,5 Free Trades and Consult,50
+158,F,M,21942.19,256,2 Free Trades,10
+167,F,S,18971.90,104,2 Free Trades,10
+168,F,M,170.02,10,5 Free Trades,20
+170,F,M,29682.97,59,2 Free Trades,10
+172,M,M,26402.64,17,2 Free Trades,10
+175,M,S,4910.49,82,5 Free Trades and Consult,50
+177,M,M,6700.67,46,5 Free Trades and Consult,50
+181,M,M,26612.66,236,2 Free Trades,10
+183,F,S,25032.50,54,5 Free Trades and Consult,50
+187,M,M,6900.69,128,5 Free Trades and Consult,50
+188,F,M,0.00,0,5 Free Trades and Consult,50
+189,F,S,1710.17,116,5 Free Trades and Consult,50
+197,F,M,27392.74,51,5 Free Trades,20
+199,F,S,20442.04,100,5 Free Trades and Consult,50
+203,F,S,10871.09,32,5 Free Trades and Consult,50
+204,M,M,21872.19,192,2 Free Trades,10
+210,F,M,11141.11,12,2 Free Trades,10
+211,F,M,2400.24,50,5 Free Trades and Consult,50
+212,F,S,0.00,0,5 Free Trades and Consult,50
+217,M,M,0.00,0,5 Free Trades and Consult,50
+219,M,M,2840.28,24,5 Free Trades,20
+221,M,M,1030.10,83,5 Free Trades,20
+225,M,M,22202.22,82,5 Free Trades and Consult,50
+235,F,M,13961.40,96,2 Free Trades,10
+236,F,M,21002.10,6,5 Free Trades and Consult,50
+241,M,S,3670.37,25,5 Free Trades,20
+249,F,M,12401.24,89,5 Free Trades and Consult,50
+253,M,S,5030.50,76,5 Free Trades and Consult,50
+258,F,M,18601.86,8,2 Free Trades,10
+261,F,S,13351.34,8,5 Free Trades and Consult,50
+263,F,M,28702.87,60,5 Free Trades and Consult,50
+273,M,S,21332.13,87,2 Free Trades,10
+275,F,S,18021.80,136,5 Free Trades and Consult,50
+292,F,M,26492.65,12,5 Free Trades and Consult,50
+293,F,S,13191.32,87,5 Free Trades and Consult,50
+300,F,M,3280.33,11,5 Free Trades and Consult,50
+306,M,S,18311.83,59,2 Free Trades,10
+308,M,M,26912.69,9,5 Free Trades and Consult,50
+318,F,M,8210.82,45,5 Free Trades,20
+324,F,M,22862.29,16,5 Free Trades and Consult,50
+330,M,S,25532.55,179,5 Free Trades and Consult,50
+353,M,M,27422.74,23,5 Free Trades and Consult,50
+354,F,M,11961.20,25,5 Free Trades and Consult,50
+358,M,M,29432.94,10,2 Free Trades,10
+362,F,S,11911.19,95,2 Free Trades,10
+368,F,M,25942.59,32,5 Free Trades and Consult,50
+374,M,M,25872.59,68,5 Free Trades and Consult,50
+382,M,M,5830.58,63,5 Free Trades,20
+385,M,S,22432.24,41,2 Free Trades,10
+393,M,M,25002.50,10,2 Free Trades,10
+395,F,M,3930.39,26,5 Free Trades and Consult,50
+396,F,M,17481.75,39,5 Free Trades and Consult,50
+400,M,S,22822.28,63,2 Free Trades,10
+403,M,S,20152.02,37,5 Free Trades and Consult,50
+406,M,S,2020.20,36,5 Free Trades,20
+407,F,M,7940.79,65,5 Free Trades and Consult,50
+408,F,S,14941.49,149,5 Free Trades,20
+417,F,M,23702.37,126,2 Free Trades,10
+421,F,S,8320.83,55,5 Free Trades,20
+422,M,S,14271.43,45,2 Free Trades,10
+424,F,S,12341.23,7,5 Free Trades and Consult,50
+426,F,M,22242.22,64,2 Free Trades,10
+427,M,S,14391.44,8,2 Free Trades,10
+432,F,M,8740.87,22,5 Free Trades,20
+433,M,M,21942.19,256,5 Free Trades and Consult,50
+435,F,M,7700.77,43,5 Free Trades,20
+445,M,M,15271.53,25,5 Free Trades and Consult,50
+452,F,M,6690.67,43,5 Free Trades and Consult,50
+453,M,S,6970.70,184,5 Free Trades,20
+457,F,M,0.00,0,5 Free Trades and Consult,50
+460,M,S,25032.50,54,2 Free Trades,10
+461,M,S,20012.00,84,2 Free Trades,10
+472,M,M,24392.44,60,5 Free Trades and Consult,50
+474,F,M,27392.74,51,2 Free Trades,10
+481,M,M,21872.19,192,2 Free Trades,10
+497,F,M,1030.10,83,5 Free Trades,20
+506,F,S,26002.60,61,5 Free Trades,20
+508,M,S,33003.30,9,5 Free Trades and Consult,50
+510,F,S,28452.85,106,2 Free Trades,10
+513,F,M,29492.95,13,2 Free Trades,10
+516,M,M,11811.18,5,5 Free Trades and Consult,50
+517,F,S,3670.37,25,5 Free Trades and Consult,50
+523,F,S,2000.20,43,5 Free Trades and Consult,50
+527,F,M,12861.29,18,2 Free Trades,10
+530,M,M,21412.14,85,5 Free Trades and Consult,50
+531,M,S,3010.30,37,5 Free Trades,20
+535,F,M,20832.08,117,5 Free Trades and Consult,50
+543,M,S,0.00,0,5 Free Trades and Consult,50
+554,M,M,6890.69,6,5 Free Trades,20
+556,M,M,29782.98,45,5 Free Trades and Consult,50
+558,M,S,26132.61,32,5 Free Trades and Consult,50
+560,M,M,12451.25,46,5 Free Trades and Consult,50
+566,F,M,22392.24,178,2 Free Trades,10
+568,F,S,22172.22,13,5 Free Trades and Consult,50
+572,F,M,13321.33,56,2 Free Trades,10
+578,M,M,3280.33,11,5 Free Trades and Consult,50
+581,F,S,21372.14,293,5 Free Trades and Consult,50
+583,M,M,12371.24,163,2 Free Trades,10
+586,M,M,20452.05,39,5 Free Trades and Consult,50
+589,F,D,23762.38,50,5 Free Trades and Consult,50
+591,F,S,20972.10,13,2 Free Trades,10
+592,M,S,11701.17,47,2 Free Trades,10
+600,F,S,16211.62,125,5 Free Trades and Consult,50
+603,F,M,20532.05,41,5 Free Trades and Consult,50
+614,M,M,27722.77,57,2 Free Trades,10
+615,F,M,3040.30,44,5 Free Trades,20
+616,F,S,22152.22,34,2 Free Trades,10
+625,F,M,26992.70,13,2 Free Trades,10
+629,F,S,2010.20,150,5 Free Trades,20
+631,M,S,29922.99,8,2 Free Trades,10
+632,M,M,680.07,10,5 Free Trades and Consult,50
+634,F,M,11961.20,25,5 Free Trades and Consult,50
+636,M,S,23232.32,80,5 Free Trades and Consult,50
+642,M,S,11911.19,95,5 Free Trades and Consult,50
+645,M,M,23282.33,168,2 Free Trades,10
+648,M,M,25942.59,32,2 Free Trades,10
+653,M,M,29642.96,90,2 Free Trades,10
+654,M,D,24072.41,27,5 Free Trades and Consult,50
+660,F,M,4910.49,6,5 Free Trades and Consult,50
+661,M,S,2200.22,9,5 Free Trades and Consult,50
+664,F,M,6080.61,30,5 Free Trades,20
+666,M,S,22432.24,41,2 Free Trades,10
+669,M,M,13561.36,144,5 Free Trades and Consult,50
+670,M,M,10911.09,93,5 Free Trades,20
+673,F,M,13721.37,11,5 Free Trades and Consult,50
+680,M,M,5720.57,25,5 Free Trades and Consult,50
+684,F,M,0.00,0,5 Free Trades and Consult,50
+696,F,M,10811.08,13,5 Free Trades and Consult,50
+701,F,S,1460.15,43,5 Free Trades and Consult,50
+702,M,M,11551.16,48,5 Free Trades and Consult,50
+703,M,M,11701.17,28,5 Free Trades and Consult,50
+707,M,S,18461.85,20,5 Free Trades and Consult,50
+709,M,M,28922.89,45,5 Free Trades and Consult,50
+712,M,M,23702.37,126,2 Free Trades,10
+716,M,S,20412.04,80,5 Free Trades and Consult,50
+720,M,S,9570.96,111,5 Free Trades and Consult,50
+722,M,S,22992.30,65,2 Free Trades,10
+728,F,S,5970.60,27,5 Free Trades and Consult,50
+738,F,M,13931.39,78,2 Free Trades,10
+741,F,S,28422.84,113,5 Free Trades and Consult,50
+743,F,S,14421.44,73,5 Free Trades and Consult,50
+745,M,M,16201.62,18,2 Free Trades,10
+752,M,M,15271.53,25,5 Free Trades and Consult,50
+759,F,M,6690.67,43,5 Free Trades and Consult,50
+760,F,S,6970.70,184,5 Free Trades,20
+761,F,M,6700.67,46,5 Free Trades and Consult,50
+764,F,M,0.00,0,5 Free Trades and Consult,50
+767,F,S,25032.50,54,2 Free Trades,10
+771,F,M,6900.69,128,5 Free Trades,20
+772,M,M,0.00,0,5 Free Trades and Consult,50
+774,F,M,21682.17,17,5 Free Trades and Consult,50
+777,M,M,0.00,0,5 Free Trades and Consult,50
+782,F,S,20442.04,100,5 Free Trades and Consult,50
+784,M,M,19241.92,118,2 Free Trades,10
+785,M,M,17011.70,27,5 Free Trades,20
+791,F,S,17491.75,106,2 Free Trades,10
+795,M,M,9900.99,8,5 Free Trades,20
+796,M,M,5590.56,23,5 Free Trades,20
+800,M,M,30003.00,160,2 Free Trades,10
+804,M,S,3760.38,5,5 Free Trades,20
+809,M,S,32003.20,99,5 Free Trades and Consult,50
+810,M,M,39003.90,26,2 Free Trades,10
+812,M,S,43004.30,61,2 Free Trades,10
+813,M,S,39003.90,35,5 Free Trades,20
+817,F,M,13961.40,96,2 Free Trades,10
+820,F,S,14001.40,88,2 Free Trades,10
+826,M,M,2000.20,40,5 Free Trades,20
+829,M,S,1000.10,43,5 Free Trades,20
+831,M,M,12401.24,89,2 Free Trades,10
+833,M,M,12861.29,18,2 Free Trades,10
+836,M,M,21412.14,85,5 Free Trades and Consult,50
+840,M,M,18601.86,8,2 Free Trades,10
+843,M,S,13351.34,8,2 Free Trades,10
+854,M,M,7740.77,6,5 Free Trades,20
+855,F,S,21332.13,87,2 Free Trades,10
+860,F,M,2800.28,11,5 Free Trades and Consult,50
+864,F,S,26132.61,32,5 Free Trades and Consult,50
+871,M,M,17441.74,49,2 Free Trades,10
+876,F,S,26492.65,12,5 Free Trades and Consult,50
+878,F,M,13321.33,56,2 Free Trades,10
+879,M,S,11541.15,22,5 Free Trades and Consult,50
+880,F,S,14831.48,25,2 Free Trades,10
+882,F,M,16791.68,81,5 Free Trades and Consult,50
+885,F,S,11051.11,50,5 Free Trades and Consult,50
+886,M,S,21372.14,293,2 Free Trades,10
+887,F,M,0.00,0,5 Free Trades and Consult,50
+899,F,M,18851.89,31,5 Free Trades and Consult,50
+909,F,M,2150.22,85,5 Free Trades and Consult,50
+914,F,S,25532.55,179,2 Free Trades,10
+915,F,S,27972.80,58,5 Free Trades and Consult,50
+918,F,M,27722.77,57,5 Free Trades,20
+919,M,M,3040.30,44,5 Free Trades,20
+922,M,S,0.00,0,5 Free Trades and Consult,50
+937,M,M,680.07,10,5 Free Trades and Consult,50
+939,F,M,11961.20,25,2 Free Trades,10
+942,M,M,10361.04,57,5 Free Trades,20
+947,F,S,11911.19,95,5 Free Trades and Consult,50
+948,F,M,21812.18,29,2 Free Trades,10
+953,F,S,20712.07,23,5 Free Trades and Consult,50
+956,M,M,7670.77,32,5 Free Trades and Consult,50
+959,F,M,25872.59,68,2 Free Trades,10
+960,M,M,15251.53,70,2 Free Trades,10
+969,M,S,22432.24,41,5 Free Trades and Consult,50
+971,F,M,17581.76,8,2 Free Trades,10
+972,M,M,13561.36,144,5 Free Trades and Consult,50
+979,M,M,3930.39,26,5 Free Trades and Consult,50
+989,F,S,2020.20,36,5 Free Trades,20
+999,F,M,23702.37,126,2 Free Trades,10
+1004,F,S,14271.43,45,5 Free Trades and Consult,50
+1005,F,S,22992.30,65,2 Free Trades,10
+1006,M,S,12341.23,7,5 Free Trades and Consult,50
+1008,F,M,22242.22,64,5 Free Trades and Consult,50
+1009,M,S,14391.44,8,2 Free Trades,10
+1010,M,S,29672.97,99,2 Free Trades,10
+1015,F,M,21942.19,256,5 Free Trades and Consult,50
+1018,F,S,14421.44,73,5 Free Trades and Consult,50
+1023,M,M,17371.74,51,2 Free Trades,10
+1029,F,D,18941.89,25,2 Free Trades,10
+1034,F,S,27282.73,93,2 Free Trades,10
+1046,F,M,21682.17,17,2 Free Trades,10
+1047,F,M,43004.30,8,5 Free Trades and Consult,50
+1053,F,M,3000.30,65,5 Free Trades and Consult,50
+1054,M,M,19241.92,118,5 Free Trades and Consult,50
+1055,M,M,17011.70,27,2 Free Trades,10
+1056,M,S,10871.09,32,2 Free Trades,10
+1058,M,M,8650.87,77,5 Free Trades,20
+1066,M,S,5590.56,23,5 Free Trades,20
+1068,M,M,27702.77,124,2 Free Trades,10
+1073,M,M,1030.10,83,5 Free Trades,20
+1074,M,S,3760.38,5,5 Free Trades and Consult,50
+1078,F,M,11721.17,5,2 Free Trades,10
+1079,F,M,8560.86,99,5 Free Trades,20
+1081,M,S,45004.50,154,2 Free Trades,10
+1084,M,S,14001.40,9,2 Free Trades,10
+1085,M,S,25772.58,38,2 Free Trades,10
+1086,M,S,28452.85,106,2 Free Trades,10
+1087,M,M,13961.40,96,5 Free Trades and Consult,50
+1088,F,M,21002.10,6,2 Free Trades,10
+1090,F,S,14001.40,88,2 Free Trades,10
+1105,M,S,5030.50,76,5 Free Trades,20
+1108,M,S,20922.09,9,5 Free Trades and Consult,50
+1120,F,S,29112.91,9,2 Free Trades,10
+1123,F,M,16141.61,126,2 Free Trades,10
+1125,M,M,7740.77,6,5 Free Trades and Consult,50
+1128,M,D,18021.80,136,2 Free Trades,10
+1134,M,M,20222.02,13,2 Free Trades,10
+1138,M,M,22392.24,178,2 Free Trades,10
+1144,M,S,16041.60,10,5 Free Trades and Consult,50
+1154,M,S,22662.27,27,5 Free Trades and Consult,50
+1157,M,M,26992.70,13,5 Free Trades and Consult,50
+1165,F,M,29432.94,10,2 Free Trades,10
+1169,F,M,29642.96,90,5 Free Trades and Consult,50
+1175,M,M,10911.09,93,5 Free Trades and Consult,50
+1181,F,M,17481.75,39,5 Free Trades and Consult,50
+1191,F,S,18941.89,25,2 Free Trades,10
+1195,M,M,690.07,112,5 Free Trades and Consult,50
+1196,M,M,0.00,0,5 Free Trades and Consult,50
+1203,F,M,15321.53,6,5 Free Trades and Consult,50
+1206,M,M,11141.11,12,5 Free Trades and Consult,50
+1207,M,M,2400.24,50,5 Free Trades and Consult,50
+1216,F,S,3760.38,5,5 Free Trades,20
+1226,M,S,14001.40,9,5 Free Trades and Consult,50
+1228,F,S,28452.85,106,2 Free Trades,10
+1231,F,M,29492.95,13,5 Free Trades and Consult,50
+1234,M,M,5000.50,40,5 Free Trades and Consult,50
+1243,M,M,18601.86,8,2 Free Trades,10
+1244,F,M,20832.08,117,2 Free Trades,10
+1246,M,S,13351.34,8,2 Free Trades,10
+1248,M,M,28702.87,60,2 Free Trades,10
+1250,F,S,28822.88,97,5 Free Trades and Consult,50
+1254,F,S,23502.35,10,2 Free Trades,10
+1256,M,M,16021.60,114,5 Free Trades and Consult,50
+1260,F,S,18021.80,136,5 Free Trades and Consult,50
+1266,F,S,9380.94,38,5 Free Trades and Consult,50
+1270,M,S,11541.15,22,2 Free Trades,10
+1280,M,M,29862.99,52,5 Free Trades and Consult,50
+1287,F,S,3750.38,11,5 Free Trades,20
+1290,F,M,22792.28,20,5 Free Trades and Consult,50
+1292,M,M,27722.77,57,5 Free Trades,20
+1294,F,S,22152.22,34,2 Free Trades,10
+1296,F,M,8360.84,39,5 Free Trades and Consult,50
+1297,F,M,6110.61,58,5 Free Trades,20
+1303,F,M,27422.74,23,5 Free Trades and Consult,50
+1304,F,M,11961.20,25,5 Free Trades and Consult,50
+1305,F,M,16011.60,10,2 Free Trades,10
+1306,F,M,10361.04,57,5 Free Trades and Consult,50
+1311,M,M,29642.96,90,5 Free Trades and Consult,50
+1312,F,M,15251.53,70,5 Free Trades,20
+1320,F,M,13721.37,11,5 Free Trades and Consult,50
+1323,F,M,17481.75,39,2 Free Trades,10
+1327,M,S,20412.04,80,5 Free Trades and Consult,50
+1330,F,M,21942.19,256,2 Free Trades,10
+1356,M,S,3760.38,5,5 Free Trades and Consult,50
+1372,M,S,3670.37,25,5 Free Trades,20
+1376,F,S,20922.09,9,5 Free Trades and Consult,50
+1379,F,M,20832.08,117,5 Free Trades and Consult,50
+1389,F,S,23502.35,10,5 Free Trades,20
+1393,F,S,21332.13,87,2 Free Trades,10
+1410,F,S,22382.24,40,2 Free Trades,10
+1412,F,S,3750.38,11,5 Free Trades and Consult,50
+1416,M,S,26682.67,9,2 Free Trades,10
+1420,F,S,17001.70,137,2 Free Trades,10
+1421,F,M,29862.99,52,2 Free Trades,10
+1424,M,M,17061.71,41,5 Free Trades and Consult,50
+1443,F,M,11961.20,25,2 Free Trades,10
+1445,F,M,10361.04,57,5 Free Trades and Consult,50
+1448,M,M,290.03,22,5 Free Trades,20
+1452,M,S,5830.58,63,5 Free Trades and Consult,50
+1458,F,M,15701.57,8,5 Free Trades and Consult,50
+1464,M,M,4980.50,258,5 Free Trades,20
+1465,F,S,14941.49,149,2 Free Trades,10
+1467,M,S,12341.23,7,5 Free Trades and Consult,50
+1475,F,M,45004.50,8,2 Free Trades,10
+1476,F,M,690.07,112,5 Free Trades and Consult,50
+1477,M,M,19241.92,118,5 Free Trades and Consult,50
+1482,M,S,20862.09,19,5 Free Trades and Consult,50
+1483,M,M,15321.53,6,5 Free Trades and Consult,50
+1488,F,S,0.00,0,5 Free Trades and Consult,50
+1489,M,M,9900.99,8,5 Free Trades and Consult,50
+1493,M,M,2840.28,24,5 Free Trades and Consult,50
+1494,M,M,22462.25,43,5 Free Trades and Consult,50
+1496,M,S,3760.38,5,5 Free Trades and Consult,50
+1499,M,M,22202.22,82,5 Free Trades and Consult,50
+1504,M,S,25772.58,61,5 Free Trades and Consult,50
+1506,F,S,14001.40,9,2 Free Trades,10
+1509,F,M,13961.40,96,2 Free Trades,10
+1511,F,M,29492.95,13,5 Free Trades and Consult,50
+1512,F,S,3670.37,25,5 Free Trades,20
+1520,M,M,21642.16,87,5 Free Trades and Consult,50
+1527,M,S,29112.91,9,2 Free Trades,10
+1528,F,S,13471.35,40,2 Free Trades,10
+1530,F,M,16141.61,126,2 Free Trades,10
+1532,F,M,7740.77,6,5 Free Trades and Consult,50
+1538,F,M,12451.25,46,5 Free Trades and Consult,50
+1565,F,M,10101.01,9,2 Free Trades,10
+1568,F,S,3750.38,11,5 Free Trades,20
+1569,M,S,25532.55,179,2 Free Trades,10
+1570,M,M,29282.93,40,2 Free Trades,10
+1577,M,M,27722.77,57,2 Free Trades,10
+1580,M,S,22662.27,27,2 Free Trades,10
+1583,M,S,22472.25,28,5 Free Trades,20
+1584,M,M,13051.31,36,2 Free Trades,10
+1597,M,M,6080.61,30,5 Free Trades and Consult,50
+1598,M,M,17581.76,8,5 Free Trades and Consult,50
+1602,F,M,15701.57,8,5 Free Trades and Consult,50
+1611,F,S,12341.23,7,2 Free Trades,10
+1618,M,M,59005.90,8,5 Free Trades and Consult,50
+1622,F,S,10871.09,32,2 Free Trades,10
+1624,M,M,8650.87,77,5 Free Trades,20
+1628,F,M,8580.86,37,5 Free Trades and Consult,50
+1636,F,M,2840.28,24,5 Free Trades,20
+1638,F,M,1030.10,83,5 Free Trades,20
+1640,M,S,20892.09,106,5 Free Trades and Consult,50
+1643,M,M,11721.17,5,2 Free Trades,10
+1653,F,M,21002.10,6,5 Free Trades and Consult,50
+1655,M,S,3670.37,25,5 Free Trades,20
+1658,M,S,3010.30,37,5 Free Trades,20
+1659,M,S,20922.09,9,5 Free Trades and Consult,50
+1661,M,M,18601.86,8,5 Free Trades and Consult,50
+1665,F,M,490.05,15,5 Free Trades,20
+1667,F,M,24242.42,5,2 Free Trades,10
+1675,F,M,7740.77,6,5 Free Trades and Consult,50
+1677,F,S,870.09,11,5 Free Trades,20
+1681,M,M,12451.25,46,5 Free Trades and Consult,50
+1682,M,M,26522.65,32,5 Free Trades and Consult,50
+1685,F,D,9650.97,6,5 Free Trades,20
+1687,F,M,22392.24,178,2 Free Trades,10
+1688,M,S,11541.15,22,2 Free Trades,10
+1697,M,M,22792.28,20,5 Free Trades and Consult,50
+1701,M,S,22152.22,34,2 Free Trades,10
+1706,F,M,13051.31,36,5 Free Trades and Consult,50
+1708,F,M,27422.74,23,5 Free Trades and Consult,50
+1715,F,M,25942.59,32,5 Free Trades and Consult,50
+1716,F,M,5520.55,17,5 Free Trades and Consult,50
