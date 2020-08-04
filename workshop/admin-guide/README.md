@@ -126,9 +126,7 @@ In order for all workshop participants to have access to the data that you just 
 
 ### Setup the Enterprise catalog
 
-* Unzip [CP4dExperienceOrganizeArtifacts.zip](../../data/wkc/CP4dExperienceOrganizeArtifacts.zip)
-
-* Perform the steps in `Organize-Experience-Runbook.docx` to setup the WKC Enterprise catalog.
+* See the separate instructions to [setup WKC Enterprise Catalog](./wkc-setup-readme.md)
 
 * Go to `Organize` -> `Data discovery` then click `Workspaces` and `Add workspace`. Name it *Enterprise*.
 
@@ -147,6 +145,8 @@ In order for all workshop participants to have access to the data that you just 
 * Under `Select a workspace` choose `Enterprise`.
 
 * click the `Discover` button.
+
+> NOTE: All workshop attendess will need to be added to the Enterprise catalog as a Viewer and added to the Enterprise Catalog Data project as an Editor. They will not be able to view the Data Flow as a Viewer.
 
 ### WKC for admins
 
