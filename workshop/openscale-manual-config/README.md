@@ -35,17 +35,16 @@ In this lab will walk through the process of deploying a credit risk model and t
 
 It is assumed that an admin has already connected a database to OpenScale, and associated a Machine Learning Provider (in our case, Watson Machine Learning on Cloud Pak for Data).
 
-You have already provided a set of sample data to your model when you tested your deployed ML model in an earlier model of the workshop.
+You have already provided a set of sample data to your model when you [tested](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/credit-risk-workshop/machine-learning-deployment-scoring#test-online-model-deployment) your [deployed ML model](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/credit-risk-workshop/machine-learning-deployment-scoring#online-model-deployment) earlier in the workshop.
 
-For example, using the UI to test the deployed model, or using cURL or the Python app. Do this now if you have not already run a test.
+For example, using the UI to test the deployed model, or using cURL or the Python app. Do this now if you have not already run a [test](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/credit-risk-workshop/machine-learning-deployment-scoring#test-online-model-deployment).
 
 
 ## 2. Open the notebook
 
 If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) using the [CreditRiskProject.zip](https://github.ibm.com/IBMDeveloper/cp4d-workshop-credit-risk/blob/master/projects/CreditRiskProject.zip) file, your notebook will be present in that project, under the `Assets` tab:
 
-TODO: Replace with new image
-![Project from zip assets tab](../.gitbook/assets/images/aios/aios-notebook-zip-file-asset.png)
+![Project from zip assets tab](../.gitbook/assets/images/openscale-config/openscale-config-initial-notebook.png)
 
 You may now skip to the next step [Update credentials](#2-update-credentials)
 
@@ -70,8 +69,7 @@ https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/
 > * **Notebook**: [openscale-initial-setup.ipynb](../../notebooks/openscale-initial-setup.ipynb)
 > * **Notebook with output**: [openscale-initial-setup-with-output.ipynb](../../notebooks/with-output/openscale-initial-setup-with-output.ipynb)
 
-TODO: new image
-![Add notebook name and URL](../.gitbook/assets/images/openscale/openscale-add-notebook-url.png)
+![Add notebook name and URL](../.gitbook/assets/images/openscale-config/openscale-config-create-from-url.png)
 
 When the Jupyter notebook is loaded and the kernel is ready then we can start executing cells.
 
@@ -86,10 +84,6 @@ When the Jupyter notebook is loaded and the kernel is ready then we can start ex
 * For the `url` field, change `https://w.x.y.z` to use the URL your ICP cluster, i.e something like: `"url": "https://zen-cpd-zen.omid-cp4d-v5-2bef1f4b4097001da9502000c44fc2b2-0001.us-south.containers.appdomain.cloud"`.
 * For the `username`, use your Cloud Pak for Data login username.
 * For the `password`, user your Cloud Pak for Data login password.
-
-#### DATABASE_CREDENTIALS
-
-In order to setup the OpenScale DataMart to store the transaction and scoring data, you will need to provide the DATABASE_CREDENTIALS that are used to configure OpenScale. Your instructor will provide these for you.
 
 #### MODEL_NAME
 
