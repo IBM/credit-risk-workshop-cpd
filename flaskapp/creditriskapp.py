@@ -28,34 +28,34 @@ app.config.update(dict(
 ))
 
 strings = {
-    "CHECKINGSTATUS": ["no_checking", "less_0", "0_to_200", "greater_200"],
-    "CREDITHISTORY": ["outstanding_credit", "prior_payments_delayed", "credits_paid_to_date", "all_credits_paid_back", "no_credits"],
-    "EMPLOYMENTDURATION": ["unemployed", "less_1", "1_to_4", "4_to_7", "greater_7"],
-    "EXISTINGSAVINGS": ["unknown", "less_100", "100_to_500", "500_to_1000", "greater_1000"],
-    "FOREIGNWORKER": ["yes", "no"],
-    "HOUSING": ["own", "free", "rent"],
-    "INSTALLMENTPLANS": ["none", "stores", "bank"],
-    "JOB": ["skilled", "management_self-employed", "unemployed", "unskilled"],
-    "OWNSPROPERTY": ["car_other", "savings_insurance", "unknown", "real_estate"],
-    "SEX": ["female", "male"],
-    "TELEPHONE": ["yes", "none"],
-    "LOANPURPOSE": ["repairs", "appliances", "car_new", "furniture", "car_used", "business", "radio_tv", "education", "vacation", "other", "retraining"],
-    "OTHERSONLOAN": ["none", "co-applicant", "guarantor"]
+    "CheckingStatus": ["no_checking", "less_0", "0_to_200", "greater_200"],
+    "CreditHistory": ["outstanding_credit", "prior_payments_delayed", "credits_paid_to_date", "all_credits_paid_back", "no_credits"],
+    "EmploymentDuration": ["unemployed", "less_1", "1_to_4", "4_to_7", "greater_7"],
+    "ExistingSavings": ["unknown", "less_100", "100_to_500", "500_to_1000", "greater_1000"],
+    "ForeignWorker": ["yes", "no"],
+    "Housing": ["own", "free", "rent"],
+    "InstallmentPlans": ["none", "stores", "bank"],
+    "Job": ["skilled", "management_self-employed", "unemployed", "unskilled"],
+    "OwnsProperty": ["car_other", "savings_insurance", "unknown", "real_estate"],
+    "Sex": ["female", "male"],
+    "Telephone": ["yes", "none"],
+    "LoanPurpose": ["repairs", "appliances", "car_new", "furniture", "car_used", "business", "radio_tv", "education", "vacation", "other", "retraining"],
+    "OthersOnLoan": ["none", "co-applicant", "guarantor"]
 }
 
 # min, max, default value
 floats = {
-    "INSTALLMENTPERCENT": [1, 10, 3],
-    "LOANAMOUNT": [200, 750000, 3500]
+    "InstallmentPercent": [1, 10, 3],
+    "LoanAmount": [200, 750000, 3500]
 }
 
 # min, max, default value
 ints = {
-    "AGE": [18, 80, 35],
-    "DEPENDENTS": [0, 10, 1],
-    "CURRENTRESIDENCEDURATION": [1, 10, 3],
-    "EXISTINGCREDITSCOUNT": [1, 7, 1],
-    "LOANDURATION": [1, 72, 24]
+    "Age": [18, 80, 35],
+    "Dependents": [0, 10, 1],
+    "CurrentResidenceDuration": [1, 10, 3],
+    "ExistingCreditsCount": [1, 7, 1],
+    "LoanDuration": [1, 72, 24]
 }
 
 labels = ["No Risk", "Risk"]
