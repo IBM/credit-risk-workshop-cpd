@@ -2,9 +2,14 @@
 
 This lab will demonstrate how to monitor your deployed machine learning model using Watson OpenScale. We will run several Jupyter notebooks to show the OpenScale APIs and how they configure various monitors. For each notebook, we'll use the OpenScale GUI tool to explore the results.
 
-## Steps
+We'll use several jupyter notebook and instructions:
 
-The lab contains the following steps:
+* [These instructions for basic OpenScale setup](./README.md)
+* [Fairness and Explainiblity monitors](./FAIRNESS-EXPLAINABILITY-README.md)
+
+## Steps for basic OpenScale setup
+
+The submodule contains the following steps:
 
 1. [Introduction](#1-introduction)
 1. [Open the notebook](#2-open-the-notebook)
@@ -123,7 +128,6 @@ Now that you have created a machine learning model and configured OpenScale, you
 
 Do not worry if the name you see does not match exactly with the screenshot. The deployment name you see will correspond to the variable used in the Jupyter notebook
 
-
 ### Confidence Distribution
 
 * From the 'Model Monitors' tab, click on the deployment tile you have created. You will a some *Analytics* data, with the Date Range set to *Today*. We've just configured OpenScale to monitor our deployment, and sent 1 scoring request, so there is not much here.
@@ -144,4 +148,4 @@ Some additional data is present in the *Chart Builder* tab.
 
 ## Recap
 
-We begun the process of monitoring our machine learning deployment with openscale. Proceed to the next sub-module.
+We begun the process of monitoring our machine learning deployment with openscale. Proceed to the next sub-module to [configure Fairness and Explainability monitors](FAIRNESS-EXPLAINABILITY-README.md)
