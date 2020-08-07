@@ -145,3 +145,4 @@ There is a lot of information available for a single transaction:
 You were able to configure *Fairness monitoring* of your machine learning deployment using the OpenScale python SDK and the APIs in a Juypyter notebook. You then scored 200 randomly selected records to provide enough information to calculate fairness, and run the monitor. After that, Explainability was enabled and an indiviudal transaction selected for later inspection.
 The OpenScale GUI tool was utilized to look at the Fairness monitor and the Explainability tool. Later in this workshop we will add more historical data to simulate a machine learning model deployed in production and the data available from these monitors.
 
+Proceed to the next sub-module to [configure Quality monitor and Feedback logging](./QUALITY-FEEDBACK-README.md)
