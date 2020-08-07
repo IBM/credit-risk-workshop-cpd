@@ -6,6 +6,7 @@ We'll use several jupyter notebook and instructions:
 
 * [These instructions for basic OpenScale setup](./README.md)
 * [Fairness and Explainiblity monitors](./FAIRNESS-EXPLAINABILITY-README.md)
+* [Quality monitor and Feedback logging](./QUALITY-FEEDBACK-README.md)
 
 ## Steps for basic OpenScale setup
 
