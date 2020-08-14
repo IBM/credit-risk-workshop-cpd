@@ -48,7 +48,7 @@ When the Jupyter notebook is loaded and the kernel is ready then we can start ex
 
 * In the notebook section *2.0*  you will add your Cloud Pak for Data platform credentials for the *WOS_CREDENTIALS*.
 
-* For the `url` field, change `https://w.x.y.z` to use the URL your Cloud Pak for Data cluster, i.e something like: `"url": "https://zen-cpd-zen.omid-cp4d-v5-2bef1f4b4097001da9502000c44fc2b2-0001.us-south.containers.appdomain.cloud"`.
+* For the `url` field, change `https://w.x.y.z` to use the URL your Cloud Pak for Data cluster, i.e something like: `"url": "https://zen-cpd-zen.cp4d-2343434502000c44fc2b2-0001.us-south.containers.appdomain.cloud"`.
 * For the `username`, use your Cloud Pak for Data login username.
 * For the `password`, user your Cloud Pak for Data login password.
 
@@ -73,7 +73,8 @@ Spend an minute looking through the sections of the notebook to get an overview.
 
 Do not worry if the name you see does not match exactly with the screenshot. The deployment name you see will correspond to the variable used in the Jupyter notebook
 
-* Now we can click on the `Drift` -> `Drop in Accuracy` tab and see the graph of transactions:
+* Either click on the `Drift` area of the card and then `Drop in accuracy` on the subsequent page, *or* 
+  click on the top of the card and then on the percentage shown for drift and then `Drop in accuracy`:
 
 ![Drift Drop in accuracy](../.gitbook/assets/images/openscale-config/openscale-config-drift-drop.png)
 
@@ -95,4 +96,4 @@ Do not worry if the name you see does not match exactly with the screenshot. The
 
 ### Recap
 
-We've seen how to save the Machine Learning model configuration, and then proceed to configure Drift monitoring using the OpenScale GUI. This method can be used to configure other monitors, as a complement to the method of using the APIs in a Jupyter notebook. Next, we'll add some historical data to emulate what would happen for a Machine learning model that is deployed in production, monitored with OpenScale, and continually receiving scoring requests. Please proceed to the [HISTORICAL-DATA-README.md](./HISTORICAL-DATA-README.md)
+We've seen how to configure Drift monitoring using a Jupyter notebook. Next, we'll add some historical data to emulate what would happen for a Machine learning model that is deployed in production, monitored with OpenScale, and continually receiving scoring requests. Please proceed to the [HISTORICAL-DATA-README.md](./HISTORICAL-DATA-README.md)
