@@ -77,3 +77,5 @@ Now that we've simulated a Machine Learning deployment in production, we can loo
 ## Recap
 
 With the addition of historical data, we can now use the OpenScale tools in a simulated production environment. We can look at Fairness, Explainability, Quality, and Drift, and see how all transactions are logged. This workshop contains API code, configuration tools, and details around using the UI tool to enable a user to monitor production machine learning environments.
+=======
+## 5. Begin to Explore the Watson OpenScale UI
