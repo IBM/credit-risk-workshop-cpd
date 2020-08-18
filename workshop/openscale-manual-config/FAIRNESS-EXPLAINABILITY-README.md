@@ -9,11 +9,11 @@ We'll then enable the Explainability monitor, which allows us to then use the AP
 The submodule contains the following steps:
 
 1. [Open the notebook](#1-open-the-notebook)
-1. [Update credentials](#3-update-credentials)
-1. [Run the notebook](#4-run-the-notebook)
-1. [Begin to Explore the Watson OpenScale UI](#5-begin-to-explore-the-watson-openscale-ui)
+1. [Update credentials](#2-update-credentials)
+1. [Run the notebook](#3-run-the-notebook)
+1. [Begin to Explore the Watson OpenScale UI](#4-begin-to-explore-the-watson-openscale-ui)
 
-## 2. Open the notebook
+## 1. Open the notebook
 
 If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) using the [CreditRiskProject.zip](https://github.ibm.com/IBMDeveloper/cp4d-workshop-credit-risk/blob/master/projects/CreditRiskProject.zip) file, the `openscale-fairness-explainability` notebook will be present in that project, under the `Assets` tab:
 
@@ -48,17 +48,17 @@ When the Jupyter notebook is loaded and the kernel is ready then we can start ex
 
 ![Notebook loaded](../.gitbook/assets/images/aios/OpenScaleNotebook.png)
 
-### 3. Update credentials
+### 2. Update credentials
 
 #### WOS_CREDENTIALS
 
 * In the notebook section *2.0*  you will add your Cloud Pak for Data platform credentials for the *WOS_CREDENTIALS*.
 
-* For the `url` field, change `https://w.x.y.z` to use the URL your ICP cluster, i.e something like: `"url": "https://zen-cpd-zen.omid-cp4d-v5-2bef1f4b4097001da9502000c44fc2b2-0001.us-south.containers.appdomain.cloud"`.
+* For the `url` field, change `https://w.x.y.z` to use the URL your Cloud Pak for Data cluster, i.e something like: `"url": "https://zen-cpd-zen.omid-cp4d-v5-2bef1f4b4097001da9502000c44fc2b2-0001.us-south.containers.appdomain.cloud"`.
 * For the `username`, use your Cloud Pak for Data login username.
 * For the `password`, user your Cloud Pak for Data login password.
 
-### 4. Run the notebook
+### 3. Run the notebook
 
 > **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to prevent leaking of memory resources!*
 
@@ -72,7 +72,7 @@ In order to use the Explainability feature, we will need the ID for an individua
 
 * In the notebook, after running cell *5.7 Run explanation for sample record* , the output will print a `transaction_id`. Copy this id.
 
-## 5. Begin to Explore the Watson OpenScale UI
+## 4. Begin to Explore the Watson OpenScale UI
 
 We've enabled the monitors for Fairness and Explainability, now let's explore the results in the OpenScale GUI.
 
