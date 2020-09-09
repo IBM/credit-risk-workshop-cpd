@@ -11,71 +11,75 @@ The section is broken up into the following steps:
 
 ## Virtualizing Data
 
-In this section, we will gather data from several tables across a couple of different data sources. We will use data virtualization to access these tables and then create joins against those tables.
+In this section, we will gather data from several tables across data sources. We will use data virtualization to access these tables and then create joined views against those virtualized tables.
 
-* To launch the data virtualization tool, go the (☰) menu and click `Collect` and then `Data Virtualization`.
+### Create Virtualized Tables
 
-![(☰) Menu -> Collect -> Data Virtualization](../.gitbook/assets/images/dv/dv-menu.png)
+* To launch the data virtualization tool, go the (☰) navigation menu and click `Collect` -> `Data virtualization`.
+
+![(☰) Menu -> Collect -> Data Virtualization](../.gitbook/assets/images/navigation/dv-menu.png)
 
 * From the Data virtualization sub-menu, Click on the *Menu* drop down list and choose *Virtualize*.
 
 ![Menu -> Virtualize](../.gitbook/assets/images/dv/dv-virtualize-menu.png)
 
-* Several tables names will be displayed across any of the data sources that are included in the data virtualization server. You will notice that on the left panel, we have tables being displayed from two main sources: (1) A DB2 database and (2) A MongoDB database.
+* Several tables names will be displayed across any of the data sources that are included in the data virtualization server. You will notice that on the right panel, we can filter the tables being displayed by selecting the datasource.
 
-* To simplify the search for tables you will use, click on the `Schemas` column header to sort the tables by Schema. Then find the tables we will be using for this workshop: `APPLICANTFINANCIALDATA`, `APPLICANTPERSONALDATA` and `LOANS`. Select the checkboxes next to these three tables, and then click on *Add to cart* followed by the *View Cart* button.
+* To simplify the search for tables you will use, click on the `Schemas` column header to sort the tables by Schema. Then find the tables we will be using for this workshop: `APPLICANTFINANCIALDATA`, `APPLICANTPERSONALDATA` and `LOANS`, which are under the `CP4DCREDIT` schema. Select the checkboxes next to these three tables, and then click on *`Add to cart`* followed by the *`View Cart`* button.
+
+> *Note: You may need to page through the available tables by clicking on the right arrow at the bottom of the tables view.*
 
 ![Choose the tables to virtualize](../.gitbook/assets/images/dv/dv-virtualize-tables.png)
 
-* The next panel prompts the user to select where to assign the virtualized tables. Select the `My virtualized data` radio button. If there is a `Submit to catalog` checkbox on the top right, unselect it and finally click the *Virtualize* button to add the virtualized tables to your data.
+* The next panel prompts you to select where to assign the virtualized tables. Select the `My virtualized data` radio button. If there is a `Submit to catalog` checkbox on the top right, unselect it and finally click the *`Virtualize`* button to add the virtualized tables to your data (we left the default values, so the tables will be virtualized under your own user schema with the same table names as the original tables).
 
 ![Add virtualized data to your project](../.gitbook/assets/images/dv/dv-virtualize-assign.png)
 
-* You'll be notified that the virtual tables have been created. Let's see the new virtualized tables from the Data Virtualization tool by clicking *View my virtualized data* button.
+* You'll be notified that the virtual tables have been created. Let's see the new virtualized tables from the Data Virtualization tool by clicking *`View my virtualized data`* button.
 
 ![We've got virtualized data](../.gitbook/assets/images/dv/dv-virtualize-complete.png)
 
-### Join the virtualized data
+### Create Joined Virtual Views
 
 Now we're going to **join** the tables we previously virtualized, so we have a final merged set of data. It will be easier to do it here rather than in a notebook where we'd have to write code to handle three different data sets.
 
-* Click on two of the virtualized tables (`APPLICANTPERSONALDATA` and `APPLICANTFINANCIALDATA` for instance) and click the *Join view* button.
+* From the 'My virtualized data' page, Click on two of the virtualized tables (`APPLICANTPERSONALDATA` and `APPLICANTFINANCIALDATA`) and click the *`Join`* button.
 
-![Choose to join two tables](../.gitbook/assets/images/dv/dv-data-join-overview.png)
+![Choose to join two tables](../.gitbook/assets/images/dv/dv-join-select-tables.png)
 
-* To join the tables we need to pick a key that is common to both data sets. Here we choose to map `CUSTOMERID` from the first table to `CUSTOMERID` on the second table. Do this by clicking on one and dragging it to another. When the line is drawn click on *Join*.
+* To join the tables we need to pick a key that is common to both data sets. Here we choose to map `CustomerID` from the first table to `CustomerID` on the second table. Do this by clicking on one and dragging it to another. When the line is drawn click on the *Next* button.
 
-![Map the two customerID keys](../.gitbook/assets/images/dv/dv-data-join-columns.png)
+![Map the two customerID keys](../.gitbook/assets/images/dv/dv-join-select-columns.png)
 
-* In the next panel we'll give our joined data a unique name (to be consistent with SQL standards, pick an all uppercase name), I chose `XXXAPPLICANTFINANCIALPERSONALDATA` (where `XXX` is my *All Upper Case* user ID), then review the joined table to ensure all columns are present and only one `CUSTOMERID` column exists. Click *Next* to continue.
+* In the next panel we will accept the existing names for our columns. Click the *`Next`* button to continue.
 
-![Review the proposed joined table](../.gitbook/assets/images/dv/dv-data-join-review.png)
+![Review joined column names](../.gitbook/assets/images/dv/dv-join-col-names-review.png)
 
-* In the next screen we choose where to assign the joined view we created, select the `My virtualized data` radio button. If there is a `Submit to catalog` checkbox on the top right, unselect it and finally click the *`Create view`* button to add the virtualized aggregate table to your data.
+* In the next panel we'll give our joined data view a unique name (to be consistent with SQL standards, pick an all uppercase name), choose someething like: `XXXAPPLICANTFINANCIALPERSONALDATA` (where `XXX` is my *All Upper Case* user ID or intitials). Also select the `My virtualized data` radio button. If there is a `Submit to catalog` checkbox on the top right, unselect it and finally click the *`Create view`* button to add the virtualized aggregate view to your data.
 
-![Add joined data tables to your project](../.gitbook/assets/images/dv/dv-data-join-assign.png)
-
-* You'll be notified that the join view creation has succeeded! Click on *View my virutalized data* button.
-
-![The data join succeeded!](../.gitbook/assets/images/dv/dv-data-join-created.png)
-
-* Repeat the same steps as above, but this time choose to join the new joined view (`XXXAPPLICANTFINANCIALPERSONALDATA`) and the last virtualized table (`LOANS`), to create a new joined view that has all three tables. Click the `Join view` button.
-
-![Join final tables](../.gitbook/assets/images/dv/dv-data-join-overview-final.png)
-
-* To join the tables we need to pick a key that is common to both data sets. Again, choose to map `CUSTOMERID` from the first table to `CUSTOMERID` on the second table. Do this by clicking on one and dragging it to another. This time, also deselect the `ID` column from the `LOAN` table. Click on the *Join* button.
-
-![Map the two customerID keys](../.gitbook/assets/images/dv/dv-data-join-columns-final.png)
-
-* As before, on the next panel we'll give our joined data a unique name (to be consistent with SQL standards, pick an all uppercase name), for example `XXXAPPLICANTFINANCIALPERSONALDATALOANS` (where `XXX` is my *All Upper Case* user ID), then review the joined table to ensure all columns are present and only one `CUSTOMERID` column exists. Click *Next* to continue.
-
-* On the next screen we choose where to assign the joined view we created, select the `My virtualized data` radio button. If there is a `Submit to catalog` checkbox on the top right, unselect it and finally click the *`Create view`* button to add the virtualized aggregate table to your data.
+![Review the proposed joined table](../.gitbook/assets/images/dv/dv-join-assign-review.png)
 
 * You'll be notified that the join view creation has succeeded! Click on *View my virutalized data* button.
 
-* From the `My virtualized data` page you should now see all three virtualized tables, and two joined tables. Do not go to the next section until you have all the tables.
+![The data join succeeded!](../.gitbook/assets/images/dv/dv-join-created-1.png)
 
-![Our data sets at the end of this section](../.gitbook/assets/images/dv/dv-project-data-all.png)
+* Repeat the same steps as above, but this time choose to join the new joined view you just created (`XXXAPPLICANTFINANCIALPERSONALDATA`) and the last virtualized table (`LOANS`), to create a new joined view that has all three tables. Click the *`Join`* button.
+
+![Join final tables](../.gitbook/assets/images/dv/dv-join-select-tables-2.png)
+
+* Again join the two tables by selecting/mapping the `CustomerID` from the first table to `CustomerID` on the second table. Do this by clicking on one and dragging it to another. When the line is drawn click on the *Next* button.
+
+![Map the two customerID keys](../.gitbook/assets/images/dv/dv-join-select-columns-2.png)
+
+* In the next panel we will accept the existing names for our columns. Click the *`Next`* button to continue.
+
+* In the next panel we'll give our joined data view a unique name (to be consistent with SQL standards, pick an all uppercase name), choose someething like: `XXXAPPLICANTFINANCIALPERSONALLOANSDATA` (where `XXX` is my *All Upper Case* user ID or intitials). Also select the `My virtualized data` radio button. If there is a `Submit to catalog` checkbox on the top right, unselect it and finally click the *`Create view`* button to add the virtualized aggregate view to your data.
+
+* You'll be notified that the join view creation has succeeded! Click on *`View my virtualized data`* button.
+
+* From the `My virtualized data` page you should now see all three virtualized tables and two joined tables. Do not go to the next section until you have all the tables.
+
+![Our data sets at the end of this section](../.gitbook/assets/images/dv/dv-virtualized-data-all.png)
 
 ## 2. Grant access to the virtualized data
 
@@ -83,19 +87,27 @@ Now we're going to **join** the tables we previously virtualized, so we have a f
 
 In order for other users to have access to the data that you just virtualized, you need to grant them access. Follow these steps to make your Virtualized data visible to them.
 
-Go to *Data Virtualization* option from the (☰) menu. Click on `Menu` -> `My virtualized data`.
+* To launch the data virtualization tool, go the (☰) navigation menu and click `Collect` -> `Data virtualization`.
 
-Click on the virtualized data you've created, then click the 3 horizontal dots `...` to the right of one, and choose `Manage access`:
+![(☰) Menu -> Collect -> Data Virtualization](../.gitbook/assets/images/navigation/dv-menu.png)
+
+* From the Data virtualization sub-menu, Click on the *Menu* drop down list and choose *`My virtualized data`*.
+
+![My virtualized data](../.gitbook/assets/images/dv/dv-menu-myvirtualizeddata.png)
+
+* For one of the virtualized data assets you've created, click the 3 vertical dots on the right (*Note: you will have to hover over the area all the way on the right of the table row to see the dots.*) and choose `Manage access`.
 
 ![Manage access to virtualized data](../.gitbook/assets/images/dv/dv-manage-access-menu.png)
 
-Click the `Specific users` button and click `+ grant access`:
+* Click the `Specific users` button and click the `Add user` button.
 
-![Grant Access to specific users](../.gitbook/assets/images/dv/dv-manage-access-grant.png)
+![Grant Access to specific users](../.gitbook/assets/images/dv/dv-manage-access-add-user.png)
 
-Select the users you wish to grant access to and click `Add`:
+* Select the user (or multiple users) you wish to grant access to and click the `Add users` button.
 
-![Select Users to Grant Access to](../.gitbook/assets/images/dv/dv-grant-select-users-access.png)
+![Select Users to Grant Access to](../.gitbook/assets/images/dv/dv-manage-access-select-users.png)
+
+* Repeat the above steps to give access to the remaining virtualized tables and views (all five that you created).
 
 ## Conclusion
 
