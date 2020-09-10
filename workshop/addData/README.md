@@ -26,7 +26,7 @@ For this section we'll explore the data that is available from the virtualized v
 
 ![Select the data you want to import](../.gitbook/assets/images/dv/adddata-select-data-assign.png)
 
-* In the 'Assign virtual objects' screen, choose your analytics project that you previously from the drop down list. If there is a `Submit to catalog` checkbox on the top right, unselect it and finally click the *`Assign`* button to add the data to your project.
+* In the 'Assign virtual objects' screen, choose your analytics project from the drop down list. If there is a `Submit to catalog` checkbox on the top right, unselect it and, finally, click the *`Assign`* button to add the data to your project.
 
 ![Assign the data to a project](../.gitbook/assets/images/dv/adddata-assign-to-project.png)
 
@@ -40,4 +40,4 @@ For this section we'll explore the data that is available from the virtualized v
 
 ## Conclusion
 
-This lab shows just one of the ways to gather data for your analytics projects in Cloud Pak for Data. In this case you used data that was previously virtualized, other ways might include browsing the catalogs, importing flat files or importing data from connections directly in the project.
+This lab shows just one of the ways to gather data for your analytics projects in Cloud Pak for Data. In this case you used data that was previously virtualized. Other ways might include: browsing the catalogs, importing flat files, or importing data from connections directly in the project.
