@@ -1,7 +1,7 @@
 # Automate model building with AutoAI
 
 For this part of the workshop, we'll learn how to use [AutoAI](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/wsj/analyze-data/autoai-overview.html).
-AutoAI is a capability that automates various tasks to ease the workflow for data scientists that are creating machine learning models. It automatautomates steps such as preparing your data for modeling, chooses the best algorithm/estimator for your problem, experiments with pipelines and parameters for the trained models.
+AutoAI is a capability that automates various tasks to ease the workflow for data scientists that are creating machine learning models. It automates steps such as preparing your data for modeling, chooses the best algorithm/estimator for your problem, experiments with pipelines and parameters for the trained models.
 
 This section is broken up into the following steps:
 
@@ -39,7 +39,7 @@ This section is broken up into the following steps:
 
 ![Choose Churn column and run](../.gitbook/assets/images/autoai/autoai-choose-prediction-and-run.png)
 
-* The AutoAI experiment will now run. AutoAI will run through steps to prepare the dataset, split the dataset into training and evaluation groups and then find the best performing algorithms / estimators for the type of model. It will then build the following series of candidate pipelines for each of the top N performing algorithms (where N is a number chosen in the configuration which defaults to 2):
+* The AutoAI experiment will now run. AutoAI will run through steps to prepare the dataset, split the dataset into training / evaluation groups and then find the best performing algorithms / estimators for the type of model. It will then build the following series of candidate pipelines for each of the top N performing algorithms (where N is a number chosen in the configuration which defaults to 2):
 
   * Baseline model (Pipeline 1)
   * Hyperparameter optimization (Pipeline 2)
@@ -60,7 +60,7 @@ This section is broken up into the following steps:
 
 * Scroll down to see the *Pipeline leaderboard*. The top performing pipeline is in the first rank.
 
-* The next step is to select the model that gives the best result and view its perfromance. In this case, Pipeline 4 gave the best result for our experiment. You can view the detailed results by clicking the corresponding pipeline name from the leaderboard:
+* The next step is to select the model that gives the best result and view its performance. In this case, Pipeline 4 gave the best result for our experiment. You can view the detailed results by clicking the corresponding pipeline name from the leaderboard:
 
 ![pipeline leaderboard](../.gitbook/assets/images/autoai/autoai-pipeline-leaderboard-topranked.png)
 
@@ -102,7 +102,7 @@ This section is broken up into the following steps:
 
 > ***Note: This is assuming you have already created a deployment space in the *pre-work* section of the workshop. Also that you have not associated that deployment space with any other project, since there default screen will not show deployment spaces that are already associated.***
 
-* Once the deployment space is associted, you will be brought back to the same model page, once again click on the `Promote to deployment space`.
+* Once the deployment space is associated, you will be brought back to the same model page, once again click on the `Promote to deployment space`.
 
 ![Deploying the model](../.gitbook/assets/images/autoai/autoai-promote-to-space.png)
 
