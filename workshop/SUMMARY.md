@@ -7,7 +7,7 @@
 
 ## Credit Risk Workshop
 
-* [Data Connection and Virtualization for Admins](data-connection-and-virtualization/README.md)
+* [Data Connection and Virtualization](data-connection-and-virtualization/README.md)
 * [Import Data to Project](addData/README.md)
 * [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md)
 * [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md)
@@ -25,10 +25,12 @@
 
 ## Resources
 
-* [IBM Cloud Pak for Data Platform API](https://cloud.ibm.com/apidocs/cloud-pak-data)
+* [IBM Cloud Pak for Data - Information and Trial](https://www.ibm.com/products/cloud-pak-for-data)
+* [IBM Cloud Pak for Data - Knowledge Center](https://www.ibm.com/support/knowledgecenter/SSQNUZ)
+* [IBM Cloud Pak for Data - Platform API](https://cloud.ibm.com/apidocs/cloud-pak-data)
+* [IBM Cloud Pak for Data - Community](https://community.ibm.com/community/user/cloudpakfordata/home)
 * [Watson Knowledge Catalog](https://www.ibm.com/cloud/watson-knowledge-catalog)
 * [Watson Knowledge Catalog Learning Center](https://developer.ibm.com/clouddataservices/docs/data-catalog/get-started/)
 * [IBM Developer](https://developer.ibm.com)
-* [Cloud Pak for Data 2.5](https://www.ibmbigdatahub.com/blog/announcing-cloud-pak-for-data-2-5)
-* [Cloud Pak Experiences - Free 7 day trial](https://www.ibm.com/cloud/garage/cloud-pak-experiences/)
-* [Cloud Pak for Applications](https://www.ibm.com/cloud/cloud-pak-for-applications)
+* [IBM Developer - Cloud Pak for Data](https://developer.ibm.com/components/cloud-pak-for-data/)
+* [IBM Garage Architecture - Data](https://www.ibm.com/cloud/architecture/architectures/dataArchitecture)
