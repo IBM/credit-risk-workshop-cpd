@@ -16,7 +16,7 @@ For this part of the exercise we're going to use a Jupyter notebook to create th
 
 ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
-* From the *Project* home, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
+* From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
 * Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `machinelearning-creditrisk-sparkmlmodel` notebook.
 
