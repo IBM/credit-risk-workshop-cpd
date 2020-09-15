@@ -28,15 +28,15 @@ After a model has been created and saved / promoted to our deployment space, we 
 
 ![Analytics Analyze deployments](../.gitbook/assets/images/navigation/menu-analytics-deployments.png)
 
-* Choose the deployment space you setup previously by clicking on the name of the space.
+* Choose the deployment space you setup previously by clicking on the name of your space.
 
-* In your space overview, find the model name for the model you previously built and now want to create a deployment against, then click the 3 dots under `Actions`, and choose `Deploy`:
+* From your deployment space overview, in the table, find the model name for the model you previously built and now want to create a deployment against. Use your mouse to hover over the right side of that table row and click the `Deploy` rocket icon (the icons are not visible by default until you hover over them).
 
 > Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.3` runtime.
 
 ![Actions Deploy model](../.gitbook/assets/images/deployment/deploy-spark-model.png)
 
-* On the 'Configure and deploy' screen, choose `Online` for the *Deployment Type*, give the Deployment a name and optional description and click `Create`:
+* On the 'Create a deployment' screen, choose `Online` for the *Deployment Type*, give the Deployment a name and optional description and click the *`Create`* button.
 
 ![Online Deployment Create](../.gitbook/assets/images/deployment/deploy-online-deployment.png)
 
@@ -48,13 +48,13 @@ After a model has been created and saved / promoted to our deployment space, we 
 
 Cloud Pak for Data offers tools to quickly test out Watson Machine Learning models. We begin with the built-in tooling.
 
-* From the Model deployment page, once the deployment status shows as *Deployed*, click on the name of your deployment. The deployment *API reference* tab shows how to use the model using *cURL*, *Java*, *Javascript*, *Python*, and *Scala*. To get to the built-in test tool, click on the `Test` tab.
+* From the Model deployment page, once the deployment status shows as *Deployed*, click on the name of your deployment. The deployment *API reference* tab shows how to use the model using *cURL*, *Java*, *Javascript*, *Python*, and *Scala*.
 
-* Click on the *Provide input data as JSON* icon.
+* To get to the built-in test tool, click on the `Test` tab and then click on the *`Provide input data as JSON`* icon.
 
 ![Test deployment with JSON](../.gitbook/assets/images/deployment/deploy-model-test-page.png)
 
-* Copy and paste the following data objects into the *Body* panel.
+* Copy and paste the following data objects into the *Body* panel (*Note: Make sure the input below is the only content in the field. Do not append it to the default content `{ "input_data": [] }` that may already be in the field).
 
 ```json
 {
@@ -69,7 +69,7 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 }
 ```
 
-* Click the `Predict` button, the model will be called with the input data. The results will display in the *Result* window. Scroll down to the bottom of the result to see the prediction (i.e "Risk" or "No Risk"):
+* Click the *`Predict`* button. The model will be called with the input data and the results will display in the *Result* window. Scroll down to the bottom of the result to see the prediction (i.e "Risk" or "No Risk"):
 
 ![Testing the deployed model](../.gitbook/assets/images/deployment/deploy-test-model-prediction.png)
 
@@ -82,7 +82,7 @@ Now that the model is deployed, we can also test it from external applications. 
 
 > NOTE: Windows users will need the *cURL* command. It's recommended to [download gitbash](https://gitforwindows.org/) for this, as you'll also have other tools and you'll be able to easily use the shell environment variables in the following steps. Also note that if you are not using gitbash, you may need to change *export* commands to *set* commands.
 
-* In a terminal window (or command prompt in Windows), run the following command to get a token to access the API. Use your CP4D cluster `username` and `password`:
+* In a terminal window (or command prompt in Windows), run the following command to get a token to access the API. Replace `<username>` and `<password>` with the username and password you used to log into the CP4D cluster. Replace `<cluster-url>` with just the hostname of the CPD cluster (value from your web browser bar)
 
 ```bash
 curl -k -X GET https://<cluster-url>/v1/preauth/validateAuth -u <username>:<password>
@@ -94,23 +94,23 @@ curl -k -X GET https://<cluster-url>/v1/preauth/validateAuth -u <username>:<pass
 {"username":"scottda","role":"Admin","permissions":["access_catalog","administrator","manage_catalog","can_provision"],"sub":"scottda","iss":"KNOXSSO","aud":"DSX","uid":"1000331002","authenticator":"default","accessToken":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNjb3R0ZGEiLCJyb2xlIjoiQWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhY2Nlc3NfY2F0YWxvZyIsImFkbWluaXN0cmF0b3IiLCJtYW5hZ2VfY2F0YWxvZyIsImNhbl9wcm92aXNpb24iXSwic3ViIjoic2NvdHRkYSIsImlzcyI6IktOT1hTU08iLCJhdWQiOiJEU1giLCJ1aWQiOiIxMDAwMzMxMDAyIiwiYXV0aGVudGljYXRvciI6ImRlZmF1bHQiLCJpYXQiOjE1NzM3NjM4NzYsImV4cCI6MTU3MzgwNzA3Nn0.vs90XYeKmLe0Efi5_3QV8F9UK1tjZmYIqmyCX575I7HY1QoH4DBhon2fa4cSzWLOM7OQ5Xm32hNUpxPH3xIi1PcxAntP9jBuM8Sue6JU4grTnphkmToSlN5jZvJOSa4RqqhjzgNKFoiqfl4D0t1X6uofwXgYmZESP3tla4f4dbhVz86RZ8ad1gS1_UNI-w8dfdmr-Q6e3UMDUaahh8JaAEiSZ_o1VTMdVPMWnRdD1_F0YnDPkdttwBFYcM9iSXHFt3gyJDCLLPdJkoyZFUa40iRB8Xf5-iA1sxGCkhK-NVHh-VTS2XmKAA0UYPGYXmouCTOUQHdGq2WXF7PkWQK0EA","_messageCode_":"success","message":"success"}
 ```
 
-* You will save this access token to a temporary environment variable. Copy the access token value (without the quotes) in the terminal and then use the following export command to save the "accessToken" to a variable called `WML_AUTH_TOKEN`.
+* You will save this access token to a temporary environment variable in your terminal. Copy the access token value (without the quotes) in the terminal and then use the following export command to save the "accessToken" to a variable called `WML_AUTH_TOKEN`.
 
 ```bash
 export WML_AUTH_TOKEN=<value-of-access-token>
 ```
 
-* Back on the model deployment page, gather the `URL` to invoke the model from the *API reference* by copying the `Endpoint`, and exporting it to a variable:
+* Back on the model deployment page, gather the `URL` to invoke the deployed model from the *API reference* by copying the `Endpoint`.
 
 ![Model Deployment Endpoint](../.gitbook/assets/images/deployment/deploy-model-endpoint.png)
 
-* Now save that endpoint to a variable named `URL` by exporting it.
+* Now save that endpoint to a variable named `URL` in your terminal by exporting it.
 
 ```bash
 export URL=<value-of-endpoint>
 ```
 
-* Now run this curl command from a terminal to invoke the model with the same payload we used previousy:
+* Now run this curl command from the terminal to invoke the model with the same payload we used previousy:
 
 ```bash
 curl -k -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "Authorization: Bearer  $WML_AUTH_TOKEN" -d '{"input_data": [{"fields": [ "CheckingStatus", "LoanDuration", "CreditHistory", "LoanPurpose", "LoanAmount", "ExistingSavings", "EmploymentDuration", "InstallmentPercent", "Sex", "OthersOnLoan", "CurrentResidenceDuration", "OwnsProperty", "Age", "InstallmentPlans", "Housing", "ExistingCreditsCount", "Job", "Dependents", "Telephone", "ForeignWorker"],"values": [[ "no_checking", 13, "credits_paid_to_date", "car_new", 1343, "100_to_500", "1_to_4", 2, "female", "none", 3, "savings_insurance", 46, "none", "own", 2, "skilled", 1, "none", "yes"]]}]}' $URL
@@ -130,29 +130,33 @@ Lets start by creating the deployment:
 
 * Choose the deployment space you created previously by clicking on the name of the space.
 
-* In your space overview, select the model name that you want to create a deployment for just built in the notebook and click the 3 dots under `Actions`, and choose `Deploy` (If you've already created an *Online* deployment for this model, click `+ New Deployment`):
+* From your deployment space overview, in the table, find the model name for the model you previously built and now want to create a deployment against. Use your mouse to hover over the right side of that table row and click the `Deploy` rocket icon (the icons are not visible by default until you hover over them).
 
 > Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.3` runtime.
 
 ![Actions Deploy model](../.gitbook/assets/images/deployment/deploy-spark-model.png)
 
-* On the 'Configure and deploy' screen, choose `Batch` for the *Deployment Type*, give the Deployment a name and optional description. The default values for environment definitions, and the smallest choice for hardware definition, can be used (in scenarios with large or frequent batch jobs, you may choose to scale the hardware up). Click `Create`:
+* On the 'Create a deployment' screen: choose `Batch` for the *Deployment Type*, give the deployment a name and optional description. From the 'Hardware definition' drop down, select the smallest option (`1 standard CPU, 4GB RAM` in this case though for large or frequent batch jobs, you might choose to scale the hardware up). Click the *`Create`* button.
 
 ![Batch Deployment Create](../.gitbook/assets/images/deployment/deploy-batch-deployment.png)
 
-* Once the status shows as *Deployed* , you will be able to start submitting jobs to the deployment.
+* Once the status shows as *Deployed* you will be able to start submitting jobs to the deployment.
 
 ![Status Deployed](../.gitbook/assets/images/deployment/deploy-batch_dep_status.png)
 
 ### Create and Schedule a Job
 
-Next we can schedule a job to run against our batch deployment. We are going to do this programmatically using the Python client SDK. For this part of the exercise we're going to use a Jupyter notebook to create and submit a batch job to our model deployment.
+Next we can schedule a job to run against our batch deployment. We could create a job, with specific input data (or data asset) and schedule, either programmatically or through the UI. For this lab, we are going to do this programmatically using the Python client SDK. For this part of the exercise we're going to use a Jupyter notebook to create and submit a batch job to our model deployment.
 
->*Note: The batch job input is impacted by the machine learning framework used to build the model. There is a known issue with SparkML based models where batch jobs require inline payload to be used. For other frameworks, we can use data assets (i.e CSV files) as the input payload.*
+>*Note: The batch job input is impacted by the machine learning framework used to build the model. Currently, SparkML based model batch jobs require inline payload to be used. For other frameworks, we can use data assets (i.e CSV files) as the input payload.*
 
 #### Run the Batch Notebook
 
 The Jupyter notebook is already included as an asset in the project you imported earlier.
+
+* Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
+
+![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
 * From the project overview page, *click* on the `Assets` tab to open the assets page where your project assets are stored and organized.
 
@@ -160,32 +164,34 @@ The Jupyter notebook is already included as an asset in the project you imported
 
 ![Notebook Open](../.gitbook/assets/images/deployment/deploy_batch_open_nb.png)
 
-When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
-
-Spend a minute looking through the sections of the notebook to get an overview. A notebook is composed of text (markdown or heading) cells and code cells. The markdown cells provide comments on what the code is designed to do.
-
-You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook or hitting the keyboard short cut to run the cell (Shift + Enter but can vary based on platform). While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
-
-**Please note that some of the comments in the notebook are directions for you to modify specific sections of the code. Perform any changes as indicated before running / executing the cell.**
+* When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
 ##### Notebook sections
 
-With the notebook open, you will notice:
+With the notebook open, spend a minute looking through the sections of the notebook to get an overview. A notebook is composed of text (markdown or heading) cells and code cells. The markdown cells provide comments on what the code is designed to do. You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook or hitting the keyboard short cut to run the cell (Shift + Enter but can vary based on platform). While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
+
+**Please note that some of the comments in the notebook are directions for you to modify specific sections of the code. Perform any changes as indicated before running / executing the cell.**
 
 * Section `1.0 Install required packages` will install some of the libraries we are going to use in the notebook (many libraries come pre-installed on Cloud Pak for Data). Note that we upgrade the installed version of Watson Machine Learning Python Client. Ensure the output of the first code cell is that the python packages were successfully installed.
 
-* Section `2.0 Create Batch Deployment Job` will create a job for the batch deployment. To do that, we the Watson Machine Learning client to get our deployment and create a job.
+![NB Section 1 Complete](../.gitbook/assets/images/deployment/deploy-batchnb-packageinstall.png)
+
+* Section `2.0 Create Batch Deployment Job` will create a job for the batch deployment. To do that, we will use the Watson Machine Learning client to get our deployment and create a job.
 
   * In the first code cell for Section2.1, be sure to update the `wml_credentials` variable.
 
     * The url should be the hostname of the Cloud Pak for Data instance.
     * The username and password should be the same credentials you used to log into Cloud Pak for Data.
 
-  * In section 2.2, be sure to update the `DEPLOYMENT_SPACE_NAME` variable with your deployment space name.
+  * In section 2.2, be sure to update the `DEPLOYMENT_SPACE_NAME` variable with your deployment space name (copy and past the name which is within the output of the previous code cell).
 
-  * In section 2.3, be sure to update the `DEPLOYMENT_NAME` variable with the name of the batch deployment you created above.
+  * In section 2.3, be sure to update the `DEPLOYMENT_NAME` variable with the name of the batch deployment you created previously (copy and past the name which is within the output of the previous code cell).
 
-* Continue to run the cells.
+![NB Section 2 Complete](../.gitbook/assets/images/deployment/deploy-batchnb-dsname-set.png)
+
+![NB Section 2 Complete](../.gitbook/assets/images/deployment/deploy-batchnb-depname-set.png)
+
+* Continue to run the rest of the cells in section 2 which will load the batch input data set and create the job. The last code cell in section 2 will show that the job is in a queued state.
 
 * Section `3.0 Monitor Batch Job Status` will start polling the job status until it completes or fails. The code cell will output the status every 5 seconds as the job goes from queued to running to completed or failed.
 
@@ -193,28 +199,21 @@ With the notebook open, you will notice:
 
 * Once the job completes, continue to run the cells until the end of the notebook.
 
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook so you can stop the kernel.*
-
-![Stop kernel](../.gitbook/assets/images/wml/JupyterStopKernel.png)
+> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions so you can see the stop kernel option.*
+> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
 
 ## (Optional) Integrate Model to Python Flask Application
 
 You can also access the online model deployment directly through the REST API. This allows you to use your model for inference in any of your apps. For this workshop we'll be using a Python Flask application to collect information, score it against the model, and show the results.
 
-> **NOTE: This section requires Python 3.6 or later**
+> **IMPORTANT: This SAMPLE application only runs on python 3.6 and above, so the instructions here are for python 3.6+ only. You will need to have Python 3.6 or later already installed on your machine**
+> *Note: The instructions below assume you have completed the pre-work module and thus have the Git repository already on your machine (cloned or downloaded).*
 
 ### Install Dependencies
 
 The general recommendation for Python development is to use a virtual environment ([`venv`](https://docs.python.org/3/tutorial/venv.html)). To install and initialize a virtual environment, use the `venv` module on Python 3:
 
-* You should have already cloned the GitHub repository as part of the pre-work, if not, open a terminal to clone the repo.
-
-  ```bash
-  git clone https://github.com/IBM/credit-risk-workshop-cpd.git
-  cd credit-risk-workshop-cpd
-  ```
-
-* Initialize a virtual environment with [`venv`](https://docs.python.org/3/tutorial/venv.html).
+* Initialize a virtual environment with [`venv`](https://docs.python.org/3/tutorial/venv.html). Run the following commands in a terminal (or command prompt):
 
   ```bash
   # Create the virtual environment using Python.
@@ -228,7 +227,7 @@ The general recommendation for Python development is to use a virtual environmen
 
   > **TIP** To terminate the virtual environment use the `deactivate` command.
 
-* Finally, install the Python requirements.
+* To install the Python requirements, from a terminal (or command prompt) navigate to where you cloned/downloaded the Git repository. Run the following commands:
 
   ```bash
   cd flaskapp
