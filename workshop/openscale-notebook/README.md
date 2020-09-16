@@ -31,13 +31,13 @@ At the project overview click the *New Asset* button, and choose *Add notebook*.
 On the next panel select the *From URL* tab, give your notebook a name, provide the following URL, and choose the Python 3.6 environment:
 
 ```bash
-https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/ConfigureOpenScale.ipynb
+https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/openscale-full-configuration.ipynb
 ```
 
 > The notebook is hosted in the same repo as [the workshop](https://github.com/IBM/credit-risk-workshop-cpd)
 >
-> * **Notebook**: [ConfigureOpenScale.ipynb](../../notebooks/ConfigureOpenScale.ipynb)
-> * **Notebook with output**: [with-output/ConfigureOpenScaleOutput.ipynb](../../notebooks/with-output/ConfigureOpenScale-with-output.ipynb)
+> * **Notebook**: [openscale-full-configuration.ipynb](https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/openscale-full-configuration.ipynb)
+> * **Notebook with output**: [openscale-full-configuration-output.ipynb](https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/with-output/openscale-full-configuration-output.ipynb)
 
 ![Add notebook name and URL](../.gitbook/assets/images/openscale/openscale-add-notebook-url.png)
 
