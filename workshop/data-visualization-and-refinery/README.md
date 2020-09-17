@@ -122,7 +122,7 @@ Let's do some visual exploration of our data using charts and graphs. We can acc
 * We first see the data in a histogram by default. Looking at the distribution can give us insights. For example, there is a large bulk of applicants in the 18-20 year old range. Hover over that bar in the histogram and you can see that it is exactly 82 people in this sample data set.
 The next histogram bar for 20-22 year olds is much smaller, with only 34 members in this cohort. These insights can help with finding gaps in our data, and aid in preventing bias and building a more accurate predictive model.
 
-* You can edit the details of the chart in the left panel. In this case, you can choose to further refine this visualization by splitting the `Age` historgram by using the `Risk` column. So we will have a visualization of distribution of age for customers that churned and another for those that did not churn.
+* You can edit the details of the chart in the left panel. In this case, you can choose to further refine this visualization by splitting the `Age` histogram by using the `Risk` column. So we will have a visualization of distribution of age for customers that churned and another for those that did not churn.
 
 ![Visualize Age column](../.gitbook/assets/images/dr/dr-vis-split-age.png)
 
