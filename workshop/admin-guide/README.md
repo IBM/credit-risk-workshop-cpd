@@ -5,7 +5,6 @@ This section covers the setup and configuration of the Cloud Pak for Data cluste
 1. [Configure Cloud Pak for Data](#platform-configuration)
 1. [Create/Load Database(s)](#database-setup)
 1. [Configure Database Connections](#database-connection-configuration)
-1. [Configure Data Virtualization](#data-virtualization-configuration)
 1. [Configure Watson Knowledge Catalog](#watson-knowledge-catalog-configuration)
 1. [Configure Watson OpenScale](#watson-openscale-configuration)
 
@@ -36,17 +35,6 @@ For Cloud Pak for Data to access the databases we setup above, we need to add *D
 * Adding global connection.
 
 Run through the instructions in the [Database Connection Configuration Readme](./database-connection-configuration.md)
-
-## Data Virtualization Configuration
-
-In order to run through the data virtualization module in the workshop, we need to configure the DV instance that has been provisioned in the cluster. (_Note: You must complete the *Database Connection* and *Platform Configuration* sections before this section._). This involves:
-
-* Provisioning Data Virtualization instance.
-* Adding users to Data Virtualization instance.
-* Add connections to DV.
-* Setup virtualized data for backup.
-
-Run through the instructions in the [Database Virtualization Configuration Readme](./datavirtualization-configuration.md)
 
 ## Watson Knowledge Catalog Configuration
 
