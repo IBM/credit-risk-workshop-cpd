@@ -7,7 +7,6 @@
 
 ## Credit Risk Workshop
 
-* [Data Connection and Virtualization](data-connection-and-virtualization/README.md)
 * [Import Data to Project](addData/README.md)
 * [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md)
 * [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md)
