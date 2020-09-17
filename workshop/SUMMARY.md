@@ -3,11 +3,9 @@
 ## Getting Started
 
 * [Pre-work](pre-work/README.md)
-* [Git integration (using GitLab)](gitIntegration/README.md)
 
 ## Credit Risk Workshop
 
-* [Import Data to Project](addData/README.md)
 * [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md)
 * [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md)
 * [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md)
