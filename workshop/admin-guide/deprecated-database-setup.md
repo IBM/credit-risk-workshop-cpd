@@ -1,4 +1,6 @@
-# Admin Guide - Setup and Configure Data Sources
+# THIS DATABASES SETUP INSTRUCTIONS INCLUDE MONGODB WHICH IS NO LONGER USED IN THE WORKSHOP DUE TO A COLUMN CAPITALIZATION ISSUE
+
+## Admin Guide - Setup and Configure Data Sources
 
 The workshop simulates the real world data connection process by having data reside on one or more data sources which are then added as connection in Cloud Pak for Data. This workshop is using heterogeneous databases as its data sources as well as a couple of CSV files. Before delivering the workshop, you will need to set up a DB2 Server instance, a DB2 Warehouse instance and a MongoDB instance, then load them with data that will be consumed by participants. There are several deployment options available in this scenario:
 
