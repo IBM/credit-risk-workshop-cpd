@@ -1,65 +1,85 @@
 # Git Repository Integration
 
-A Cloud Pak for Data project can be integrated with a git repository.
+A Cloud Pak for Data project can be integrated with a git repository. The Git integration must be done at project creation time.
 
-## Generate a token in GitLab
+## Generate GitLab Token
 
 * To create a token for Gitlab, login to [GitLab](https://about.gitlab.com/), click on your user account in the top right and choose `Settings`:
 
-   ![GitLab user account](../.gitbook/assets/images/git/GitLabUserAccount.png)
+![GitLab user account](../.gitbook/assets/images/git/GitLabUserAccount.png)
 
 * From the left navigation bar select `Access tokens` and fill in the *name*, *expiration date*, and check the boxes for *read_repository* and *write_repository*. Finally, click `Create personal access token` button:
 
-   ![GitLab select Access Tokens](../.gitbook/assets/images/git/GitLabSelectAccessTokens.png)
+![GitLab select Access Tokens](../.gitbook/assets/images/git/GitLabSelectAccessTokens.png)
 
 * On the resulting page, you'll see your personal access token. Copy this.
 
-   > NOTE: This token gives access to your git repository. Do not share with anyone.
+> NOTE: This token gives access to your git repository. Do not share with anyone.
 
-   ![GitLab copy Access Token](../.gitbook/assets/images/git/GitLabCopyToken.png)
+![GitLab copy Access Token](../.gitbook/assets/images/git/GitLabCopyToken.png)
 
-* Now go back to the Cloud Pak for Data *Create project* page and we'll add the token.
+## Create Analytics Project with Git Integration
 
-## Create a project with git integration
+* Go the (☰) navigation menu and click on the *Projects* link.
 
-* Go the (☰) menu and click *Projects*
+![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
-   ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+* Click on the *New project* button on the top right.
 
-* Click on *New project*
+![Start a new project](../.gitbook/assets/images/prework/new-project.png)
 
-   ![Start a new project](../.gitbook/assets/images/prework/project-new.png)
+* Select the `Analytics project` radio button and click the **Next** button.
 
-* Create a new project, choose `Analytics project`. Give the project a name.
+![New analytics project](../.gitbook/assets/images/prework/new-project-type.png)
 
-* Click the box for `Integrate this project with git`. Add the token that you have created, and then select it. Put in the repository URL, Select a branch, and click `Create`.
+* We are going to create an empty project. Select the _*Create an empty project*_ option.
 
-   ![Create Project with git](../.gitbook/assets/images/prework/project-new-with-git.png)
+![Create project from file](../.gitbook/assets/images/prework/new-project-empty.png)
 
-## Create assets and push to git
+* Give the project a name and Click the box for `Integrate this project with git`. Then click the `New Token` link on the right.
 
-* Now if we create an asset in the project, we can push to git.
+![Create token](../.gitbook/assets/images/git/create-git-token.png)
 
-* At the project overview, either click the `+Add to project` button, and choose `Notebook`, or to the right of *Notebooks* click `+ New notebook`:
+* In the Git Integration panel: select the Gitlab option from the *Platform* drop down list, Paste in your access token from the previous section, Enter your GitLab username, provide a name to the token. Then click the *`Continue`* button.
 
-   ![Add a new asset](../.gitbook/assets/images/wml/wml-add-asset.png)
+![Create token](../.gitbook/assets/images/git/create-git-token-details.png)
 
-* On the next panel select the *From URL* tab, give your notebook a name, provide the following URL, and choose the Python 3.6 environment:
+* Now select the token you just created in the *Token* drop down list. Put in the repository URL, Select a branch, and click `Create`.
 
-```bash
-https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/machinelearning-creditrisk-sparkmlmodel.ipynb
-```
+![Create Project with git](../.gitbook/assets/images/git/project-new-with-git.png)
 
-* Now, go back to the top-level project page, click the "rectangular arrow" sync-icon, and choose `Pull and Push`:
+> *Note: We are assuming you have a project already created in the repository that you will synch to. If not, go ahead and create an empty project in GitLab*
 
-   ![git pull and push](../.gitbook/assets/images/git/gitPullAndPush.png)
+## Create Asset and Push to GitLab
 
-* On the *Confirm Sync* page, select your token, check the box for your notebook, and click `Sync`:
+Now whenever we create an asset in the project, we will be able to push it to the GitLab repository.
 
-   ![git confirm sync](../.gitbook/assets/images/git/gitConfirmSync.png)
+* From the project overview, either click the `Add to project +` button, and choose `Notebook`.
 
-* The next screen will verify "Did you remove credentials from assets?". After confirming this, click `Continue export`.
+![Add a new asset](../.gitbook/assets/images/git/git-new-notebook-asset.png)
 
-* After syncing, the screen will show Success. You can click `Back to project`.
+* On the *'New notebook'* panel, give the notebook a name and optional description. Leave the default runtime. Click the *`Create notebook`* button.
 
-* You can integrate git into your workflow in your usual way, syncing with teammates via 'git pull' and using 'git push' to upload your changes to the git remote repository.
+![Create notebook](../.gitbook/assets/images/git/gitCreateNotebook.png)
+
+* We can start making changes to the notebook but first lets sync with the repository. Go back to the top-level project page by clicking on the project name in the navigation hierarchy in the top left of the page.
+
+![Project navigation](../.gitbook/assets/images/git/git-navigate-project-home.png)
+
+* Click the "circular arrow" sync-icon and choose the `Pull and Push` option from the menu.
+
+![git pull and push](../.gitbook/assets/images/git/gitPullAndPush.png)
+
+* On the *Confirm Sync* page, select your token, check the box next to your notebook, and click the `Sync` button.
+
+![git confirm sync](../.gitbook/assets/images/git/gitConfirmSync.png)
+
+* A window will come up asking you to verify "Did you remove credentials from assets?". After confirming this, click the `Continue export` button.
+
+* After syncing, the window will show Success. You can click the `Back to project` button.
+
+* You can check your GitLab project to see the notebook has been added under the *'assets'* directory.
+
+## Conclusion
+
+In this section we covered how to enable the Git integration to your projects in Cloud Pak for Data. You can integrate git into your workflow in your usual way, syncing with teammates via 'git pull' and using 'git push' to upload your changes to the git remote repository.
