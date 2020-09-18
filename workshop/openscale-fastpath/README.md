@@ -51,7 +51,7 @@ The *Insights Dashboard* provides an overview of the models that OpenScale is mo
 
   ![OpenScale Insight Dashboard Tile Open](../.gitbook/assets/images/openscale/openscale-fp-model-viewmonitors.png)
 
-* Click the `Endpoints` menu on the left, then the Endpoints tab. Use the Endpoint pulldown to select `Debiased transactions`. This is the REST endpoint that offers a debiased version of the credit risk ML model, based on the features that were configured (i.e. Sex and Age). It will present an inference, that attempts to remove the bias that has been detected.
+* Click the `Endpoints` menu on the left, then the Endpoints tab. Use the Endpoint pulldown to select `Debiased transactions`. This is the REST endpoint that offers a debiased version of the credit risk ML model, based on the features that were configured (i.e. Sex and Age). It will present an inference that attempts to remove the bias that has been detected.
 
   ![OpenScale Monitors Endpoints](../.gitbook/assets/images/openscale/openscale-fp-endpoints.png)
 
@@ -61,7 +61,7 @@ The *Insights Dashboard* provides an overview of the models that OpenScale is mo
 
 ### Examine an individual transaction
 
-* Click on the left-hand menu icon for `Explain a transaction`. Below the text input you may see a series of tabs with transaction ids. These are the tranactions that have been explained and cached. Click on one of these cached transaction ids if its present.
+* Click on the left-hand menu icon for `Explain a transaction`. Below the text input you may see a series of tabs with transaction ids. These are the transactions that have been explained and cached. Click on one of these cached transaction ids if it is present.
 
 > If you do not have cached transaction IDs, you can use one of the following approaches to find a transaction to explain: (1) As you did in the section above, you can go back to the transactions page that you navigated to from the Fairness alert and click the `Explain` link under the 'Action' column.  (2) If you've run the `Run the OpenScale notebook` code. You can enter a transaction UID you copied from that notebook into the search bar.
 
