@@ -3,7 +3,6 @@
 
 Welcome to our workshop! In this workshop we'll be using the Cloud Pak for Data platform to Collect Data, Organize Data, Analyze Data, and Infuse AI into our applications. The goals of this workshop are:
 
-* Collect and virtualize data
 * Visualize data with Data Refinery
 * Create and deploy a machine learning model
 * Monitor the model
@@ -75,7 +74,6 @@ This file has the following attributes:
 |   |   |
 | - | - |
 | [Pre-work](pre-work/README.md) | Creating a project, downloading the data set, seeding a database |
-| [Data Connection and Virtualization](data-connection-and-virtualization/README.md) | Creating a new connection, virtualizing the data, importing the data into the project |
 | [Import Data to Project](addData/README.md) | Import the data into your project |
 | [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) | Refining the data, vizualizing and profiling the data |
 | [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md) | Use and Enterprise data catalog to search, manage, and protect data |
