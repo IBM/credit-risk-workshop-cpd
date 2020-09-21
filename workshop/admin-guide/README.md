@@ -2,152 +2,65 @@
 
 This section covers the setup and configuration of the Cloud Pak for Data cluster as well as supporting services necessary for the workshop. This involves the following steps:
 
-1. [Configure Cloud Pak for Data](#cloud-pak-for-data-environment-configuration)
-1. [Create Data Sources](#database-setup)
-1. [Configure Data Connections](#database-configuration)
-1. [Setup Data Virtualization](#data-virtualization-configuration)
-1. [Setup Watson Knowledge Catalog](#watson-knowledge-catalog-setup)
+1. [Configure Cloud Pak for Data](#platform-configuration)
+1. [Create/Load Database(s)](#database-setup)
+1. [Configure Database Connections](#database-connection-configuration)
+1. [Configure Data Virtualization](#data-virtualization-configuration)
+1. [Configure Watson Knowledge Catalog](#watson-knowledge-catalog-configuration)
+1. [Configure Watson OpenScale](#watson-openscale-configuration)
 
-> **NOTE**: Parts of this section requires the user running it to have `Admin` user access to the Cloud Pak for Data cluster.
+> **NOTE**: Many of these sections either require or should be completed by a user with `Administrator` user role to the Cloud Pak for Data cluster (i.e the `admin` account in a default installation).
 
-## Cloud Pak for Data Environment Configuration
+## Platform Configuration
 
 There are a couple of steps to configure services and setup the platform so users can access the environment. This covers:
 
-* Provisioning Data Virtualiation.
 * Adding user accounts to cluster.
-* Adding users to data virtualization.
 
-Run through the instructions in the [Platform Configuration Readme](PlatformConfiguration.md)
+Run through the instructions in the [Platform Configuration Readme](./platform-configuration.md)
 
 ## Database Setup
 
-The workshop uses data stored in several data sources, these databases need to be installed and setup prior to the workshop. This involves:
+The workshop uses data stored in various data sources, these databases need to be installed / provisioned and setup prior to the workshop. This involves:
 
 * Provisioning databases.
 * Loading data.
 * Gathering connection information.
 
-Run through the instructions in the [Database Configuration Readme](DatasourceConfiguration.md)
+Run through the instructions in the [Database Setup Readme](./database-setup.md)
 
-## Database Configuration
+## Database Connection Configuration
 
-For Cloud Pak for Data to access our data sources (Db2 Warehouse, MongoDB, etd), we need to add *Data Connections* to connect to them via JDBC to Cloud Pak for Data.
+For Cloud Pak for Data to access the databases we setup above, we need to add *Data Connections* to connect to them via JDBC. (_Note: You must complete the *Database Setup* section before this section._)
 
-### Add DB2 Warehouse Connection
+* Adding global connection.
 
-* To add a new data source, go to the (☰) menu and click on the *Connections* option.
-
-  ![(☰) Menu -> Collections](../.gitbook/assets/images/connections/conn-menu.png)
-
-* At the overview, click *Add connection*.
-
-  ![Overview page](../.gitbook/assets/images/connections/conn-overview-empty.png)
-
-* Start by giving your new *Connection* a name and select *Db2 Warehouse on Cloud* as your connection type. More fields should apper. Fill the new fields with the same credentials for your own Db2 Warehouse connection from the previous section .
-
-* Click the check box for `Use SSL`. Next click `Select file` and navigate to where you converted the SSL certificate for DB2 Warehouse form a `.crt` file to a `.pem` file (probably called DigiCertGlobalRootCA.pem).
-
-* Click `Test Connection` and, after that succeeds, click `Add`.
-
-  ![Add a Db2 Warehouse on Cloud connection](../.gitbook/assets/images/connections/conn-details.png)
-
-* The new connection will be listed in the overview.
-
-  ![Connection has been added!](../.gitbook/assets/images/connections/conn-overview-db2.png)
-
-### Add MongoDB Connection
-
-* To add a new data source, go to the (☰) menu and click on the *Connections* option.
-
-  ![(☰) Menu -> Collections](../.gitbook/assets/images/connections/conn-menu.png)
-
-* At the overview, click *Add connection*.
-
-  ![Overview page](../.gitbook/assets/images/connections/conn-overview-empty.png)
-
-* Start by giving your new *Connection* a name and select *Mongo* as your connection type. More fields should apper. Fill the new fields with the credentials you saved for the MongoDB connection from the previous section.
-
-  ![Mongo Connection](../.gitbook/assets/images/connections/mongodb-connection.png)
-
-* Click Save. The new connection will be listed in the overview.
+Run through the instructions in the [Database Connection Configuration Readme](./database-connection-configuration.md)
 
 ## Data Virtualization Configuration
 
-With the data connections created, we next add them as data sources that can be used in data virtualization.
+In order to run through the data virtualization module in the workshop, we need to configure the DV instance that has been provisioned in the cluster. (_Note: You must complete the *Database Connection* and *Platform Configuration* sections before this section._). This involves:
 
-* To launch the data virtualization tool, go the (☰) menu and click `Collect` and then `Data Virtualization`.
+* Provisioning Data Virtualization instance.
+* Adding users to Data Virtualization instance.
+* Add connections to DV.
+* Setup virtualized data for backup.
 
-  ![(☰) Menu -> Collect -> Data Virtualization](../.gitbook/assets/images/dv/dv-menu.png)
+Run through the instructions in the [Database Virtualization Configuration Readme](./datavirtualization-configuration.md)
 
-* At the empty overview, click *Add* and choose *Add data source*. If you do not get to the `Data Sources` page. Click the `Menu` under 'Data virtualization' and selct `Data Sources`.
+## Watson Knowledge Catalog Configuration
 
-  ![No data sources, yet](../.gitbook/assets/images/dv/dv-data-sources-empty.png)
+In order to run through the WKC modules in the workshop, we need to configure WKC.
 
-* Select the data source we made in the previous step, and click *Next*.
+* Loading assets into database.
+* Setting up the enterprise catalog.
 
-  ![Add the Db2 Warehouse connection](../.gitbook/assets/images/dv/dv-data-sources-add.png)
+Run through the instructions in the [WKC Configuration Readme](./wkc-configuration.md)
 
-* The new connection will be listed as a data source for data virtualization.
+## Watson OpenScale Configuration
 
-  ![Db2 Warehouse connection is now associated with Data Virtualization](../.gitbook/assets/images/dv/dv-data-sources-shown.png)
+We setup the a sample model and content in Watson OpenScale. (_Note: You must complete the *Database Setup* section before this section._).
 
-* Repeat the process to add the mongoDB instance.
+* Run fastpath configuration.
 
-  ![Data Virtualization data sources](../.gitbook/assets/images/dv/dv-data-sources-complete.png)
-
-### Virtualizing Data
-
-In this section, we will run through the data virtualization lab to create virtualized table views and joined table views. We will store these views in an `INSTRUCTOR` schema and share them with all Data Virtualization users. This is done as a backup in case there are any unexpected issues with any of the data sources.
-
-* Run through the [Virtualize Data section of the data virtualization lab](../data-connection-and-virtualization/README.md). Note that before running through the lab, you are only running through the first section  (`Virtualize Data`, not assign `Grant Access to Virtualized Data`) and there are two key changes that you need to make from the lab instructions:
-
-  * When you virtualize the tables in the lab, specify `INSTRUCTOR` as the schema instead of accepting the default schema name (i.e USERXXXX).
-
-    ![Add virtualized data to your project](../.gitbook/assets/images/dv/dv-virtualize-assign.png)
-
-  * When you are joining virtual objects, specify `INSTRUCTOR` as the schema instead of accepting the default schema name (i.e USERXXXX).
-
-    ![Review the proposed joined table](../.gitbook/assets/images/dv/dv-data-join-review.png)
-
-### Grant Access to all Users
-
-In order for all workshop participants to have access to the data that you just virtualized, you need to grant them access. Follow these steps to make your Virtualized data visible to them.
-
-* Go to *Data Virtualization* option from the (☰) menu. Click on `Menu` -> `My virtualized data`.
-
-* Click on the virtualized data you've created, then click the 3 horizontal dots `...` to the right of one, and choose `Manage access`:
-
-  ![Manage access to virtualized data](../.gitbook/assets/images/dv/dv-manage-access-menu.png)
-
-* Click the `All data virtualization users` radio button and then the `Continue` button in the dialog window.
-
-## Watson Knowledge Catalog Setup
-
-### Setup the Enterprise catalog
-
-* See the separate instructions to [setup WKC Enterprise Catalog](./wkc-setup-readme.md)
-
-* Go to `Organize` -> `Data discovery` then click `Workspaces` and `Add workspace`. Name it *Enterprise*.
-
-* In your `Enterprise` Data discovery workspace, go to `Settings` -> `Users and groups` and add the CPD cluster users (your workshop attendees).
-
-### Setup Data Discovery
-
-* In `Data discovery` click on `New Discovery job` -> `Quick scan`.
-
-* Under `Select a connection` click your DB connection.
-
-* Under `Discovery root` drill down and check `CUSTOMER`, `INSURANCE`, and `MORTGAGE`.
-
-* Click all the options and choose `1000` for max number of records to scan.
-
-* Under `Select a workspace` choose `Enterprise`.
-
-* click the `Discover` button.
-
-> NOTE: All workshop attendess will need to be added to the Enterprise catalog as a Viewer and added to the Enterprise Catalog Data project as an Editor. They will not be able to view the Data Flow as a Viewer.
-
-### WKC for admins
-
-* To run the [WKC for admins](../watson-knowledge-catalog/README.md) module, the users will need CPD cluster admin role.
+Run through the instructions in the [OpenScale Configuration Readme](./wos-configuration.md)
