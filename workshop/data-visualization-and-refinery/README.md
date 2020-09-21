@@ -4,137 +4,143 @@ Let's take a quick detour to the *Data Refinery* tool. Data Refinery can quickly
 
 This section is broken up into the following steps:
 
-1. [Load the *XXXAPPLICANTFINANCIALPERSONALLOAN* data table into data refinery](#1-load-the-xxxapplicantfinancialpersonalloan-data-table-into-data-refinery)
-1. [Refine your data](#2-refine-your-data)
-1. [Use Data Flow steps to keep track of your work](#3-use-data-flow-steps-to-keep-track-of-your-work)
-1. [Schedule jobs](#4-schedule-jobs)
-1. [Profile the data](#5-profile-the-data)
-1. [Visualize with charts and graphs](#6-visualize-with-charts-and-graphs)
+1. [Load the data](#1-load-data)
+1. [Refine the data](#2-refine-data)
+1. [Profile the data](#3-profile-data)
+1. [Visualize the data](#4-visualize-data)
 
-## 1. Load the *XXXAPPLICANTFINANCIALPERSONALLOAN* data table into data refinery
+>*Note: The lab instructions below assume you have a project already and have data you will refine. If not, follow the instructions in the pre-work and import data to project sections to create a project and assign data to your project.*
 
-* From the *Project* home, under the *Assets* tab, click on the *Data assets* arrow to toggle it and open up the list of data assets. Click the box next to *XXXAPPLICANTFINANCIALPERSONALLOAN* (where `XXX` is your username or the username of the person who granted you data access) to check it, and click the 3 dots to the right, and then *Refine* :
+## 1. Load Data
 
-![Launch the XXXAPPLICANTFINANCIALPERSONALLOAN table](../.gitbook/assets/images/dr/dr-launch-table.png)
+* Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
-Data Refinery should launch and open the data like the image below:
+![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
-![Data Refinery view of the XXXAPPLICANTFINANCIALPERSONALLOAN table](../.gitbook/assets/images/dr/dr-open-table.png)
+* From the *Project* home, under the *Assets* tab, ensure the *Data assets* section is expanded or click on the arrow to toggle it and open up the list of data assets.
 
-* Click the `X` by the *Details* button to close it.
+* Click the check box next to the merged data asset  *XXXAPPLICANTFINANCIALPERSONALLOAN* (where `XXX` is your username or the username of the person who granted you data access) to check it, then click the 3 vertical dots to the right, and select the *Refine* option from the menu.
 
-## 2. Refine your data
+![Launch the action menu](../.gitbook/assets/images/dr/dr-launch-table.png)
 
-We'll start out in the *Data* tab.
+* Data Refinery will launch and open to the `Data` tab. It will also display the information panel with details of the data refinery flow and where the output of the flow will be placed. Go ahead and click the `X` to the right of the *Information* panel to close it.
 
-### Transform your sample data set by entering R code in the command line or selecting operations from the menu
+![Data Refinery view](../.gitbook/assets/images/dr/dr-open-table.png)
 
-* For example, type *filter* on the Command line and observe that autocomplete will give hints on the syntax and how to use the command:
+## 2. Refine Data
+
+We'll start out in the *Data* tab where we wrangle, shape and refine our data. As you refine your data, IBM Data Refinery keeps track of the steps in your data flow. You can modify them and even select a step to return to a particular moment in your data’s transformation.
+
+### Create Transformation Flow
+
+* With Data Refinery, we can transform our data by directly entering operations in R-style syntax or interactively by selecting operations from the menu. For example, start typing *filter* on the Command line and observe that autocomplete will give hints on the syntax and how to use the command.
 
 ![Command line filter](../.gitbook/assets/images/dr/dr-cli-filter.png)
 
-* When you have completed a command, click Apply to apply the operation to your data set.
-
-* Click the `+Operation` button:
+* We will use the UI to explore and transform the data. Click the `+Operation` button.
 
 ![Choose Operation button](../.gitbook/assets/images/dr/dr-choose-operation-button.png)
 
-* Let's use the `filter` operation to check some values. Click on `filter`:
+* Let's use the `Filter` operation to check some values. Click on `Filter` in the left panel.
 
 ![Filter Operation](../.gitbook/assets/images/dr/dr-filter-operation.png)
 
-* We want to make sure that there are no empty values, and there may to be some for the *StreetAddress* column, so let's fix that. Click on `filter` and choose the *StreetAddress* column from the drop down, then the Operator *Is empty*, then `Apply`:
+* We want to make sure that there are no empty values in the *StreetAddress* column. Select the *`StreetAddress`* column from the *Column* drop down list, select *`Is empty`* from the *Operator* drop down list, and then click the `Apply` button.
 
 ![Filter is empty](../.gitbook/assets/images/dr/dr-filter-is-empty.png)
 
-If nothing shows up in this filter, it means that the 1000 rows we are previewing do not have any empty values for *StreetAddress*. On the other hand, we may see some empty values.
+> *Note: If there are records where the selected column is empty, they will be displayed after clicking the apply button. If there are no records for this filter, it means that the 1000 rows we are previewing do not have any empty values for the selected column.*
 
-* Now, click on the counter-clockwise "back" arrow, to remove the filter. Alternately, we can just remove the filter under the *Steps*:
+* Now, click on the counter-clockwise "back" arrow to remove the filter. Alternately, we can also remove the filter by clicking the trash icon for the Filter step in the *Steps* panel on the right.
 
 ![Click back arrow](../.gitbook/assets/images/dr/dr-click-back-arrow.png)
 
-If the emtpy rows show up, you can remove them.
-
-* Choose the Operation *Remove empty rows*, select the *StreetAddress* column, and click `Apply`:
+* We can remove these records with empty values. Click the `+Operation` again and this time select the *Remove empty rows* operation. Select the *StreetAddress* column, then click the `Next` button and finally the `Apply` button.
 
 ![Remove empty rows](../.gitbook/assets/images/dr/dr-remove-empty-rows.png)
 
-Let's say we've decide that there are features (columns) that we don't want to use later in our Machine Learning model. We'll remove the `FirstName,LastName,Email,StreetAddress,City,State,PostalCode` columns.
+* Let's say we've decide that there are columns that we don't want to leave in our dataset ( maybe because they might not be usefule features in our Machine Learning model, or because we don't want to make those data attributes accessible to others, or any other reason). We'll remove the `FirstName`, `LastName`, `Email`, `StreetAddress`, `City`, `State`, `PostalCode` columns.
 
-* For each columnn to be removed, go to `Operation` -> `Remove` and choose the column. Click `Next` and then `Apply`. The columns will be removed.
+* For each columnn to be removed: Click the `+Operation` button, then select the `Remove` operation. Click the `Change column selection` option.
 
-### 3. Use Data Flow steps to keep track of your work
+![Remove Column](../.gitbook/assets/images/dr/dr-remove-change-column.png)
 
-What if you need to show a non-technical person the steps you took? What if we do something we don't want?
+* In the *Select column* drop down, choose one of the columns to remove (i.e `FirstName`). Click the `Next` button and then the `Apply` button. The columns will be removed. Repeat for each of the above columns.
 
-As we saw in the last section, we keep track of the steps and we can even undo (or redo) an action using the circular arrows.
+* At this point, you have a data transformation flow with 8 steps. As we saw in the last section, we keep track of each of the steps and we can even undo (or redo) an action using the circular arrows. To see the steps in the data flow that you have performed, click the *Steps* button. The operations that you have performed on the data will be shown.
 
-As you refine your data, IBM Data Refinery keeps track of the steps in your data flow. You can modify them and even select a step to return to a particular moment in your data’s transformation.
+![Flow](../.gitbook/assets/images/dr/dr-final-flow.png)
 
-To see the steps in the data flow that you have performed, click the *Steps* button. The operations that you have performed on the data will be shown.
+* You can modify these steps in real time and save for future use.
 
-You can modify these steps in real time and save for future use.
-
-### 4. Schedule jobs
+### Schedule Jobs
 
 Data Refinery allows you to run jobs at scheduled times, and save the output. In this way, you can regularly refine new data as it is updated.
 
-* Click on the "jobs" icon and then `Save and create job`:
+* Click on the "jobs" icon and then `Save and create job` option from the menu.
 
 ![Click jobs icon](../.gitbook/assets/images/dr/dr-save-and-create-job.png)
 
-* Give the job a name and optional description. Note that you can `Edit` the steps in this Data Refinery flow at this time. Also, note the output name, which in this case is *USER1051.APPLICANTFINANCIALPERSONALLOAN_shaped.csv*. Click `Create and Run`:
+* Give the job a name and optional description. Note that you can `Edit` the steps in this Data Refinery flow at this time. Also, note the output name, which in this case is *USER1006.JRTAPPLICANTFINANCIALPERSONALLOAN_shaped.csv*. Click the `Create and Run` button.
 
 ![Create and Run Refinery job](../.gitbook/assets/images/dr/dr-create-and-run-job.png)
 
-The job will be listed as *Status* *Running* and then the *Status* will change to *Completed*. You can click `Edit` under *Scheduled to run*:
+* The job will be listed as *Status* *`Running`* and then the *Status* will change to *`Completed`*.
 
 ![Click Edit to schedule job](../.gitbook/assets/images/dr/dr-job-running.png)
 
-* Toggle the *Schedule to run* switch and choose a date and time. Then click `Done`:
+* You can click `Edit` next to *Scheduled to run*. Notice that you can toggle the *Schedule to run* switch and choose a date and time to run this transformation as a job or even change the compute environment for this transformation. We will not run this as a job, go ahead and click the `Cancel` button
 
 ![Choose job scheduled time](../.gitbook/assets/images/dr/dr-job-settings.png)
 
-### 5. Profile the data
+### 3. Profile Data
 
-* Back at the top level of our *USER1051.APPLICANTFINANCIALPERSONALLOAN*, clicking on the *Profile* tab will bring up a quick view of several histograms about the data.
+* Go back to the top level of the data refinery view by clicking on the flow asset under the *'Associated Asset'* section in the scheduled job page.
+
+![Back to refinery flow](../.gitbook/assets/images/dr/dr-flow-assset.png)
+
+* Clicking on the *Profile* tab will bring up a view of several statistics and histograms for the attributes in your data.
 
 ![Data Refinery Profile tab](../.gitbook/assets/images/dr/dr-profile.png)
 
-You can get insight into the data from the histograms:
+* You can get insight into the data from the views and statistics:
 
-* The median age  of the applicants is 35, with the bulk under 49.
+  * The median age of the applicants is 35, with the bulk under 49.
 
-* About as many people had credits_paid_to_date as prior_payments_delayed. Few had no_credits.
+  * About as many people had credits_paid_to_date as prior_payments_delayed. Few had no_credits.
 
-*  The median was 3 years for duration at current residence. Range was 1-6 years.
+  * The median was 3 years for duration at current residence. Range was 1-6 years.
 
-### 6. Visualize with charts and graphs
+### 4. Visualize Data
 
-* Choose the *Visualizations* tab to bring up an option to choose which columns to visualize. Under *Columns to Visualize* choose *Age* and click `Visualize data`:
+Let's do some visual exploration of our data using charts and graphs. We can accomplish this in Data Refinery interactively without coding.
 
-![Visualize Age column](../.gitbook/assets/images/dr/dr-vis-choose-column-age.png)
+* Choose the *Visualizations* tab to bring up an option to choose which columns to visualize. Under *Columns to Visualize* choose *Age* and click the `Visualize data` button.
 
-We first see the data in a histogram by default. Looking at the distribution can give us insights. For example, there is a large bulk of applicants in the 18-20 year old range. Hover over that bar in the histogram and you can see that it is exactly 82 people in this sample data set.
+![Select Age column](../.gitbook/assets/images/dr/dr-vis-choose-column-age.png)
+
+* We first see the data in a histogram by default. Looking at the distribution can give us insights. For example, there is a large bulk of applicants in the 18-20 year old range. Hover over that bar in the histogram and you can see that it is exactly 82 people in this sample data set.
 The next histogram bar for 20-22 year olds is much smaller, with only 34 members in this cohort. These insights can help with finding gaps in our data, and aid in preventing bias and building a more accurate predictive model.
 
-* You can choose other chart types. We'll pick `Scatter plot` next by clicking on it:
+* You can edit the details of the chart in the left panel. In this case, you can choose to further refine this visualization by splitting the `Age` histogram by using the `Risk` column. So we will have a visualization of distribution of age for customers that churned and another for those that did not churn.
+
+![Visualize Age column](../.gitbook/assets/images/dr/dr-vis-split-age.png)
+
+* You can choose other chart types. Let's build a `Scatter plot` next. Click on `Scatter plot` as the 'Chart Type' in the top panel and then click the *`Continue`* button when prompted in the *Switch charts?* window.
+
+![Switch to scatter](../.gitbook/assets/images/dr/dr-vis-switch-scatter.png)
+
+* In the scatter plot, choose *Age* for the x-axis and *LoanAmount* for the y-axis. Choose *Age* for the Color map and *LoanAmount* for the Size map. Give it a title.
 
 ![Visualize Age and LoanAmount histogram](../.gitbook/assets/images/dr/dr-vis-scatter-plot.png)
 
-* In the scatter plot, choose *Age* for the x-axis and *LoanAmount* for the y-axis. Choose *Age* for the Color map and *LoanAmount* for the Size map. Give it a title and subtitle.
+* You can see an expected correlation between age and loan amount, with a nice graphic representation using color and size. Play around with the parameters, and feel free to choose other columns to visualize. You can also choose other Chart types.
 
-You can see an expected correlation between age and loan amount, with a nice graphic representation using color and size. Play around with the parameters, and feel free to choose other columns to visualize. You can also choose other Chart types.
+* Under the `Actions` panel, notice that you can perform tasks such as *Start over*, *Download chart details*, *Download chart image*, or set *Global visualization preferences* (_Note: Hover over the icons to see the names_).
 
-Under the `Actions` panel, notice that you can perform tasks such as *Start over*, *Download chart details*, *Download chart image*, or set *Global visualization preferences* (_Note: Hover over the icons to see the names_).
-
-* Click on the "gear" icon in the `Actions` panel:
+* Click on the "gear" icon in the `Actions` panel. We see that we can do things in the *Global visualization preferences* for *Titles*, *Tools*, *Theme*, and *Notifications*. Click on the `Theme` tab and update the color scheme to *Dark*. Then click the `Apply` button, now the colors for all of our charts will reflect this. Play around with various Themes and find one that you like.
 
 ![Visualize set theme and choose preferences](../.gitbook/assets/images/dr/dr-vis-choose-theme.png)
-
-We see that we can do things in the *Global visualization preferences* for *Titles*, *Tools*, *Theme*, and *Notifications*. Click on the `Theme` tab and update the color scheme to *Dark*. Then click the `Apply` button. Play around with various Themes and find one that you like.
-
-Now the colors for all of our charts will reflect this.
 
 ### Conclusion
 
