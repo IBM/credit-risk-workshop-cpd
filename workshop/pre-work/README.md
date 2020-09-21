@@ -127,20 +127,6 @@ Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and mana
 
 ![View deployment space](../.gitbook/assets/images/prework/view-deployment-space.png)
 
-* Next, we will add a collaborator to the new deployment space. Collaborators allow others to view/edit/manage the assets being deployed. In this workshop, we want the models we deploy to be visible and monitored in the OpenScale model monitoring lab.
-
-* Click on the `Access control` tab and then click on `Add collaborators` on the right.
-
-![Deployment space access control](../.gitbook/assets/images/prework/deployment-space-access-control.png)
-
-* Enter "admin" as a Collaborator input field and select the `Admin` user from the drop down list. Then click on the `Add to list` button.
-
-![Deployment space collaborators](../.gitbook/assets/images/prework/deployment-space-add-collaborator.png)
-
-> *NOTE: We are adding the user that configured the machine learning instance for OpenScale monitoring. In this case, the user is the admin user.*
-
-* Click the `Add` button to finish adding the collaborator. You should be brought back to the deployment space page and see your user ID along with the `Admin` user as collaborators for this space.
-
 ## Conclusion
 
 We've completed creating the project and deployment space that we will be using for the rest of this workshop.
