@@ -106,5 +106,5 @@ _**Please note that there are several places in the notebook where you need to u
 
 In this sub-module we've setup Payload logging and the Quality monitor. Move on to the next submodule to learn about the [Drift monitor](./DRIFT.md)
 
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running (in this case the `openscale-fairness-explainability`) and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions menu so you can see the stop kernel option.*
+> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running (in this case the `openscale-quality-feedback`) and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions menu so you can see the stop kernel option.*
 > ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
