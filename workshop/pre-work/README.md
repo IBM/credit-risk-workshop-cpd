@@ -61,7 +61,7 @@ In Cloud Pak for Data, we use the concept of a project to collect / organize the
 
 ![Project name](../.gitbook/assets/images/prework/project-import-name.png)
 
-* A new tab opens up, where you can create the Cloud Object Service. By default, a `Lite` (Free) plan will be selected. Scroll down and give update the name of your Cloud Object Storage service if you wish, and click `Create`.
+* A new tab opens up, where you can create the Cloud Object Service. By default, a `Lite` (Free) plan will be selected. Scroll down and update the name of your Cloud Object Storage service if you wish, and click `Create`.
 
 ![Create COS instance](../.gitbook/assets/images/prework/create-cos-instance.png)
 
@@ -95,7 +95,7 @@ Some of the data assets required for this workshop are stored in an external DB2
 
 * Provide the connection details for the Db2 Warehouse connection and click `Create`.
 
-> **Note**: The connection details will be provided by the instructor.
+> **Note**: The Db2 Warehouse connection details will be provided by the instructor.
 
 ![Add connection to project](../.gitbook/assets/images/connections/conn-details.png)
 
@@ -107,7 +107,7 @@ Some of the data assets required for this workshop are stored in an external DB2
 
 Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and manage the deployment of a set of related deployable assets. These assets can be data files, machine learning models, etc.
 
-* Go the (☰) navigation menu and under `Deployment spaces` select `View all spaces`.
+* Go the (☰) navigation menu, expand `Deployment spaces` and then select `View all spaces`.
 
 ![(☰) Menu -> Deployment spaces](../.gitbook/assets/images/navigation/menu-analytics-deployments.png)
 
