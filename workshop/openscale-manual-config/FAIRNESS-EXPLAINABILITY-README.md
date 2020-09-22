@@ -66,6 +66,8 @@ _**Please note that there are several places in the notebook where you need to u
   * For the `username`, use your Cloud Pak for Data login username.
   * For the `password`, user your Cloud Pak for Data login password.
 
+> *Note: The Jupyter notebook included in the project has been cleared of output. If you would like to see the notebook that has already been completed with associated output, it is hosted in the same repo as this workshop: **Notebook with output**: [oopenscale-fairness-explainability-with-output.ipynb](../../notebooks/with-output/openscale-fairness-explainability-with-output.ipynb)*
+
 #### Get Explainability transaction_id
 
 * In order to use the Explainability feature, we will need the ID for an individual transaction.
