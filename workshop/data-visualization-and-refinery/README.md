@@ -19,7 +19,7 @@ This section is broken up into the following steps:
 
 * From the *Project* home, on the *Assets* tab, ensure the *Data assets* section is expanded or click on the arrow to toggle it and open up the list of data assets.
 
-* Find the *APPLICANTFINANCIALPERSONALLOAN.csv* data asset, then click the 3 vertical dots to the right, and select the *Refine* option from the menu.
+* Find the *german_credit_data_plus_personal.csv* data asset, then click the 3 vertical dots to the right, and select the *Refine* option from the menu.
 
 ![Launch the action menu](../.gitbook/assets/images/dr/dr-launch-table.png)
 
@@ -37,7 +37,7 @@ We'll start out in the *Data* tab where we wrangle, shape and refine our data. A
 
 ![Command line filter](../.gitbook/assets/images/dr/dr-cli-filter.png)
 
-* A `filter` operation syntax will be displayed in the Command line. Clicking on the operation name within the Command line will give hints on the syntax and how to use the command.
+* A `filter` operation syntax will be displayed in the Command line. Clicking on the operation name within the Command line will give hints on the syntax and how to use the command. Click `Cancel` to clear out the command line.
 
 ![Command line filter syntax](../.gitbook/assets/images/dr/dr-cli-filter-syntax.png)
 
@@ -89,7 +89,7 @@ Data Refinery allows you to run jobs at scheduled times, and save the output. In
 
 ![Refinery job name](../.gitbook/assets/images/dr/dr-refinery-job-name.png)
 
-* Click `Next` on the next 2 screens. You will reach the *Review and create* screen. Note the output name, which is *APPLICANTFINANCIALPERSONALLOAN_shaped.csv*. Click the `Create and run` button.
+* Click `Next` on the next 2 screens. You will reach the *Review and create* screen. Note the output name, which is *german_credit_data_plus_personal.csv_shaped*. Click the `Create and run` button.
 
 ![Refinery job name](../.gitbook/assets/images/dr/dr-create-and-run-job.png)
 
@@ -115,11 +115,11 @@ Data Refinery allows you to run jobs at scheduled times, and save the output. In
 
 ### 3. Profile Data
 
-* Go back to the project by clicking the name of the project in the breadcrumbs in the top left area of the  browser. 
+* Go back to the project by clicking the name of the project in the breadcrumbs in the top left area of the browser. 
 
 ![Back to project](../.gitbook/assets/images/dr/dr-back-to-project.png)
 
-* Scroll down to the *Data Refinery flows* section and click on the *APPLICANTFINANCIALPERSONALLOAN.csv_flow* flow.
+* Scroll down to the *Data Refinery flows* section and click on the *german_credit_data_plus_personal.csv_flow* flow.
 
 ![Back to refinery flow](../.gitbook/assets/images/dr/dr-flow-assset.png)
 
@@ -146,7 +146,7 @@ Let's do some visual exploration of our data using charts and graphs. We can acc
 * We first see the data in a histogram by default. Looking at the distribution can give us insights. For example, there is a large bulk of applicants in the 19-20 year old range. Hover over that bar in the histogram and you can see that it is exactly 373 people in this sample data set.
 The next histogram bar for 21-22 year olds is much smaller, with only 72 members in this cohort. These insights can help with finding gaps in our data, and aid in preventing bias and building a more accurate predictive model.
 
-* You can edit the details of the chart in the left panel. In this case, you can choose to further refine this visualization by splitting the `Age` histogram by using the `Risk` column. So we will have a visualization of distribution of agefor risky loan applicants and another for those that are not risky.
+* You can edit the details of the chart in the left panel. In this case, you can choose to further refine this visualization by splitting the `Age` histogram by using the `Risk` column. So we will have a visualization of distribution of age for risky loan applicants and another for those that are not risky.
 
 ![Visualize Age column](../.gitbook/assets/images/dr/dr-vis-split-age.png)
 
@@ -168,4 +168,4 @@ The next histogram bar for 21-22 year olds is much smaller, with only 72 members
 
 ### Conclusion
 
-We've seen a small sampling of the power of Data Refinery on IBM Cloud Pak for Data as a Service. We saw how we can transform data using R code, at the command line, or using various Operations on the columns such as changing the data type, removing empty rows, or deleting the column altogether. We next saw that all the steps in our Data Flow are recorded, so we can remove steps, repeat them, or edit an individual step. We were able to quickly profile the data, to see histograms and statistics for each column. And finally we created more in-depth Visualizations, creating a scatter plot mapping TotalCharges vs. MonthlyCharges, with the Churn results highlighted in color.
+We've seen a small sampling of the power of Data Refinery on IBM Cloud Pak for Data as a Service. We saw how we can transform data using R code, at the command line, or using various Operations on the columns such as changing the data type, removing empty rows, or deleting the column altogether. We next saw that all the steps in our Data Flow are recorded, so we can remove steps, repeat them, or edit an individual step. We were able to quickly profile the data, to see histograms and statistics for each column. And finally we created more in-depth Visualizations, creating a scatter plot mapping Age vs. LoanAmount.
