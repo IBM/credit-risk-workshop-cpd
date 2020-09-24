@@ -5,6 +5,7 @@ Before we get started, we will download some assets and complete some setup for 
 1. [Download or Clone the Repository](#1-download-or-clone-the-repository)
 1. [Create IBM Cloud account and log into IBM Cloud Pak for Data](#2-create-ibm-cloud-account-and-log-into-ibm-cloud-pak-for-data)
 1. [Create an Analytics Project and Deployment Space](#3-create-a-project-and-deployment-space)
+1. [Get the IBM Cloud platform API key and Watson Machine Learning service instance location](#4-get-the-ibm-cloud-platform-api-key-and-watson-machine-learning-service-instance-location)
 
 ## 1. Download or Clone the Repository
 
@@ -34,6 +35,10 @@ Various parts of this workshop will require the attendee to upload files or run 
 * The apps required for IBM Cloud Pak for Data will be provisioned for you. Once you see a message that says that the apps are ready to use, click on `Go to IBM Cloud Pak for Data`.
 
 ![CPDaaS ready](../.gitbook/assets/images/navigation/cpdaas-ready.png)
+
+* Once you are on IBM Cloud Pak for Data, on the top right corner click on your avatar, and then click on `Profile and settings`. Go to the `Services` tab and note down the name of the `Machine Learning` service instance associated with your `Cloud Pak for Data`. You will need to provide this name in future steps.
+
+![CPDaaS WML instance name](../.gitbook/assets/images/prework/cpdaas-wml-instance-name.png)
 
 ## 3. Create a Project and Deployment Space
 
@@ -119,7 +124,7 @@ Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and mana
 
 ![Create empty deployment space](../.gitbook/assets/images/prework/new-deployment-space-empty.png)
 
-* Give your deployment space a unique name and optional description. Provide the Cloud Object Storage instance that you had created when you were creating the project and select the Machine Learning Service that was provisioned when you signed up for IBM Cloud Pak for Data as a Service, then click the `Create` button.
+* Give your deployment space a unique name and optional description. Provide the Cloud Object Storage instance that you had created when you were creating the project and select the Machine Learning Service instance associated with your IBM Cloud Pak for Data as a Service instance, then click the `Create` button.
 
 ![Deployment space name](../.gitbook/assets/images/prework/deployment-space-name.png)
 
@@ -127,6 +132,71 @@ Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and mana
 
 ![View deployment space](../.gitbook/assets/images/prework/view-deployment-space.png)
 
+## 4. Get the IBM Cloud platform API key and Watson Machine Learning service instance location
+
+In some parts of this workshop, you will be executing Jupyter notebooks which use the Watson Machine Learning API to perform operations on your Watson Machine Learning instance. For the Jupyter notebooks to gain access to your Watson Machine Learning instance, you will need to provide them with the API key for your IBM Cloud account as well as the location of the WML service instance.
+
+### Get the IBM Cloud platform API key
+
+Use one of the following methods to retrieve the IBM Cloud Platform API key:
+
+1. [Using the IBM Cloud CLI](#1-using-the-ibm-cloud-cli)
+1. [Using the IBM Cloud console](#2-using-the-ibm-cloud-console)
+
+#### 1. Using the IBM Cloud CLI
+
+* Install the [IBM Cloud CLI](https://cloud.ibm.com/docs/cli/index.html) using the instructions in the link.
+
+* Once the IBM Cloud CLI is installed, run the following command in your terminal to log into your IBM Cloud account. Running this command will prompt you to enter your email address and password.
+
+```bash
+ibmcloud login
+```
+
+* Once you have successfully logged in, generate an API key using the following command. Replace API_KEY_NAME with a unique name.
+
+```bash
+ibmcloud iam api-key-create API_KEY_NAME
+```
+
+* Get the value of `API Key` from the result of the command. This is the *api_key* value that you will need to provide in your Jupyter notebooks for accessing the Watson Machine Learning service instance.
+
+#### 2. Using the IBM Cloud console
+
+Alternatively, you can use the IBM Cloud Console to generate the IBM Cloud API key.
+
+* Go to the [API keys section of the Cloud console](https://cloud.ibm.com/iam/apikeys).
+
+* Select `My IBM Cloud API keys` in the *View* dropdown and then click `Create an IBM Cloud API key +`. 
+
+![Create IBM Cloud API Key](../.gitbook/assets/images/prework/create-ibm-cloud-api-key.png)
+
+* Give your API key a unique name and click `Create`. You should see a message that says `API key successfully created`. Click `Copy` to copy the generated API key. 
+
+![Copy API key](../.gitbook/assets/images/prework/copy-api-key.png)
+
+This is the *api_key* value that you will need to provide in your Jupyter notebooks for accessing the Watson Machine Learning service instance.
+
+### Get the Watson Machine Learning service instance location
+
+Once the API key has been generated, you can use the API key to obtain the location of the Watson Machine Learning Service instance associated with your IBM Cloud Pak for Data as a Service instance.
+
+* Install the [IBM Cloud CLI](https://cloud.ibm.com/docs/cli/index.html) using the instructions in the link.
+
+* Run the following command in a terminal to log into IBM Cloud using the API Key you had generated earlier. Remember to update `API_KEY` with your api key.
+
+```bash
+ibmcloud login --apikey API_KEY -a https://cloud.ibm.com
+```
+
+* Run the following command to retrieve information about the Watson Machine Learning service instance. Remember to update `WML_INSTANCE_NAME` with the name of the Watson Machine Learning instance associated with your IBM Cloud Pak for Data as a Service instance.
+
+```bash
+ibmcloud resource service-instance WML_INSTANCE_NAME
+```
+
+* Get the value of `Location` from this result. This is the *location* value that you will need to provide in your Jupyter notebooks for accessing the Watson Machine Learning service instance.
+
 ## Conclusion
 
-We've completed creating the project and deployment space that we will be using for the rest of this workshop.
+We have now completed creating an IBM Cloud account, a Cloud Pak for Data as a Service instance, and the project and deployment space that we will be using for the rest of this workshop. We have also obtained the IBM Cloud API key and the Watson Machine Learning service instance that we will be using while running the Jupyter notebooks.
