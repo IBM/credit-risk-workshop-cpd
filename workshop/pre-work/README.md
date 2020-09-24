@@ -108,6 +108,22 @@ Some of the data assets required for this workshop are stored in an external DB2
 
 ![Add connection to project](../.gitbook/assets/images/connections/conn-add-success.png)
 
+### Associate a Watson Machine Learning Service instance to the project
+
+You will need to associate a Watson Machine Learning service instance to your project in order to run Machine Learning experiments.
+
+* Go to the *Settings* tab of your project and look for the *Associated services* section. Click on `Add service` and in the menu that opens up, click on `Watson`.
+
+![Add Watson service](../.gitbook/assets/images/prework/add-watson-service.png)
+
+* Click the checkbox next to the Watson Machine Learning service instance that was created for you when you signed up for Cloud Pak for Data as a Service. Click `Associate service`.
+
+![Choose WML instance](../.gitbook/assets/images/prework/choose-wml-instance.png)
+
+* You will  see a notification that the WatsonMachineLearning service was successfully associated with your project. Click on the `X` in the right top corner to close the pop up modal and go back to your project.
+
+![WML Service added successfully](../.gitbook/assets/images/prework/wml-service-added-successfully.png)
+
 ### Create a Deployment Space
 
 Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and manage the deployment of a set of related deployable assets. These assets can be data files, machine learning models, etc.
