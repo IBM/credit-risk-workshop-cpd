@@ -36,7 +36,13 @@ Various parts of this workshop will require the attendee to upload files or run 
 
 ![CPDaaS ready](../.gitbook/assets/images/navigation/cpdaas-ready.png)
 
-* Once you are on IBM Cloud Pak for Data, on the top right corner click on your avatar, and then click on `Profile and settings`. Go to the `Services` tab and note down the name of the `Machine Learning` service instance associated with your `Cloud Pak for Data`. You will need to provide this name in future steps.
+* Once you are on IBM Cloud Pak for Data, on the top right corner click on your avatar, and then click on `Profile and settings`. Go to the `Services` tab.
+
+If the `Machine Learning` service instance is not added then click `Add` and note down the name of the `Machine Learning` service instance associated with your `Cloud Pak for Data`. You will need to provide this name in future steps.
+
+Similarly, Add the `Watson Knowledge Catalog`, if not already added to your `Cloud Pak for Data`.
+
+![CPDaaS WML instance add](../.gitbook/assets/images/prework/cpdaas-wml-instance-add.png)
 
 ![CPDaaS WML instance name](../.gitbook/assets/images/prework/cpdaas-wml-instance-name.png)
 
