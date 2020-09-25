@@ -1,6 +1,6 @@
 # Machine Learning in Jupyter Notebook
 
-In this module, we will go through the process of exploring our data set and building a predictive model that can be used to determine the likelyhood of a credit loan having 'Risk' or 'No Risk'. For this use case, the machine learning model we are building is a classification model that will return a prediction of 'Risk' (the features of the loan applicant predict that there is a good chance of default on the loan) or No Risk (the applicant's inputs predict that the loan will be paid off). The approach we will take in this lab is to some fairly popular libraries / frameworks to build the model in Python using a Jupyter notebook. Once we have built the model, we will make it available for deployment so that it can be used by others.
+In this module, we will go through the process of exploring our data set and building a predictive model that can be used to determine the likelihood of a credit loan having 'Risk' or 'No Risk'. For this use case, the machine learning model we are building is a classification model that will return a prediction of 'Risk' (the features of the loan applicant predict that there is a good chance of default on the loan) or 'No Risk' (the applicant's inputs predict that the loan will be paid off). The approach we will take in this lab is to use some fairly popular libraries / frameworks to build the model in Python using a Jupyter notebook. Once we have built the model, we will make it available for deployment so that it can be used by others.
 
 > *Note: The lab instructions below assume you have a project and a deployment space already. If not, follow the instructions in the pre-work section to create a project and a space.*
 
@@ -12,9 +12,9 @@ For this part of the exercise we're going to use a Jupyter notebook to create th
 
 ### Open the Jupyter notebook
 
-* Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
+* Go the (☰) navigation menu, expand *Projects* and then click on your analytics project.
 
-![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> your project](../.gitbook/assets/images/navigation/menu-your-project.png)
 
 * From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
@@ -36,18 +36,18 @@ You will run cells individually by highlighting each cell, then either click the
 
 #### Load and Prepare Dataset
 
-* Section `1.0 Install required packages` will install some of the libraries we are going to use in the notebook (many libraries come pre-installed on Cloud Pak for Data). Note that we upgrade the installed version of Watson Machine Learning Python Client. Ensure the output of the first code cell is that the python packages were successfully installed.
+* Section `1.0 Install required packages` will install some of the libraries we are going to use in the notebook (many libraries come pre-installed on Cloud Pak for Data as a Service). Note that we upgrade the installed version of Watson Machine Learning Python Client. Ensure the output of the second code cell is that the python packages were successfully installed.
 
-  * Run the code cells in section 1.1 and 1.2. Ensuring that the cells complete before continuing.
+  * Run the code cells in section 1.1 and 1.2. Ensure that the cells complete before continuing.
 
 ![Imported packages](../.gitbook/assets/images/ml/mljupyter-packages-installed.png)
 
-* Section `2.0 Load and Clean data` will load the data set we will use to build out machine learning model. In order to import the data into the notebook, we are going to use the code generation capability of Watson Studio.
+* Section `2.0 Load and Clean data` will load the data set we will use to build our machine learning model. In order to import the data into the notebook, we are going to use the code generation capability of Watson Studio.
 
   * Highlight the code cell below by clicking it. Ensure you place the cursor below the first comment line.
-  * Click the 10/01 "Find data" icon in the upper right of the notebook to find the data asset you need to import.
-  * If you are using virtualized data, then choose your virtualized merged view (i.e. USERXXXX.APPLICANTFINANCIALPERSONALLOANSDATA). If you are using this notebook without virtualized data, you can use the `german_credit_data.csv` CSV file version of the data set that has been included in the project.
-  * For your dataset, Click `Insert to code` and choose `Insert Pandas DataFrame`. The code to bring the data into the notebook environment and create a Pandas DataFrame will be added to the cell below.
+  * Click the 01/00 "Find data" icon in the upper right of the notebook to find the data asset you need to import.
+  * Find the `german_credit_data.csv` data set that has been included in the project.
+  * Click `Insert to code` and choose `pandas DataFrame`. The code to bring the data into the notebook environment and create a Pandas DataFrame will be added to the cell below.
   * Run the cell and you will see the first five rows of our dataset.
 
 ![Add the data as a Pandas DataFrame](../.gitbook/assets/images/ml/mljupyter-insert-dataframe.png)
@@ -64,7 +64,7 @@ You will run cells individually by highlighting each cell, then either click the
 
 * Section `3.0 Create a model` cells will run through the steps to build a model pipeline.
 
-  * We will split our data into training and test data, encode the categorial string values, create a model using the Random Forest Classifier algorithm, and evaluate the model against the test set.
+  * We will split our data into training and test data, encode the categorical string values, create a model using the Random Forest Classifier algorithm, and evaluate the model against the test set.
   * Run all the cells in section 3 to build the model.
 
 ![Building the pipeline and model](../.gitbook/assets/images/ml/mljupyter-buid-pipeline-and-model.png)
@@ -73,23 +73,25 @@ You will run cells individually by highlighting each cell, then either click the
 
 * Section `4.0 Save the model` will save the model to your project.
 
-* We will be saving and deploying the model to the Watson Machine Learning service within our Cloud Pak for Data platform. In the next code cell, be sure to update the `wml_credentials` variable.
-
-  * The url should be the full hostname of the Cloud Pak for Data instance, which you can copy from your browsers address bar (for example, it may look like this: `https://zen.clustername.us-east.containers.appdomain.cloud`)
-  * The username and password should be the same credentials you used to log into Cloud Pak for Data.
-
-* You will update the `MODEL_NAME` and `DEPLOYMENT_SPACE_NAME` variables. For the `MODEL_NAME` use a unique and easily identifiable model name. For the `DEPLOYMENT_SPACE_NAME` copy the name of your deployment space which was output in the previous code cell.
+* We will be saving and deploying the model to the Watson Machine Learning service on IBM Cloud. In section 4.1, be sure to update the `api_key` and `location` variables using the IBM Cloud platform API key and WML service instance location obtained in the pre-work section.
 
 ```python
-MODEL_NAME = "user123 credit risk model"
-DEPLOYMENT_SPACE_NAME = "Name you used for deployment space"
+api_key = '<api-key>'
+location = '<location>'
+```
+
+* In section 4.2, you will update the `MODEL_NAME` and `DEPLOYMENT_SPACE_NAME` variables. For the `MODEL_NAME`,use a unique and easily identifiable model name. For the `DEPLOYMENT_SPACE_NAME`, copy the name of your deployment space which was output in the previous code cell.
+
+```python
+MODEL_NAME = "<model-name>"
+DEPLOYMENT_SPACE_NAME = "<deployment-space-name>"
 ```
 
 ![Model and DS Name](../.gitbook/assets/images/ml/mljupyter-model-ds-name.png)
 
 * Continue to run the cells in the section to save the model to Cloud Pak for Data. Once your model is saved, the call to `wml_client.repository.list_models()` will show it in the output.
 
-![Model SAvede](../.gitbook/assets/images/ml/mljupyter-listmodels-output.png)
+![Model Saved](../.gitbook/assets/images/ml/mljupyter-listmodels-output.png)
 
 **We've successfully built and saved a machine learning model programmatically. Congratulations!**
 
