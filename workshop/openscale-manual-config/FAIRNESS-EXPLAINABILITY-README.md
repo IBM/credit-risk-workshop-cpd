@@ -132,7 +132,7 @@ We've enabled the monitors for Fairness and Explainability, now let's explore th
 
 * Click the "i" information icons next to *Minimum changes for another outcome* and *Maximum changes allowed for the same outcome* to help understand the use of the *Pertinent Negative* and *Pertinent Positive*:
 
-* You can see information about the *Perntinent Negative*, for example, that shows what the minimum changes would need to be to cause a different outcome, i.e from Risk to No Risk, or changing No Risk to Risk. In my example shown, you can see that this is not always calculated:
+* You can see information about the *Pertinent Negative*, for example, that shows what the minimum changes would need to be to cause a different outcome, i.e from *Risk* to *No Risk*, or changing *No Risk* to *Risk*. In my example shown, you can see that this is not always calculated:
 
   ![Pertinent Negative explanation](../.gitbook/assets/images/openscale-config/openscale-config-pertinent-negative.png)
 
