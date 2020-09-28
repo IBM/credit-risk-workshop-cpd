@@ -82,16 +82,22 @@ Now that the model is deployed, we can also test it from external applications. 
 
 > NOTE: Windows users will need the *cURL* command. It's recommended to [download gitbash](https://gitforwindows.org/) for this, as you'll also have other tools and you'll be able to easily use the shell environment variables in the following steps. Also note that if you are not using gitbash, you may need to change *export* commands to *set* commands.
 
-* In a terminal window (or command prompt in Windows), run the following command to get a token to access the API. Replace `<username>` and `<password>` with the username and password you used to log into the CP4D cluster. Replace `<cluster-url>` with just the hostname of the CPD cluster (value from your web browser bar)
+* In order to get access token you need to have `API Key`, that you can get from your IBM cloud account. You can create one by running following command.
 
 ```bash
-curl -k -X GET https://<cluster-url>/v1/preauth/validateAuth -u <username>:<password>
+ibmcloud iam api-key-create <key name>
+```
+
+* In a terminal window (or command prompt in Windows), run the following command to get a token to access the API. Replace `<API Key>` with the api key that you got from running above command.
+
+```bash
+curl -X POST 'https://iam.cloud.ibm.com/identity/token' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Accept: application/json' --data-urlencode 'grant_type=urn:ibm:params:oauth:grant-type:apikey' --data-urlencode 'apikey=<API Key>'
 ```
 
 * A json string will be returned with a value for "accessToken" that will look *similar* to this:
 
 ```json
-{"username":"scottda","role":"Admin","permissions":["access_catalog","administrator","manage_catalog","can_provision"],"sub":"scottda","iss":"KNOXSSO","aud":"DSX","uid":"1000331002","authenticator":"default","accessToken":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNjb3R0ZGEiLCJyb2xlIjoiQWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhY2Nlc3NfY2F0YWxvZyIsImFkbWluaXN0cmF0b3IiLCJtYW5hZ2VfY2F0YWxvZyIsImNhbl9wcm92aXNpb24iXSwic3ViIjoic2NvdHRkYSIsImlzcyI6IktOT1hTU08iLCJhdWQiOiJEU1giLCJ1aWQiOiIxMDAwMzMxMDAyIiwiYXV0aGVudGljYXRvciI6ImRlZmF1bHQiLCJpYXQiOjE1NzM3NjM4NzYsImV4cCI6MTU3MzgwNzA3Nn0.vs90XYeKmLe0Efi5_3QV8F9UK1tjZmYIqmyCX575I7HY1QoH4DBhon2fa4cSzWLOM7OQ5Xm32hNUpxPH3xIi1PcxAntP9jBuM8Sue6JU4grTnphkmToSlN5jZvJOSa4RqqhjzgNKFoiqfl4D0t1X6uofwXgYmZESP3tla4f4dbhVz86RZ8ad1gS1_UNI-w8dfdmr-Q6e3UMDUaahh8JaAEiSZ_o1VTMdVPMWnRdD1_F0YnDPkdttwBFYcM9iSXHFt3gyJDCLLPdJkoyZFUa40iRB8Xf5-iA1sxGCkhK-NVHh-VTS2XmKAA0UYPGYXmouCTOUQHdGq2WXF7PkWQK0EA","_messageCode_":"success","message":"success"}
+{"access_token":"eyJraWQiOiIyMDIwMDkyMjE4MzMiLCJhbGciOiJSUzI1NiJ9.eyJpYW1faWQiOiJJQk1pZC0zMTAwMDJKUlREIiwiaWQiOiJJQk1pZC0zMTAwMDJKUlREIiwicmVhbG1pZCI6IklCTWlkIiwianRpIjoiNTFhYzkyYTUtZmRhMi00ZDE5LWJkZDItN2JmMTQwZmExYTQ1IiwiaWRlbnRpZmllciI6IjMxMDAwMkpSVEQiLCJnaXZlbl9uYW1lIjoiU2FuamVldiIsImZhbWlseV9uYW1lIjoiR2hpbWlyZSIsIm5hbWUiOiJTYW5qZWV2IEdoaW1pcmUiLCJlbWFpbCI6InNhbmplZXYuZ2hpbWlyZUBpYm0uY29tIiwic3ViIjoic2FuamVldi5naGltaXJlQGlibS5jb20iLCJhY2NvdW50Ijp7InZhbGlkIjp0cnVlLCJic3MiOiJjM2JmNzBjMWExMDViYTM5Y2Q2ZTIzOTJkMGFmNDYzMyIsImZyb3plbiI6dHJ1ZX0sImlhdCI6MTYwMTMxMzYwMSwiZXhwIjoxNjAxMzE3MjAxLCJpc3MiOiJodHRwczovL2lhbS5jbG91ZC5pYm0uY29tL2lkZW50aXR5IiwiZ3JhbnRfdHlwZSI6InVybjppYm06cGFyYW1zOm9hdXRoOmdyYW50LXR5cGU6YXBpa2V5Iiwic2NvcGUiOiJpYm0gb3BlbmlkIiwiY2xpZW50X2lkIjoiZGVmYXVsdCIsImFjciI6MSwiYW1yIjpbInB3ZCJdfQ.ZbWf7cYY96yVNL7k5qmxoqasvmACvQcPlu0iO-vSamIuo1Hbdho1tUvg95o061u1wCKtsP-QNlnhNzORB2Ziy1xYaTcXTwaOBpbIU95nyf14fpmgOioiH_t2EZi8vptkokgJEL_l1vRFpuE-AoV1Yr1f0zseZvABh__J7ifFPmGsHNOAEoFL2TL8CFiKwiDsXQJRTwloBgSKLP6_bmD-IkFpw0fnOkTk-TQE9qfdiKz1zE6qyXQADl3ukPyTaWqMsrCmESNhzXWEbGbBFMa4mevD_PesmZPQOpHKURp5c4GdNNzOMXPxML6wmICIUXGsspngjOi72OxCxtL-JW5WOA","refresh_token":"OKAWi2SWPcoNMdPbt2Z2_ssrBIt38djgF0A-LMwNjc2dEjiWcf5-tl6u8I-RVX-rs8Ua40FNJi_mSaRMU7LF5Be7RThXxZKdH1n14QTYMStA7PnEMpMHFGDoUM6vCPd1vcJBYG5A0il8gec4uzs-e0MourxgLxTnYTI8MTTdoAh8Ozl6yUSr0PtdmtwTn0E6cnVv1j0Spce0sZbK0vgzydienF4UCbmqNLcUEywuj_60o3Z1GP-PAv1zPiS9EzqCeDOo87rk6ts4TEX9QMtasqPm20MIsNThljtvJCdGY6GAewyRRGuWtOSlN4Vfxt__xGtkr_Ehm-5Sow56k3NXld-6FKFCWkckK24HROtL0TX0xOQ0gpgtdBzsL9QIMGHRYo34Wuakj0PR_vmSzly6hIvltuC4p5-ywyi0s8mTuT9nbmTaBrG7eih-LrAgUu7NVkWU8jhwMPi66eOLoVpjHLi2ODyZ-bg9fv0OVxNl0bH9AtiCKssI13L6_IdDO3FPL1ZLrkS36uh3JJO3H5p8DbBtpIPnBmkeTmdg3FX1SFbuiUX_hPpJzEp1VafsadUwSbZI98xDbgiSM7t5DwmGWNfCLqKlQM44R90bAouGXqUX6HcTBmq_0btrg6cxPWKzjBZgl6RXYjUO4Cs9kkrDKeoCZWwboEHY5xH3J_u4hdlrFYSX5lmFqbgS16qxMiycoT18WLz938d82QogZuh3FEbQxaYS1i1fe5q5m-90p8h4Tb_L9-q-gDkeDOvqSxAwasqYmvzPsxUMZaTLxx0r_EruhD5Qim4rUrqFnDJ71iQ2T3H2JUpExZZthsBRyk4u7qucE0BuTF_MJqzyVAtZFlHeWw1pheGEx5B_dXsrljvBDpOZ5F_yrMQLZyvrTifdMZbxkWRCWBEqFHHo9e6bGU0P1rgAfEym5JkDAefQqVtcN5p1f_ruVlGChyxxS9W5BBZ95ouUC0D_f01DIzyb4MRRO_UszdgebwWCHovMpcoZhz9BMRcin81UXDnvYic1dvVGD_6BxEp-Mql0roHREdiTWtWSgzEWx5k0xKUzfbNoVAVdQAjS2OQE3L1S0TR7__pQWJfxtLXu44wKH78Hp1EC0ihrskJbNWQuLk2NOaePHNcG2UVeWcST7Rw42z6nmlM","token_type":"Bearer","expires_in":3600,"expiration":1601317201,"scope":"ibm openid"}
 ```
 
 * You will save this access token to a temporary environment variable in your terminal. Copy the access token value (without the quotes) in the terminal and then use the following export command to save the "accessToken" to a variable called `WML_AUTH_TOKEN`.
@@ -104,16 +110,22 @@ export WML_AUTH_TOKEN=<value-of-access-token>
 
 ![Model Deployment Endpoint](../.gitbook/assets/images/deployment/deploy-model-endpoint.png)
 
-* Now save that endpoint to a variable named `URL` in your terminal by exporting it.
+* Now save that endpoint to a variable named `URL` in your terminal by exporting it. URL also requires a version query parameter.
 
 ```bash
-export URL=<value-of-endpoint>
+export WML_URL=<value-of-endpoint>
+```
+
+Example of an URL:
+
+```bash
+export WML_URL="https://us-south.ml.cloud.ibm.com/ml/v4/deployments/98bfa972-f32e-40d0-94db-6092848652c1/predictions?version=2020-09-01"
 ```
 
 * Now run this curl command from the terminal to invoke the model with the same payload we used previousy:
 
 ```bash
-curl -k -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "Authorization: Bearer  $WML_AUTH_TOKEN" -d '{"input_data": [{"fields": [ "CheckingStatus", "LoanDuration", "CreditHistory", "LoanPurpose", "LoanAmount", "ExistingSavings", "EmploymentDuration", "InstallmentPercent", "Sex", "OthersOnLoan", "CurrentResidenceDuration", "OwnsProperty", "Age", "InstallmentPlans", "Housing", "ExistingCreditsCount", "Job", "Dependents", "Telephone", "ForeignWorker"],"values": [[ "no_checking", 13, "credits_paid_to_date", "car_new", 1343, "100_to_500", "1_to_4", 2, "female", "none", 3, "savings_insurance", 46, "none", "own", 2, "skilled", 1, "none", "yes"]]}]}' $URL
+curl -k -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "Authorization: Bearer  $WML_AUTH_TOKEN" -d '{"input_data": [{"fields": [ "CheckingStatus", "LoanDuration", "CreditHistory", "LoanPurpose", "LoanAmount", "ExistingSavings", "EmploymentDuration", "InstallmentPercent", "Sex", "OthersOnLoan", "CurrentResidenceDuration", "OwnsProperty", "Age", "InstallmentPlans", "Housing", "ExistingCreditsCount", "Job", "Dependents", "Telephone", "ForeignWorker"],"values": [[ "no_checking", 13, "credits_paid_to_date", "car_new", 1343, "100_to_500", "1_to_4", 2, "female", "none", 3, "savings_insurance", 46, "none", "own", 2, "skilled", 1, "none", "yes"]]}]}' $WML_URL
 ```
 
 * A json string will be returned with the response, including a  prediction from the model (i.e a "Risk" or "No Risk" at the end indicating the prediction of this loan representing risk).
@@ -124,7 +136,7 @@ Another approach to expose the model to be consumed by other users/applications 
 
 Lets start by creating the deployment:
 
-* Navigate to the left-hand (☰) hamburger menu and choose `Analyze` -> `Analytics deployments`:
+* Navigate to the left-hand (☰) hamburger menu and choose `Deployment Spaces` -> `View all spaces`:
 
 ![Analytics Analyze deployments](../.gitbook/assets/images/navigation/menu-analytics-deployments.png)
 
