@@ -1,6 +1,6 @@
 # Watson Knowledge Catalog for Admins
 
-This exercise demonstrates how to solve the problems of enterprise data governance using Watson Knowledge Catalog on the Cloud Pak for Data platform. We'll explain how to use governance, data quality and active policy management in order to help your organization protect and govern sensitive data, trace data lineage and manage data lakes. This knowledge will help users quickly discover, curate, categorize and share data assets, data sets, analytical models and their relationships with other members of your organization. It serves as a single source of truth for data engineers, data stewards, data scientists and business analysts to gain self-service access to data they can trust.
+This exercise demonstrates how to solve the problems of enterprise data governance using Watson Knowledge Catalog on the Cloud Pak for Data-as-a-Service (CP4DaaS). We'll explain how to use governance, data quality and active policy management in order to help your organization protect and govern sensitive data, trace data lineage and manage data lakes. This knowledge will help users quickly discover, curate, categorize and share data assets, data sets, analytical models and their relationships with other members of your organization. It serves as a single source of truth for data engineers, data stewards, data scientists and business analysts to gain self-service access to data they can trust.
 
 You will need the *Admin* role to create a catalog.
 
@@ -70,21 +70,6 @@ Then click `browse` or you can `drag and drop` your local file. Browse to the `/
 
 * The connection now shows up in the catalog:
 
-
-### Add Virtualized Data
-
-Virtualized data can be added to the *Default* catalog by someone with Administrator or Editor access to that catalog.
-
-* Go to the upper-left (☰) hamburger menu and choose `Catalogs` -> `View all catalogs`. Click `+Add to Catalog` -> `Connected asset`:
-
-![add connected asset](../.gitbook/assets/images/wkc-admin/wkc-add-connected-asset.png)
-
-* Click *Source* -> `Select source`. Browse under `DV` to you Schema (i.e. UserXYZW) and choose the joined table. Click `Select`.
-
-![add connected asset](../.gitbook/assets/images/wkc-admin/wkc-admin-select-source.png)
-
-A user can now add this to a project like any other asset from a catalog.
-
 ## 2. Add collaborators and control access
 
 * Under the *Access Control* tab you can click `Add Collaborator +` to give other users access to your catalog:
@@ -128,7 +113,7 @@ You can use [Business terms](https://dataplatform.cloud.ibm.com/docs/content/wsj
 
 ![organize Data Business terms](../.gitbook/assets/images/wkc-admin/wkc-admin-business-term.png)
 
-* Give the new Business term a name such as *Contact Information* and optional description, and click `Save as draft`. NOTE that others on the platform will be creating a business term for this workshop, so perhaps pre-pend your term with something unique, i.e *scottda-ContactInfo*:
+* Give the new Business term a name such as *Contact Information* and optional description, and click `Save as draft`. 
 
 ![create business term](../.gitbook/assets/images/wkc-admin/wkc-admin-business-term-add-draft.png)
 
@@ -145,12 +130,12 @@ You can use [Business terms](https://dataplatform.cloud.ibm.com/docs/content/wsj
 
 ![search business terms](../.gitbook/assets/images/wkc-admin/wkc-admin-business-term-add-catalog.png)
 
-* Enter *Contact Information* (or your uniquely named term such as *scottda-ContactInfo*) under *Business terms* and the term will be searched for. Click on the `Contact Information` term that is found, and click `Apply`:
+* Enter *Contact Information* under *Business terms* and the term will be searched for. Click on the `Contact Information` term that is found, and click `Apply`:
 
 Close that window once the term has been applied.
 Now, do the same thing to add the *Contact Information* Business term to the *Telephone* column.
 
-* You will now be able to search for these terms from within the platform. For example, going back to your top level *Credit Risk Catalog*, in the search bar with the comment "What assets are you searching for?" enter your unique *<unique_string>Contact Information* term:
+* You will now be able to search for these terms from within the platform. For example, going back to your top level *Credit Risk Catalog*, in the search bar with the comment "What assets are you searching for?" enter your  *Contact Information* term:
 
 ![search using business terms](../.gitbook/assets/images/wkc-admin/wkc-admin-search-business-terms.png)
 
