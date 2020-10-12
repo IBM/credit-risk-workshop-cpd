@@ -2,33 +2,43 @@
 
 Before we get started, we will download some assets and complete some setup for our workshop. This section is broken up into the following steps:
 
-1. [Download or Clone the Repository](#1-download-or-clone-the-repository)
-1. [Create IBM Cloud account and log into IBM Cloud Pak for Data](#2-create-ibm-cloud-account-and-log-into-ibm-cloud-pak-for-data)
-1. [Create an Analytics Project and Deployment Space](#3-create-a-project-and-deployment-space)
-1. [Get the IBM Cloud platform API key and Watson Machine Learning service instance location](#4-get-the-ibm-cloud-platform-api-key-and-watson-machine-learning-service-instance-location)
+- [Pre-work](#pre-work)
+  - [1. Download or Clone the Repository](#1-download-or-clone-the-repository)
+  - [2. Create IBM Cloud account and log into IBM Cloud Pak for Data as a Service](#2-create-ibm-cloud-account-and-log-into-ibm-cloud-pak-for-data-as-a-service)
+  - [3. Create a Project and Deployment Space](#3-create-a-project-and-deployment-space)
+    - [Create a New Project](#create-a-new-project)
+    - [Associate a Watson Machine Learning Service instance to the project](#associate-a-watson-machine-learning-service-instance-to-the-project)
+    - [Create a Deployment Space](#create-a-deployment-space)
+  - [4. Get the IBM Cloud platform API key and Watson Machine Learning service instance location](#4-get-the-ibm-cloud-platform-api-key-and-watson-machine-learning-service-instance-location)
+    - [Get the IBM Cloud platform API key](#get-the-ibm-cloud-platform-api-key)
+      - [1. Using the IBM Cloud CLI](#1-using-the-ibm-cloud-cli)
+      - [2. Using the IBM Cloud console](#2-using-the-ibm-cloud-console)
+    - [Get the Watson Machine Learning service instance location](#get-the-watson-machine-learning-service-instance-location)
+  - [Conclusion](#conclusion)
 
 ## 1. Download or Clone the Repository
-
+<!-- TODO: ADD PROJECT TO GALLERY -->
 Various parts of this workshop will require the attendee to upload files or run scripts that we've stored in the repository. To download the repository and its assets, you have two options. Option 1, if you have the [`git`](https://git-scm.com) command line interface on your laptop, you can clone the repository directly. Option 2, if you don't have git you can access the [GitHub repository](https://github.com/IBM/credit-risk-workshop-cpd) page to download the zip file.
 
-* [Option 1] If you have the git CLI, run the following commands from a terminal or command prompt:
+* **[Option 1]** If you have the git CLI, run the following commands from a terminal or command prompt:
 
    ```bash
    git clone https://github.com/IBM/credit-risk-workshop-cpd.git
    cd credit-risk-workshop-cpd
    ```
 
-* [Option 2] To download the repository as a zip file, go to the [GitHub repo for this workshop](https://github.com/IBM/credit-risk-workshop-cpd) and download the archived version of the workshop and extract it on your laptop.
+* **[Option 2]** To download the repository as a zip file, go to the [GitHub repo for this workshop](https://github.com/IBM/credit-risk-workshop-cpd) and download the archived version of the workshop and extract it on your laptop.
 
 ![download workshop zip](../.gitbook/assets/images/prework/github-zip-download.png)
 
-> **Note: If its not automatically done for you, make sure you extract or unzip the zip file after its downloaded.**
+> **Note: If you used Option 2, make sure you extract or unzip the zip file after it's downloaded. This is not needed if you followed Option 1**
 
-## 2. Create IBM Cloud account and log into IBM Cloud Pak for Data
+## 2. Create IBM Cloud account and log into IBM Cloud Pak for Data as a Service
 
 * Launch a browser and navigate to [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/login?context=cpdaas).
 
-* Log into your IBM Cloud account using your IBMId. If you don't have one, you can click on `Sign up and try for free` to create a free IBM Cloud account.
+* Click the `Select Region` button and choose between `Dallas` and `Frankfurt`, whichever one is closest to you.
+* Then you can log into your IBM Cloud account using your IBMid. If you don't have one, you can click on `Sign up and try for free` to create a free IBM Cloud account.
 
 ![CPDaaS login](../.gitbook/assets/images/navigation/cpdaas-login.png)
 
@@ -38,17 +48,19 @@ Various parts of this workshop will require the attendee to upload files or run 
 
 * Once you are on IBM Cloud Pak for Data, on the top right corner click on your avatar, and then click on `Profile and settings`. Go to the `Services` tab.
 
-If the `Machine Learning` service instance is not added then click `Add` and note down the name of the `Machine Learning` service instance associated with your `Cloud Pak for Data`. You will need to provide this name in future steps.
-
-Similarly, Add the `Watson Knowledge Catalog`, if not already added to your `Cloud Pak for Data`.
+If the `Machine Learning` service instance is not listed under `You Cloud Pak for Data Services` then find it in the `Try our Available Services` section and click on the `Add` button. 
 
 ![CPDaaS WML instance add](../.gitbook/assets/images/prework/cpdaas-wml-instance-add.png)
 
+Next, note down the name of the `Machine Learning` service instance in your `Cloud Pak for Data` section. This is the blue hyperlink underneeth the `Machine Learning` card title. You will need to provide this name in future steps.
+
 ![CPDaaS WML instance name](../.gitbook/assets/images/prework/cpdaas-wml-instance-name.png)
+
 
 ## 3. Create a Project and Deployment Space
 
 ### Create a New Project
+<!-- TODO: If project is cloned form the Gallery, this is already done. -->
 
 In Cloud Pak for Data, we use the concept of a project to collect / organize the resources used to achieve a particular goal (resources to build a solution to a problem). Your project resources can include data, collaborators, and analytic assets like notebooks and models, etc.
 
@@ -56,7 +68,7 @@ In Cloud Pak for Data, we use the concept of a project to collect / organize the
 
 ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
-* Click on the *New +* button on the top.
+* Click on the `New +` button on the top.
 
 ![Start a new project](../.gitbook/assets/images/prework/new-project.png)
 
@@ -64,7 +76,7 @@ In Cloud Pak for Data, we use the concept of a project to collect / organize the
 
 ![Create project from file](../.gitbook/assets/images/prework/new-project-from-file.png)
 
-* Click on the **browse** link and in the file browser popup, navigate to where you cloned or downloaded this repository in the previous section. From within that root directory, navigate to the `projects/` sub-directory and choose the `CreditRiskProject.zip` file. Then click the **open** button.
+* Click on the **browse** link and in the file browser popup, navigate to where you cloned or downloaded this repository in the previous section. Then select the `CreditRiskProject.zip` file in the `projects/` folder there.
 
 ![Browse for project files](../.gitbook/assets/images/prework/browse-project-zip.png)
 
@@ -84,14 +96,16 @@ In Cloud Pak for Data, we use the concept of a project to collect / organize the
 
 ![Create project](../.gitbook/assets/images/prework/create-project.png)
 
-* You can see a progress bar that says your project is being created. Once the project is succesfully created, on the pop up window click on the *View new project* button.
+* You can see a progress bar that says your project is being created. Once the project is succesfully created, on the pop up window click on the `View new project` button.
 
 ![Import project success](../.gitbook/assets/images/prework/project-import-success.png)
 
 * Clicking on the *Assets* tab will show all the assets that were imported into the project when it was created.
 
+<!-- TODO: Once the zip file is finalized, update the screenshot. -->
 ![Project assets](../.gitbook/assets/images/prework/project-assets.png)
 
+<!-- TODO later: Add this back once DV is rolled out
 ### Add a connection to the project
 
 Some of the data assets required for this workshop are stored in an external DB2 Warehouse instance on IBM Cloud. The next step is to add the DB2 Warehouse instance as a connection to the project, so that these data assets can be accessed.
@@ -112,7 +126,7 @@ Some of the data assets required for this workshop are stored in an external DB2
 
 * Once the connection has been successfully added to the project, you can see it listed under *Data assets* on your project's *Assets* tab.
 
-![Add connection to project](../.gitbook/assets/images/connections/conn-add-success.png)
+![Add connection to project](../.gitbook/assets/images/connections/conn-add-success.png) -->
 
 ### Associate a Watson Machine Learning Service instance to the project
 
@@ -124,6 +138,10 @@ You will need to associate a Watson Machine Learning service instance to your pr
 
 * Click the checkbox next to the Watson Machine Learning service instance that was created for you when you signed up for Cloud Pak for Data as a Service. Click `Associate service`.
 
+> **Note:** If you have multiple WatsonMachineLearning services, make sure you select the one that is in the same regios as is your Cloud Pak for Data as a service. 
+
+> **Note:** Also make sure that the Name of the instance matches the name of the WatsonMachineLearning that you added in the earlier steps
+
 ![Choose WML instance](../.gitbook/assets/images/prework/choose-wml-instance.png)
 
 * You will  see a notification that the WatsonMachineLearning service was successfully associated with your project. Click on the `X` in the right top corner to close the pop up modal and go back to your project.
@@ -132,7 +150,7 @@ You will need to associate a Watson Machine Learning service instance to your pr
 
 ### Create a Deployment Space
 
-Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and manage the deployment of a set of related deployable assets. These assets can be data files, machine learning models, etc.
+Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and manage the deployment of a set of related deployable assets. These assets can be data files, machine learning models, etc. For this workshop, we need to create one.
 
 * Go the (☰) navigation menu, expand `Deployment spaces` and then select `View all spaces`.
 
@@ -201,7 +219,19 @@ This is the *api_key* value that you will need to provide in your Jupyter notebo
 
 ### Get the Watson Machine Learning service instance location
 
-Once the API key has been generated, you can use the API key to obtain the location of the Watson Machine Learning Service instance associated with your IBM Cloud Pak for Data as a Service instance.
+<!-- TODO: In case we can only use Frankfurt and Dallas, remove the rest. -->
+**Option 1:**
+You can select the Watson Machine Learning location code from the table below if you are sure where you've deployed your instance. 
+
+| Region       |   Region Codes | 
+|--------------|------------| 
+| Dallas       | us-south   | 
+| London       | eu-gb      | 
+| Frankfurt    | eu-de      | 
+| Tokyo        | jp-tok     | 
+
+
+**Option 2:** Alternatively, if you prefer to use the CLI, you can use the API key to obtain the location of the Watson Machine Learning Service instance associated with your IBM Cloud Pak for Data as a Service instance.
 
 * Install the [IBM Cloud CLI](https://cloud.ibm.com/docs/cli/index.html) using the instructions in the link.
 
@@ -219,6 +249,9 @@ ibmcloud resource service-instance WML_INSTANCE_NAME
 
 * Get the value of `Location` from this result. This is the *location* value that you will need to provide in your Jupyter notebooks for accessing the Watson Machine Learning service instance.
 
+
+
+
 ## Conclusion
 
-We have now completed creating an IBM Cloud account, a Cloud Pak for Data as a Service instance, and the project and deployment space that we will be using for the rest of this workshop. We have also obtained the IBM Cloud API key and the Watson Machine Learning service instance that we will be using while running the Jupyter notebooks.
+We have now completed creating an IBM Cloud account, a Cloud Pak for Data as a Service instance, and the project and deployment space that we will use in the rest of this workshop. We have also obtained the IBM Cloud API key and the Watson Machine Learning service instance location region code that we will use in the Jupyter notebooks section.
