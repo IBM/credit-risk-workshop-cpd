@@ -15,77 +15,79 @@ We need to find the right data and business information related to the Mortgage 
 
 * Enter the words `mortgage` in the global search area and press the enter key to start finding what you need. Place your cursor inside the global search area next to the word mortgage and press the enter key:
 
-![Global search for mortgage](../.gitbook/assets/images/wkc-user/wkc-user-search-mortgage.png)
+  ![Global search for mortgage](../.gitbook/assets/images/wkc-user/wkc-user-search-mortgage.png)
 
-The search returns all data and information assets related to the search criteria across all catalogs, projects and governance artifacts. Scroll down through the list to take a closer look at what was found.
+* The search returns all data and information assets related to the search criteria across all catalogs, projects and governance artifacts. Scroll down through the list to take a closer look at what was found.
 
-You can further refine your search results by using the filters supplied by type, tag, catalog, project etc.
+* You can further refine your search results by using the filters supplied by type, tag, catalog, project etc.
 
-![Mortgage search results](../.gitbook/assets/images/wkc-user/wkc-user-search-results.png)
+  ![Mortgage search results](../.gitbook/assets/images/wkc-user/wkc-user-search-results.png)
 
-First and foremost, we need to verify that all the data needed for the project has been cataloged and available to the project team to use. We can do this very easily by refining the search to only display mortgage data that exists across all catalogs.
+* First and foremost, we need to verify that all the data needed for the project has been cataloged and available to the project team to use. We can do this very easily by refining the search to only display mortgage data that exists across all catalogs.
 
 * From the search drop down menu select Catalogs > All catalogs.
 
-![Search all catalogs](../.gitbook/assets/images/wkc-user/wkc-user-search-all-catalogs.png)
+  ![Search all catalogs](../.gitbook/assets/images/wkc-user/wkc-user-search-all-catalogs.png)
 
-All data assets across catalogs meeting the criteria are displayed. This is the data we are looking for.
+* All data assets across catalogs meeting the criteria are displayed. This is the data we are looking for.
 
-The connection to the Analytics Data Warehouse and the 4 mortgage tables are what the project team requested; Mortgage Default, Applicant, Property and Customer are all in the Enterprise catalog.
+* The connection to the Analytics Data Warehouse and the 4 mortgage tables are what the project team requested; Mortgage Default, Applicant, Property and Customer are all in the Enterprise catalog.
 
-However, before we proceed to the catalog we need to also find all the business information related to the project to review the terms and content of the data and identify if there are any policies and rules set by the business that the project team needs to be aware of and adhere to.
+* However, before we proceed to the catalog we need to also find all the business information related to the project to review the terms and content of the data and identify if there are any policies and rules set by the business that the project team needs to be aware of and adhere to.
 
 * Click on the Any type filter and select the Business term type from the list to refine the results.
 
-![Search business terms](../.gitbook/assets/images/wkc-user/wkc-user-search-any-type-business-term.png)
+  ![Search business terms](../.gitbook/assets/images/wkc-user/wkc-user-search-any-type-business-term.png)
 
-Notice that the governance team has been hard at work and has defined 25 business terms related to the mortgage data the project will be using. Also notice that they are tagged with the key word Mortgage to easily find them
+* Notice that the governance team has been hard at work and has defined 25 business terms related to the mortgage data the project will be using. Also notice that they are tagged with the key word Mortgage to easily find them
 
-* Click on the Sort Arrow to the right of the Name column to sort ascending by Name.
-Note that the Email Address has also been tagged as Sensitive information.
 * Scroll down the list of business terms to view them all.
-Note that the Phone Number and Social Security Number are tagged as Sensitive information.
+
+  * Note that the Email Address, Phone Number and Social Security Number have all been tagged as Sensitive information.
+
 * Click on the Clear all button to get ready for the next search task.
 
-![Sort scroll and clear business terms](../.gitbook/assets/images/wkc-user/wkc-user-sort-scroll-business-terms.png)
+  ![Sort scroll and clear business terms](../.gitbook/assets/images/wkc-user/wkc-user-sort-scroll-business-terms.png)
 
 * Click on the Any type filter and select the Category type from the list to refine the results.
+
 * Click on the Any type filter and select the Policy type from the list to refine the results.
+
 * Click on the Any type filter and select the Rule type from the list to refine the results.
 
-![Filter Category Policy Rule](../.gitbook/assets/images/wkc-user/wkc-user-filter-category-policy-rule.png)
+  ![Filter Category Policy Rule](../.gitbook/assets/images/wkc-user/wkc-user-filter-category-policy-rule.png)
 
-Notice that there is a Mortgage Default Analysis category defined that contains all the business in-formation related to the project and a category named Sensitive Information that is a sub-category, along with a business policy related to the Protection of Sensitive Information and three rules outlin-ing the protection of Email Addresses, Phone Numbers and Social Security Numbers. This is a good indication that the mortgage data being used by the project contains sensitive information that needs to be protected.
+* Notice that there is a Mortgage Default Analysis category defined that contains all the business information related to the project and a category named Sensitive Information that is a sub-category, along with a business policy related to the Protection of Sensitive Information and three rules outlining the protection of Email Addresses, Phone Numbers and Social Security Numbers. This is a good indication that the mortgage data being used by the project contains sensitive information that needs to be protected.
 
 ## 2. Understand the Data
 
 The best data is data that is fully understood and trusted.
 
-You can be confident in your data when you know where it comes from, that it complies to a set of policies and rules that address data privacy regulations and that it is clean and conforms to data quali-ty policies, rules and standards, and that others have used it and trust it and are willing to share that information, to ensure you can produce meaningful and accurate analytical and AI results that will benefit better business outcomes.
+You can be confident in your data when you know where it comes from, that it complies to a set of policies and rules that address data privacy regulations and that it is clean and conforms to data quality policies, rules and standards, and that others have used it and trust it and are willing to share that information, to ensure you can produce meaningful and accurate analytical and AI results that will benefit better business outcomes.
 
 ### Understand Data Policies and Rules
 
-In this section you will use the Business glossary to gain a deeper understanding of the business terminology defined by the data steward and the governance team responsible for establishing policies and rules to govern and protect the data. Since we see that there is an indication of sensitive infor-mation Let’s take a closer look at the Sensitive Information category content.
+In this section you will use the Business glossary to gain a deeper understanding of the business terminology defined by the data steward and the governance team responsible for establishing policies and rules to govern and protect the data. Since we see that there is an indication of sensitive information Let’s take a closer look at the Sensitive Information category content.
 
 * Click on the Sensitive Information category from the list.
 
-![Click Sensitive Information](../.gitbook/assets/images/wkc-user/wkc-user-search-choose-sensitive.png)
+  ![Click Sensitive Information](../.gitbook/assets/images/wkc-user/wkc-user-search-choose-sensitive.png)
 
-The description clearly states that this subcategory contains references to business terms that relate to data that will be used by the project team that need to be governed by data protection rules. Let’s get more information on the Social Security Number.
+* The description clearly states that this subcategory contains references to business terms that relate to data that will be used by the project team that need to be governed by data protection rules. Let’s get more information on the Social Security Number.
 
-* In the global search area, enter the words social security number and press the enter key.
+* In the global search area, enter the words `social security number` and press the enter key.
 
-![Global search social security](../.gitbook/assets/images/wkc-user/wkc-user-search-social-security.png)
+  ![Global search social security](../.gitbook/assets/images/wkc-user/wkc-user-search-social-security.png)
 
-A Social Security Number term appears in the list with tags of Mortgage applicant and Sensitive information. This is an indication that the Mortgage Applicant table has a social security number.
+* A Social Security Number term appears in the list with tags of Mortgage applicant and Sensitive information. This is an indication that the Mortgage Applicant table has a social security number.
 
 * Click on the Social Security Number business term with the two tags applied from the list.
 
 * Click on the Related Content tab.
 
-* Click on the arrow next to the MORTGAGE_APPLICANT table in the Catalog assets section. There is definitely a SOCIAL_SECURITY_NUMBER column that resides in this table.
+* Click on the arrow next to the `MORTGAGE_APPLICANT` table in the Catalog assets section. There is definitely a SOCIAL_SECURITY_NUMBER column that resides in this table.
 
-![Related Content SSN](../.gitbook/assets/images/wkc-user/wkc-user-ssn-related-content.png)
+  ![Related Content SSN](../.gitbook/assets/images/wkc-user/wkc-user-ssn-related-content.png)
 
 * Click on the CUSTOMER table in the Additional information assets section.
 
