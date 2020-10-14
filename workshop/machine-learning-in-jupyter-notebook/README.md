@@ -2,7 +2,7 @@
 
 In this module, we will go through the process of exploring our data set and building a predictive model that can be used to determine the likelihood of a credit loan having 'Risk' or 'No Risk'. For this use case, the machine learning model we are building is a classification model that will return a prediction of 'Risk' (the features of the loan applicant predict that there is a good chance of default on the loan) or 'No Risk' (the applicant's inputs predict that the loan will be paid off). The approach we will take in this lab is to use the most popular Mchine Learning libraries and frameworks to build our classification model in Python using a Jupyter notebook. Once we have built the model, we will make it available for deployment.
 
-> **Note:** The lab instructions below assume you have a project and a deployment space already. If not, follow the instructions in the pre-work section to create a project and a space.
+> **Note:** The lab instructions below assume you have completed the pre-work section already, if not, be sure to complete the pre-work first to create a project and a deployment space.
 
 ## Build and Save a model
 
@@ -96,7 +96,7 @@ DEPLOYMENT_SPACE_NAME = "<deployment-space-name>"
 
 **We've successfully built and saved a machine learning model programmatically. Congratulations!**
 
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions so you can see the stop kernel option.*
+> **Important**: Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions so you can see the stop kernel option.
 > ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
 
 ## Conclusion
