@@ -60,6 +60,8 @@ If you followed the pre-work and [created the project](../pre-work/README.md#cre
   > Note: Use the instructions in the pre-work or directly in the notebook if you do not already have an API Key, WML location or COS details.
   > Note: The `BUCKET_NAME` has to be globally unique. So consider using the example in the notebook and append your own uniqueID (i.e initials + date).
 
+* In the notebook section 1.3 you will need to provide a value for the `CUSTOM_NAME` variable. Choose a value that is unique and memorable to you, it will be used as part of the naming for various artifacts in the notebook (i.e. the ML model, deployment, etc).
+
 ## 3. Run the Notebook
 
 Spend some time looking through the sections of the notebook to get an overview. A notebook is composed of text (markdown or heading) cells and code cells. The markdown cells provide comments on what the code is designed to do.
