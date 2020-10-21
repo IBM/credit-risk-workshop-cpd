@@ -13,7 +13,7 @@ This lab is comprised of the following steps:
 
 ## 1. Open the Notebook
 
-If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) using the [CreditRiskProject.zip](../../projects/CreditRiskProject.zip) file, your notebook will be present in that project.
+If you followed the pre-work and [created the project](../pre-work/README.md#create-a-new-project) using the CreditRiskProject.zip file, your notebook will be present in that project.
 
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
@@ -35,14 +35,14 @@ If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-cr
 
 > NOTE: You should probably not need this step, and should only perform it if instructed to do so.
 
-* If, for some reason, you are not using the [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) step in the Pre-work to import [CreditRiskProject.zip](../../projects/CreditRiskProject.zip), then you will need to import the notebook file by itself. Use the following steps for that.
+* If, for some reason, you are not using the steps in the [Pre-work to import the CreditRiskProject.zip](../pre-work/README.md#create-a-new-project), then you will need to import the notebook file by itself. Use the following steps for that.
 
 * At the project overview click the *New Asset* button, and choose *Add notebook*.
 
-* On the next panel select the *From URL* tab, give your notebook a name, provide the following URL, and leave the default Python 3.6 environment:
+* On the next panel select the *From URL* tab, give your notebook a name, provide the following URL, and leave the default Python 3.7 environment:
 
   ```bash
-  https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/openscale-full-configuration.ipynb
+  https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/workshop-CPDaaS-master/notebooks/openscale-full-configuration.ipynb
   ```
 
   ![Add notebook name and URL](../.gitbook/assets/images/openscale/openscale-add-notebook-url.png)
@@ -51,13 +51,16 @@ If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-cr
 
 ## 2. Update Credentials
 
-* In the notebook section 1.2 you edit the first code cell to use your Cloud Pak for Data platform credentials in the `WOS_CREDENTIALS`.
+* In the notebook section 1.2 you edit the first code cell to use your Cloud API Key in the `CLOUD_API_KEY`. You also set the `WML_LOCATION` variable to the location where your Watson Machine Learning instance is provisioned.
 
-  * For the `url`, use the URL your cluster, i.e something like: `"url": "https://zen.clusterid.us-south.containers.appdomain.cloud"`.
-  * For the `username`, use your login username.
-  * For the `password`, user your login password.
+* In the third code cell of this section, you will enter the Cloud Object Storage instance API Key, Resource CRN and Endpoint. You will also provide a `BUCKET_NAME` for bucket that will be used to store your training data.
 
   ![Edite notebook credentials](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-creds.png)
+
+  > Note: Use the instructions in the pre-work or directly in the notebook if you do not already have an API Key, WML location or COS details.
+  > Note: The `BUCKET_NAME` has to be globally unique. So consider using the example in the notebook and append your own uniqueID (i.e initials + date).
+
+* In the notebook section 1.3 you will need to provide a value for the `CUSTOM_NAME` variable. Choose a value that is unique and memorable to you, it will be used as part of the naming for various artifacts in the notebook (i.e. the ML model, deployment, etc).
 
 ## 3. Run the Notebook
 
@@ -67,9 +70,9 @@ You will run cells individually by highlighting each cell, then either click the
 
 _**Please note that some of the comments in the notebook are directions for you to modify specific sections of the code. Perform any changes as indicated before running / executing the cell.**_
 
-### 4. Get Transactions for Explainability
+## 4. Get Transactions for Explainability
 
-Under `8.9 Identify transactions for Explainability` run the cell. It will produce a series of UIDs for indidvidual ML scoring transactions. Copy one or more of them to examine in the next section.
+Code cell `9.0 Identify transactions for Explainability` will produce a series of IDs for indidvidual ML scoring transactions. Copy one or more of them to examine in the OpenScale UI.
 
 ## Conclusion
 
@@ -79,5 +82,5 @@ In this section we covered one of the approaches to configure Watson OpenScale t
 * How to use the OpenScale Python APIs programatically.
 * How to configure all the monitors in OpenScale.
 
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running (in this case the `openscale-full-configuration`) and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions menu so you can see the stop kernel option.*
+> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running (in this case the `openscale-full-configuration`) and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions menu so you can see the stop kernel option. Note: The screenshot below is an example of stopping the kernel, the name of the notebook may not match your notebook.*
 > ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
