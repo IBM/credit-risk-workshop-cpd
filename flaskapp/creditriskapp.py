@@ -112,28 +112,27 @@ app.jinja_env.globals.update(generate_input_lines=generate_input_lines)
 
 def get_token():
     auth_token = os.environ.get('AUTH_TOKEN')
-    auth_username = os.environ.get('AUTH_USERNAME')
-    auth_password = os.environ.get('AUTH_PASSWORD')
-    auth_url = os.environ.get('AUTH_URL')
+    api_token = os.environ.get("API_TOKEN")
+    token_request_url = os.environ.get("TOKEN_REQUEST_URL")
 
     if (auth_token):
         # All three are set. bad bad!
-        if (auth_username and auth_password):
-            raise EnvironmentError('[ENV VARIABLES] please set either "AUTH_TOKEN" or ("AUTH_USERNAME", "AUTH_PASSWORD", and "AUTH_URL"). Not both.')
+        if (api_token and auth_token):
+            raise EnvironmentError('[ENV VARIABLES] please set either "AUTH_TOKEN" or "API_TOKEN". Not both.')
         # Only TOKEN is set. good.
         else:
             return auth_token
     else:
         # Nothing is set. bad!
-        if not (auth_username and auth_password):
-            raise EnvironmentError('[ENV VARIABLES] please set "AUTH_USERNAME", "AUTH_PASSWORD", and "AUTH_URL" as "TOKEN" is not set.')
+        if not (api_token and token_request_url):
+            raise EnvironmentError('[ENV VARIABLES] Please set "API_TOKEN" as "AUTH_TOKEN" is not set.')
         # Only USERNAME, PASSWORD are set. good.
         else:
-            response_preauth = requests.get(auth_url, auth=HTTPBasicAuth(auth_username, auth_password), verify=False)
-            if response_preauth.status_code == 200:
-                return json.loads(response_preauth.text)['accessToken']
+            token_response = requests.post(token_request_url, data={"apikey": api_token, "grant_type": 'urn:ibm:params:oauth:grant-type:apikey'})
+            if token_response.status_code == 200:
+                return token_response.json()["access_token"]
             else:
-                raise Exception(f"Authentication returned {response_preauth}: {response_preauth.text}")
+                raise Exception(f"Authentication returned {token_response.status_code}: {token_response.text}")
 
 
 class riskForm():

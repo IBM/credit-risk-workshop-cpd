@@ -74,16 +74,10 @@ This file has the following attributes:
 |   |   |
 | - | - |
 | [Pre-work](pre-work/README.md) | Creating a project, downloading the data set, seeding a database |
-| [Import Data to Project](addData/README.md) | Import the data into your project |
-| [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) | Refining the data, vizualizing and profiling the data |
-| [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md) | Use and Enterprise data catalog to search, manage, and protect data |
-| [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md) | Create new Categories, Business terms, Policies and Rules in Watson Knowledge Catalog |
-| [Machine Learning with Jupyter](machine-learning-in-Jupyter-notebook/README.md) | Building a model with Spark, deploying the model with Watson Maching Learning, testing the model with a Python Flask app |
+| [Data Visualization with Data Refinery](./data-visualization-and-refinery/README.md) | Refining the data, vizualizing and profiling the data |
+| [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md) | Building a model with Spark, deploying the model with Watson Maching Learning, testing the model with a Python Flask app |
 | [Machine Learning with AutoAI](machine-learning-autoai/README.md) | Use AutoAi to quickly generate a Machine Learning pipeline and model |
 | [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md) | Deploy and machine learning models using several approaches |
-| [Monitoring models with OpenScale GUI (Fastpath Monitoring)](openscale-fastpath/README.md) | Quickly deploy an OpenScale demo with FastPath |
-| [Monitoring models with OpenScale GUI (Manual Config)](openscale-gui-manual-config/README.md) | Use the OpenScale tool to monitor deployed machine learning models |
-| [Monitoring models with OpenScale (Notebook)](openscale-notebook/README.md) | See the OpenScale APIs in a Jupyter notebook and manually configure the monitors |
 
 ## Compatability
 
