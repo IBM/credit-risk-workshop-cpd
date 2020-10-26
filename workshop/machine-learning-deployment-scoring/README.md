@@ -125,7 +125,7 @@ export WML_URL=<value-of-endpoint>
 Example of an URL:
 
 ```bash
-export WML_URL="https://us-south.ml.cloud.ibm.com/ml/v4/deployments/<DEPLOYMENT_ID>/predictions?..."
+export WML_URL="https://us-south.ml.cloud.ibm.com/ml/v4/deployments/<DEPLOYMENT_ID>/predictions?version=2020-09-01"
 ```
 
 * Now run this curl command from the terminal to invoke the model with the same payload we used previousy:
