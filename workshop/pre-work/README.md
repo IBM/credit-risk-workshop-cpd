@@ -138,7 +138,7 @@ You will need to associate a Watson Machine Learning service instance to your pr
 
 * Click the checkbox next to the Watson Machine Learning service instance that was created for you when you signed up for Cloud Pak for Data as a Service. Click `Associate service`.
 
-> **Note:** If you have multiple WatsonMachineLearning services, make sure you select the one that is in the same regios as is your Cloud Pak for Data as a service. 
+> **Note:** If you have multiple WatsonMachineLearning services, make sure you select the one that is in the same regions as is your Cloud Pak for Data as a service. 
 
 > **Note:** Also make sure that the Name of the instance matches the name of the WatsonMachineLearning that you added in the earlier steps
 
