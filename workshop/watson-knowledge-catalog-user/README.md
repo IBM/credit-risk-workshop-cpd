@@ -93,15 +93,13 @@ In this section you will use the Business glossary to gain a deeper understandin
 
 ![Click Additonal Info CUSTOMER](../.gitbook/assets/images/wkc-user/wkc-user-bus-ssn-additional-info-customer.png)
 
-It has been assigned the four business terms that relate to sensitive information. It has 28 columns and is from the CUSTOMER schema from the BLUDB database. Let’s investigate further and Explore and visualize these relationships.
+* It has been assigned the four business terms that relate to sensitive information. It has 28 columns and is from the CUSTOMER schema from the BLUDB database. Let’s investigate further and Explore and visualize these relationships.
 
 * Click on the ellipses (…) in the top right corner and select the Explore relationships menu item:
 
 ![Click ellispses CUSTOMER info](../.gitbook/assets/images/wkc-user/wkc-user-customer-info-ellipses.png)
 
-A new tab will open in your browser and display the relationship graph:
-
-![CUSTOMER relationship graph](../.gitbook/assets/images/wkc-user/wkc-user-customer-relationship-graph.png)
+* A new tab will open in your browser and display the relationship graph:
 
 * Click the magnifying glass with a + sign in the lower left corner to increase the graph size.
 
@@ -109,9 +107,11 @@ A new tab will open in your browser and display the relationship graph:
 
 * Click on the Center graph button in the lower left corner to center the graph for easier viewing.
 
-![Expand CUSTOMER columns](../.gitbook/assets/images/wkc-user/wkc-user-expand-relationship-colunns.png)
+![CUSTOMER relationship graph](../.gitbook/assets/images/wkc-user/wkc-user-customer-relationship-graph.png)
 
-The table also contains EMAIL_ADDRESS, CREDIT_CARD_NUMBER, and PHONE_NUMBER data that we know is sensitive.
+* The table also contains EMAIL_ADDRESS, CREDIT_CARD_NUMBER, and PHONE_NUMBER data that we know is sensitive.
+
+![Expand CUSTOMER columns](../.gitbook/assets/images/wkc-user/wkc-user-expand-relationship-colunns.png)
 
 * Close this tab in your browser and go back to the source tab that got you here.
 
