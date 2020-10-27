@@ -37,8 +37,7 @@ Various parts of this workshop will require the attendee to upload files or run 
 
 * Launch a browser and navigate to [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/login?context=cpdaas).
 
-* Click the `Select Region` button and choose between `Dallas` and `Frankfurt`, whichever one is closest to you.
-* Then you can log into your IBM Cloud account using your IBMid. If you don't have one, you can click on `Sign up and try for free` to create a free IBM Cloud account.
+* You can log into your IBM Cloud account using your IBMid. If you don't have one, you can click on `Sign up and try for free` to create a free IBM Cloud account.
 
 ![CPDaaS login](../.gitbook/assets/images/navigation/cpdaas-login.png)
 
@@ -215,7 +214,7 @@ Alternatively, you can use the IBM Cloud Console to generate the IBM Cloud API k
 
 ![Copy API key](../.gitbook/assets/images/prework/copy-api-key.png)
 
-This is the *api_key* value that you will need to provide in your Jupyter notebooks for accessing the Watson Machine Learning service instance.
+This is the `api_key` value that you will need to provide in your Jupyter notebooks for accessing the Watson Machine Learning service instance.
 
 ### Get the Watson Machine Learning service instance location
 
@@ -226,8 +225,6 @@ You can select the Watson Machine Learning location code from the table below if
 | Region       |   Region Codes | 
 |--------------|------------| 
 | Dallas       | us-south   | 
-| London       | eu-gb      | 
-| Frankfurt    | eu-de      | 
 | Tokyo        | jp-tok     | 
 
 
