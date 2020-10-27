@@ -5,23 +5,25 @@ AutoAI is a capability that automates various tasks to ease the workflow for dat
 
 This section is broken up into the following steps:
 
-1. [Run AutoAI Experiment](#1-run-autoai-experiment)
-2. [Save AutoAI Model](#2-save-autoai-model)
-3. [Promote the Model](#3-promote-the-model)
+- [Automate model building with AutoAI](#automate-model-building-with-autoai)
+  - [1. Run AutoAI Experiment](#1-run-autoai-experiment)
+  - [2. Save AutoAI Model](#2-save-autoai-model)
+  - [3. Promote the model](#3-promote-the-model)
+  - [Conclusion](#conclusion)
 
->*Note: The lab instructions below assume you have a project already with the assets necessary to build a model. If not, follow the instructions in the pre-work section to create a project.*
+> **Note:** The lab instructions below assume you have completed the pre-work section already, if not, be sure to complete the pre-work first to create a project and a deployment space.
 
 ## 1. Run AutoAI Experiment
 
-* Go the (☰) navigation menu, expand *Projects* and then click on your analytics project.
+* Go the (☰) navigation menu, expand `Projects` and then click on your analytics project.
 
 ![(☰) Menu -> your project](../.gitbook/assets/images/navigation/menu-your-project.png)
 
-* To start the AutoAI experiment, click the *`Add to project +`* button from the top of the page and select the `AutoAI experiment` option.
+* To start the AutoAI experiment, click the `Add to project +` button from the top of the page and select the `AutoAI experiment` option.
 
 ![Adding a project](../.gitbook/assets/images/autoai/autoai-add-project.png)
 
-* Name your AutoAI experiment asset. The Associated Watson Machine Learning Service Instance should already be populated with the Watson Machine Learning service instance that was associated with the project as part of the pre-work. Then click the `Create` button.
+* Name your AutoAI experiment asset. The Associated Watson Machine Learning Service Instance should already be populated for you. If not, please select the one that you created in pre-work section from the drop down. Then click the `Create` button.
 
 ![Naming your experiment](../.gitbook/assets/images/autoai/autoai-name-experiment.png)
 
@@ -33,9 +35,9 @@ This section is broken up into the following steps:
 
 ![Select data](../.gitbook/assets/images/autoai/autoai-select-dataset.png)
 
-* Once the dataset is read in, we will need to indicate what we want the model to predict. Under *What do you want to predict?* panel, select the *Prediction column* as `Risk`.
+* Once the dataset is loaded, we will need to indicate what we want the model to predict. Under `What do you want to predict?` panel, select the `Prediction column` as `Risk`.
 
-* AutoAI will set up default values for the experiment based on the dataset and the column selected for the prediction. This includes the type of model to build, the metrics to optimize against, the test/train split, etc. You could view/change these values under 'Experiment settings', however, for now we will accept the defaults and click the *`Run experiment`* button.
+* AutoAI will set up default values for the experiment based on the dataset and the column selected for the prediction. This includes the type of model to build, the metrics to optimize against, the test/train split, etc. You could view and change these values under `Experiment settings`, however, for now we will accept the defaults and click the `Run experiment` button.
 
 ![Choose Churn column and run](../.gitbook/assets/images/autoai/autoai-choose-prediction-and-run.png)
 
@@ -50,7 +52,7 @@ This section is broken up into the following steps:
 
 ![autoai progress](../.gitbook/assets/images/autoai/autoai-pipeline-progress.png)
 
-* The experiment can take several minutes to run. Upon completion you will see a message that the pipelines have been created. Do not proceed to the next section until the experiment completes.
+* The experiment can take several minutes to complete. Upon completion you will see a message that the pipelines have been created. Do not proceed to the next section until the experiment completes.
 
 ## 2. Save AutoAI Model
 
@@ -58,7 +60,7 @@ This section is broken up into the following steps:
 
 ![autoai pipelines created](../.gitbook/assets/images/autoai/autoai-pipelines-complete.png)
 
-* Scroll down to see the *Pipeline leaderboard*. The top performing pipeline is in the first rank.
+* Scroll down to see the `Pipeline leaderboard`. The top performing pipeline is in the first rank.
 
 * The next step is to select the model that gives the best result and view its performance. In this case, Pipeline 4 gave the best result for our experiment. You can view the detailed results by clicking the corresponding pipeline name from the leaderboard:
 
@@ -68,33 +70,33 @@ This section is broken up into the following steps:
 
 ![Model evaluation](../.gitbook/assets/images/autoai/autoai-toppipeline-details.png)
 
-* In order to deploy this model, click on the *`Save as`* button and select the `Model` option to save it.
+* In order to deploy this model, click on the `Save as` button and select the `Model` option to save it.
 
 ![Save model](../.gitbook/assets/images/autoai/autoai-pipeline-save-model.png)
 
-* In the 'Save as model' window you can accept the default values or give your model a meaningful name/description and then click the `Save` button.
+* In the `Save as model` window you can accept the default values or give your model a meaningful name/description and then click the `Save` button.
 
 ![Save model name](../.gitbook/assets/images/autoai/autoai-save-model-name.png)
 
-* You receive a notification to indicate that your model is saved to your project. Go back to your project main page by clicking on the project name on the navigator on the top left:
+* You will receive a notification to indicate that your model is saved to your project. Go back to your project main page by clicking on the project name on the navigator on the top left:
 
 ![Select Project](../.gitbook/assets/images/autoai/autoai-project-navigator.png)
 
-* You will see the new model under *Models* section of the *Assets* page.
+* You will see the new model under `Models` section of the `Assets` page.
 
 ## 3. Promote the model
 
-* Now that we have saved our model, we will next need to make the model available in our deployment space so it can be deployed. Under the *Models* section of the *Assets* page, click the name of your saved model:
+* Now that we have saved our model, we can promote it to our deployment space for deployment. Under the `Models` section of the `Assets` page, click the name of your saved model:
 
 ![choose AI model](../.gitbook/assets/images/autoai/autoai-choose-asset-ai-model.png)
 
-* To make the model available to be deployed, we need to make it available in the deployment space we previously set up. Click on the `Promote to deployment space`:
+* Next, click on the `Promote to deployment space`:
 
 ![Deploying the model](../.gitbook/assets/images/autoai/autoai-promote-to-space.png)
 
-* Select the deployment space that was created as part of the pre-work as the *Target space* and click `Promote`.
+* Select the deployment space that was created as part of the pre-work as the `Target space` and click `Promote`.
 
-> ***Note***: This is assuming you have already created a deployment space in the *pre-work* section of the workshop. 
+> ***Note***: This is assuming you have already created a deployment space in the `pre-work` section of the workshop. 
 
 ![Promote model](../.gitbook/assets/images/autoai/autoai-promote-to-space-confirm.png)
 
@@ -102,11 +104,13 @@ This section is broken up into the following steps:
 
 ![Create Deployment Space](../.gitbook/assets/images/autoai/autoai-promotion-success.png)
 
+**Congratulation. We have now successfully created a highly optimized machine learning model using AutoAI and prepared it for deployment.**
+
 ## Conclusion
 
 In this section we covered one approach to building machine learning models on Cloud Pak for Data as a Service. We have seen how AutoAI helps to find an optimal model by automating tasks such as:
 
 * Data Wrangling
-* Model Algorithm Evaluation & Selection
+* Algorithm Evaluation & Selection
 * Feature Engineering
 * Hyperparameter Optimization
