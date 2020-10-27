@@ -12,8 +12,7 @@ Welcome to our workshop! In this workshop we'll be using the Cloud Pak for Data 
 
 * [Agenda](#agenda)
 * [Compatability](#compatability)
-* [About Cloud Pak for Data](#about-cloud-pak-for-data)
-* [Credits](#credits)
+* [About Cloud Pak for Data as a Service](#about-cloud-pak-for-data-as-a-service)
 
 ### About the data set
 
@@ -23,67 +22,78 @@ In this workshop we will be using a credit risk / lending scenario. In this scen
 
 The credit risk model that we are exploring in this workshop uses a training data set that contains 20 attributes about each loan applicant. The scenario and model use synthetic data based on the [UCI German Credit dataset](https://archive.ics.uci.edu/ml/datasets/Statlog+(German+Credit+Data)). The data is split into three CSV files and are located in the [data](../data/split) directory of the GitHub repository you will download in the pre-work section.
 
-#### [Applicant Financial Data](../../data/split/applicant_financial_data.csv)
-
-This file has the following attributes:
-
-* CUSTOMERID (hex number, used as Primary Key)
-* CHECKINGSTATUS
-* CREDITHISTORY
-* EXISTINGSAVINGS
-* INSTALLMENTPLANS
-* EXISTINGCREDITSCOUNT
-
-#### **[Applicant Loan Data](../../data/split/applicant_loan_data.csv)**
-
-This file has the following attributes:
-
-* CUSTOMERID
-* LOANDURATION
-* LOANPURPOSE
-* LOANAMOUNT
-* INSTALLMENTPERCENT
-* OTHERSONLOAN
-* RISK
-
-#### **[Applicant Personal Data](../../data/split/applicant_personal_data.csv)**
-
-This file has the following attributes:
-
-* CUSTOMERID
-* EMPLOYMENTDURATION
-* SEX
-* CURRENTRESIDENCEDURATION
-* OWNSPROPERTY
-* AGE
-* HOUSING
-* JOB
-* DEPENDENTS
-* TELEPHONE
-* FOREIGNWORKER
-* FIRSTNAME
-* LASTNAME
-* EMAIL
-* STREETADDRESS
-* CITY
-* STATE
-* POSTALCODE
-
 ## Agenda
 
-|   |   |
-| - | - |
-| [Pre-work](pre-work/README.md) | Creating a project, downloading the data set, seeding a database |
-| [Import Data to Project](addData/README.md) | Import the data into your project |
-| [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) | Refining the data, vizualizing and profiling the data |
-| [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md) | Use and Enterprise data catalog to search, manage, and protect data |
-| [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md) | Create new Categories, Business terms, Policies and Rules in Watson Knowledge Catalog |
-| [Machine Learning with Jupyter](machine-learning-in-Jupyter-notebook/README.md) | Building a model with Spark, deploying the model with Watson Maching Learning, testing the model with a Python Flask app |
-| [Machine Learning with AutoAI](machine-learning-autoai/README.md) | Use AutoAi to quickly generate a Machine Learning pipeline and model |
-| [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md) | Deploy and machine learning models using several approaches |
-| [Monitoring models with OpenScale GUI (Fastpath Monitoring)](openscale-fastpath/README.md) | Quickly deploy an OpenScale demo with FastPath |
-| [Monitoring models with OpenScale GUI (Manual Config)](openscale-gui-manual-config/README.md) | Use the OpenScale tool to monitor deployed machine learning models |
-| [Monitoring models with OpenScale (Notebook)](openscale-notebook/README.md) | See the OpenScale APIs in a Jupyter notebook and manually configure the monitors |
+<table>
+<thead>
+  <tr>
+    <th>Topic</th>
+    <th>Content</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Introduction</td>
+    <td>Introduction Video (xx:xx)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Platform Overview</td>
+    <td>CP4DaaS Overview (xx:xx)</td>
+  </tr>
+  <tr>
+    <td>[Lab] Project Setup video (xx:xx) |&nbsp;&nbsp;&nbsp;Instructions</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Data Wrangling</td>
+    <td>Data Wrangling Overview (xx:xx)</td>
+  </tr>
+  <tr>
+    <td>[Lab] Data Refinery video(xx:xx) |&nbsp;&nbsp;&nbsp;Instructions</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Data Management</td>
+    <td>Watson Knowledge Catalog Overview (xx:xx)</td>
+  </tr>
+  <tr>
+    <td>[Demo] WKC (xx:xx)</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Machine Learning</td>
+    <td>Machine Learning into (xx:xx)</td>
+  </tr>
+  <tr>
+    <td>[Lab] ML with Jupyter Notebook video&nbsp;&nbsp;&nbsp;(xx:xx) | Instructions</td>
+  </tr>
+  <tr>
+    <td>[Lab] Automated ML with AutoAI Lab video&nbsp;&nbsp;&nbsp;(xx:xx) | Instructions</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Model Deployment</td>
+    <td>Model Deployment intro (xx:xx)</td>
+  </tr>
+  <tr>
+    <td>[Lab] Online Deployment &amp; testing&nbsp;&nbsp;&nbsp;video (xx:xx) | Instructions</td>
+  </tr>
+  <tr>
+    <td>[Lab] Batch Scoring video (xx:xx) |&nbsp;&nbsp;&nbsp;Instructions</td>
+  </tr>
+  <tr>
+    <td>[Lab] Deploy model to Python app video&nbsp;&nbsp;&nbsp;(xx:xx) | Instructions</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Model Monitoring</td>
+    <td>Monitoring &amp; Explainability intro (xx:xx)</td>
+  </tr>
+  <tr>
+    <td>[Demo] OpenScale (xx:xx)</td>
+  </tr>
+  <tr>
+    <td>Conclusion</td>
+    <td>Conclusion Video (xx:xx)</td>
+  </tr>
+</tbody>
+</table>
+
 
 ## Compatability
 
@@ -94,3 +104,9 @@ This workshop has been tested on the following platforms:
 
 * **Microsoft**: Windows 10
   * Google Chrome, Microsoft Edge
+
+## About Cloud Pak for Data as a Service
+
+Cloud Pak for Data as a Service provides you with an integrated set of capabilities for collecting and organizing your data into a trusted, unified view, and then creating and scaling AI models across your business.
+
+[Docs](https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/overview-cpdaas.html?context=analytics)
