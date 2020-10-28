@@ -144,28 +144,30 @@ Data Refinery allows you to run jobs at scheduled times, and save the output. In
 Let's do some visual exploration of our data using charts and graphs. Note that this is an exploratory phase and we're looking for insights in out data. We can accomplish this in Data Refinery interactively without coding.
 
 * Choose the `Visualizations` tab to bring up the page where you can select columns that you want to visualize. Add `LoanAmount` as the first column and click `Add Column` to add another column. Next add `LoanDuration` and click `Visualize`. The system will pick a suggested plot for you based on your data and show more suggested plot types at the top.
-![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-smartpick.PNG)
+
+![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-smartpick.png)
 
 * Remember that we are most interested in knowing how these features impact a loan being at the risk. So, let's add the `Risk` as a color on top of our current scatter plot. That should help us visually see if there's something of interest here.
 * From the left, click the `Color Map` section and select `Risk`. Also, to see the full data, drag the right side of the data selector at the bottom all the way to the right, in order to show all the data inside your plot.
-![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-scatter-add-color.PNG)
+
+![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-scatter-add-color.png)
  
 * We notice that there are more purple on this plot towards the top right, than there is on the bottom left. This is a good start as it shows that there is probably a relationship between the riskiness of a loan and its duration and amount. It appears that the higher the amount and duration, the riskier the loan. Interesting, let's dig in further in how the loan duration could play into the riskiness of a loan. 
 
-* Let's plot a histogram of the `LoanPurpose` to see if we can notice anything. First, select `Histogram` from the `Chart Type`. Next on the left, select `Risk` in the Split By section, check the `Stacked` option, and uncheck the `Show kde curve, as well as the show distribution curve. You should see a chart that looks like the following image.
+* Let's plot a histogram of the `LoanDuration` to see if we can notice anything. First, select `Histogram` from the `Chart Type`. Next on the left, select `Risk` in the Split By section, check the `Stacked` option, and uncheck the `Show kde curve, as well as the show distribution curve. You should see a chart that looks like the following image.
 
-![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-histogram.PNG)
+![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-histogram.png)
 
 * It looks like the longer the duration the larger the blue bar (risky loan count) become and the smaller the purple bars (non risky loan count) become. That indicate loans with longer duration are in general more likely to be risky. However, we need more information.
 
 * We next explore if there is some insight in terms of the riskiness of a loan based on its duration when broken down by the loan purpose. To do so, let's create a Heat Map plot.
 * At the top of the page, in the `Chart Type` section, open the arrows on the right, select `Heat Map`, and accept the warning.
 
-![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-select-heatmap.PNG)
+![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-select-heatmap.png)
 
 * Next, select `Risk` in the column section and `LoanPurpose` for the Row section. Additionally, to see the effects of the loan duration, select `Mean` in the summary section, and select `LoanDuration` in the `Value` section.
 
-![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-heatmap.PNG)
+![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-heatmap.png)
 
 * You can now see that the least risky loans are those taken out for purchasing a new car and they are on average 10 years long. To the left of that cell we see that loans taken out for the same purpose that average around 15 years for term length seem to be more risky. So one could conclude the longer the loan term is, the more likely it will be risky. In contrast, we can see that both risky and non-risky loans for the `other` category seem to have the same average term length, so one could conclude that there's little, if any, relationship between loan length and its riskiness for the loans of type `other`. 
 * In general, for each row, the bigger the color difference between the right and left column, the more likely that loan duration plays a role for the riskiness of the loan category.
