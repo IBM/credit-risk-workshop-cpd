@@ -44,8 +44,8 @@ Various parts of this workshop will require the attendee to upload files or run 
 For each line below, click on the `[Download]` link to get the file. If the link isn't working for you, try clicking the `[Mirror]` to get it from out backup servers. You'll need these files in the next sections.
 
 
-1. CP4DaaS Project [[Download]](http://ibm.biz/ddc-cp4daas-project) | [Mirror]
-2. Python Application [[Download]](http://ibm.biz/ddc-cp4daas-python-app) | [Mirror]
+1. CP4DaaS Project [[Download]](http://ibm.biz/ddc-cp4daas-project) | [[Mirror]](http://ibm.biz/ddc-cp4daas-project-mirror)
+2. Python Application [[Download]](http://ibm.biz/ddc-cp4daas-python-app) | [[Mirror]](http://ibm.biz/ddc-cp4daas-python-app-mirror)
 
 ## 2. Create IBM Cloud account and log into IBM Cloud Pak for Data as a Service
 
