@@ -1,0 +1,3 @@
+.gittattributes export-ignore  
+.gitignore export-ignore
+flaskapp/python_app.zip export-ignore
