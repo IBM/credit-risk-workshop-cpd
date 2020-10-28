@@ -3,7 +3,7 @@
 Before we get started, we will download some assets and complete some setup for our workshop. This section is broken up into the following steps:
 
 - [Pre-work](#pre-work)
-  - [1. Download or Clone the Repository](#1-download-or-clone-the-repository)
+  - [1. Download a copy of the the Repository](#1-download-a-copy-of-the-the-repository)
   - [2. Create IBM Cloud account and log into IBM Cloud Pak for Data as a Service](#2-create-ibm-cloud-account-and-log-into-ibm-cloud-pak-for-data-as-a-service)
   - [3. Create a Project and Deployment Space](#3-create-a-project-and-deployment-space)
     - [Create a New Project](#create-a-new-project)
@@ -15,10 +15,14 @@ Before we get started, we will download some assets and complete some setup for 
       - [2. Using the IBM Cloud console](#2-using-the-ibm-cloud-console)
     - [Get the Watson Machine Learning service instance location](#get-the-watson-machine-learning-service-instance-location)
   - [Conclusion](#conclusion)
+  - [FAQ](#faq)
+    - [Download FAQ](#download-faq)
+    - [Sign up FAQ](#sign-up-faq)
 
-## 1. Download or Clone the Repository
+
+<!-- ## 1. Download or Clone the Repository -->
 <!-- TODO: ADD PROJECT TO GALLERY -->
-Various parts of this workshop will require the attendee to upload files or run scripts that we've stored in the repository. To download the repository and its assets, you have two options. Option 1, if you have the [`git`](https://git-scm.com) command line interface on your laptop, you can clone the repository directly. Option 2, if you don't have git you can access the [GitHub repository](https://github.com/IBM/credit-risk-workshop-cpd) page to download the zip file.
+<!-- Various parts of this workshop will require the attendee to upload files or run scripts that we've stored in the repository. To download the repository and its assets, you have two options. Option 1, if you have the [`git`](https://git-scm.com) command line interface on your laptop, you can clone the repository directly. Option 2, if you don't have git you can access the [GitHub repository](https://github.com/IBM/credit-risk-workshop-cpd) page to download the zip file.
 
 * **[Option 1]** If you have the git CLI, run the following commands from a terminal or command prompt:
 
@@ -31,30 +35,37 @@ Various parts of this workshop will require the attendee to upload files or run 
 
 ![download workshop zip](../.gitbook/assets/images/prework/github-zip-download.png)
 
-> **Note: If you used Option 2, make sure you extract or unzip the zip file after it's downloaded. This is not needed if you followed Option 1**
+> **Note: If you used Option 2, make sure you extract or unzip the zip file after it's downloaded. This is not needed if you followed Option 1** -->
+
+## 1. Download a copy of the the Repository
+
+Various parts of this workshop will require the attendee to upload files or run scripts. These artifacts have been collected in the following two zip files which you can download using the links below. 
+
+For each line below, click on the `[Download]` link to get the file. If the link isn't working for you, try clicking the `[Mirror]` to get it from out backup servers. You'll need these files in the next sections.
+
+
+1. CP4DaaS Project [[Download]](http://ibm.biz/ddc-cp4daas-project) | [Mirror]
+2. Python Application [[Download]](http://ibm.biz/ddc-cp4daas-python-app) | [Mirror]
 
 ## 2. Create IBM Cloud account and log into IBM Cloud Pak for Data as a Service
 
-* Launch a browser and navigate to [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/login?context=cpdaas).
+* Launch a browser and navigate to one of the following links based on what day you're joining us and if you already have an account:
+    - [Sign Up Page [Nov 10]](http://ibm.biz/ddc-cp4daas-nov-10)
+    - [Sign Up Page [Nov 24]](http://ibm.biz/ddc-cp4daas-nov-24)
 
-* Click the `Select Region` button and choose between `Dallas` and `Frankfurt`, whichever one is closest to you.
-* Then you can log into your IBM Cloud account using your IBMid. If you don't have one, you can click on `Sign up and try for free` to create a free IBM Cloud account.
+* You can then log into your IBM Cloud account using your IBMid or create a new one. Note that the correct region should already be selected for you.
+  - If you are a new user, use the `Create a new IBM Cloud Account` section.
+  - If you are a returning user, click on the `Log in with your IBMid` link.
+    > **Note:** If you are a returning user and you have watson services in a different region than the pre-selected one, you will see an error message telling you to select that region instead. See `Q3` in the [Sign up FAQ](#sign-up-faq) section for help.
 
-![CPDaaS login](../.gitbook/assets/images/navigation/cpdaas-login.png)
+ 
+![CPDaaS login](../.gitbook/assets/images/prework/new-signup-page.png)
 
-* The apps required for IBM Cloud Pak for Data will be provisioned for you. Once you see a message that says that the apps are ready to use, click on `Go to IBM Cloud Pak for Data`.
+* The services required for IBM Cloud Pak for Data will be automatically provisioned for you. Once you see a message that says that the apps are ready to use, click on `Go to IBM Cloud Pak for Data`.
 
 ![CPDaaS ready](../.gitbook/assets/images/navigation/cpdaas-ready.png)
 
-* Once you are on IBM Cloud Pak for Data, on the top right corner click on your avatar, and then click on `Profile and settings`. Go to the `Services` tab.
-
-If the `Machine Learning` service instance is not listed under `You Cloud Pak for Data Services` then find it in the `Try our Available Services` section and click on the `Add` button. 
-
-![CPDaaS WML instance add](../.gitbook/assets/images/prework/cpdaas-wml-instance-add.png)
-
-Next, note down the name of the `Machine Learning` service instance in your `Cloud Pak for Data` section. This is the blue hyperlink underneeth the `Machine Learning` card title. You will need to provide this name in future steps.
-
-![CPDaaS WML instance name](../.gitbook/assets/images/prework/cpdaas-wml-instance-name.png)
+If you have any issues, please see the [Sign up FAQ:](#sign-up-faq).
 
 
 ## 3. Create a Project and Deployment Space
@@ -76,7 +87,7 @@ In Cloud Pak for Data, we use the concept of a project to collect / organize the
 
 ![Create project from file](../.gitbook/assets/images/prework/new-project-from-file.png)
 
-* Click on the **browse** link and in the file browser popup, navigate to where you cloned or downloaded this repository in the previous section. Then select the `CreditRiskProject.zip` file in the `projects/` folder there.
+* Click on the **browse** link and in the file browser popup, navigate to where you downloaded the files for this lab. Then select the `CreditRiskProject.zip` file.
 
 ![Browse for project files](../.gitbook/assets/images/prework/browse-project-zip.png)
 
@@ -215,19 +226,16 @@ Alternatively, you can use the IBM Cloud Console to generate the IBM Cloud API k
 
 ![Copy API key](../.gitbook/assets/images/prework/copy-api-key.png)
 
-This is the *api_key* value that you will need to provide in your Jupyter notebooks for accessing the Watson Machine Learning service instance.
+This is the `api_key` value that you will need to provide in your Jupyter notebooks for accessing the Watson Machine Learning service instance.
 
 ### Get the Watson Machine Learning service instance location
 
-<!-- TODO: In case we can only use Frankfurt and Dallas, remove the rest. -->
 **Option 1:**
 You can select the Watson Machine Learning location code from the table below if you are sure where you've deployed your instance. 
 
 | Region       |   Region Codes | 
 |--------------|------------| 
 | Dallas       | us-south   | 
-| London       | eu-gb      | 
-| Frankfurt    | eu-de      | 
 | Tokyo        | jp-tok     | 
 
 
@@ -254,4 +262,37 @@ ibmcloud resource service-instance WML_INSTANCE_NAME
 
 ## Conclusion
 
-We have now completed creating an IBM Cloud account, a Cloud Pak for Data as a Service instance, and the project and deployment space that we will use in the rest of this workshop. We have also obtained the IBM Cloud API key and the Watson Machine Learning service instance location region code that we will use in the Jupyter notebooks section.
+At this point we are done with this section. We have completed creating an IBM Cloud account, a Cloud Pak for Data as a Service instance, and the project and deployment space that we will use in the rest of this workshop. We have also obtained the IBM Cloud API key and the Watson Machine Learning service instance location region code that we will use in the Jupyter notebooks section. 
+
+If you have any questions, see the [FAQ](#faq) section. Otherwise, you can go to the next lab.
+
+---
+## FAQ
+
+### Download FAQ
+
+**Q1: I'm having issues downloading the files**
+
+A: For each file that you need to download, we have provided multiple options: the `[Download]` button as well as the `[Mirror]` links. Try downloading the file from any of those links. If neither works for you, reach out to the instructors and they can provide the files to you.
+
+### Sign up FAQ
+ 
+**Q1: I don't have all the services needed.**
+
+A: In some rare cases, the services will not auttomatically provision for you. You can do that manually by following these instructions:
+
+  1. Once you are on IBM Cloud Pak for Data, on the top right corner click on your avatar, and then click on `Profile and settings`. Go to the `Services` tab.
+  
+  2. If the `Machine Learning` service instance is not listed under `You Cloud Pak for Data Services` then find it in the `Try our Available Services` section and click on the `Add` button. 
+  ![CPDaaS WML instance add](../.gitbook/assets/images/prework/cpdaas-wml-instance-add.png)
+
+  1.  Next, note down the name of the `Machine Learning` service instance in your `Cloud Pak for Data` section. This is the blue hyperlink underneeth the `Machine Learning` card title. You will need to provide this name in future steps.
+  ![CPDaaS WML instance name](../.gitbook/assets/images/prework/cpdaas-wml-instance-name.png)
+
+**Q2: I get the `That email address is already registered to an IBM Cloud account.` messsage.**
+
+A: You must already have an IBMid account. Follow the login link provided in the error message to login to your existing account. 
+
+**Q3: I get the `Your Watson Studio, Watson Knowledge Catalog, and Watson Machine Learning Lite services must be created in the same service region.` error.**
+
+A: This means you have previously created some Watson services in a different region. To resolve this, go to the [CP4DaaS Login](https://dataplatform.cloud.ibm.com/registration/stepone?context=cpdaas&apps=all) page, select the region you had previously used and then login using the login link at the bottom right. Alternatively, you can create a new account and proceed as a new user to follow along.
