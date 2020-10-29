@@ -142,7 +142,7 @@ The fundamental abstraction in Watson Knowledge Catalog is the Category. A categ
 
   ![new category billing](../.gitbook/assets/images/wkc-admin/wkc-admin-new-category-personal-data.png)
 
-* Now, if you hit the `Create category` link on the *Personal Data* category screen, you can create a sub-category, such as *Residence Information*.
+* Now, if you hit the `Create category` link on the *Personal Data* category screen, you can create a subcategory, such as *Residence Information*.
 
   ![sub category residence information](../.gitbook/assets/images/wkc-admin/wkc-admin-new-subcategory-residence-information.png)
 
@@ -198,7 +198,7 @@ You already saw how to create a category and make it a *business term*. You can 
 
   ![create business term](../.gitbook/assets/images/wkc-admin/wkc-create-business-term.png)
 
-* Give the new Business term a name such as *Contact Information* and optional description (**NOTE: If you are working with others on the same platform, pre-pend your term with something unique, i.e scottda-ContactInfo**). Click the `Save as draft` button.
+* Give the new Business term a name such as *Contact Information* and optional description (**NOTE: If you are working with others on the same platform, prepend your term with something unique, i.e scottda-ContactInfo**). Click the `Save as draft` button.
 
   ![name new business term](../.gitbook/assets/images/wkc-admin/wkc-admin-name-business-term.png)
 

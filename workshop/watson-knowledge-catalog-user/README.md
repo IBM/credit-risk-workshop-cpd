@@ -57,7 +57,7 @@ We need to find the right data and business information related to the Mortgage 
 
   ![Filter Category Policy Rule](../.gitbook/assets/images/wkc-user/wkc-user-filter-category-policy-rule.png)
 
-* Notice that there is a Mortgage Default Analysis category defined that contains all the business information related to the project and a category named Sensitive Information that is a sub-category, along with a business policy related to the Protection of Sensitive Information and three rules outlining the protection of Email Addresses, Phone Numbers and Social Security Numbers. This is a good indication that the mortgage data being used by the project contains sensitive information that needs to be protected.
+* Notice that there is a Mortgage Default Analysis category defined that contains all the business information related to the project and a category named Sensitive Information that is a subcategory, along with a business policy related to the Protection of Sensitive Information and three rules outlining the protection of Email Addresses, Phone Numbers and Social Security Numbers. This is a good indication that the mortgage data being used by the project contains sensitive information that needs to be protected.
 
 ## 2. Understand the Data
 
@@ -161,7 +161,7 @@ You have gained an understanding of the policies and rules and information relat
 
 * Click on the `Enterprise` catalog.
 
-Watson Knowledge Catalog provides suggested assets to you based on recommendations using AI, things you might be interested in based on your past viewing history. Notice that it is already recom-mending Mortgage data to you based on your past searches. It also keeps track of what’s hot and Highly Rated based on reviews and ranks them in order of their rating highest to lowest.
+Watson Knowledge Catalog provides suggested assets to you based on recommendations using AI, things you might be interested in based on your past viewing history. Notice that it is already recommending Mortgage data to you based on your past searches. It also keeps track of what’s hot and Highly Rated based on reviews and ranks them in order of their rating highest to lowest.
 
 * Click on the `Highly Rated` section to see what’s hot:
 
@@ -185,21 +185,21 @@ Watson Knowledge Catalog provides suggested assets to you based on recommendatio
 
   ![Hover over masked email column](../.gitbook/assets/images/wkc-user/wkc-user-mortgage-column-masked.png)
 
-* Click on the Review tab to read the review. The table has a 5-star rating with a very positive review. Reviews can be written by anyone who has access to the catalog and the asset to notify and inform others of the content and usability of the data.
+* Click on the Review tab to read the review. The table has a 5 star rating with a very positive review. Reviews can be written by anyone who has access to the catalog and the asset to notify and inform others of the content and usability of the data.
 
 * Click on the Profile tab to view the data profile.
 
-* As data assets are discovered and added to the catalog they are automatically profiled and classified to give end users a more in-depth understanding of the data content, quality and usability. Data classi-fications are used to identify what type of data it is and to autonomously enforce data protect rules to mask sensitive data, like you just saw.
+* As data assets are discovered and added to the catalog they are automatically profiled and classified to give end users a more in-depth understanding of the data content, quality and usability. Data classifications are used to identify what type of data it is and to autonomously enforce data protect rules to mask sensitive data, like you just saw.
 
 * Scroll to the right to view the other columns. Notice that the protected data does not have any profile information displayed.
 
   ![Mortgage profile with masked columsn](../.gitbook/assets/images/wkc-user/wkc-user-mortgage-profile.png)
 
-* Lineage is captured for every data asset in a catalog. It keeps track of where it came from, any up-dates or changes that have been made to its metadata and any movement of the data outside of the catalog. Click on the `Activities` tab to view the data asset lineage.
+* Lineage is captured for every data asset in a catalog. It keeps track of where it came from, any updates or changes that have been made to its metadata and any movement of the data outside of the catalog. Click on the `Activities` tab to view the data asset lineage.
 
 ![Mortgage data lineage](../.gitbook/assets/images/wkc-user/wkc-user-lineage.png)
 
-* Click on any node to see the detail pane on the right. Do this for every node in the line-age graph to see what is tracked.
+* Click on any node to see the detail pane on the right. Do this for every node in the lineage graph to see what is tracked.
 
 ## Conclusion
 
