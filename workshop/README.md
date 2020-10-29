@@ -10,9 +10,12 @@ Welcome to our workshop! In this workshop we'll be using the Cloud Pak for Data 
 
 ## About this workshop
 
-* [Agenda](#agenda)
-* [Compatability](#compatability)
-* [About Cloud Pak for Data as a Service](#about-cloud-pak-for-data-as-a-service)
+- [Analyzing Credit Risk with Cloud Pak for Data on OpenShift](#analyzing-credit-risk-with-cloud-pak-for-data-on-openshift)
+  - [About this workshop](#about-this-workshop)
+    - [About the data set](#about-the-data-set)
+  - [Agenda](#agenda)
+  - [Compatability](#compatability)
+  - [About Cloud Pak for Data as a Service](#about-cloud-pak-for-data-as-a-service)
 
 ### About the data set
 
@@ -24,75 +27,25 @@ The credit risk model that we are exploring in this workshop uses a training dat
 
 ## Agenda
 
-<table>
-<thead>
-  <tr>
-    <th>Topic</th>
-    <th>Content</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Introduction</td>
-    <td>Introduction Video (xx:xx)</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Platform Overview</td>
-    <td>CP4DaaS Overview (xx:xx)</td>
-  </tr>
-  <tr>
-    <td>[Lab] Project Setup video (xx:xx) |&nbsp;&nbsp;&nbsp;Instructions</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Data Wrangling</td>
-    <td>Data Wrangling Overview (xx:xx)</td>
-  </tr>
-  <tr>
-    <td>[Lab] Data Refinery video(xx:xx) |&nbsp;&nbsp;&nbsp;Instructions</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Data Management</td>
-    <td>Watson Knowledge Catalog Overview (xx:xx)</td>
-  </tr>
-  <tr>
-    <td>[Demo] WKC (xx:xx)</td>
-  </tr>
-  <tr>
-    <td rowspan="3">Machine Learning</td>
-    <td>Machine Learning into (xx:xx)</td>
-  </tr>
-  <tr>
-    <td>[Lab] ML with Jupyter Notebook video&nbsp;&nbsp;&nbsp;(xx:xx) | Instructions</td>
-  </tr>
-  <tr>
-    <td>[Lab] Automated ML with AutoAI Lab video&nbsp;&nbsp;&nbsp;(xx:xx) | Instructions</td>
-  </tr>
-  <tr>
-    <td rowspan="4">Model Deployment</td>
-    <td>Model Deployment intro (xx:xx)</td>
-  </tr>
-  <tr>
-    <td>[Lab] Online Deployment &amp; testing&nbsp;&nbsp;&nbsp;video (xx:xx) | Instructions</td>
-  </tr>
-  <tr>
-    <td>[Lab] Batch Scoring video (xx:xx) |&nbsp;&nbsp;&nbsp;Instructions</td>
-  </tr>
-  <tr>
-    <td>[Lab] Deploy model to Python app video&nbsp;&nbsp;&nbsp;(xx:xx) | Instructions</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Model Monitoring</td>
-    <td>Monitoring &amp; Explainability intro (xx:xx)</td>
-  </tr>
-  <tr>
-    <td>[Demo] OpenScale (xx:xx)</td>
-  </tr>
-  <tr>
-    <td>Conclusion</td>
-    <td>Conclusion Video (xx:xx)</td>
-  </tr>
-</tbody>
-</table>
+| Topic             | Content                                                            |
+|-------------------|--------------------------------------------------------------------|
+| Introduction      | Introduction Video (xx:xx)                                         |
+| Platform Overview | CP4DaaS Overview (xx:xx)                                           |
+|                   | [Lab] Project Setup video (xx:xx) \|   Instructions                |
+| Data Wrangling    | Data Wrangling Overview (xx:xx)                                    |
+|                   | [Lab] Data Refinery video(xx:xx) \|   Instructions                 |
+| Data Management   | Watson Knowledge Catalog Overview (xx:xx)                          |
+|                   | [Demo] WKC (xx:xx)                                                 |
+| Machine Learning  | Machine Learning into (xx:xx)                                      |
+|                   | [Lab] ML with Jupyter Notebook video   (xx:xx) \| Instructions     |
+|                   | [Lab] Automated ML with AutoAI Lab video   (xx:xx) \| Instructions |
+| Model Deployment  | Model Deployment intro (xx:xx)                                     |
+|                   | [Lab] Online Deployment & testing video (xx:xx) \| Instructions    |
+|                   | [Lab] Batch Scoring video (xx:xx) \|   Instructions                |
+|                   | [Lab] Deploy model to Python app video (xx:xx) \| Instructions     |
+| Model Monitoring  | Monitoring & Explainability intro (xx:xx)                          |
+|                   | [Demo] OpenScale (xx:xx)                                           |
+| Conclusion        | Conclusion Video (xx:xx)                                           |
 
 
 ## Compatability
