@@ -22,9 +22,9 @@ This module is broken up into several sections that explore the different model 
 
 ## Online Model Deployment
 
-After a model has been created, saved and promoted to our deployment space, we can procceed to dpeloying the model. For this section, we will be creating an online deployment. This type of deployment will make an instance of the model available to make predictions in real time via an API. Although we will use the Cloud Pak for Data UI to deploy the model, the same can be done programmatically.
+After a model has been created, saved and promoted to our deployment space, we can proceed to deploying the model. For this section, we will be creating an online deployment. This type of deployment will make an instance of the model available to make predictions in real time via an API. Although we will use the Cloud Pak for Data UI to deploy the model, the same can be done programmatically.
 
-* Navigate to the left-hand (☰) hamburger menu and choose `Analyze` -> `Analytics deployments`:
+* Navigate to the left-hand (☰) hamburger menu and choose `Deployment spaces` -> `View all spaces`:
 
 ![Analytics Analyze deployments](../.gitbook/assets/images/navigation/menu-analytics-deployments.png)
 
@@ -55,7 +55,7 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 
 * Copy and paste the following data objects into the `Body` panel 
 
-> (**Note:** Make sure the input below is the only content in the field. Do not append it to the default content `{ "input_data": [] }` that may already be in the field. Instead, remove the exsiting content and replace it with the following data.).
+> (**Note:** Make sure the input below is the only content in the field. Do not append it to the default content `{ "input_data": [] }` that may already be in the field. Instead, remove the existing content and replace it with the following data.).
 
 ```json
 {
@@ -152,7 +152,7 @@ Lets start by creating the deployment:
 
 * From your deployment space overview, in the table, find the model name for the model you previously built and now want to create a deployment against. Use your mouse to hover over the right side of that table row and click the `Deploy` rocket icon (the icons are not visible by default until you hover over them).
 
-> Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.3` runtime.
+> Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whichever model is available that is using a `spark-mllib_2.3` runtime.
 
 ![Actions Deploy model](../.gitbook/assets/images/deployment/deploy-spark-model.png)
 
@@ -190,7 +190,7 @@ The Jupyter notebook is already included as an asset in the project you imported
 
 With the notebook open, spend a minute looking through the sections of the notebook to get an overview. A notebook is composed of text (markdown or heading) cells and code cells. The markdown cells provide comments on what the code is designed to do. You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook or hitting the keyboard short cut to run the cell (Shift + Enter but can vary based on platform). While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
 
-> **Note:** Please note that some of the comments in the notebook are directions for you to modify specific sections of the code. These are writted in **red**. Perform any changes neccessary, as indicated in the cells, before executing them.
+> **Note:** Please note that some of the comments in the notebook are directions for you to modify specific sections of the code. These are written in **red**. Perform any changes necessary, as indicated in the cells, before executing them.
 
 
 
@@ -201,12 +201,73 @@ With the notebook open, spend a minute looking through the sections of the noteb
 
 You can also access the online model deployment directly through the REST API. This allows you to use your model for inference in any of your apps. For this workshop we'll be using a Python Flask application to collect information, score it against the model, and show the results.
 
-> **IMPORTANT: This SAMPLE application only runs on python 3.6 and above, so the instructions here are for python 3.6+ only. You will need to have Python 3.6 or later already installed on your machine**
-> *Note: The instructions below assume you have completed the pre-work module and thus have the Git repository already on your machine (cloned or downloaded).*
+There are many ways of running python applications. We will cover two of them, first running as a python application on your machine, and next as a deployed application on IBM Cloud. 
 
-### Install Dependencies
+### Common Steps
 
-The general recommendation for Python development is to use a virtual environment ([`venv`](https://docs.python.org/3/tutorial/venv.html)). To install and initialize a virtual environment, use the `venv` module on Python 3:
+Regardless of which option we choose for deployment, we need to configure our Python application so it knows how to connect to our specific model. To do that follow these steps.
+
+1. Unzip the python app zip file that you downloaded in the [pre-work](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/v/workshop-DDC/getting-started/pre-work) section. Depending on your operation system the command to do this will differ, so an online search might be in order if you don't know how already!
+2. It's best practice to store secrets and configurations as environment variables, instead of hard-coding them in the code. Following this convention, we will sore our API Key and model URL in a `.env` file. The key-value pairs in this files are treated as environment variables when the code runs.
+
+   * Copy the `env.sample` file to `.env`.
+
+     ```bash
+     cp env.sample .env
+     ```
+
+   * Edit `.env` to and fill in the `MODEL_URL` and `API_TOKEN` variables.
+
+     * `API_TOKEN` is your API Token that we created in the [pre-work](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/v/workshop-DDC/getting-started/pre-work) section. If you don't have your API Key, see the [Get the IBM Cloud platform API Key](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/v/workshop-DDC/getting-started/pre-work#get-the-ibm-cloud-platform-api-key) section of the [pre-work](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/v/workshop-DDC/getting-started/pre-work).
+     * `MODEL_URL` is your online deployment's Endpoint. We covered how to find this URL (the `MODEL_URL`) in the [Test Online Model Deployment using cURL](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/v/workshop-DDC/credit-risk-workshop/machine-learning-deployment-scoring#optional-test-online-model-deployment-using-curl) section above. For convenience, we're adding a reminder blow.)
+
+   * To find your MODEL_URL
+     1.  Go to the (☰) hamburger menu > `Deployments` > `View all spaces`. 
+     2.  Select your Deployment Space name from the [pre-work](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/v/workshop-DDC/getting-started/pre-work) section
+     3.  Select your model from the ML with [Jupyter Notebook](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/v/workshop-DDC/credit-risk-workshop/machine-learning-in-jupyter-notebook) section.
+     4.  In the `Online` tab, select your deployment's name. 
+     5.  Finally, you can find the Endpoint in the API reference section. 
+     
+     ![Finding your online deployment's endpoint](../.gitbook/assets/images/deployment/find-model-url.gif)
+
+
+   * Here is an **example** of a completed lines of the .env file. Your `API_TOKEN` and `MODEL_URL` will defer.
+
+     ```bash
+     # Copy this file to .env.
+     # Edit the .env file with the required settings before starting the app.
+
+     # 1. Required: Provide your web service URL for scoring.
+     # E.g., MODEL_URL=https://<cluster_url>/v4/deployments/<deployment_space_guid>/predictions
+     MODEL_URL=https://us-south.ml.cloud.ibm.com/ml/v4/deployments/012f3ebd-9885-4d1f-a720-9d2f2008ff2a/predictions?version=2020-10-31
+
+
+     # 2. Required: fill in EITHER section A OR B below:
+
+     # ### A: Authentication using API_TOKEN
+     #   Fill in your API Token. You don't need to update the TOKEN_REQUEST_URL
+     #   Example:
+     #     TOKEN_REQUEST_URL=https://iam.ng.bluemix.net/identity/token
+     #     API_TOKEN=<Your API Key>
+     TOKEN_REQUEST_URL=https://iam.ng.bluemix.net/identity/token
+     API_TOKEN=0evvIIfebBQZc2AIxWE2rYkYc2KGAoiHpMiphntzhxqO
+     ```
+
+And we're done! Now you can proceed to your favorite option below.
+
+
+### Option 1: Running you your machine
+ 
+Choose this option if you want to run the Python Flask application locally on our machines. Note that this application will still access your deployed model in Cloud Pak for Data as a Service over the internet.
+
+> **Important pre-requisites** 
+> - Completion of pre-work and Online Deployment section
+> - Completion of the common steps section above.
+> - A working installation of Python 3.6 or above
+
+#### Installing the dependencies
+
+You could run this Python application in your default python environment; however, the general recommendation for Python development is to use a virtual environments (see [`venv`](https://docs.python.org/3/tutorial/venv.html)). To install and initialize a virtual environment, use the `venv` module on Python 3:
 
 * Initialize a virtual environment with [`venv`](https://docs.python.org/3/tutorial/venv.html). Run the following commands in a terminal (or command prompt):
 
@@ -222,70 +283,71 @@ The general recommendation for Python development is to use a virtual environmen
 
   > **TIP** To terminate the virtual environment use the `deactivate` command.
 
-* To install the Python requirements, from a terminal (or command prompt) navigate to where you cloned/downloaded the Git repository. Run the following commands:
+Next, to install the Python requirements, from a terminal (or command prompt) navigate to where you downloaded the python app zip file during the [pre-work](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/v/workshop-DDC/getting-started/pre-work). Unzip the downloaded python application and the following commands:
 
   ```bash
+  # Don't forget to do the common steps above first!
   cd flaskapp
   pip install -r requirements.txt
   ```
 
-### Update Environment Variables
+#### Start Application
 
-It's best practice to store configurable information as environment variables, instead of hard-coding any important information. To reference our model and supply an API key, we'll pass these values in via a file that is read, the key-value pairs in this files are stored as environment variables.
-
-* Copy the `env.sample` file to `.env`.
-
-  ```bash
-  cp env.sample .env
-  ```
-
-* Edit `.env` to and fill in the `MODEL_URL` as well as the `AUTH_URL`, `AUTH_USERNAME`, and `AUTH_PASSWORD`.
-
-  * `MODEL_URL` is your web service URL for scoring which you got from the section above
-  * `AUTH_URL` is the preauth url of your CloudPak4Data and will look like this: `https://<cluster_url>/v1/preauth/validateAuth`
-  * `AUTH_USERNAME` is your username with which you login to the CloudPak4Data environment
-  * `AUTH_PASSWORD` is your password with which you login to the CloudPak4Data environment
-
-  >Note: Alternatively, you can fill in the `AUTH_TOKEN` instead of `AUTH_URL`, `AUTH_USERNAME`, and `AUTH_PASSWORD`. You will have generated this token in the section above. However, since tokens expire after a few hours and you would need to restart your app to update the token, this option is not suggested. Instead, if you use the username/password option, the app can generate a new token every time for you so it will always have a non-expired ones.
-
-* Here's an example of a completed lines of the .env file.
-
-  ```bash
-  # Required: Provide your web service URL for scoring.
-  # E.g., MODEL_URL=https://<cluster_url>/v4/deployments/<deployment_space_guid>/predictions
-  MODEL_URL=https://cp4d.cp4dworkshops.com/v4/deployments/5f939979-14c2-4538-a2af-a970aeb59abd/predictions
-
-  # Required: Please fill in EITHER section A OR B below:
-
-  # #### A: Authentication using username and password
-  #   Fill in the authntication url, your CloudPak4Data username, and CloudPak4Data password.
-  #   Example:
-  #     AUTH_URL=<cluster_url>/v1/preauth/validateAuth
-  #     AUTH_USERNAME=my_username
-  #     AUTH_PASSWORD=super_complex_password
-  AUTH_URL=https://cp4d.cp4dworkshops.com/v1/preauth/validateAuth
-  AUTH_USERNAME=username_001
-  AUTH_PASSWORD=my_secure_password_!
-  ```
-
-### Start Application
+Now we are ready to start our python application. 
 
 * Start the flask server by running the following command:
 
   ```bash
+  # You might need to use python3 instead of python
   python creditriskapp.py
   ```
 
-* Use your browser to go to [http://0.0.0.0:5000](http://0.0.0.0:5000) and try it out.
+* Finally, use your browser to go to [http://localhost:5000](http://localhost:5000) and try it out.
 
   > **TIP**: Use `ctrl`+`c` to stop the Flask server when you are done.
 
-#### Test the application
+#### Testing the application
 
 * Either use the default values pre-filled in the input form, or modify the value and then click the `Submit` button. The python application will invoke the predictive model and a risk prediction & probability is returned:
 
 ![Get the risk percentage as a result](../.gitbook/assets/images/deployment/flaskapp-output.png)
 
+### Option 2: Running on IBM Cloud
+
+As an alternative, you can deploy this application in the your IBM Cloud account as a Cloud Foundry application. 
+
+> **Important pre-requisites** 
+> - Completion of [pre-work](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/v/workshop-DDC/getting-started/pre-work) and Online Deployment section
+> - Completion of the common steps section above.
+> - A working installation of IBM Cloud CLI. ([See how to get started](https://cloud.ibm.com/docs/cli?topic=cli-getting-started)) 
+
+1. Configuring our application:
+   - First, make sure you have completed the Common Sections section above.
+   - [Optional]: You can inspect or change the deployment definitions for this application in the file named `manifest.yml`. As defined, your application will have a random URL. You can could change that by setting `  random-route: false` and picking a unique name in the `name` section.
+2. Authenticating with the IBM Cloud:
+   - Make sure you have the IBM Cloud CLI installed
+   - Then use `ibmcloud login` command to authenticate. (You can also use `ibmcloud login --sso` if your organization uses single-sign-on)
+   - Target the desired cloud foundry endpoint by using the following `ibmcloud target --cf`
+3. Publishing our Application
+   - We are now ready to publish our application. Use `ibmcloud cf push` to push your application to the cloud
+   - Once it is complete you will see the URL for your application on the IBM Cloud.
+4. Testing our application
+   - For the final step, navigate to the URL that you got after publishing your application 
+   - You can then change the field and click `Submit`. The application makes a call to your deployed model on the backend and visualize the predictions for you. All on the Cloud!
+  
+  
+Summary of the commands
+``` sh
+# 1. Don't forget the common steps section!
+
+# 2. Login to IBM Cloud
+ibmcloud login # or ibmcloud login --sso
+ibmcloud target --cf
+
+# 3. Publishing our application
+ibmcloud cf push
+```
+And we are all done. We configured our application, logged in using the IBM Cloud cli, and published our application to the cloud. 
 ## Conclusion
 
 In this section we covered the followings:
