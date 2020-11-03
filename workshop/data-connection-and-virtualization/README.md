@@ -6,8 +6,8 @@ This section will cover aspects of collecting data in Cloud Pak for Data. Specif
 
 The section is broken up into the following steps:
 
-1. [Virtualize Data](#virtualize-data)
-1. [Grant Access to Virtualized Data](#grant-access-to-virtualized-data)
+1. [Virtualize Data](#virtualizing-data)
+1. [Grant Access to Virtualized Data](#grant-access-to-the-virtualized-data)
 
 ## Virtualizing Data
 
@@ -81,7 +81,7 @@ Now we're going to **join** the tables we previously virtualized, so we have a f
 
 ![Our data sets at the end of this section](../.gitbook/assets/images/dv/dv-virtualized-data-all.png)
 
-## 2. Grant access to the virtualized data
+## Grant access to the virtualized data
 
 >*Note: This section only needs to be completed if there are non-Admin or non-Data Engineer users you are working in a group with. The instructors would have indicated that it needs to be completed to give those users access to the data you have virtualized above.*
 
