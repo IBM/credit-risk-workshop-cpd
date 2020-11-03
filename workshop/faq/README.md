@@ -45,4 +45,34 @@ You will need to create a new empty project to import the files you'll use into.
 
 ![Create project](../.gitbook/assets/images/faq/create-project.png)
 
-* To import the notebook you need for a lab, 
+* To import the notebook you need for a lab, click on `Add to project +` button.
+
+![Add to project](../.gitbook/assets/images/faq/add-to-project.png)
+
+* Choose `Notebook`.
+
+![Notebook](../.gitbook/assets/images/faq/notebook.png)
+
+* Then, choose `From file`. Keep the environment the same and browse your files or drag and drop your notebook file. Give your notebook a name.
+
+![Create notebook](../.gitbook/assets/images/faq/create-notebook.png)
+
+* Finally. click `Create`.
+
+![Created notebook](../.gitbook/assets/images/faq/created-notebook.png)
+
+* To import any data asset you need like CSV files, click on `0100` button at the top right.
+
+![Add to project](../.gitbook/assets/images/faq/add-data-to-project.png)
+
+* Browse or drag and drop the data asset you want to add. 
+
+![Add Data](../.gitbook/assets/images/faq/browse-drag-data.png)
+
+* Once upload is complete, click on `Assets` to view your uploaded file.
+
+![Uploaded Successfully](../.gitbook/assets/images/faq/uploaded-data.png)
+
+
+
+
