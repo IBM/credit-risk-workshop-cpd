@@ -228,7 +228,7 @@ Regardless of which option we choose for deployment, we need to configure our Py
      4.  In the `Online` tab, select your deployment's name. 
      5.  Finally, you can find the Endpoint in the API reference section. 
      
-     ![Finding your online deployment's endpoint](../.gitbook/assets/images/deployment/find-model-url.gif)
+![Finding your online deployment's endpoint](../.gitbook/assets/images/deployment/find-model-url.gif)
 
 
    * Here is an **example** of a completed lines of the .env file. Your `API_TOKEN` and `MODEL_URL` will defer.
@@ -240,8 +240,7 @@ Regardless of which option we choose for deployment, we need to configure our Py
      # 1. Required: Provide your web service URL for scoring.
      # E.g., MODEL_URL=https://<cluster_url>/v4/deployments/<deployment_space_guid>/predictions
      MODEL_URL=https://us-south.ml.cloud.ibm.com/ml/v4/deployments/012f3ebd-9885-4d1f-a720-9d2f2008ff2a/predictions?version=2020-10-31
-
-
+     
      # 2. Required: fill in EITHER section A OR B below:
 
      # ### A: Authentication using API_TOKEN
