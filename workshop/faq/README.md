@@ -12,7 +12,8 @@ If you ran the following commands to download the project, navigate to `projects
    git clone https://github.com/IBM/credit-risk-workshop-cpd.git
    cd credit-risk-workshop-cpd
    ```
-If you downloaded the zip folder from the link provided in the Pre-work section, make sure you extract the zip folder after it's downloaded. After that, navigate to `projects` then unzip the folder named `CreditRiskProject.zip`. All files you need are in the `assests` folder. 
+If you downloaded the zip folder from the link provided in the Pre-work section, make sure you extract the zip folder after it's downloaded. All files you need are in the `assests` folder.
+
 ### Importing Files into the Cloud Pak for Data as a Service platform
 
 You will need to create a new empty project to import the files you'll use into.
