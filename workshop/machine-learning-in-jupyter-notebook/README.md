@@ -96,8 +96,21 @@ DEPLOYMENT_SPACE_NAME = "<deployment-space-name>"
 
 **We've successfully built and saved a machine learning model programmatically. Congratulations!**
 
-> **Important**: Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions so you can see the stop kernel option.
-> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
+## Stop the Environment
+
+**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done.
+
+* Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
+
+![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+
+* Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
+
+![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+
+* Click the `Stop` button on the subsequent pop up window.
+
+![Stop environment confirm](../.gitbook/assets/images/ml/stop-notebook-environment-confirmation.png)
 
 ## Conclusion
 
