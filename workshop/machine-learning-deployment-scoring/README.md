@@ -30,9 +30,10 @@ After a model has been created, saved and promoted to our deployment space, we c
 
 * Choose the deployment space you setup previously by clicking on the name of your space.
 
-* From your deployment space overview, in the table, click on the model name that you previousely promoted. Next, you can click on the `Create Deployment`. 
+* From your deployment space overview, in the table, click on the model name that you previousely promoted. Next, you can click on the `Create Deployment`.
 
-> Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.3` runtime (this is denoted in the `Software Specification` column).
+> Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.4` runtime (this is denoted in the `Software Specification` column).
+
 ![Actions Deploy model](../.gitbook/assets/images/deployment/deploy-spark-model-button.png)
 
 * On the `Create a deployment` screen, choose `Online` for the `Deployment Type`, give the Deployment a name and optionally a description and click the `Create` button.
@@ -77,19 +78,22 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 > **Note:** For some deployed models (for example AutoAI based models), you can provide the request payload using a generated form by clicking on the `Provide input using form` icon and providing values for the input fields of the form. If the form is not available for the model you deployed, the icon will not be present or will remain grayed out.
 > ![Input to the fields](../.gitbook/assets/images/deployment/deploy-test-input-form.png)
 
+* ***Important: If you have completed this section and do not plan on completing the other optional deployment approaches below, please go ahead and cleanup your deployment. Follow the [Cleanup Deployment instructions below.](#cleanup-deployments)***
+
 ### (Optional) Test Online Model Deployment using cURL
 
 Now that the model is deployed, we can also test it from external applications. One way to invoke the model API is using the cURL command.
 
 > **Note for WINDOWS users:** This section uses commands available in unix-based systems (MacOS, Linux, ...). Windows users can use [IBM Cloud Shell](https://cloud.ibm.com/shell) or if you want to run the commands locally, it is recommended to [download gitbash](https://gitforwindows.org/) or enable [Windows Linux Subsystem (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) if you use Windows 10. If neither option works for you, you will need to adapt the commands for your system to follow this section (for instance, you need to change `export` commands to `set` commands, and find an alternative for `cURL`)
 
-* First step is to install the [IBM Cloud CLI](https://cloud.ibm.com/functions/learn/cli). You can follow the instructions in the link to do so. 
+* First step is to install the [IBM Cloud CLI](https://cloud.ibm.com/functions/learn/cli). You can follow the instructions in the link to do so.
   
 * In order to get access token you need to have `API Key`, that you can get from your IBM cloud account. You can create one by running following command. Remember to save your API Key as they can't be retrieved after they are created.
 
 ```bash
 ibmcloud iam api-key-create <key name>
 ```
+
 ![Model Deployment Endpoint](../.gitbook/assets/images/deployment/api-key.png)
 
 * Next, in a terminal window, run the following command to get a token to access the API. Replace `<API Key>` with the api key that you got from running above command.
@@ -109,8 +113,6 @@ curl -X POST 'https://iam.cloud.ibm.com/identity/token' -H 'Content-Type: applic
 ```bash
 export WML_AUTH_TOKEN=<value-of-access-token>
 ```
-
-
 
 * Back on the model deployment page, gather the `URL` to invoke the deployed model from the *API reference* by copying the `Endpoint`.
 
@@ -136,9 +138,12 @@ curl -k -X POST --header 'Content-Type: application/json' --header 'Accept: appl
 
 * A json string will be returned with the response, including a  prediction from the model (i.e a "Risk" or "No Risk" at the end indicating the prediction of this loan representing risk).
 
+* ***Important: If you have completed this section and do not plan on completing the other optional deployment approaches below, please go ahead and cleanup your deployment. Follow the [Cleanup Deployment instructions below.](#cleanup-deployments)***
+
 ## (Optional) Batch Model Deployment
 
-Another approach to expose the model to be consumed by other users/applications is to create a batch deployment. This type of deployment will make an instance of the model available to make predictions against data assets or groups of records. The model prediction requests are scheduled as jobs, which are executed asynchronously. For the lab, we will break this into two steps: 
+Another approach to expose the model to be consumed by other users/applications is to create a batch deployment. This type of deployment will make an instance of the model available to make predictions against data assets or groups of records. The model prediction requests are scheduled as jobs, which are executed asynchronously. For the lab, we will break this into two steps:
+
 1. Creating the batch deployment
 2. Creating and scheduling the batch job
 
@@ -192,16 +197,27 @@ With the notebook open, spend a minute looking through the sections of the noteb
 
 > **Note:** Please note that some of the comments in the notebook are directions for you to modify specific sections of the code. These are written in **red**. Perform any changes necessary, as indicated in the cells, before executing them.
 
+#### Stop the Environment
 
+In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done.
 
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions so you can see the stop kernel option.*
-> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
+* Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
+
+![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+
+* Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
+
+![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+
+* Click the `Stop` button on the subsequent pop up window.
+
+![Stop environment confirm](../.gitbook/assets/images/ml/stop-notebook-environment-confirmation.png)
 
 ## (Optional) Integrate Model to Python Flask Application
 
 You can also access the online model deployment directly through the REST API. This allows you to use your model for inference in any of your apps. For this workshop we'll be using a Python Flask application to collect information, score it against the model, and show the results.
 
-There are many ways of running python applications. We will cover two of them, first running as a python application on your machine, and next as a deployed application on IBM Cloud. 
+There are many ways of running python applications. We will cover two of them, first running as a python application on your machine, and next as a deployed application on IBM Cloud.
 
 ### Common Steps
 
@@ -311,6 +327,8 @@ Now we are ready to start our python application.
 
 ![Get the risk percentage as a result](../.gitbook/assets/images/deployment/flaskapp-output.png)
 
+>***Important: Please go ahead and cleanup your deployments. Follow the [Cleanup Deployment instructions below.](#cleanup-deployment)***
+
 ### Option 2: Running on IBM Cloud
 
 As an alternative, you can deploy this application in the your IBM Cloud account as a Cloud Foundry application. 
@@ -347,6 +365,35 @@ ibmcloud target --cf
 ibmcloud cf push
 ```
 And we are all done. We configured our application, logged in using the IBM Cloud cli, and published our application to the cloud. 
+
+>***Important: Please go ahead and cleanup your deployments. Follow the [Cleanup Deployment instructions below.](#cleanup-deployments)***
+
+## Cleanup Deployments
+
+You can clean up the deployments created for your models. To remove the deployment:
+
+* Navigate to the left-hand (☰) hamburger menu and choose `Deployment spaces` -> `View all spaces`:
+
+![Analytics Analyze deployments](../.gitbook/assets/images/navigation/menu-analytics-deployments.png)
+
+* Choose the deployment space you setup previously by clicking on the name of your space.
+
+* From your deployment space overview, in the table, click on the model name that you previousely promoted and created deployments against.
+
+* Under 'Deployment Types', click on `Online` to view the online deployments you have created for this model.
+
+* In the table on the main panel, click on the three vertical dots at the right of the row for the online deployment you created. Select the `Delete` option from the menu.
+
+> *Note: The vertical dots are hidden until you hover over them with your mouse*
+
+![Delete online deployments](../.gitbook/assets/images/deployment/delete-deployment.png)
+
+* In the subsequent pop up window, click on the `Delete` button to confirm you want to delete this deployment.
+
+![Delete online deployments confirm](../.gitbook/assets/images/deployment/delete-deployment-confirm.png)
+
+* You can follow the same process to delete other deployments as needed.
+
 ## Conclusion
 
 In this section we covered the followings:
