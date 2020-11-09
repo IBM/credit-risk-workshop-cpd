@@ -29,23 +29,23 @@ The credit risk model that we are exploring in this workshop uses a training dat
 
 | Topic             | Content                                                            |
 |-------------------|--------------------------------------------------------------------|
-| Introduction      | Introduction Video (xx:xx)                                         |
-| Platform Overview | CP4DaaS Overview (xx:xx)                                           |
-|                   | [Lab] Project Setup video (xx:xx) \|   Instructions                |
-| Data Wrangling    | Data Wrangling Overview (xx:xx)                                    |
-|                   | [Lab] Data Refinery video(xx:xx) \|   Instructions                 |
-| Data Management   | Watson Knowledge Catalog Overview (xx:xx)                          |
-|                   | [Demo] WKC (xx:xx)                                                 |
-| Machine Learning  | Machine Learning into (xx:xx)                                      |
-|                   | [Lab] ML with Jupyter Notebook video   (xx:xx) \| Instructions     |
-|                   | [Lab] Automated ML with AutoAI Lab video   (xx:xx) \| Instructions |
-| Model Deployment  | Model Deployment intro (xx:xx)                                     |
-|                   | [Lab] Online Deployment & testing video (xx:xx) \| Instructions    |
-|                   | [Lab] Batch Scoring video (xx:xx) \|   Instructions                |
-|                   | [Lab] Deploy model to Python app video (xx:xx) \| Instructions     |
-| Model Monitoring  | Monitoring & Explainability intro (xx:xx)                          |
-|                   | [Demo] OpenScale (xx:xx)                                           |
-| Conclusion        | Conclusion Video (xx:xx)                                           |
+| Introduction      | Introduction Video                                                 |
+| Platform Overview | CP4DaaS Overview                                                   |
+|                   | [Lab] Project Setup video         \|   Instructions                |
+| Data Wrangling    | Data Wrangling Overview                                            |
+|                   | [Lab] Data Refinery video        \|   Instructions                 |
+| Data Management   | Watson Knowledge Catalog Overview                                  |
+|                   | [Demo] WKC                                                         |
+| Machine Learning  | Machine Learning into                                              |
+|                   | [Lab] ML with Jupyter Notebook video           \| Instructions     |
+|                   | [Lab] Automated ML with AutoAI Lab video           \| Instructions |
+| Model Deployment  | Model Deployment intro                                             |
+|                   | [Lab] Online Deployment & testing video         \| Instructions    |
+|                   | [Lab] Batch Scoring video         \|   Instructions                |
+|                   | [Lab] Deploy model to Python app video         \| Instructions     |
+| Model Monitoring  | Monitoring & Explainability intro                                  |
+|                   | [Demo] OpenScale                                                   |
+| Conclusion        | Conclusion Video                                                   |
 
 
 ## Compatability
