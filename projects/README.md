@@ -2,14 +2,9 @@
 
 The CreditRiskProject.zip contains:
 
-* Seven notebooks:
+* Two notebooks:
   * machinelearning-creditrisk-batchscoring-<ID>.ipynb
   * machinelearning-creditrisk-sparkmlmodel-<ID>.ipynb
-  * openscale-full-configuration-<ID>.ipynb
-  * openscale-fairness-explainability-<ID>.ipynb
-  * openscale-quality-feedback-<ID>.ipynb
-  * openscale-initial-setup-<ID>.ipynb
-  * openscale-drift-config-<ID>.ipynb
 
 * Four CSV files:
 
