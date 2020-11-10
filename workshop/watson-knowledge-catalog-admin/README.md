@@ -44,6 +44,11 @@ If the `Watson Knowledge Catalog` service instance is not added then click `Add`
 
 ![add local files to catalog](../.gitbook/assets/images/wkc-admin/wkc-add-to-catalog-local-files.png)
 
+* Download the `application_personal_data.csv` file from [here](https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/data/split/applicant_personal_data.csv). If 
+the download doesn't start automatically,
+right-click on the white space in the file and click `Save-As` and then name
+the file `application_personal_data.csv`.
+
 * Browse to the `/data/split/applicant_personal_data.csv` file and double-click or click `Open`. Add an optional description and click `Add`:
 
 ![click add for local files to catalog](../.gitbook/assets/images/wkc-admin/wkc-add-asset-local-files.png)
