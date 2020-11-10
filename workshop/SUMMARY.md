@@ -1,5 +1,9 @@
 # Summary
 
+## Frequently Asked Questions
+
+* [FAQ](faq/README.md)
+
 ## Getting Started
 
 * [Pre-work](pre-work/README.md)
