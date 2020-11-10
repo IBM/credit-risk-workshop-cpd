@@ -69,11 +69,15 @@ We'll start out in the `Data` tab where we wrangle, shape and refine our data. A
 
 * Let's say we've decide that there are columns that we don't want to leave in our dataset ( maybe because they might not be useful features in our Machine Learning model, or because we don't want to make those data attributes accessible to others, or any other reason). We'll remove the `FirstName`, `LastName`, `Email`, `StreetAddress`, `City`, `State`, `PostalCode` columns.
 
-* For each column to be removed: Click the `Operation +` button, then select the `Remove` operation. Click the `Change column selection` option.
+* For each column to be removed: Click the `Operation +` button, then select the `Remove` operation. Click the `Select column` option.
 
-![Remove Column](../.gitbook/assets/images/dr/dr-remove-change-column.png)
+![Select Column](../.gitbook/assets/images/dr/dr-remove-select-column.png)
 
 * In the `Select column` drop down, choose one of the columns to remove (i.e `FirstName`). Click the `Next` button and then the `Apply` button. The column will be removed. Repeat for each of the above columns.
+
+* After the first operation, you may be on the screen where you will remove by clicking on `Change column selection`:
+
+![Remove Column](../.gitbook/assets/images/dr/dr-remove-change-column.png)
 
 * At this point, you have a data transformation flow with 9 steps. As we saw in the last section, we keep track of each of the steps and we can even undo (or redo) an action using the circular arrows. To see the steps in the data flow that you have performed, click the `Steps` button. The operations that you have performed on the data will be shown.
 
@@ -97,7 +101,7 @@ Data Refinery allows you to run jobs at scheduled times, and save the output. In
 
 ![Refinery job name](../.gitbook/assets/images/dr/dr-create-and-run-job.png)
 
-* The job will be listed as `Status Running` and then the `Status` will change to `Completed`. Click `Edit job`.
+* The job *Status* will be listed as `Running` and then the *Status* will change to `Completed`. Click `Edit job`.
 
 ![Click Edit to schedule job](../.gitbook/assets/images/dr/dr-job-running.png)
 
@@ -145,18 +149,18 @@ Let's do some visual exploration of our data using charts and graphs. Note that 
 
 * Choose the `Visualizations` tab to bring up the page where you can select columns that you want to visualize. Add `LoanAmount` as the first column and click `Add Column` to add another column. Next add `LoanDuration` and click `Visualize`. The system will pick a suggested plot for you based on your data and show more suggested plot types at the top.
 
-![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-smartpick.png)
+![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-smartpick-1.png)
 
 * Remember that we are most interested in knowing how these features impact a loan being at the risk. So, let's add the `Risk` as a color on top of our current scatter plot. That should help us visually see if there's something of interest here.
 * From the left, click the `Color Map` section and select `Risk`. Also, to see the full data, drag the right side of the data selector at the bottom all the way to the right, in order to show all the data inside your plot.
 
-![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-scatter-add-color.png)
+![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-scatter-add-color-1.png)
  
 * We notice that there are more purple on this plot towards the top right, than there is on the bottom left. This is a good start as it shows that there is probably a relationship between the riskiness of a loan and its duration and amount. It appears that the higher the amount and duration, the riskier the loan. Interesting, let's dig in further in how the loan duration could play into the riskiness of a loan. 
 
-* Let's plot a histogram of the `LoanDuration` to see if we can notice anything. First, select `Histogram` from the `Chart Type`. Next on the left, select `Risk` in the Split By section, check the `Stacked` option, and uncheck the `Show kde curve, as well as the show distribution curve. You should see a chart that looks like the following image.
+* Let's plot a histogram of the `LoanDuration` to see if we can notice anything. First, select `Histogram` from the `Chart Type`. Next on the left, select `Loan duration` for the *X-axis* and `Risk` in the *Split By* section. Check the `Stacked` option, and uncheck the `Show kde curve`, and uncheck the `Show distribution curve`. You should see a chart that looks like the following image.
 
-![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-histogram.png)
+![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-histogram-1.png)
 
 * It looks like the longer the duration the larger the blue bar (risky loan count) become and the smaller the purple bars (non risky loan count) become. That indicate loans with longer duration are in general more likely to be risky. However, we need more information.
 
@@ -167,9 +171,10 @@ Let's do some visual exploration of our data using charts and graphs. Note that 
 
 * Next, select `Risk` in the column section and `LoanPurpose` for the Row section. Additionally, to see the effects of the loan duration, select `Mean` in the summary section, and select `LoanDuration` in the `Value` section.
 
-![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-heatmap.png)
+![DR Smart Visualization](../.gitbook/assets/images/dr/dr-vis-heatmap-1.png)
 
 * You can now see that the least risky loans are those taken out for purchasing a new car and they are on average 10 years long. To the left of that cell we see that loans taken out for the same purpose that average around 15 years for term length seem to be more risky. So one could conclude the longer the loan term is, the more likely it will be risky. In contrast, we can see that both risky and non-risky loans for the `other` category seem to have the same average term length, so one could conclude that there's little, if any, relationship between loan length and its riskiness for the loans of type `other`. 
+
 * In general, for each row, the bigger the color difference between the right and left column, the more likely that loan duration plays a role for the riskiness of the loan category.
 
 * Now let's look into customizing our plot. Under the `Actions` panel, notice that you can perform tasks such as `Start over`, `Download chart details`, `Download chart image`, or set `Global visualization preferences` (_Note: Hover over the icons to see the names_).
@@ -178,9 +183,9 @@ Let's do some visual exploration of our data using charts and graphs. Note that 
 
 ![Visualize set theme and choose preferences](../.gitbook/assets/images/dr/dr-vis-choose-theme.png)
 
-* Finally, to save our plot as an image, click on the image icon on the top right, highlighted below, and then save the image.
+* Finally, to download our plot as an image, click on the `Actions` "down arrow" in the top right, and choose `Download chart image`.
   
-![Visualize set theme and choose preferences](../.gitbook/assets/images/dr/dr-vis-save.png)
+![Download chart image](../.gitbook/assets/images/dr/dr-vis-save.png)
 
 ### Conclusion
 
