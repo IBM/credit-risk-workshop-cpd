@@ -23,6 +23,8 @@ This section is broken up into the following steps:
 
 ![Launch the action menu](../.gitbook/assets/images/dr/dr-launch-table.png)
 
+> Note: If you do not see the *Refine* options, try [this solution](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/v/workshop-DDC/frequently-asked-questions/faq#im-doing-the-data-preparation-lab-for-the-3rd-track-but-in-my-cloud-pak-data-project-i-can-only-download-promote-and-remove-the-csv-data-i-dont-have-the-option-to-refine-it)
+
 * Data Refinery will launch and open to the `Data` tab. It will also display the information panel with details of the data refinery flow and where the output of the flow will be placed. Go ahead and click the `X` to the right of the `Information` panel to close it.
 
 ![Data Refinery view](../.gitbook/assets/images/dr/dr-open-table.png)
