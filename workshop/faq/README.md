@@ -5,6 +5,7 @@
   - [I got an error 'IndexError: list index out of range' when I run Jupytor notebook to save the model (Chapter 5: Analyze - [Lab] Building AI Model in Jupyter Notebooks) in step  "4.4 Save the Model"](#i-got-an-error-indexerror-list-index-out-of-range-when-i-run-jupytor-notebook-to-save-the-model-chapter-5-analyze---lab-building-ai-model-in-jupyter-notebooks-in-step-44-save-the-model)
   - [I'm doing the Data Preparation Lab for the 3rd track, but in my Cloud Pak Data project I can only download, promote and remove the csv data; I don't have the option to refine it.](#im-doing-the-data-preparation-lab-for-the-3rd-track-but-in-my-cloud-pak-data-project-i-can-only-download-promote-and-remove-the-csv-data-i-dont-have-the-option-to-refine-it)
   - [What do I do if importing the project into the platform takes a long time?](#what-do-i-do-if-importing-the-project-into-the-platform-takes-a-long-time)
+  - [Why do I see the following when I push the python app to IBM Cloud `**ERROR** Could not install python`](#why-do-i-see-the-following-when-i-push-the-python-app-to-ibm-cloud-error-could-not-install-python)
     - [Accessing Files](#accessing-files)
     - [Importing Files into the Cloud Pak for Data as a Service platform](#importing-files-into-the-cloud-pak-for-data-as-a-service-platform)
 
@@ -29,6 +30,10 @@ If you don't see "Watson Studio" under "Services instances", click +Add Service 
 ## What do I do if importing the project into the platform takes a long time?
 
 If you are facing any issues with importing the project into the IBM Cloud Pak for Data as a Service platform, all you need to do is import the relevant notebooks and/or data assets for each lab.
+
+## Why do I see the following when I push the python app to IBM Cloud `**ERROR** Could not install python`
+
+Answer: Frequently, IBM Cloud updates to the newer versions of Python and deprecates the older versions. If you see this error, open the `runtime.txt` file in your python app folder and bump up the python version to `python-3.6.12` or newer as suggested in the error message.
 
 ### Accessing Files
 
