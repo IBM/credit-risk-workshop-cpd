@@ -49,7 +49,7 @@ the download doesn't start automatically,
 right-click on the white space in the file and click `Save-As` and then name
 the file `application_personal_data.csv`.
 
-* Browse to the `/data/split/applicant_personal_data.csv` file and double-click or click `Open`. Add an optional description and click `Add`:
+* Browse to the `/data/split/applicant_personal_data.csv` file or `application_personal_data.csv` file if you've just downloaded the raw file from the step above, and double-click or click `Open`. Add an optional description and click `Add`:
 
 ![click add for local files to catalog](../.gitbook/assets/images/wkc-admin/wkc-add-asset-local-files.png)
 
