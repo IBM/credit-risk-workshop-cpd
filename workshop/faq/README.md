@@ -1,5 +1,19 @@
 # Frequently Asked Questions 
 
+- [Frequently Asked Questions](#frequently-asked-questions)
+  - [I see only two notebooks, is that ok?](#i-see-only-two-notebooks-is-that-ok)
+  - [I got an error 'IndexError: list index out of range' when I run Jupytor notebook to save the model (Chapter 5: Analyze - [Lab] Building AI Model in Jupyter Notebooks) in step  "4.4 Save the Model"](#i-got-an-error-indexerror-list-index-out-of-range-when-i-run-jupytor-notebook-to-save-the-model-chapter-5-analyze---lab-building-ai-model-in-jupyter-notebooks-in-step-44-save-the-model)
+  - [I'm doing the Data Preparation Lab for the 3rd track, but in my Cloud Pak Data project I can only download, promote and remove the csv data; I don't have the option to refine it.](#im-doing-the-data-preparation-lab-for-the-3rd-track-but-in-my-cloud-pak-data-project-i-can-only-download-promote-and-remove-the-csv-data-i-dont-have-the-option-to-refine-it)
+  - [What do I do if importing the project into the platform takes a long time?](#what-do-i-do-if-importing-the-project-into-the-platform-takes-a-long-time)
+    - [Accessing Files](#accessing-files)
+    - [Importing Files into the Cloud Pak for Data as a Service platform](#importing-files-into-the-cloud-pak-for-data-as-a-service-platform)
+
+## I see only two notebooks, is that ok?
+
+Answer: Yes it is ok. There are only two notebooks in your zip file, even thought you see more in the video. The additional notebooks are for the demos, therefore not included in the zip file. We decided this to reduce the number of notebooks and reduce confusion. (Apparently, in has caused instead cause confusion!!)
+
+We will make sure to update the zip file after the conference and add them in so you can go through them at your own pace after the workshop.
+
 ## I got an error 'IndexError: list index out of range' when I run Jupytor notebook to save the model (Chapter 5: Analyze - [Lab] Building AI Model in Jupyter Notebooks) in step  "4.4 Save the Model"
 
 Answer: This Error does not cause a problem with saving the model, and can safely be ignored.
