@@ -90,6 +90,8 @@ DEPLOYMENT_SPACE_NAME = "<deployment-space-name>"
 
 ![Model and DS Name](../.gitbook/assets/images/ml/mljupyter-model-ds-name.png)
 
+> Note You may get an error 'IndexError: list index out of range' in step  *4.4 Save the Model*. This Error does not cause a problem with saving the model, and can safely be ignored.
+
 * Continue to run the cells in the section to save the model to Cloud Pak for Data. Once your model is saved, the call to `wml_client.repository.list_models()` will show it in the output.
 
 ![Model Saved](../.gitbook/assets/images/ml/mljupyter-listmodels-output.png)
