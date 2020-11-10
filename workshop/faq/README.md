@@ -1,5 +1,13 @@
 # Frequently Asked Questions 
 
+## I'm doing the Data Preparation Lab for the 3rd track, but in my Cloud Pak Data project I can only download, promote and remove the csv data; I don't have the option to refine it.
+
+Answer: When you go to the Navigation "hamburger" menu and choose Services -> Services instances do you see "Watson Studio"? If not, you need to create one:
+
+![Create Services instance](../.gitbook/assets/images/faq/faq-service-instance-create.png)
+
+If you don't see "Watson Studio" under "Services instances", click +Add Service and search for "Watson Studio" and add it. Make sure that it is in the same region as your Cloud Pak for Data service.
+
 ## What do I do if importing the project into the platform takes a long time?
 
 If you are facing any issues with importing the project into the IBM Cloud Pak for Data as a Service platform, all you need to do is import the relevant notebooks and/or data assets for each lab.
