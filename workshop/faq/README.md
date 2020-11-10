@@ -35,6 +35,8 @@ If you are facing any issues with importing the project into the IBM Cloud Pak f
 
 Answer: Frequently, IBM Cloud updates to the newer versions of Python and deprecates the older versions. If you see this error, open the `runtime.txt` file in your python app folder and bump up the python version to `python-3.6.12` or newer as suggested in the error message.
 
+Alternatively, you can remove the `runtime.txt` if you just want to use whatever is the latest version, thought it is best practice to always know what version of he tools you're using and update the version yourself. 
+
 ### Accessing Files
 
 If you ran the following commands to download the project, navigate to `projects` then unzip the folder named `CreditRiskProject.zip` to access the content you need for each lab. All files you need are in the `assests` folder.
