@@ -14,7 +14,7 @@ For this section we'll explore the data that is available from the virtualized v
 
 * From the upper-left (☰) navigation menu, click on *`Collect`* -> *`Data virtualization`*.
 
-![(☰) Menu -> Collect -> Data Virtualization](../.gitbook/assets/images/dv/dv-menu.png)
+![(☰) Menu -> Collect -> Data Virtualization](../.gitbook/assets/images/navigation/dv-menu.png)
 
 * Click on the `My virtualized data` option from the data virtualization sub-menu. Here you should see the data you have virtualized or that you have been given access to (or that the administrator has assigned to you).
 
