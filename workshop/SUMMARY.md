@@ -11,8 +11,8 @@
 * [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md)
 * [Machine Learning with AutoAI](machine-learning-autoai/README.md)
 * [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md)
+* [Monitoring models with OpenScale GUI (Manual Config)](openscale-gui-manual-config/README.md)
 * [Monitoring models with OpenScale GUI (Fastpath Monitoring)](openscale-fastpath/README.md)
-* [(Optional) Monitoring models with OpenScale (Notebook)](openscale-notebook/README.md)
 
 ## Workshop Resources
 
@@ -21,6 +21,7 @@
 
 ## Resources
 
+* [Full Workshop Content for Digital Badge](https://app.gitbook.com/@ibm-developer/s/cloudpakfordata-credit-risk-workshop/)
 * [IBM Cloud Pak for Data - Information and Trial](https://www.ibm.com/products/cloud-pak-for-data)
 * [IBM Cloud Pak for Data - Knowledge Center](https://www.ibm.com/support/knowledgecenter/SSQNUZ)
 * [IBM Cloud Pak for Data - Platform API](https://cloud.ibm.com/apidocs/cloud-pak-data)
