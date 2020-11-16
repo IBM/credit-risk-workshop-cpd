@@ -7,6 +7,9 @@ We'll use several jupyter notebook and instructions:
 * [These instructions for basic OpenScale setup](./README.md)
 * [Fairness and Explainiblity monitors](./FAIRNESS-EXPLAINABILITY-README.md)
 * [Quality monitor and Feedback logging](./QUALITY-FEEDBACK-README.md)
+* [Drift monitor](./DRIFT-README.md)
+
+> *Note: It is also assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks.*
 
 ## Steps for basic OpenScale setup
 
@@ -14,9 +17,8 @@ The submodule contains the following steps:
 
 1. [Introduction](#1-introduction)
 1. [Open the notebook](#2-open-the-notebook)
-1. [Update credentials](#3-update-credentials)
-1. [Run the notebook](#4-run-the-notebook)
-1. [Begin to Explore the Watson OpenScale UI](#5-begin-to-explore-the-watson-openscale-ui)
+1. [Run the notebook](#3-run-the-notebook)
+1. [Begin to Explore the Watson OpenScale UI](#4-begin-to-explore-the-watson-openscale-ui)
 
 ## 1. Introduction
 
@@ -45,108 +47,110 @@ You have already provided a set of sample data to your model when you [tested](h
 
 For example, using the UI to test the deployed model, or using cURL or the Python app. Do this now if you have not already run a [test](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/credit-risk-workshop/machine-learning-deployment-scoring#test-online-model-deployment).
 
-
 ## 2. Open the notebook
 
-If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) using the [CreditRiskProject.zip](https://github.ibm.com/IBMDeveloper/cp4d-workshop-credit-risk/blob/master/projects/CreditRiskProject.zip) file, your notebook will be present in that project, under the `Assets` tab:
+* Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
-![Project from zip assets tab](../.gitbook/assets/images/openscale-config/openscale-config-initial-notebook.png)
+  ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
-You may now skip to the next step [Update credentials](#2-update-credentials)
+* From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
-## Import the notebook (If you are not using the Project Import pre-work steps)
+* Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `openscale-initial-setup` notebook.
 
-> NOTE: You should probably not need this step, and should only perform it if instructed to.
+  ![Notebook Open](../.gitbook/assets/images/openscale-config/openscale-config-initial-notebook.png)
 
-If, for some reason, you are not using the [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) step in the Pre-work to import [CreditRiskProject.zip](https://github.ibm.com/IBMDeveloper/cp4d-workshop-credit-risk/blob/master/projects/CreditRiskProject.zip), then you will need to import the notebook file by itself. Use the following steps for that.
+* When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
-At the project overview click the *New Asset* button, and choose *Add notebook*.
+  ![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
 
-![Add a new asset](../.gitbook/assets/images/wml/wml-add-asset.png)
+## 3. Run the Notebook
 
-On the next panel select the *From URL* tab, give your notebook a name, provide the following URL, and choose the Python 3.6 environment:
+Spend some time looking through the sections of the notebook to get an overview. A notebook is composed of text (markdown or heading) cells and code cells. The markdown cells provide comments on what the code is designed to do.
 
-```bash
-https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/openscale-initial-setup.ipynb
-```
+You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook or hitting the keyboard short cut to run the cell (Shift + Enter but can vary based on platform). While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
 
-> The notebook is hosted in the same repo as [the workshop](https://github.com/IBM/credit-risk-workshop-cpd)
->
-> * **Notebook**: [openscale-initial-setup.ipynb](../../notebooks/openscale-initial-setup.ipynb)
-> * **Notebook with output**: [openscale-initial-setup-with-output.ipynb](../../notebooks/with-output/openscale-initial-setup-with-output.ipynb)
-
-![Add notebook name and URL](../.gitbook/assets/images/openscale-config/openscale-config-create-from-url.png)
-
-When the Jupyter notebook is loaded and the kernel is ready then we can start executing cells.
-
-![Notebook loaded](../.gitbook/assets/images/aios/OpenScaleNotebook.png)
-
-### 3. Update credentials
+_**Please note that there are several places in the notebook where you need to update variables. Some of the comments in the notebook are directions for you to modify specific sections of the code. Perform any changes as indicated before running / executing the cell. These changes are described below.**_
 
 #### WOS_CREDENTIALS
 
 * In the notebook section *2.0*  you will add your Cloud Pak for Data platform credentials for the *WOS_CREDENTIALS*.
 
-* For the `url` field, change `https://w.x.y.z` to use the URL your ICP cluster, i.e something like: `"url": "https://zen-cpd-zen.omid-cp4d-v5-2bef1f4b4097001da9502000c44fc2b2-0001.us-south.containers.appdomain.cloud"`.
-* For the `username`, use your Cloud Pak for Data login username.
-* For the `password`, user your Cloud Pak for Data login password.
+  * For the `url`, use the URL your Cloud Pak for Data cluster, i.e something like: `"url": "https://zen.clusterid.us-south.containers.appdomain.cloud"`
+  * For the `username`, use your Cloud Pak for Data login username.
+  * For the `password`, user your Cloud Pak for Data login password.
 
 #### MODEL_NAME
 
-After running cell *5.1* containing `ai_client.data_mart.bindings.list_assets()` you should see the machine learning model that you deployed previously in the workshop.
+* After running cell *5.1* containing `ai_client.data_mart.bindings.list_assets()` you should see the machine learning model that you deployed previously in the workshop.
 
-You will add the name of this model in cell *5.2* as *MODEL_NAME*
+* You will add the name of this model in cell *5.2* as *MODEL_NAME*
 
 #### default_space
 
-After running cell *6.1* containing `wml_client.spaces.list()` you should see the name of your deployment space.
+* After running cell *6.1* containing `wml_client.spaces.list()` you should see the name of your deployment space.
 
-Use the *GUID* of this deployment space in cell *6.2* as *default_space*.
+* Use the *GUID* of this deployment space in cell *6.2* as *default_space*.
 
 #### DEPLOYMENT_NAME
 
-In section *6.3* set the *DEPLOYMENT_NAME* to the name that you gave to your *Analytics deployment* in the previous workshop.
+* In section *6.3* set the *DEPLOYMENT_NAME* to the name that you gave to your *Online deployment* for the model during the 'Deploy and Test Machine Learning Modles' portion of the workshop.
 
-### 4. Run the notebook
+> *Note: The Jupyter notebook included in the project has been cleared of output. If you would like to see the notebook that has already been completed with associated output, it is hosted in the same repo as this workshop: **Notebook with output**: [openscale-initial-setup-with-output.ipynb](../../notebooks/with-output/openscale-initial-setup-with-output.ipynb)*
 
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to prevent leaking of memory resources!*
+## 4. Begin to Explore the Watson OpenScale UI
 
-![Stop kernel](../.gitbook/assets/images/wml/JupyterStopKernel.png)
+Now that you have created a machine learning model and configured OpenScale with a subscription to that model deployment, you can utilize the OpenScale dashboard to monitor the model. Although we have not enabled any type of monitoring yet, with the deployment approach we are using for this lab \( Watson Machine Learning as the model engine \), we will be able to see payload and some performance information out of the box.
 
-Spend an minute looking through the sections of the notebook to get an overview. You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook. While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
+* In the same browser \(but a separate tab\), open the `Services` tab by clicking the `Services` icon on the top right.
 
-## 5. Begin to Explore the Watson OpenScale UI
+  ![Service](../.gitbook/assets/images/navigation/services.png)
 
-Now that you have created a machine learning model and configured OpenScale, you can utilize the OpenScale dashboard to monitor the model. Although we have not enabled any type of monitoring yet, with the deployment approach we are using for this lab \( Watson Machine Learning as the model engine \), we will be able to see payload and some performance information out of the box.
+* Find and click on the `Watson OpenScale` tile.
 
-* In the same browser \(but a separate tab\), open the `Services` tab by clicking the icon in the upper right. Go to the `OpenScale` tile under the `AI` category and click `Open`:
+  ![Openscale Tile](../.gitbook/assets/images/openscale/services-wos-tile.png)
 
-![Deploy OpenScale](../.gitbook/assets/images/aios/aios-deploy-service.png)
+* Launch the OpenScale UI tooling by clicking on the *`Launch`* button
 
-* When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the deployment you configured in the jupyter notebook when you ran it in the previous section:
+  ![Openscale Launch](../.gitbook/assets/images/openscale/services-wos-launch.png)
 
-![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-model-monitors.png)
+* When the *Insights Dashboard* loads, _**Click**_ on the _**'Model Monitors'**_  tab. Here you will see tiles for all model subscriptions that are being monitored including the deployment you configured in the jupyter notebook when you ran it in the previous section:
 
-Do not worry if the name you see does not match exactly with the screenshot. The deployment name you see will correspond to the variable used in the Jupyter notebook
+  ![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-start-insights.png)
+
+> *Note:Do not worry if the name you see does not match exactly with the screenshot. The subscription name you see will correspond to the variable used in the Jupyter notebook and the name you used when you deployed the model. At this point, it is normal for the subscription tile to show no monitors have ben configured (i.e N/A under Quality, Fairness, Drift)*
 
 ### Confidence Distribution
 
-* From the 'Model Monitors' tab, click on the deployment tile you have created. You will a some *Analytics* data, with the Date Range set to *Today*. We've just configured OpenScale to monitor our deployment, and sent 1 scoring request, so there is not much here.
+* From the 'Model Monitors' tab, in the subscription tile you have created, click on one of the `N/A` values (i.e the `N/A` under the 'Fairness' heading). You will see some *Analytics* data, with the Date Range set to *Today*. We've just configured OpenScale to monitor our deployment, and sent a scoring request with 8 records, so there is not much here yet. We can see the distribution of confidence for those 8 predictions.
 
-* Click on the _**'Predictions by Confidence'**_ option on the left panel.
+  ![GUI predictions by confidence](../.gitbook/assets/images/openscale-config/openscale-config-gui-predictions-by-confidence.png)
 
-![GUI predictions by confidence](../.gitbook/assets/images/openscale-config/openscale-config-gui-predictions-by-confidence.png)
+* If you hover over the bars you will see the number of 'Risk' and 'No Risk' predictions for each confidence range.
 
-* You will see the number of 'Risk' and 'No Risk' predictions for each confidence range.
+### Chart Builder
 
-## Chart Builder
+* Some additional data is present in the *Chart Builder* tab.
 
-Some additional data is present in the *Chart Builder* tab.
+* Click on `Analytics` -> `Chart Builder`. Here you can create charts using various Measurements, Features, and Dimensions of your machine learning model. Experiment with different values from the drop downs and examine the charts that are created.
 
-* Click on `Analytics` -> `Chart Builder`. Here you can create charts using various Measurements, Features, and Dimensions of your machine learning model. Change them and examine the charts that are created:
+  ![Dashboard Chart builder](../.gitbook/assets/images/openscale-config/openscale-config-chart-builder.png)
 
-![Dashboard Chart builder](../.gitbook/assets/images/openscale-config/openscale-config-chart-builder.png)
+## Stop the Environment
 
-## Recap
+**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
 
-We begun the process of monitoring our machine learning deployment with openscale. Proceed to the next sub-module to [configure Fairness and Explainability monitors](FAIRNESS-EXPLAINABILITY-README.md)
+* Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
+
+![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+
+* Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
+
+![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+
+* Click the `Stop` button on the subsequent pop up window.
+
+## Conclusion
+
+We begun the process of monitoring our machine learning deployment with openscale. At this point we have just a subscription from OpenScale for our deployed model.
+
+Proceed to the next sub-module to [configure the Fairness and Explainability monitors.](FAIRNESS-EXPLAINABILITY-README.md)

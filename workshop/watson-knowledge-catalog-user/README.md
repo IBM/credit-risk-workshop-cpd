@@ -15,91 +15,91 @@ We need to find the right data and business information related to the Mortgage 
 
 * Enter the words `mortgage` in the global search area and press the enter key to start finding what you need. Place your cursor inside the global search area next to the word mortgage and press the enter key:
 
-![Global search for mortgage](../.gitbook/assets/images/wkc-user/wkc-user-search-mortgage.png)
+  ![Global search for mortgage](../.gitbook/assets/images/wkc-user/wkc-user-search-mortgage.png)
 
-The search returns all data and information assets related to the search criteria across all catalogs, projects and governance artifacts. Scroll down through the list to take a closer look at what was found.
+* The search returns all data and information assets related to the search criteria across all catalogs, projects and governance artifacts. Scroll down through the list to take a closer look at what was found.
 
-You can further refine your search results by using the filters supplied by type, tag, catalog, project etc.
+* You can further refine your search results by using the filters supplied by type, tag, catalog, project etc.
 
-![Mortgage search results](../.gitbook/assets/images/wkc-user/wkc-user-search-results.png)
+  ![Mortgage search results](../.gitbook/assets/images/wkc-user/wkc-user-search-results.png)
 
-First and foremost, we need to verify that all the data needed for the project has been cataloged and available to the project team to use. We can do this very easily by refining the search to only display mortgage data that exists across all catalogs.
+* First and foremost, we need to verify that all the data needed for the project has been cataloged and available to the project team to use. We can do this very easily by refining the search to only display mortgage data that exists across all catalogs.
 
 * From the search drop down menu select Catalogs > All catalogs.
 
-![Search all catalogs](../.gitbook/assets/images/wkc-user/wkc-user-search-all-catalogs.png)
+  ![Search all catalogs](../.gitbook/assets/images/wkc-user/wkc-user-search-all-catalogs.png)
 
-All data assets across catalogs meeting the criteria are displayed. This is the data we are looking for.
+* All data assets across catalogs meeting the criteria are displayed. This is the data we are looking for.
 
-The connection to the Analytics Data Warehouse and the 4 mortgage tables are what the project team requested; Mortgage Default, Applicant, Property and Customer are all in the Enterprise catalog.
+* The connection to the Analytics Data Warehouse and the 4 mortgage tables are what the project team requested; Mortgage Default, Applicant, Property and Customer are all in the Enterprise catalog.
 
-However, before we proceed to the catalog we need to also find all the business information related to the project to review the terms and content of the data and identify if there are any policies and rules set by the business that the project team needs to be aware of and adhere to.
+* However, before we proceed to the catalog we need to also find all the business information related to the project to review the terms and content of the data and identify if there are any policies and rules set by the business that the project team needs to be aware of and adhere to.
 
 * Click on the Any type filter and select the Business term type from the list to refine the results.
 
-![Search business terms](../.gitbook/assets/images/wkc-user/wkc-user-search-any-type-business-term.png)
+  ![Search business terms](../.gitbook/assets/images/wkc-user/wkc-user-search-any-type-business-term.png)
 
-Notice that the governance team has been hard at work and has defined 25 business terms related to the mortgage data the project will be using. Also notice that they are tagged with the key word Mortgage to easily find them
+* Notice that the governance team has been hard at work and has defined 25 business terms related to the mortgage data the project will be using. Also notice that they are tagged with the key word Mortgage to easily find them
 
-* Click on the Sort Arrow to the right of the Name column to sort ascending by Name.
-Note that the Email Address has also been tagged as Sensitive information.
 * Scroll down the list of business terms to view them all.
-Note that the Phone Number and Social Security Number are tagged as Sensitive information.
+
+  * Note that the Email Address, Phone Number and Social Security Number have all been tagged as Sensitive information.
+
 * Click on the Clear all button to get ready for the next search task.
 
-![Sort scroll and clear business terms](../.gitbook/assets/images/wkc-user/wkc-user-sort-scroll-business-terms.png)
+  ![Sort scroll and clear business terms](../.gitbook/assets/images/wkc-user/wkc-user-sort-scroll-business-terms.png)
 
 * Click on the Any type filter and select the Category type from the list to refine the results.
+
 * Click on the Any type filter and select the Policy type from the list to refine the results.
+
 * Click on the Any type filter and select the Rule type from the list to refine the results.
 
-![Filter Category Policy Rule](../.gitbook/assets/images/wkc-user/wkc-user-filter-category-policy-rule.png)
+  ![Filter Category Policy Rule](../.gitbook/assets/images/wkc-user/wkc-user-filter-category-policy-rule.png)
 
-Notice that there is a Mortgage Default Analysis category defined that contains all the business in-formation related to the project and a category named Sensitive Information that is a sub-category, along with a business policy related to the Protection of Sensitive Information and three rules outlin-ing the protection of Email Addresses, Phone Numbers and Social Security Numbers. This is a good indication that the mortgage data being used by the project contains sensitive information that needs to be protected.
+* Notice that there is a Mortgage Default Analysis category defined that contains all the business information related to the project and a category named Sensitive Information that is a subcategory, along with a business policy related to the Protection of Sensitive Information and three rules outlining the protection of Email Addresses, Phone Numbers and Social Security Numbers. This is a good indication that the mortgage data being used by the project contains sensitive information that needs to be protected.
 
 ## 2. Understand the Data
 
 The best data is data that is fully understood and trusted.
 
-You can be confident in your data when you know where it comes from, that it complies to a set of policies and rules that address data privacy regulations and that it is clean and conforms to data quali-ty policies, rules and standards, and that others have used it and trust it and are willing to share that information, to ensure you can produce meaningful and accurate analytical and AI results that will benefit better business outcomes.
+You can be confident in your data when you know where it comes from, that it complies to a set of policies and rules that address data privacy regulations and that it is clean and conforms to data quality policies, rules and standards, and that others have used it and trust it and are willing to share that information, to ensure you can produce meaningful and accurate analytical and AI results that will benefit better business outcomes.
 
 ### Understand Data Policies and Rules
 
-In this section you will use the Business glossary to gain a deeper understanding of the business terminology defined by the data steward and the governance team responsible for establishing policies and rules to govern and protect the data. Since we see that there is an indication of sensitive infor-mation Let’s take a closer look at the Sensitive Information category content.
+In this section you will use the Business glossary to gain a deeper understanding of the business terminology defined by the data steward and the governance team responsible for establishing policies and rules to govern and protect the data. Since we see that there is an indication of sensitive information Let’s take a closer look at the Sensitive Information category content.
 
 * Click on the Sensitive Information category from the list.
 
-![Click Sensitive Information](../.gitbook/assets/images/wkc-user/wkc-user-search-choose-sensitive.png)
+  ![Click Sensitive Information](../.gitbook/assets/images/wkc-user/wkc-user-search-choose-sensitive.png)
 
-The description clearly states that this subcategory contains references to business terms that relate to data that will be used by the project team that need to be governed by data protection rules. Let’s get more information on the Social Security Number.
+* The description clearly states that this subcategory contains references to business terms that relate to data that will be used by the project team that need to be governed by data protection rules. Let’s get more information on the Social Security Number.
 
-* In the global search area, enter the words social security number and press the enter key.
+* In the global search area, enter the words `social security number` and press the enter key.
 
-![Global search social security](../.gitbook/assets/images/wkc-user/wkc-user-search-social-security.png)
+  ![Global search social security](../.gitbook/assets/images/wkc-user/wkc-user-search-social-security.png)
 
-A Social Security Number term appears in the list with tags of Mortgage applicant and Sensitive information. This is an indication that the Mortgage Applicant table has a social security number.
+* A Social Security Number term appears in the list with tags of Mortgage applicant and Sensitive information. This is an indication that the Mortgage Applicant table has a social security number.
 
 * Click on the Social Security Number business term with the two tags applied from the list.
 
 * Click on the Related Content tab.
 
-* Click on the arrow next to the MORTGAGE_APPLICANT table in the Catalog assets section. There is definitely a SOCIAL_SECURITY_NUMBER column that resides in this table.
+* Click on the arrow next to the `MORTGAGE_APPLICANT` table in the Catalog assets section. There is definitely a SOCIAL_SECURITY_NUMBER column that resides in this table.
 
-![Related Content SSN](../.gitbook/assets/images/wkc-user/wkc-user-ssn-related-content.png)
+  ![Related Content SSN](../.gitbook/assets/images/wkc-user/wkc-user-ssn-related-content.png)
 
 * Click on the CUSTOMER table in the Additional information assets section.
 
-![Click Additonal Info CUSTOMER](../.gitbook/assets/images/wkc-user/wkc-user-bus-ssn-additional-info-customer.png)
+  ![Click Additonal Info CUSTOMER](../.gitbook/assets/images/wkc-user/wkc-user-bus-ssn-additional-info-customer.png)
 
-It has been assigned the four business terms that relate to sensitive information. It has 28 columns and is from the CUSTOMER schema from the BLUDB database. Let’s investigate further and Explore and visualize these relationships.
+* It has been assigned the four business terms that relate to sensitive information. It has 28 columns and is from the CUSTOMER schema from the BLUDB database. Let’s investigate further and Explore and visualize these relationships.
 
 * Click on the ellipses (…) in the top right corner and select the Explore relationships menu item:
 
-![Click ellispses CUSTOMER info](../.gitbook/assets/images/wkc-user/wkc-user-customer-info-ellipses.png)
+  ![Click ellispses CUSTOMER info](../.gitbook/assets/images/wkc-user/wkc-user-customer-info-ellipses.png)
 
-A new tab will open in your browser and display the relationship graph:
-
-![CUSTOMER relationship graph](../.gitbook/assets/images/wkc-user/wkc-user-customer-relationship-graph.png)
+* A new tab will open in your browser and display the relationship graph:
 
 * Click the magnifying glass with a + sign in the lower left corner to increase the graph size.
 
@@ -107,9 +107,11 @@ A new tab will open in your browser and display the relationship graph:
 
 * Click on the Center graph button in the lower left corner to center the graph for easier viewing.
 
-![Expand CUSTOMER columns](../.gitbook/assets/images/wkc-user/wkc-user-expand-relationship-colunns.png)
+  ![CUSTOMER relationship graph](../.gitbook/assets/images/wkc-user/wkc-user-customer-relationship-graph.png)
 
-The table also contains EMAIL_ADDRESS, CREDIT_CARD_NUMBER, and PHONE_NUMBER data that we know is sensitive.
+* The table also contains EMAIL_ADDRESS, CREDIT_CARD_NUMBER, and PHONE_NUMBER data that we know is sensitive.
+
+  ![Expand CUSTOMER columns](../.gitbook/assets/images/wkc-user/wkc-user-expand-relationship-colunns.png)
 
 * Close this tab in your browser and go back to the source tab that got you here.
 
@@ -121,31 +123,31 @@ The data quality analyst has informed the project team that the mortgage data qu
 
 To review the data quality results:
 
-* Click the (☰) hamburger menu in the upper left corner and click `Organize` -> `Curation` -> `Data discovery`:
+* Click the (☰) hamburger menu in the upper left corner and click `Organize` -> `Curation` -> `Data discovery`.
 
-![Click Organize Curation Data dicovery](../.gitbook/assets/images/wkc-user/wkc-user-click-data-discovery.png)
+  ![Click Organize Curation Data dicovery](../.gitbook/assets/images/wkc-user/wkc-user-click-data-discovery.png)
 
-* Click on the `View automated discovery results` link in the top right corner:
+* Click on the `View automated discovery results` link in the top right corner.
 
-![Click automated discovery results](../.gitbook/assets/images/wkc-user/wkc-user-click-discovery-results.png)
+  ![Click automated discovery results](../.gitbook/assets/images/wkc-user/wkc-user-click-discovery-results.png)
 
-* Click on the Discovery results ID for view the Mortgage Default Analysis quality results:
+* Click on the Discovery results ID for view the Mortgage Default Analysis quality results. (*Note: Look for a discovery root using `CUSTOMER`, `INSURANCE` and `MORTGAGE`)
 
-![Disovery results for Mortgage Default Analysis](../.gitbook/assets/images/wkc-user/wkc-user-disco-results-mortgage.png)
+  ![Disovery results for Mortgage Default Analysis](../.gitbook/assets/images/wkc-user/wkc-user-disco-results-mortgage.png)
 
-* Click on the Review discovery results button under Actions in the bottom right corner that is highlighted.
+* Click on the Review discovery results button under Actions in the bottom right corner for the `MORTGAGE` asset.
 
-![Click review Discovery results](../.gitbook/assets/images/wkc-user/wkc-user-review-disco-results.png)
+  ![Click review Discovery results](../.gitbook/assets/images/wkc-user/wkc-user-review-disco-results.png)
 
-You immediately see the Quality score for each table analyzed with the lowest score being 98% and the highest being 100%. Also notice that business terms have been assigned at the table level.
+* You immediately see the Quality score for each table analyzed with the lowest score being 98% and the highest being 100%. Also notice that business terms have been assigned at the table level.
 
-Since we know the MORTGAGE_APPLICANT table is a new addition to the project, that was just requested, and it contains sensitive information, we will drill down into the details of the analysis
+* Since we know the MORTGAGE_APPLICANT table is a new addition to the project, that was just requested, and it contains sensitive information, we will drill down into the details of the analysis
 
 * Click on the Arrow next to the MORTGAGE_APPLICANT table to expand it and review the column analysis.
 
-![Discovery expand MORTGAGE_APPLICANT table](../.gitbook/assets/images/wkc-user/wkc-user-mortgage-discovery-details.png)
+  ![Discovery expand MORTGAGE_APPLICANT table](../.gitbook/assets/images/wkc-user/wkc-user-mortgage-discovery-details.png)
 
-You are presented with a Quality score for each column analyzed. The quality looks satisfactory and meets the quality standard thresholds and the data classes and business terms are accurately assigned and complete. This is important to ensure the data is autonomously protected and that the governance artifacts are related to data assets they apply to.
+* You are presented with a Quality score for each column analyzed. The quality looks satisfactory and meets the quality standard thresholds and the data classes and business terms are accurately assigned and complete. This is important to ensure the data is autonomously protected and that the governance artifacts are related to data assets they apply to.
 
 * Scroll down to see the remaining columns.
 
@@ -153,58 +155,56 @@ You are presented with a Quality score for each column analyzed. The quality loo
 
 ## 4. Understand the Data Content
 
-You have gained an understanding of the policies and rules and information related to sensitive data and validated and trust the data quality.
-
-In this section we will go to the Enterprise catalog, which is where we identified all the data we need resides, and use all of the features it provides to gain an even better understanding of the data content and have even more confidence in the data based on what others are saying and by utilizing the AI assisted recommendations, automatic profiling and additional data content statistics provided.
+You have gained an understanding of the policies and rules and information related to sensitive data and validated and trust the data quality. In this section we will go to the Enterprise catalog, which is where we identified all the data we need resides, and use all of the features it provides to gain an even better understanding of the data content and have even more confidence in the data based on what others are saying and by utilizing the AI assisted recommendations, automatic profiling and additional data content statistics provided.
 
 * Click the (☰) hamburger menu in the upper left corner and click `Organize` -> `All catalogs`
 
 * Click on the `Enterprise` catalog.
 
-Watson Knowledge Catalog provides suggested assets to you based on recommendations using AI, things you might be interested in based on your past viewing history. Notice that it is already recom-mending Mortgage data to you based on your past searches. It also keeps track of what’s hot and Highly Rated based on reviews and ranks them in order of their rating highest to lowest.
+Watson Knowledge Catalog provides suggested assets to you based on recommendations using AI, things you might be interested in based on your past viewing history. Notice that it is already recommending Mortgage data to you based on your past searches. It also keeps track of what’s hot and Highly Rated based on reviews and ranks them in order of their rating highest to lowest.
 
 * Click on the `Highly Rated` section to see what’s hot:
 
-![Catalog click Highly Rated](../.gitbook/assets/images/wkc-user/wkc-user-click-highly-rated.png)
+  ![Catalog click Highly Rated](../.gitbook/assets/images/wkc-user/wkc-user-click-highly-rated.png)
 
-Notice that the Analytics Data Warehouse, MORTGAGE_APPLICANT and MORTGAGE_CUSTOMER tables have been reviewed and are rated quite high. A good indication of their quality and usability.
+* Notice that the Analytics Data Warehouse, MORTGAGE_APPLICANT and MORTGAGE_CUSTOMER tables have been reviewed and are rated quite high. A good indication of their quality and usability.
 
-Lastly, Watson Knowledge Catalog keeps track of what’s new that has been Recently Added since the last time you visited the catalog. This are all means to help you find and understand the data more quickly and easily.
+* Lastly, Watson Knowledge Catalog keeps track of what’s new that has been Recently Added since the last time you visited the catalog. This are all means to help you find and understand the data more quickly and easily.
 
 * Click on the `Recently Added` section to see what’s new.
 
-Notice that the `MORTGAGE_APPLICANT` table was the most recent data asset added to the catalog.
+* Notice that the `MORTGAGE_APPLICANT` table was the most recent data asset added to the catalog.
 
-* Click on the MORTGAGE_APPLICANT table to review its content and metadata.
+* Click on the `MORTGAGE_APPLICANT` table to review its content and metadata.
 
-You are brought into the Overview section of the MORTGAGE_APPLICANT table. You may see that Data masking is in progress and that 3 columns are being masked. The asset is being masked by the Protect Sensitive Personal Information data protection rule being enforced by the data governance team. Because you are not authorized to view the sensitive information, the data is being protected.
+* You are brought into the Overview section of the MORTGAGE_APPLICANT table. You may see that Data masking is in progress and that 3 columns are being masked. The asset is being masked by the Protect Sensitive Personal Information data protection rule being enforced by the data governance team. Because you are not authorized to view the sensitive information, the data is being protected.
 
-The data that is masked is indicated with a lock icon next to their column names; EMAIL_ADDRESS, PHONE_NUMBER and SOCIAL_SECURITY_NUMBER.
+* The data that is masked is indicated with a lock icon next to their column names; EMAIL_ADDRESS, PHONE_NUMBER and SOCIAL_SECURITY_NUMBER. Scroll to the right to view all the masked columns.
 
-* Scroll to the right to view all the masked columns.
+* Click on the lock icon on the `EMAIL_ADDRESS` column to view the data protection message.
 
-* Hover over the lock icon on the EMAIL_ADDRESS column to view the data protection message. Do the same for the PHONE_NUMBER and SOCIAL_SECURITY_NUMBER columns.
+  ![Hover over masked email column](../.gitbook/assets/images/wkc-user/wkc-user-mortgage-column-masked.png)
 
-![Hover over masked email column](../.gitbook/assets/images/wkc-user/wkc-user-mortgage-column-masked.png)
-
-* Click on the Review tab to read the review.
-
-The table has a 5-star rating with a very positive review. Reviews can be written by anyone who has access to the catalog and the asset to notify and inform others of the content and usability of the data.
+* Click on the Review tab to read the review. The table has a 5 star rating with a very positive review. Reviews can be written by anyone who has access to the catalog and the asset to notify and inform others of the content and usability of the data.
 
 * Click on the Profile tab to view the data profile.
 
-As data assets are discovered and added to the catalog they are automatically profiled and classified to give end users a more in-depth understanding of the data content, quality and usability. Data classi-fications are used to identify what type of data it is and to autonomously enforce data protect rules to mask sensitive data, like you just saw.
+* As data assets are discovered and added to the catalog they are automatically profiled and classified to give end users a more in-depth understanding of the data content, quality and usability. Data classifications are used to identify what type of data it is and to autonomously enforce data protect rules to mask sensitive data, like you just saw.
 
-* Scroll to the right to view the other columns.
+* Scroll to the right to view the other columns. Notice that the protected data does not have any profile information displayed.
 
-![Mortgage profile with masked columsn](../.gitbook/assets/images/wkc-user/wkc-user-mortgage-profile.png)
+  ![Mortgage profile with masked columsn](../.gitbook/assets/images/wkc-user/wkc-user-mortgage-profile.png)
 
-Notice that the protected data does not have any profile information displayed.
-
-* Click on the Lineage tab to view the data asset lineage.
+* Lineage is captured for every data asset in a catalog. It keeps track of where it came from, any updates or changes that have been made to its metadata and any movement of the data outside of the catalog. Click on the `Activities` tab to view the data asset lineage.
 
 ![Mortgage data lineage](../.gitbook/assets/images/wkc-user/wkc-user-lineage.png)
 
-Lineage is captured for every data asset in a catalog. It keeps track of where it came from, any up-dates or changes that have been made to its metadata and any movement of the data outside of the catalog.
+* Click on any node to see the detail pane on the right. Do this for every node in the lineage graph to see what is tracked.
 
-* Click on any node to see the detail pane on the right. Do this for every node in the line-age graph to see what is tracked.
+## Conclusion
+
+In this section we covered several aspects of data organization and governance. We've seen:
+
+* How data is cataloged.
+* How to search for data.
+* How policies and rules can be applied to protect and govern sensitive data.
