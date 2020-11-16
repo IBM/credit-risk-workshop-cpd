@@ -63,9 +63,9 @@ The *Insights Dashboard* provides an overview of the models that OpenScale is mo
 
 * Click on the left-hand menu icon for `Explain a transaction`. Below the text input you may see a series of tabs with transaction ids. These are the transactions that have been explained and cached. Click on one of these cached transaction ids if it is present.
 
-> If you do not have cached transaction IDs, you can use one of the following approaches to find a transaction to explain: (1) As you did in the section above, you can go back to the transactions page that you navigated to from the Fairness alert and click the `Explain` link under the 'Action' column.  (2) If you've run the `Run the OpenScale notebook` code. You can enter a transaction UID you copied from that notebook into the search bar.
+> If you do not have cached transaction IDs, you can use one of the following approaches to find a transaction to explain: (1) As you did in the section above, you can go back to the transactions page that you navigated to from the Fairness alert and click the `Explain` link under the 'Action' column.  (2) If you've run the `OpenScale Notebook` modules. You can enter a transaction UID you copied from that Jupyter notebook into the search bar.
 
-  ![Explain a transaction](../.gitbook/assets/images/aios/OpenScaleExplainTransaction.png)
+  ![Explain a transaction](../.gitbook/assets/images/openscale/openscale-explain-transaction.png)
 
 > *NOTE: Each time you create the Explainibility data, the perterbation algorithm is sending 1000's of requests to the deployed Machine Learning REST endpoint, so the first time this is done can take a few seconds.*
 
@@ -83,17 +83,21 @@ The *Insights Dashboard* provides an overview of the models that OpenScale is mo
 
 * A full breakdown of the factors contributing to either "Risk" or "No Risk" are at the bottom.
 
+  ![Explain a transaction - details](../.gitbook/assets/images/openscale/openscale-explain-transaction-info.png)
+
 ## Using the Analytics tools
 
 * Click on the left-hand menu icon for `Insights`, make sure that you are on the `Model monitors` tab, and then open the tile for the `GermanCreditRiskModelICP` model (click the 3-dot menu on the tile and then `View Details`):
 
   ![OpenScale Insight Dashboard Tile Open](../.gitbook/assets/images/openscale/openscale-fp-model-viewdetails.png)
 
-* Notice the red alert indicators on the various monitors (Fairness, Quality, Drift). You should see a red indicator under Fairness. Click on the *Fairness score*.
+* Notice the red alert indicators on the various monitors (Fairness, Quality, Drift). You should see a red indicator under Fairness. Click on the `Fairness score`.
 
   ![Model Overview](../.gitbook/assets/images/openscale/openscale-fp-model-overview.png)
 
-* From this dashboard click on `Analytics` -> `Chart Builder`. Here you can create charts using various Measurements, Features, and Dimensions of your machine learning model. You can  see a chart that breaks down *Predictions by Confidence* (*Note: You may need to click the date range for 'Past Week' or 'Yesterday' to load the data).
+* From this dashboard click on `Analytics` -> `Chart Builder`. Here you can create charts using various Measurements, Features, and Dimensions of your machine learning model. You can  see a chart that breaks down `Predictions by Confidence`
+
+  > *Note: You may need to click the date range for 'Past Week' or 'Yesterday' to load the data.*
 
   ![Analytics Predictions by Confidence](../.gitbook/assets/images/openscale/openscale-analytics-predictions-confidence.png)
 
