@@ -12,13 +12,13 @@ For this part of the exercise we're going to use a Jupyter notebook to create th
 
 ### Open the Jupyter notebook
 
-* Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
+* Go the (☰) navigation menu, expand the `Projects` section and then click the project you created in the pre-work.
 
 ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
-* From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
+* From your `Project` overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
-* Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `machinelearning-creditrisk-sparkmlmodel` notebook.
+* Scroll down to the `Notebooks` section of the page and click on the pencil icon at the right of the `machinelearning-creditrisk-sparkmlmodel` notebook.
 
 ![Notebook Open](../.gitbook/assets/images/ml/mljupyter-open-notebook.png)
 
@@ -30,9 +30,9 @@ For this part of the exercise we're going to use a Jupyter notebook to create th
 
 Spend some time looking through the sections of the notebook to get an overview. A notebook is composed of text (markdown or heading) cells and code cells. The markdown cells provide comments on what the code is designed to do.
 
-You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook or hitting the keyboard short cut to run the cell (Shift + Enter but can vary based on platform). While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
+You will run cells individually by highlighting each cell, then either click the `Run` button at the top of the notebook or hitting the keyboard short cut to run the cell (`Shift + Enter` but can vary based on platform). While the cell is running, an asterisk (`[*]`) will show up to the left of the cell. When that cell has finished executing a sequential number will show up (i.e. `[17]`).
 
-**Please note that some of the comments in the notebook are directions for you to modify specific sections of the code. Perform any changes as indicated before running / executing the cell.**
+> **Note: Some of the comments in the notebook (those in bold red) are directions for you to modify specific sections of the code. Perform any changes as indicated before running / executing the cell.**
 
 #### Load and Prepare Dataset
 
@@ -46,7 +46,7 @@ You will run cells individually by highlighting each cell, then either click the
 
   * Highlight the code cell below by clicking it. Ensure you place the cursor below the first comment line.
   * Click the 10/01 "Find data" icon in the upper right of the notebook to find the data asset you need to import.
-  * If you are using virtualized data, then choose your virtualized merged view (i.e. USERXXXX.APPLICANTFINANCIALPERSONALLOANSDATA). If you are using this notebook without virtualized data, you can use the `german_credit_data.csv` CSV file version of the data set that has been included in the project.
+  * If you are using virtualized data, then choose your virtualized merged view (i.e. `USERXXXX.APPLICANTFINANCIALPERSONALLOANSDATA`). If you are using this notebook without virtualized data, you can use the `german_credit_data.csv` CSV file version of the data set that has been included in the project.
   * For your dataset, Click `Insert to code` and choose `Insert Pandas DataFrame`. The code to bring the data into the notebook environment and create a Pandas DataFrame will be added to the cell below.
   * Run the cell and you will see the first five rows of our dataset.
 
@@ -78,7 +78,7 @@ You will run cells individually by highlighting each cell, then either click the
   * The url should be the full hostname of the Cloud Pak for Data instance, which you can copy from your browsers address bar (for example, it may look like this: `https://zen.clustername.us-east.containers.appdomain.cloud`)
   * The username and password should be the same credentials you used to log into Cloud Pak for Data.
 
-* You will update the `MODEL_NAME` and `DEPLOYMENT_SPACE_NAME` variables. For the `MODEL_NAME` use a unique and easily identifiable model name. For the `DEPLOYMENT_SPACE_NAME` copy the name of your deployment space which was output in the previous code cell.
+* You will update the `MODEL_NAME` and `DEPLOYMENT_SPACE_NAME` variables. For the `MODEL_NAME`, create a unique and easily identifiable model name. For the `DEPLOYMENT_SPACE_NAME`, copy the name of your deployment space which was output in the previous code cell.
 
 ```python
 MODEL_NAME = "user123 credit risk model"
@@ -93,8 +93,19 @@ DEPLOYMENT_SPACE_NAME = "Name you used for deployment space"
 
 **We've successfully built and saved a machine learning model programmatically. Congratulations!**
 
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions so you can see the stop kernel option.*
-> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
+## Stop the Environment
+
+**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done.
+
+* Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
+
+![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+
+* Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
+
+![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+
+* Click the `Stop` button on the subsequent pop up window.
 
 ## Conclusion
 
