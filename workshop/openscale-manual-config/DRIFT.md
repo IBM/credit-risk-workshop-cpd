@@ -1,5 +1,9 @@
 # Configuring Drift Monitor for OpenScale
 
+> *Note: It is also assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks.*
+
+## Steps for Drift Monitor Configuration
+
 The submodule contains the following steps:
 
 1. [Open the notebook](#1-open-the-notebook)
@@ -24,26 +28,6 @@ If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-cr
 
   ![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
 
-* You may now skip to the next section, [running the notebook](#2-run-the-notebook).
-
-### Import the Notebook
-
-> **NOTE: You should probably not need this step and should only perform it if instructed to do so.**
-
-* If, for some reason, you are not using the [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) step in the Pre-work to import [CreditRiskProject.zip](../../projects/CreditRiskProject.zip), then you will need to import the notebook file by itself. Use the following steps for that.
-
-* At the project overview click the *New Asset* button, and choose *Add notebook*.
-
-* On the next panel select the *From URL* tab, give your notebook a name, provide the following 'Notebook URL', and choose the default Python 3.6 environment:
-
-  ```bash
-  https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/openscale-drift-config.ipynb
-  ```
-
-  ![Add notebook name and URL](../.gitbook/assets/images/openscale-config/openscale-config-url-drift.png)
-
-* When the Jupyter notebook is loaded and the kernel is ready then we can start executing cells.
-
 ## 2. Run the Notebook
 
 Spend some time looking through the sections of the notebook to get an overview. A notebook is composed of text (markdown or heading) cells and code cells. The markdown cells provide comments on what the code is designed to do.
@@ -62,7 +46,7 @@ _**Please note that there are several places in the notebook where you need to u
 
 > *Note: The Jupyter notebook included in the project has been cleared of output. If you would like to see the notebook that has already been completed with associated output, it is hosted in the same repo as this workshop: **Notebook with output**: [openscale-drift-config-with-output.ipynb](../../notebooks/with-output/openscale-drift-config-with-output.ipynb)*
 
-### 3. Look at Drift in the Dashboard
+## 3. Look at Drift in the Dashboard
 
 * In the same browser \(but a separate tab\), open the `Services` tab by clicking the `Services` icon on the top right.
 
@@ -95,11 +79,22 @@ _**Please note that there are several places in the notebook where you need to u
 
   ![Drift list of transactions](../.gitbook/assets/images/openscale-config/openscale-config-drift-drop-transactions.png)
 
-### Conclusion
+## Stop the Environment
+
+**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
+
+* Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
+
+![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+
+* Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
+
+![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+
+* Click the `Stop` button on the subsequent pop up window.
+
+## Conclusion
 
 We've seen how to configure Drift monitoring using a Jupyter notebook. Next, we'll add some historical data to emulate what would happen for a Machine learning model that is deployed in production, monitored with OpenScale, and continually receiving scoring requests.
 
-Please proceed to the [HISTORICAL-DATA-README.md](./HISTORICAL-DATA-README.md)
-
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running (in this case the `openscale-fairness-explainability`) and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions menu so you can see the stop kernel option.*
-> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
+Proceed to the next sub-module to [load historical data](./HISTORICAL-DATA-README.md)

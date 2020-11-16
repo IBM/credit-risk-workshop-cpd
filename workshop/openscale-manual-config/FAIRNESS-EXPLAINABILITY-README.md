@@ -4,6 +4,8 @@ Watson OpenScale utilizes several monitors to gather data about machine learning
 
 We'll then enable the Explainability monitor, which allows us to then use the API or GUI tool to explain individual transactions. By sending slightly perturbed data to the scoring endpoint, the explainability algorithm can build a model of which features contributed to the category of *Risk* or *No Risk*, and give a quantitative breakdown of the contributions of each feature to the results.
 
+> *Note: It is also assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks.*
+
 ## Steps for OpenScale Fairness and Explainabilty monitor setup
 
 The submodule contains the following steps:
@@ -13,8 +15,6 @@ The submodule contains the following steps:
 1. [Begin to Explore the Watson OpenScale UI](#3-begin-to-explore-the-watson-openscale-ui)
 
 ## 1. Open the notebook
-
-If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) using the [CreditRiskProject.zip](../../projects/CreditRiskProject.zip) file, your notebook will be present in that project.
 
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
@@ -29,26 +29,6 @@ If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-cr
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
   ![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
-
-* You may now skip to the next section, [running the notebook](#2-run-the-notebook).
-
-### Import the Notebook
-
-> **NOTE: You should probably not need this step and should only perform it if instructed to do so.**
-
-* If, for some reason, you are not using the [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) step in the Pre-work to import [CreditRiskProject.zip](../../projects/CreditRiskProject.zip), then you will need to import the notebook file by itself. Use the following steps for that.
-
-* At the project overview click the *New Asset* button, and choose *Add notebook*.
-
-* On the next panel select the *From URL* tab, give your notebook a name, provide the following 'Notebook URL', and choose the default Python 3.6 environment:
-
-  ```bash
-   https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/openscale-fairness-explainability.ipynb
-  ```
-
-  ![Add notebook name and URL](../.gitbook/assets/images/openscale-config/openscale-config-url-explainability.png)
-
-* When the Jupyter notebook is loaded and the kernel is ready then we can start executing cells.
 
 ## 2. Run the Notebook
 
@@ -144,6 +124,20 @@ We've enabled the monitors for Fairness and Explainability, now let's explore th
 
 * Any previous Explainability transactions will be cached and presented as a tab that you can click on to revisit in the future.
 
+## Stop the Environment
+
+**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
+
+* Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
+
+![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+
+* Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
+
+![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+
+* Click the `Stop` button on the subsequent pop up window.
+
 ## Conclusion
 
 You were able to configure *Fairness monitoring* of your machine learning deployment using the OpenScale python SDK and the APIs in a Juypyter notebook. You then scored 200 randomly selected records to provide enough information to calculate fairness, and run the monitor. After that, Explainability was enabled and an indiviudal transaction selected for later inspection.
@@ -151,6 +145,3 @@ You were able to configure *Fairness monitoring* of your machine learning deploy
 The OpenScale GUI tool was utilized to look at the Fairness monitor and the Explainability tool. Later in this workshop we will add more historical data to simulate a machine learning model deployed in production and the data available from these monitors.
 
 Proceed to the next sub-module to [configure Quality monitor and Feedback logging](./QUALITY-FEEDBACK-README.md)
-
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running (in this case the `openscale-fairness-explainability`) and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions menu so you can see the stop kernel option.*
-> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
