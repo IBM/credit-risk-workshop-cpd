@@ -7,6 +7,9 @@ We'll use several jupyter notebook and instructions:
 * [These instructions for basic OpenScale setup](./README.md)
 * [Fairness and Explainiblity monitors](./FAIRNESS-EXPLAINABILITY-README.md)
 * [Quality monitor and Feedback logging](./QUALITY-FEEDBACK-README.md)
+* [Drift monitor](./DRIFT-README.md)
+
+> *Note: It is also assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks.*
 
 ## Steps for basic OpenScale setup
 
@@ -46,8 +49,6 @@ For example, using the UI to test the deployed model, or using cURL or the Pytho
 
 ## 2. Open the notebook
 
-If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) using the [CreditRiskProject.zip](../../projects/CreditRiskProject.zip) file, your notebook will be present in that project.
-
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
   ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
@@ -61,26 +62,6 @@ If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-cr
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
   ![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
-
-* You may now skip to the next step [Update credentials](#3-run-the-notebook).
-
-### Import the Notebook
-
-> **NOTE: You should probably not need this step and should only perform it if instructed to do so.**
-
-* If, for some reason, you are not using the [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) step in the Pre-work to import [CreditRiskProject.zip](../../projects/CreditRiskProject.zip), then you will need to import the notebook file by itself. Use the following steps for that.
-
-* At the project overview click the *New Asset* button, and choose *Add notebook*.
-
-* On the next panel select the *From URL* tab, give your notebook a name, provide the following 'Notebook URL', and choose the default Python 3.6 environment:
-
-  ```bash
-  https://raw.githubusercontent.com/IBM/credit-risk-workshop-cpd/master/notebooks/openscale-initial-setup.ipynb
-  ```
-
-  ![Add notebook name and URL](../.gitbook/assets/images/openscale-config/openscale-config-create-from-url.png)
-
-* When the Jupyter notebook is loaded and the kernel is ready then we can start executing cells.
 
 ## 3. Run the Notebook
 
@@ -154,11 +135,22 @@ Now that you have created a machine learning model and configured OpenScale with
 
   ![Dashboard Chart builder](../.gitbook/assets/images/openscale-config/openscale-config-chart-builder.png)
 
+## Stop the Environment
+
+**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
+
+* Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
+
+![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+
+* Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
+
+![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+
+* Click the `Stop` button on the subsequent pop up window.
+
 ## Conclusion
 
 We begun the process of monitoring our machine learning deployment with openscale. At this point we have just a subscription from OpenScale for our deployed model.
 
 Proceed to the next sub-module to [configure the Fairness and Explainability monitors.](FAIRNESS-EXPLAINABILITY-README.md)
-
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running (in this case the `openscale-initial-setup`) and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions menu so you can see the stop kernel option.*
-> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
