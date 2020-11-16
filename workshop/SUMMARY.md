@@ -22,6 +22,7 @@
 ## Workshop Resources
 
 * [Instructor Guide](admin-guide/README.md)
+* [FAQs / Tips](faq/README.md)
 
 ## Resources
 
