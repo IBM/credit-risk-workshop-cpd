@@ -36,11 +36,11 @@ After a model has been created and saved / promoted to our deployment space, we 
 
 ![Actions Deploy model](../.gitbook/assets/images/deployment/deploy-spark-model.png)
 
-* On the 'Create a deployment' screen, choose `Online` for the *Deployment Type*, give the Deployment a name and optional description and click the *`Create`* button.
+* On the 'Create a deployment' screen, choose `Online` for the `Deployment Type`, give the Deployment a name and optional description and click the *`Create`* button.
 
 ![Online Deployment Create](../.gitbook/assets/images/deployment/deploy-online-deployment.png)
 
-* The Deployment will show as *In progress* and then switch to *Deployed* when done.
+* The Deployment will show as `In progress` and then switch to `Deployed` when done.
 
 ![Status Deployed](../.gitbook/assets/images/deployment/deploy-status-deployed.png)
 
@@ -48,13 +48,15 @@ After a model has been created and saved / promoted to our deployment space, we 
 
 Cloud Pak for Data offers tools to quickly test out Watson Machine Learning models. We begin with the built-in tooling.
 
-* From the Model deployment page, once the deployment status shows as *Deployed*, click on the name of your deployment. The deployment *API reference* tab shows how to use the model using *cURL*, *Java*, *Javascript*, *Python*, and *Scala*.
+* From the Model deployment page, once the deployment status shows as `Deployed`, click on the name of your deployment. The deployment `API reference` tab shows how to use the model using `cURL`, `Java`, `Javascript`, `Python`, and `Scala`.
 
 * To get to the built-in test tool, click on the `Test` tab and then click on the *`Provide input data as JSON`* icon.
 
 ![Test deployment with JSON](../.gitbook/assets/images/deployment/deploy-model-test-page.png)
 
-* Copy and paste the following data objects into the *Body* panel (*Note: Make sure the input below is the only content in the field. Do not append it to the default content `{ "input_data": [] }` that may already be in the field).
+* Copy and paste the following data objects into the `Body` panel.
+
+> *Note: Make sure the input below is the only content in the field. Do not append it to the default content `{ "input_data": [] }` that may already be in the field.*
 
 ```json
 {
@@ -120,7 +122,10 @@ curl -k -X POST --header 'Content-Type: application/json' --header 'Accept: appl
 
 ## (Optional) Batch Model Deployment
 
-Another approach to expose the model to be consumed by other users/applications is to create a batch deployment. This type of deployment will make an instance of the model available to make predictions against data assets or groups of records. The model prediction requests are scheduled as jobs, which are exected asynchronously. For the lab, we will break this into two steps: first step is creating the deployment (which we will do using the UI), then second step is creating and scheduling a job with values.
+Another approach to expose the model to be consumed by other users/applications is to create a batch deployment. This type of deployment will make an instance of the model available to make predictions against data assets or groups of records. The model prediction requests are scheduled as jobs, which are exected asynchronously. For the lab, we will break this into two steps:
+
+1. Creating the deployment (which we will do using the UI).
+1. Creating and scheduling a job with values (which we will do using a Jupyter Notebook).
 
 Lets start by creating the deployment:
 
@@ -136,11 +141,11 @@ Lets start by creating the deployment:
 
 ![Actions Deploy model](../.gitbook/assets/images/deployment/deploy-spark-model.png)
 
-* On the 'Create a deployment' screen: choose `Batch` for the *Deployment Type*, give the deployment a name and optional description. From the 'Hardware definition' drop down, select the smallest option (`1 standard CPU, 4GB RAM` in this case though for large or frequent batch jobs, you might choose to scale the hardware up). Click the *`Create`* button.
+* On the 'Create a deployment' screen: choose `Batch` for the `Deployment Type`, give the deployment a name and optional description. From the 'Hardware definition' drop down, select the smallest option (`1 standard CPU, 4GB RAM` in this case though for large or frequent batch jobs, you might choose to scale the hardware up). Click the *`Create`* button.
 
 ![Batch Deployment Create](../.gitbook/assets/images/deployment/deploy-batch-deployment.png)
 
-* Once the status shows as *Deployed* you will be able to start submitting jobs to the deployment.
+* Once the status shows as `Deployed` you will be able to start submitting jobs to the deployment.
 
 ![Status Deployed](../.gitbook/assets/images/deployment/deploy-batch_dep_status.png)
 
@@ -154,13 +159,13 @@ Next we can schedule a job to run against our batch deployment. We could create 
 
 The Jupyter notebook is already included as an asset in the project you imported earlier.
 
-* Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
+* Go the (☰) navigation menu and click on the `Projects` link and then click on your analytics project.
 
 ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
-* From the project overview page, *click* on the `Assets` tab to open the assets page where your project assets are stored and organized.
+* From the project overview page, click on the `Assets` tab to open the assets page where your project assets are stored and organized.
 
-* Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `machinelearning-creditrisk-batchscoring` notebook.
+* Scroll down to the `Notebooks` section of the page and click on the pencil icon at the right of the `machinelearning-creditrisk-batchscoring` notebook.
 
 ![Notebook Open](../.gitbook/assets/images/deployment/deploy_batch_open_nb.png)
 
@@ -178,7 +183,7 @@ With the notebook open, spend a minute looking through the sections of the noteb
 
 * Section `2.0 Create Batch Deployment Job` will create a job for the batch deployment. To do that, we will use the Watson Machine Learning client to get our deployment and create a job.
 
-  * In the first code cell for Section2.1, be sure to update the `wml_credentials` variable.
+  * In the first code cell for `Section2.1`, be sure to update the `wml_credentials` variable.
 
     * The url should be the hostname of the Cloud Pak for Data instance.
     * The username and password should be the same credentials you used to log into Cloud Pak for Data.
@@ -199,8 +204,19 @@ With the notebook open, spend a minute looking through the sections of the noteb
 
 * Once the job completes, continue to run the cells until the end of the notebook.
 
-> **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions so you can see the stop kernel option.*
-> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
+### Cleanup and Stop Environment
+
+**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done.
+
+* Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
+
+![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+
+* Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
+
+![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+
+* Click the `Stop` button on the subsequent pop up window.
 
 ## (Optional) Integrate Model to Python Flask Application
 
