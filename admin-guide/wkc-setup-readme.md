@@ -207,7 +207,7 @@ We will use an exported project that contains the connection and tables that wil
 1. Click on Create a project from a sample or file
 1. Enter a name of - Enterprise Catalog Data
 1. Enter a Description of - The connection and 10 tables needed for the CP4D Organize Experience flow. (including the period at the end)
-1. Select the `workshop/admin-guide/scripts/Enterprise-Catalog-Data.zip` file as the upload file.
+1. Select the `admin-guide/scripts/Enterprise-Catalog-Data.zip` file as the upload file.
 1. Select Create.
 1. Go into the project by clicking `View new project` and select the `Analytics Data Warehouse` connection. (You may need to click `View all` and/or `Show more`).
 1. Change the host and port to the host and port of Db2 instance that you are using (You can get it from Db2 from the connection section in the console by selecting Open). For DB2 Warehouse on IBM Cloud you will need an SSL cert. See the [README.md Get IBM Cloud DB2 SSL cert](./README.md) section for instructions. The port will be `50001` in this case.
