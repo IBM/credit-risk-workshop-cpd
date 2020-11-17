@@ -14,8 +14,6 @@ The submodule contains the following steps:
 
 ## 1. Open the notebook
 
-If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-credit-risk-workshop/getting-started/pre-work#create-a-new-project) using the [CreditRiskProject.zip](../../projects/CreditRiskProject.zip) file, your notebook will be present in that project.
-
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
   ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
