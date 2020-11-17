@@ -2,7 +2,7 @@
 
 For a deployed machine learning model, OpenScale will record all of the requests for scoring and the results in the datamart using feedback logging. In this submodule, we'll emulate a production system that has been used for a week to score many requests, allowing the various configured monitors to present some interesting data. Note that this Historic Data submodule can be run at any time.
 
-> *Note: It is also assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks.*
+> *Note: It is assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks. Also note that the Jupyter notebooks included in the project have been cleared of output. If you would like to see the notebook that has already been completed with output, see the `Workshop Resources` -> `FAQs / Tips` section for links to the completed notebooks.*
 
 ## Steps for Historical Data Load
 
@@ -44,8 +44,6 @@ _**Please note that there are several places in the notebook where you need to u
   * For the `username`, use your Cloud Pak for Data login username.
   * For the `password`, user your Cloud Pak for Data login password.
 
-> *Note: The Jupyter notebook included in the project has been cleared of output. If you would like to see the notebook that has already been completed with associated output, it is hosted in the same repo as this workshop: **Notebook with output**: [openscale-historic-data-with-output.ipynb](../../notebooks/with-output/openscale-historic-data-with-output.ipynb)*
-
 ## 3. Explore the Watson OpenScale UI
 
 Now that we've simulated a Machine Learning deployment in production, we can look at the associated monitors again and see more detail. Re-visit the various monitors and look again at the graphs, charts and explanations after the addition of the historical data:
@@ -58,7 +56,7 @@ Now that we've simulated a Machine Learning deployment in production, we can loo
 
 ## Stop the Environment
 
-**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
+**Important:** When you have completed the last submodule in this "openscale-manual-config" section that you will be doing, it's recommended you stop the environment in order to conserve resources. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
 
 * Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
 

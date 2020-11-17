@@ -1,6 +1,6 @@
 # Configuring Drift Monitor for OpenScale
 
-> *Note: It is also assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks.*
+> *Note: It is assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks. Also note that the Jupyter notebooks included in the project have been cleared of output. If you would like to see the notebook that has already been completed with output, see the `Workshop Resources` -> `FAQs / Tips` section for links to the completed notebooks.*
 
 ## Steps for Drift Monitor Configuration
 
@@ -44,8 +44,6 @@ _**Please note that there are several places in the notebook where you need to u
   * For the `username`, use your Cloud Pak for Data login username.
   * For the `password`, user your Cloud Pak for Data login password.
 
-> *Note: The Jupyter notebook included in the project has been cleared of output. If you would like to see the notebook that has already been completed with associated output, it is hosted in the same repo as this workshop: **Notebook with output**: [openscale-drift-config-with-output.ipynb](../../notebooks/with-output/openscale-drift-config-with-output.ipynb)*
-
 ## 3. Look at Drift in the Dashboard
 
 * In the same browser \(but a separate tab\), open the `Services` tab by clicking the `Services` icon on the top right.
@@ -81,7 +79,7 @@ _**Please note that there are several places in the notebook where you need to u
 
 ## Stop the Environment
 
-**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
+**Important:** When you have completed the last submodule in this "openscale-manual-config" section that you will be doing, it's recommended you stop the environment in order to conserve resources. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
 
 * Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
 
