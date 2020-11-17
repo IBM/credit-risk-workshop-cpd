@@ -16,12 +16,15 @@
 * [Machine Learning with AutoAI](machine-learning-autoai/README.md)
 * [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md)
 * [Monitoring models with OpenScale GUI (Fastpath Monitoring)](openscale-fastpath/README.md)
-* [Monitoring models with OpenScale GUI (Manual Config)](openscale-gui-manual-config/README.md)
+* [Monitoring models with OpenScale GUI (Manual Config)](openscale-manual-config/README.md)
+    * [OpenScale Manual Config Part 2 ](openscale-manual-config/FAIRNESS-EXPLAINABILITY-README.md)
+    * [OpenScale Manual Config Part 3 ](openscale-manual-config/QUALITY-FEEDBACK-README.md)
+    * [OpenScale Manual Config Part 4 ](openscale-manual-config/DRIFT-README.md)
+    * [OpenScale Manual Config Part 5 ](openscale-manual-config/HISTORIC-DATA-README.md)
 * [Monitoring models with OpenScale (Notebook)](openscale-notebook/README.md)
 
 ## Workshop Resources
 
-* [Instructor Guide](admin-guide/README.md)
 * [FAQs / Tips](faq/README.md)
 
 ## Resources
