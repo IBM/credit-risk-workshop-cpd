@@ -52,7 +52,7 @@ _**Please note that there are several places in the notebook where you need to u
 
 * In order to use the Explainability feature, we will need the ID for an individual transaction.
 
-* In the notebook, after running cell *5.7 Run explanation for sample record* , the output will print a `transaction_id`. Copy this id.
+* In the notebook, after running cell *5.5 Run explanation for sample record* , the output will print a `transaction_id`. Copy this id.
 
 ## 3. Begin to Explore the Watson OpenScale UI
 
@@ -120,7 +120,7 @@ We've enabled the monitors for Fairness and Explainability, now let's explore th
 
   ![Explainability important factors](../.gitbook/assets/images/openscale-config/openscale-config-explainability-breakdown.png)
 
-* (Optional) If you saved the transaction_id that you copied after running cell *5.7* in the notebook, you can past it into the search bar and press enter:
+* (Optional) If you saved the transaction_id that you copied after running cell *5.5* in the notebook, you can past it into the search bar and press enter:
 
 * Any previous Explainability transactions will be cached and presented as a tab that you can click on to revisit in the future.
 
