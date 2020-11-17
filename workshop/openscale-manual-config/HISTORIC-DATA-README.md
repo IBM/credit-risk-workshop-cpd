@@ -16,17 +16,17 @@ The submodule contains the following steps:
 
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
-  ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
 * From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
 * Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `openscale-historic-data` notebook.
 
-  ![Project from zip assets tab](../.gitbook/assets/images/openscale-config/openscale-config-historic-notebook.png)
+![Project from zip assets tab](../.gitbook/assets/images/openscale-config/openscale-config-historic-notebook.png)
 
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
-  ![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
+![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
 
 ## 2. Run the Notebook
 
