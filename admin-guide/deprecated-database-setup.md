@@ -23,17 +23,17 @@ You only need to create one DB2 Warehouse instance, follow the instructions for 
 
 * Once the service is provisioned, Go to `Service Credentials` and click `New credential +`. Open `View credentials` and copy the credentials for use later.
 
-   ![Get DB2 Warehouse credentials](../.gitbook/assets/images/connections/db2whoc-credentials.png)
+   ![Get DB2 Warehouse credentials](../workshop/.gitbook/assets/images/connections/db2whoc-credentials.png)
 
 #### Load Data
 
 * Now go to `Manage` and click `Open Console`:
 
-   ![DB2 Warehouse Cloud open console](../.gitbook/assets/images/connections/db2whoc-manage-console.png)
+   ![DB2 Warehouse Cloud open console](../workshop/.gitbook/assets/images/connections/db2whoc-manage-console.png)
 
 * From the upper-left (☰) hamburger menu click `Load` -> `Load data`:
 
-   ![DB2 Warehouse Cloud load data](../.gitbook/assets/images/connections/db2whoc-load-data.png)
+   ![DB2 Warehouse Cloud load data](../workshop/.gitbook/assets/images/connections/db2whoc-load-data.png)
 
 * Choose `Browse file` and navigate to where you cloned this repository, then to `data/split/` and choose `applicant_financial_data.csv`, then click `Next`.
 
@@ -49,7 +49,7 @@ You will need an SSL certificate for Cloud Pak for Data to use the IBM Cloud DB2
 
 * In the DB2 Warehouse console, from the upper-left (☰) hamburger menu click `Connection Info` -> `Connection Information`. Then click `Download SSL Certificate`:
 
-   ![DB2 get SSL certificate](../.gitbook/assets/images/connections/db2whoc-get-ssl-cert.png)
+   ![DB2 get SSL certificate](../workshop/.gitbook/assets/images/connections/db2whoc-get-ssl-cert.png)
 
 * You'll need to convert the SSL certificate from `.crt` to a `.pem` file using [openssl](https://www.openssl.org/). Run the following command:
 
@@ -67,11 +67,11 @@ These instructions are for loading the data into the local CP4D version of DB2 W
 
 * Got to `Services` and click on `DB2 Warehouse` and click `Open`:
 
-   ![Open Service DB2 Warehouse](../.gitbook/assets/images/connections/db2whlocal-open-console.png)
+   ![Open Service DB2 Warehouse](../workshop/.gitbook/assets/images/connections/db2whlocal-open-console.png)
 
 * Under `Menu` choose `Load` and `Load Data`:
 
-   ![Menu Load Data](../.gitbook/assets/images/connections/db2whlocal-load-data.png)
+   ![Menu Load Data](../workshop/.gitbook/assets/images/connections/db2whlocal-load-data.png)
 
 * Choose `Browse file` and navigate to where you cloned this repository, then to `data/split/` and choose `applicant_financial_data.csv`, then click `Next`.
 
@@ -85,15 +85,15 @@ These instructions are for loading the data into the local CP4D version of DB2 W
 
 * To get the connection info for you local DB2 Warehouse, go to the (☰) menu and click on the *My Instances* option.
 
-   ![(☰) Menu -> My Instances](../.gitbook/assets/images/dv/dv-menu-my-instances.png)
+   ![(☰) Menu -> My Instances](../workshop/.gitbook/assets/images/dv/dv-menu-my-instances.png)
 
 * In *My instances* go to the *Provisioned instances* tab. Highlight you local DB2 Warehouse and click the 3 vertical dots on the far right, and then click `View Details`:
 
-   ![Provisioned local DB2 details](../.gitbook/assets/images/connections/db2whlocal-view-details.png)
+   ![Provisioned local DB2 details](../workshop/.gitbook/assets/images/connections/db2whlocal-view-details.png)
 
 * Either keep this window open in a separate tab, or copy the required Connection info: *Host*, *Port*, *Database name*, *Username*, and *Password*. You can get the port from the *JDBC Connection URL*, i.e for the URL `jdbc:db2://os-workshop-nov22worker-05.vz-cpd-nov22.com:30290/BLUDB` the port is the number after the colin in the URL `30290`:
 
-   ![DB2 Connection credentials](../.gitbook/assets/images/connections/db2whlocal-conn-details.png)
+   ![DB2 Connection credentials](../workshop/.gitbook/assets/images/connections/db2whlocal-conn-details.png)
 
 ## Create and Load MongoDB Instance
 
@@ -122,15 +122,15 @@ Next we will provision and load data into a MongoDB instance. There are several 
 
 * From the cloud catalog, [install the block storage plugin](https://cloud.ibm.com/catalog/content/ibmcloud-block-storage-plugin). Select the IKS cluster you created from the drop down list. You can use the `default` namespace. Click the `Install` button.
 
-   ![IKS Block Storage Plugin](../.gitbook/assets/images/connections/iks-block-storage-plugin.png)
+   ![IKS Block Storage Plugin](../workshop/.gitbook/assets/images/connections/iks-block-storage-plugin.png)
 
 * Once block storage is successfully installed, you can deploy MongoDB to IKS directly from the cloud catalog (alternatively you can use Helm to deploy MongoDB). Click on [MongoDB from the cloud catalog](https://cloud.ibm.com/catalog/content/mongodb-Qml0bmFtaS1tb25nb2Ri-global). Selecting the IKS cluster you created from the drop down list. You can use the `default` namespace.
 
-   ![MongoDB Install](../.gitbook/assets/images/connections/mongodb-install.png)
+   ![MongoDB Install](../workshop/.gitbook/assets/images/connections/mongodb-install.png)
 
 * You can leave all the default parameters for the installation. One of these parameters is the root password, if you leave it unset it will be autogenerated. If you want to create your own password, fill it in before clicking the `Install` button
 
-    ![MongoDB Parameters](../.gitbook/assets/images/connections/mongodb-install-parameters.png)  
+    ![MongoDB Parameters](../workshop/.gitbook/assets/images/connections/mongodb-install-parameters.png)  
 
 * After the installation successfully completes, you will need to expose the mongodb deployment to be accessible outside the IKS cluster (so CP4D can access it). There are several ways to do this (i.e ingress, loadbalancer, nodeport).
 
@@ -144,13 +144,13 @@ Next we will provision and load data into a MongoDB instance. There are several 
   kubectl expose deploy mongodbee-04e3-46 --port=27017 --target-port=27017 --type=LoadBalancer --name mongodb-svc-lb
   ```
 
-  ![MongoDB Kubectl](../.gitbook/assets/images/connections/mongodb-kubectl.png)  
+  ![MongoDB Kubectl](../workshop/.gitbook/assets/images/connections/mongodb-kubectl.png)  
 
 * Save the `External IP` value as well as the exposed port (i.e. 27017) as you will need them later.
 
 * If you did not specify your own mongodb root password, you need to get the generated value. You can do this either through the command line or by going to the kubernetes dashboard -> secrets. Save this password for use later:
 
-  ![MongoDB Secret](../.gitbook/assets/images/connections/mongodb-k8secrets.png)  
+  ![MongoDB Secret](../workshop/.gitbook/assets/images/connections/mongodb-k8secrets.png)  
 
 ### Load Data and Create User
 
@@ -170,7 +170,7 @@ With MongoDB running and accessible, you can now load the data into a new DB and
    python load_mongodb.py -data-csv-file applicant_loan_data.csv -db-name CP4DCREDIT -collection-name LOANS
    ```
 
-  ![MongoDB Script](../.gitbook/assets/images/admin/mongodb-loadscript.png)  
+  ![MongoDB Script](../workshop/.gitbook/assets/images/admin/mongodb-loadscript.png)  
 
 * Once the database / collection has been created and the data has been loaded, we need to create a user in the database. To do so, you will need a mongo CLI client installed. From the client, run the following command:
 
@@ -178,7 +178,7 @@ With MongoDB running and accessible, you can now load the data into a new DB and
   db.createUser( { user: "mongodbuser", pwd: "REPLACE_WITH_YOUR_OWN_PASSWORD", roles: [ { role: "dbOwner", db: "CP4DCREDIT" } ] })
   ```
 
-  ![MongoDB Create User](../.gitbook/assets/images/admin/mongodb-create-user.png)
+  ![MongoDB Create User](../workshop/.gitbook/assets/images/admin/mongodb-create-user.png)
 
 ## Create DB2 Instance
 
@@ -190,6 +190,6 @@ If you are running the OpenScale Lab, you will need a DB2 Server instance (DB2 W
 
 * Once the service is provisioned, Go to `Service Credentials` and click `New credential +`. Open `View credentials` and copy the credentials for use later.
 
-   ![Get DB2 Warehouse credentials](../.gitbook/assets/images/connections/db2-server-credential.png)
+   ![Get DB2 Warehouse credentials](../workshop/.gitbook/assets/images/connections/db2-server-credential.png)
 
 __THIS SECTION IS COMPLETE, GO BACK AND CONTINUE WITH THE ADMIN GUIDE__
