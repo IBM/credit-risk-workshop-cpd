@@ -8,24 +8,23 @@ This lab is comprised of the following steps:
 2. [Update credentials](#2-update-credentials)
 3. [Run the notebook](#3-run-the-notebook)
 
-> *Note: The Jupyter notebook included in the project has been cleared of output. If you would like to see the notebook that has already been completed with output, it is hosted in the same repo as this workshop: **Notebook with output**: [with-output/openscale-full-configuration-output.ipynb](../../notebooks/with-output/openscale-full-configuration-output.ipynb)*
-> *Note: It is also assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks.*
+> *Note: It is assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks. Also note that the Jupyter notebooks included in the project have been cleared of output. If you would like to see the notebook that has already been completed with output, see the `Workshop Resources` -> `FAQs / Tips` section for links to the completed notebooks.*
 
 ## 1. Open the Notebook
 
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
-  ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
 * From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
 * Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `openscale-full-configuration` notebook.
 
-  ![Notebook Open](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-open.png)
+![Notebook Open](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-open.png)
 
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
-  ![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
+![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
 
 ## 2. Update Credentials
 
@@ -35,7 +34,7 @@ This lab is comprised of the following steps:
   * For the `username`, use your login username.
   * For the `password`, user your login password.
 
-  ![Edite notebook credentials](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-creds.png)
+![Edite notebook credentials](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-creds.png)
 
 ## 3. Run the Notebook
 

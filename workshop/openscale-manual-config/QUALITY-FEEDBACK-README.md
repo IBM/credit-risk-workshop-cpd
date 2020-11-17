@@ -2,7 +2,7 @@
 
 Watson OpenScale utilizes several monitors to gather data about machine learning inferences and the GUI tool can then present that data in a form that is useful. In this sub-module we will use a Jupyter notebook to configure the monitor for Quality and enable Feedback logging.
 
-> *Note: It is also assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks.*
+> *Note: It is assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks. Also note that the Jupyter notebooks included in the project have been cleared of output. If you would like to see the notebook that has already been completed with output, see the `Workshop Resources` -> `FAQs / Tips` section for links to the completed notebooks.*
 
 ## Steps for OpenScale Quality monitor and Feedback logging
 
@@ -16,17 +16,17 @@ The submodule contains the following steps:
 
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
-  ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
 * From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
 * Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `openscale-quality-feedback` notebook.
 
-  ![Notebook Open](../.gitbook/assets/images/openscale-config/openscale-config-quality-notebook.png)
+![Notebook Open](../.gitbook/assets/images/openscale-config/openscale-config-quality-notebook.png)
 
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
-  ![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
+![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
 
 ## 2. Run the Notebook
 
@@ -44,27 +44,25 @@ _**Please note that there are several places in the notebook where you need to u
   * For the `username`, use your Cloud Pak for Data login username.
   * For the `password`, user your Cloud Pak for Data login password.
 
-> *Note: The Jupyter notebook included in the project has been cleared of output. If you would like to see the notebook that has already been completed with associated output, it is hosted in the same repo as this workshop: **Notebook with output**: [openscale-quality-feedback-with-output.ipynb](../../notebooks/with-output/openscale-quality-feedback-with-output.ipynb)*
-
 ## 3. Begin to Explore the Watson OpenScale UI
 
 * We've enabled the monitor for Quality and Feedback logging, now let's explore the results in the OpenScale GUI.
 
 * In the same browser \(but a separate tab\), open the `Services` tab by clicking the `Services` icon on the top right.
 
-  ![Service](../.gitbook/assets/images/navigation/services.png)
+![Service](../.gitbook/assets/images/navigation/services.png)
 
 * Find and click on the `Watson OpenScale` tile.
 
-  ![Openscale Tile](../.gitbook/assets/images/openscale/services-wos-tile.png)
+![Openscale Tile](../.gitbook/assets/images/openscale/services-wos-tile.png)
 
 * Launch the OpenScale UI tooling by clicking on the *`Launch`* button
 
-  ![Openscale Launch](../.gitbook/assets/images/openscale/services-wos-launch.png)
+![Openscale Launch](../.gitbook/assets/images/openscale/services-wos-launch.png)
 
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the deployment you configured in the jupyter notebook when you ran it in the previous section. Click on the `Quality` section of the tile to bring up the *Fairness monitor*.
 
-  ![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-quality-monitors.png)
+![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-quality-monitors.png)
 
   > *Note: Do not worry if the name you see does not match exactly with the screenshot. The deployment name you see will correspond to the variable used in the Jupyter notebook.*
 
@@ -74,17 +72,17 @@ _**Please note that there are several places in the notebook where you need to u
 
 * Look for a time slot that shows a quality alert (i.e. below the red threshold line). The monitor only runs once per hour, so there may only be one teal colored "dot" representing a single run when you first visit the graph. Click on it for more details.
 
-  ![Quality area under ROC](../.gitbook/assets/images/openscale-config/openscale-config-quality-area-under-roc.png)
+![Quality area under ROC](../.gitbook/assets/images/openscale-config/openscale-config-quality-area-under-roc.png)
 
 * We can see statistics for this time slot including *Area under ROC*, *TPR*, *FPR*, *Recall*, *Precision*, and more:
 
-  ![Quality statitstics](../.gitbook/assets/images/openscale-config/openscale-config-quality-statistics.png)
+![Quality statitstics](../.gitbook/assets/images/openscale-config/openscale-config-quality-statistics.png)
 
 * Other time slots can be examined to gather the relevant quality statistics.
 
 ## Stop the Environment
 
-**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
+**Important:** When you have completed the last submodule in this "openscale-manual-config" section that you will be doing, it's recommended you stop the environment in order to conserve resources. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
 
 * Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
 

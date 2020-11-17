@@ -4,7 +4,7 @@ Watson OpenScale utilizes several monitors to gather data about machine learning
 
 We'll then enable the Explainability monitor, which allows us to then use the API or GUI tool to explain individual transactions. By sending slightly perturbed data to the scoring endpoint, the explainability algorithm can build a model of which features contributed to the category of *Risk* or *No Risk*, and give a quantitative breakdown of the contributions of each feature to the results.
 
-> *Note: It is also assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks.*
+> *Note: It is assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks. Also note that the Jupyter notebooks included in the project have been cleared of output. If you would like to see the notebook that has already been completed with output, see the `Workshop Resources` -> `FAQs / Tips` section for links to the completed notebooks.*
 
 ## Steps for OpenScale Fairness and Explainabilty monitor setup
 
@@ -18,17 +18,17 @@ The submodule contains the following steps:
 
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
-  ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
 * From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
 * Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `openscale-fairness-explainability` notebook.
 
-  ![Notebook Open](../.gitbook/assets/images/openscale-config/openscale-config-explainability-notebook.png)
+![Notebook Open](../.gitbook/assets/images/openscale-config/openscale-config-explainability-notebook.png)
 
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
-  ![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
+![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
 
 ## 2. Run the Notebook
 
@@ -46,13 +46,11 @@ _**Please note that there are several places in the notebook where you need to u
   * For the `username`, use your Cloud Pak for Data login username.
   * For the `password`, user your Cloud Pak for Data login password.
 
-> *Note: The Jupyter notebook included in the project has been cleared of output. If you would like to see the notebook that has already been completed with associated output, it is hosted in the same repo as this workshop: **Notebook with output**: [oopenscale-fairness-explainability-with-output.ipynb](../../notebooks/with-output/openscale-fairness-explainability-with-output.ipynb)*
-
 #### Get Explainability transaction_id
 
 * In order to use the Explainability feature, we will need the ID for an individual transaction.
 
-* In the notebook, after running cell *5.7 Run explanation for sample record* , the output will print a `transaction_id`. Copy this id.
+* In the notebook, after running cell *5.5 Run explanation for sample record* , the output will print a `transaction_id`. Copy this id.
 
 ## 3. Begin to Explore the Watson OpenScale UI
 
@@ -60,19 +58,19 @@ We've enabled the monitors for Fairness and Explainability, now let's explore th
 
 * In the same browser \(but a separate tab\), open the `Services` tab by clicking the `Services` icon on the top right.
 
-  ![Service](../.gitbook/assets/images/navigation/services.png)
+![Service](../.gitbook/assets/images/navigation/services.png)
 
 * Find and click on the `Watson OpenScale` tile.
 
-  ![Openscale Tile](../.gitbook/assets/images/openscale/services-wos-tile.png)
+![Openscale Tile](../.gitbook/assets/images/openscale/services-wos-tile.png)
 
 * Launch the OpenScale UI tooling by clicking on the *`Launch`* button
 
-  ![Openscale Launch](../.gitbook/assets/images/openscale/services-wos-launch.png)
+![Openscale Launch](../.gitbook/assets/images/openscale/services-wos-launch.png)
 
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the deployment you configured in the jupyter notebook when you ran it in the previous section. Click on the `Fairness` section of the tile to bring up the *Fairness monitor*.
 
-  ![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-model-monitors.png)
+![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-model-monitors.png)
 
   > *Note: Do not worry if the name you see does not match exactly with the screenshot. The deployment name you see will correspond to the variable used in the Jupyter notebook.*
 
@@ -82,17 +80,17 @@ We've enabled the monitors for Fairness and Explainability, now let's explore th
 
 * Look for a time slot that shows bias (i.e. below the red threshold line). The monitor only runs once per hour, so there may only be one teal colored "dot" representing a single run when you first visit the graph. Click on it for more details:
 
-  ![Fairness monitor click for details](../.gitbook/assets/images/openscale-config/openscale-config-fairness-graph.png)
+![Fairness monitor click for details](../.gitbook/assets/images/openscale-config/openscale-config-fairness-graph.png)
 
 * For a given time slot, we will see a comparison between the 2 groups, in this case, female and male. A bar chart presents information for percent of favorable vs. unfavorable outcomes.
 
 * We can choose our *Data set* from a series of radio buttons, whether *Payload + Perturbed*, *Payload*, *Training*, or *Debiased*. The *Monitored features* can be toggled, and we can change the *Date and time*. Click on the various radio buttons, toggle the monitored features, and change the time to see how the tool works:
 
-  ![Fairness transactions](../.gitbook/assets/images/openscale-config/openscale-config-bias-female.png)
+![Fairness transactions](../.gitbook/assets/images/openscale-config/openscale-config-bias-female.png)
 
 * Now back to our biased time slot, click on *Debiased* Data Set and *Sex* and view how the use of the Debiased endpoint has made our scoring more fair:
 
-  ![Debiased Data Set](../.gitbook/assets/images/openscale-config/openscale-config-debiased-female-endpoint.png)
+![Debiased Data Set](../.gitbook/assets/images/openscale-config/openscale-config-debiased-female-endpoint.png)
 
 * Click on the `View Debiased Endpoint` button. Here you can see some *Debiased Endpoint Code Snippet* examples, showing *cURL*, *Java*, and *Python* code that can utilize the endpoint for debiased transactions, enabling a developer to get a machine learning model score that prevents the biased outcome. (You may need to change the *'Code language'* drop down list to see code snippets in different languages):
 
@@ -102,31 +100,31 @@ We've enabled the monitors for Fairness and Explainability, now let's explore th
 
 * Click on the `View Transactions` button. We can see the various transactions that took place during this time slot, as well as some aggregate information around "Risk" and "No Risk" for both the Current model and the Debiased model. We can click on `Explain` for one of the transactions for more detailed information (HINT: A "Risk" transaction might be more interesting):
 
-  ![Explain transaction](../.gitbook/assets/images/openscale-config/openscale-config-view-biased.png)
+![Explain transaction](../.gitbook/assets/images/openscale-config/openscale-config-view-biased.png)
 
   > *Note that the explanation of a transaction requires that 1000's of scoring transactions take place using slightly perturbed data for each of the features. This can take several seconds, or even minutes. Future use of this individual transaction will be cached, so the network latency and overhead from performing the scoring will not be a factor.*
 
 * There is a lot of information available for a single transaction:
 
-  ![Explain a transaction](../.gitbook/assets/images/openscale-config/openscale-config-explain-transaction.png)
+![Explain a transaction](../.gitbook/assets/images/openscale-config/openscale-config-explain-transaction.png)
 
 * Click the "i" information icons next to *Minimum changes for another outcome* and *Maximum changes allowed for the same outcome* to help understand the use of the *Pertinent Negative* and *Pertinent Positive*:
 
 * You can see information about the *Pertinent Negative*, for example, that shows what the minimum changes would need to be to cause a different outcome, i.e from *Risk* to *No Risk*, or changing *No Risk* to *Risk*. In my example shown, you can see that this is not always calculated:
 
-  ![Pertinent Negative explanation](../.gitbook/assets/images/openscale-config/openscale-config-pertinent-negative.png)
+![Pertinent Negative explanation](../.gitbook/assets/images/openscale-config/openscale-config-pertinent-negative.png)
 
 * Scroll down and you can see that the *Most important factors influencing prediction* are highlighted, and below is a complet breakdown of all features, with the percent of influence for the score of either *Risk* or *No Risk*:
 
-  ![Explainability important factors](../.gitbook/assets/images/openscale-config/openscale-config-explainability-breakdown.png)
+![Explainability important factors](../.gitbook/assets/images/openscale-config/openscale-config-explainability-breakdown.png)
 
-* (Optional) If you saved the transaction_id that you copied after running cell *5.7* in the notebook, you can past it into the search bar and press enter:
+* (Optional) If you saved the transaction_id that you copied after running cell *5.5* in the notebook, you can past it into the search bar and press enter:
 
 * Any previous Explainability transactions will be cached and presented as a tab that you can click on to revisit in the future.
 
 ## Stop the Environment
 
-**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
+**Important:** When you have completed the last submodule in this "openscale-manual-config" section that you will be doing, it's recommended you stop the environment in order to conserve resources. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
 
 * Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
 
