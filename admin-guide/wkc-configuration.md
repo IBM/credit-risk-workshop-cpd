@@ -22,7 +22,7 @@
 
 * Click the `Discover` button.
 
-![WKC Automated Discovery](../.gitbook/assets/images/admin/wkc-setup-automated-discovery-job.png)
+![WKC Automated Discovery](../workshop/.gitbook/assets/images/admin/wkc-setup-automated-discovery-job.png)
 
   >*Note: This may take a while to run. Refresh the page to make sure its finished.*
 
@@ -30,13 +30,13 @@
 
 * Click on the `Settings` tab, then on the `Users and groups` option from the left navigation panel. Click on the `Add users and groups` button.
 
-![Project Add Users](../.gitbook/assets/images/admin/wkc-setup-workspace-addusers.png)
+![Project Add Users](../workshop/.gitbook/assets/images/admin/wkc-setup-workspace-addusers.png)
 
 * Search for the user ids of the participants, then click the checkbox next to the user you want to add and click the `Add` button.
 
 * Click the user you just added and ensure they have the appropriate roles.
 
-![Project User Roles](../.gitbook/assets/images/admin/wkc-setup-workspace-userroles.png)
+![Project User Roles](../workshop/.gitbook/assets/images/admin/wkc-setup-workspace-userroles.png)
 
 **As indicated in the catalog setup section, all workshop attendess will need to be added to the Enterprise catalog as an Editor and added to the Enterprise Catalog Data project as an Editor. They will not be able to view the Data Flow as a Viewer.**
 
