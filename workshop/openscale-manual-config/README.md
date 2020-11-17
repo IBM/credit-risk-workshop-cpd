@@ -51,17 +51,17 @@ For example, using the UI to test the deployed model, or using cURL or the Pytho
 
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
-  ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
 * From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
 * Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `openscale-initial-setup` notebook.
 
-  ![Notebook Open](../.gitbook/assets/images/openscale-config/openscale-config-initial-notebook.png)
+![Notebook Open](../.gitbook/assets/images/openscale-config/openscale-config-initial-notebook.png)
 
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
-  ![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
+![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
 
 ## 3. Run the Notebook
 
@@ -103,19 +103,19 @@ Now that you have created a machine learning model and configured OpenScale with
 
 * In the same browser \(but a separate tab\), open the `Services` tab by clicking the `Services` icon on the top right.
 
-  ![Service](../.gitbook/assets/images/navigation/services.png)
+![Service](../.gitbook/assets/images/navigation/services.png)
 
 * Find and click on the `Watson OpenScale` tile.
 
-  ![Openscale Tile](../.gitbook/assets/images/openscale/services-wos-tile.png)
+![Openscale Tile](../.gitbook/assets/images/openscale/services-wos-tile.png)
 
 * Launch the OpenScale UI tooling by clicking on the *`Launch`* button
 
-  ![Openscale Launch](../.gitbook/assets/images/openscale/services-wos-launch.png)
+![Openscale Launch](../.gitbook/assets/images/openscale/services-wos-launch.png)
 
 * When the *Insights Dashboard* loads, _**Click**_ on the _**'Model Monitors'**_  tab. Here you will see tiles for all model subscriptions that are being monitored including the deployment you configured in the jupyter notebook when you ran it in the previous section:
 
-  ![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-start-insights.png)
+![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-start-insights.png)
 
 > *Note:Do not worry if the name you see does not match exactly with the screenshot. The subscription name you see will correspond to the variable used in the Jupyter notebook and the name you used when you deployed the model. At this point, it is normal for the subscription tile to show no monitors have ben configured (i.e N/A under Quality, Fairness, Drift)*
 
@@ -123,7 +123,7 @@ Now that you have created a machine learning model and configured OpenScale with
 
 * From the 'Model Monitors' tab, in the subscription tile you have created, click on one of the `N/A` values (i.e the `N/A` under the 'Fairness' heading). You will see some *Analytics* data, with the Date Range set to *Today*. We've just configured OpenScale to monitor our deployment, and sent a scoring request with 8 records, so there is not much here yet. We can see the distribution of confidence for those 8 predictions.
 
-  ![GUI predictions by confidence](../.gitbook/assets/images/openscale-config/openscale-config-gui-predictions-by-confidence.png)
+![GUI predictions by confidence](../.gitbook/assets/images/openscale-config/openscale-config-gui-predictions-by-confidence.png)
 
 * If you hover over the bars you will see the number of 'Risk' and 'No Risk' predictions for each confidence range.
 
@@ -133,7 +133,7 @@ Now that you have created a machine learning model and configured OpenScale with
 
 * Click on `Analytics` -> `Chart Builder`. Here you can create charts using various Measurements, Features, and Dimensions of your machine learning model. Experiment with different values from the drop downs and examine the charts that are created.
 
-  ![Dashboard Chart builder](../.gitbook/assets/images/openscale-config/openscale-config-chart-builder.png)
+![Dashboard Chart builder](../.gitbook/assets/images/openscale-config/openscale-config-chart-builder.png)
 
 ## Stop the Environment
 
