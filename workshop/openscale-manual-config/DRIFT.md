@@ -97,4 +97,4 @@ _**Please note that there are several places in the notebook where you need to u
 
 We've seen how to configure Drift monitoring using a Jupyter notebook. Next, we'll add some historical data to emulate what would happen for a Machine learning model that is deployed in production, monitored with OpenScale, and continually receiving scoring requests.
 
-Proceed to the next sub-module to [load historical data](./HISTORICAL-DATA-README.md)
+Proceed to the next sub-module to [load historical data](./HISTORIC-DATA-README.md)
