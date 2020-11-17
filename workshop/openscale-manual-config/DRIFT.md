@@ -1,6 +1,6 @@
 # Configuring Drift Monitor for OpenScale
 
-> *Note: It is also assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks.*
+> *Note: It is assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks. Also note that the Jupyter notebooks included in the project have been cleared of output. If you would like to see the notebook that has already been completed with output, see the `Workshop Resources` -> `FAQs / Tips` section for links to the completed notebooks.*
 
 ## Steps for Drift Monitor Configuration
 
@@ -16,17 +16,17 @@ If you [Created the Project](https://ibm-developer.gitbook.io/cloudpakfordata-cr
 
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
-  ![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
 
 * From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
 * Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `openscale-drift-config` notebook.
 
-  ![Notebook Open](../.gitbook/assets/images/openscale-config/openscale-config-drift-notebook.png)
+![Notebook Open](../.gitbook/assets/images/openscale-config/openscale-config-drift-notebook.png)
 
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
-  ![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
+![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
 
 ## 2. Run the Notebook
 
@@ -44,44 +44,42 @@ _**Please note that there are several places in the notebook where you need to u
   * For the `username`, use your Cloud Pak for Data login username.
   * For the `password`, user your Cloud Pak for Data login password.
 
-> *Note: The Jupyter notebook included in the project has been cleared of output. If you would like to see the notebook that has already been completed with associated output, it is hosted in the same repo as this workshop: **Notebook with output**: [openscale-drift-config-with-output.ipynb](../../notebooks/with-output/openscale-drift-config-with-output.ipynb)*
-
 ## 3. Look at Drift in the Dashboard
 
 * In the same browser \(but a separate tab\), open the `Services` tab by clicking the `Services` icon on the top right.
 
-  ![Service](../.gitbook/assets/images/navigation/services.png)
+![Service](../.gitbook/assets/images/navigation/services.png)
 
 * Find and click on the `Watson OpenScale` tile.
 
-  ![Openscale Tile](../.gitbook/assets/images/openscale/services-wos-tile.png)
+![Openscale Tile](../.gitbook/assets/images/openscale/services-wos-tile.png)
 
 * Launch the OpenScale UI tooling by clicking on the *`Launch`* button
 
-  ![Openscale Launch](../.gitbook/assets/images/openscale/services-wos-launch.png)
+![Openscale Launch](../.gitbook/assets/images/openscale/services-wos-launch.png)
 
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the deployment you configured in the jupyter notebook when you ran it in the previous section. Click on the `Drift` section of the tile to bring up the *Drift monitor*.
 
-  ![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-drift-monitors.png)
+![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-drift-monitors.png)
 
   > *Note: Do not worry if the name you see does not match exactly with the screenshot. The deployment name you see will correspond to the variable used in the Jupyter notebook.*
   > *Note: If you click on the card itself, you can get to the drift monitor page by clicking on the percentage shown for drift in the UI.*
 
 * Click on `Drop in accuracy`and then look for a time slot on the graph that shows bias (i.e. below the red threshold line). The monitor only runs every three hours, so there may only be one teal colored "dot" representing a single run when you first visit the graph. Click on it for more details that will show the number of transactions responsible "for drop in accuracy" and "for drop in data consistency".
 
-  ![Drift Drop in accuracy](../.gitbook/assets/images/openscale-config/openscale-config-drift-drop.png)
+![Drift Drop in accuracy](../.gitbook/assets/images/openscale-config/openscale-config-drift-drop.png)
 
 * You can choose to get details about "Transactions responsible for drop in accuracy and data consistency":
 
-  ![Drift list of transactions](../.gitbook/assets/images/openscale-config/openscale-config-drift-responsible-transactions.png)
+![Drift list of transactions](../.gitbook/assets/images/openscale-config/openscale-config-drift-responsible-transactions.png)
 
 * From here you can see groupings of transactions that caused drift. Where the groups are formed by shared features. Drilling deeper will bring up the individual transactions, and as we've seen before, we can choose a transaction to get the details.
 
-  ![Drift list of transactions](../.gitbook/assets/images/openscale-config/openscale-config-drift-drop-transactions.png)
+![Drift list of transactions](../.gitbook/assets/images/openscale-config/openscale-config-drift-drop-transactions.png)
 
 ## Stop the Environment
 
-**Important**: In order to conserve resources, make sure that you stop the environment used by your notebook(s) when you are done. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
+**Important:** When you have completed the last submodule in this "openscale-manual-config" section that you will be doing, it's recommended you stop the environment in order to conserve resources. **You should only follow these steps to stop your environment if you are not going to proceed with the other sub-modules in this section.**
 
 * Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
 
@@ -97,4 +95,4 @@ _**Please note that there are several places in the notebook where you need to u
 
 We've seen how to configure Drift monitoring using a Jupyter notebook. Next, we'll add some historical data to emulate what would happen for a Machine learning model that is deployed in production, monitored with OpenScale, and continually receiving scoring requests.
 
-Proceed to the next sub-module to [load historical data](./HISTORICAL-DATA-README.md)
+Proceed to the next sub-module to [load historical data](./HISTORIC-DATA-README.md)
