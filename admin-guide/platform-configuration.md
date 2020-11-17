@@ -6,7 +6,7 @@
 
 * Go the (☰) menu and under manage the `Administer` section, click on the `Manage Users` option from the menu. Then click on the *`New user`* button on the top right.
 
-![Add a user](../.gitbook/assets/images/admin/manage-add-users.png)
+![Add a user](../workshop/.gitbook/assets/images/admin/manage-add-users.png)
 
 * Fill in the account details using a pattern (i.e user100, user101, user102, etc). Ensure you select the Roles necessary for the modules that will be executed at the workshop (at minimum: `Developer`, `Data Scientist`, `Data Steward`, and `Data Engineer`). Click the `Save` button.
 

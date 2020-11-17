@@ -3,24 +3,32 @@
 ## Getting Started
 
 * [Pre-work](pre-work/README.md)
+* [Git integration (using GitLab)](gitIntegration/README.md)
 
 ## Credit Risk Workshop
 
 * [Data Connection and Virtualization](data-connection-and-virtualization/README.md)
 * [Import Data to Project](addData/README.md)
+* [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md)
+* [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md)
+* [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md)
 * [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md)
 * [Machine Learning with AutoAI](machine-learning-autoai/README.md)
 * [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md)
+* [Monitoring models with OpenScale GUI (Manual Config)](openscale-manual-config/README.md)
+    * [OpenScale Manual Config Part 2 ](openscale-manual-config/FAIRNESS-EXPLAINABILITY-README.md)
+    * [OpenScale Manual Config Part 3 ](openscale-manual-config/QUALITY-FEEDBACK-README.md)
+    * [OpenScale Manual Config Part 4 ](openscale-manual-config/DRIFT-README.md)
+    * [OpenScale Manual Config Part 5 ](openscale-manual-config/HISTORIC-DATA-README.md)
 * [Monitoring models with OpenScale GUI (Fastpath Monitoring)](openscale-fastpath/README.md)
-* [(Optional) Monitoring models with OpenScale (Notebook)](openscale-notebook/README.md)
 
 ## Workshop Resources
 
-* [Instructor Guide](admin-guide/README.md)
 * [FAQs / Tips](faq/README.md)
 
 ## Resources
 
+* [Full Workshop Content for Digital Badge](https://app.gitbook.com/@ibm-developer/s/cloudpakfordata-credit-risk-workshop/)
 * [IBM Cloud Pak for Data - Information and Trial](https://www.ibm.com/products/cloud-pak-for-data)
 * [IBM Cloud Pak for Data - Knowledge Center](https://www.ibm.com/support/knowledgecenter/SSQNUZ)
 * [IBM Cloud Pak for Data - Platform API](https://cloud.ibm.com/apidocs/cloud-pak-data)
