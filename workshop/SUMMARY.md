@@ -11,12 +11,12 @@
 * [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md)
 * [Machine Learning with AutoAI](machine-learning-autoai/README.md)
 * [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md)
-* [Monitoring models with OpenScale GUI (Manual Config)](openscale-manual-config/README.md)
+* [Monitoring models with OpenScale GUI (Fastpath Monitoring)](openscale-fastpath/README.md)
+* OPTIONAL: [Monitoring models with OpenScale GUI (Manual Config)](openscale-manual-config/README.md)
     * [OpenScale Manual Config Part 2 ](openscale-manual-config/FAIRNESS-EXPLAINABILITY-README.md)
     * [OpenScale Manual Config Part 3 ](openscale-manual-config/QUALITY-FEEDBACK-README.md)
     * [OpenScale Manual Config Part 4 ](openscale-manual-config/DRIFT-README.md)
     * [OpenScale Manual Config Part 5 ](openscale-manual-config/HISTORIC-DATA-README.md)
-* [Monitoring models with OpenScale GUI (Fastpath Monitoring)](openscale-fastpath/README.md)
 
 ## Workshop Resources
 
