@@ -2,7 +2,7 @@
 
 ## Frequently Asked Questions
 
-* [FAQ](faq/README.md)
+<!-- * [FAQ](faq/README.md) -->
 
 ## Getting Started
 
@@ -10,17 +10,17 @@
 
 ## Credit Risk Workshop
 
-* [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md)
-* [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md)
-* [Machine Learning with AutoAI](machine-learning-autoai/README.md)
-* [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md)
+<!-- * [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) -->
+<!-- * [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md) -->
+<!-- * [Machine Learning with AutoAI](machine-learning-autoai/README.md) -->
+<!-- * [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md) -->
 <!-- * [Monitoring models with OpenScale GUI (Fastpath Monitoring)](openscale-fastpath/README.md) -->
 
 
 ## Additional Resources
 
-* [Instructor Guide](admin-guide/README.md)
-* [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md)
+<!-- * [Instructor Guide](admin-guide/README.md) -->
+<!-- * [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md) -->
 
 ## Resources
 
