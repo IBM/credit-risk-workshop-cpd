@@ -50,7 +50,7 @@ For each line below, click on the `[Download]` link to get the file. If the link
 ## 2. Create IBM Cloud account and log into IBM Cloud Pak for Data as a Service
 
 * Launch a browser and navigate to one of the following links based on what day you're joining us and if you already have an account:
-    - [Sign Up Page [Nov 10]](http://ibm.biz/ddc-cp4daas-nov-10)
+    <!-- - [Sign Up Page [Nov 10]](http://ibm.biz/ddc-cp4daas-nov-10) -->
     - [Sign Up Page [Nov 24]](http://ibm.biz/ddc-cp4daas-nov-24)
 
 * You can then log into your IBM Cloud account using your IBMid or create a new one. Note that the correct region should already be selected for you.
