@@ -26,7 +26,6 @@
 
 * [Sample Application](http://ibm.biz/cp4dworkshop-demoapp?_ga=2.74513883.873642022.1605640187-545911721.1605539142)
 * [Cloud Pak for Data Lab Environment](http://ibm.biz/cp4dworkshop1118-cluster?_ga=2.74513883.873642022.1605640187-545911721.1605539142)
-* [Cloud Pak for Data Credentials Application](http://ibm.biz/cp4dworkshop1118-passwordapp?_ga=2.162471669.873642022.1605640187-545911721.1605539142)
 * [Workshop Lab(s) Step by Step Instructions](http://ibm.biz/cp4dworkshop1118-gitbook?_ga=2.162471669.873642022.1605640187-545911721.1605539142)
 * [Lecture Notes](http://ibm.biz/cp4dworkshop1118-lectures?_ga=2.128581189.873642022.1605640187-545911721.1605539142)
 * [Provide Feedback on our Survey](http://ibm.biz/cpdworkshop1118-survey?_ga=2.128581189.873642022.1605640187-545911721.1605539142)
