@@ -8,6 +8,8 @@
   - [Why do I see the following when I push the python app to IBM Cloud `**ERROR** Could not install python`](#why-do-i-see-the-following-when-i-push-the-python-app-to-ibm-cloud-error-could-not-install-python)
     - [Accessing Files](#accessing-files)
     - [Importing Files into the Cloud Pak for Data as a Service platform](#importing-files-into-the-cloud-pak-for-data-as-a-service-platform)
+    
+ - [Click here to join a WebEx meeting with IBM support team](https://ibm.webex.com/webappng/sites/ibm/meeting/info/55e46bbc68ea42e496e8eae59017ad71?siteurl=ibm&MTID=md3c254364ceb8f04386f847515b33035)
 
 ## I see only two notebooks, is that ok?
 
