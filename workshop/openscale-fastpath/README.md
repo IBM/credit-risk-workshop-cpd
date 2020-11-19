@@ -33,7 +33,7 @@ The *Insights Dashboard* provides an overview of the models that OpenScale is mo
 
 * Click on the triangle with `!` under `Fairness` -> `Sex`. This indicates that there has been an alert for this attribute in the `Fairness` monitor. Alerts are configurable, based on thresholds for fairness outcomes which can be set and altered as desired.
 
-* By moving your mouse pointer over the trend chart, you can see the values change, and which contains bias. Find and click on a spot in the graph that is above the red threshold line to view details.
+* By moving your mouse pointer over the trend chart, you can see the values change, and which contains bias. Find and click on a spot in the graph that is below the red threshold line to view details.
 
 ![OpenScale Fairness Monitor](../.gitbook/assets/images/openscale/openscale-fp-model-fairnessgraph.png)
 

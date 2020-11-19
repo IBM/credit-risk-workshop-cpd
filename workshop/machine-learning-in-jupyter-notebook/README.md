@@ -43,7 +43,7 @@ You will run cells individually by highlighting each cell, then either click the
 * Section `2.0 Load and Clean data` will load the data set we will use to build out machine learning model. In order to import the data into the notebook, we are going to use the code generation capability of Watson Studio.
 
   * Highlight the code cell below by clicking it. Ensure you place the cursor below the first comment line.
-  * Click the 10/01 "Find data" icon in the upper right of the notebook to find the data asset you need to import.
+  * Click the `01/00` "Find data" icon in the upper right of the notebook to find the data asset you need to import.
   * If you are using virtualized data, then choose your virtualized merged view (i.e. `USERXXXX.APPLICANTFINANCIALPERSONALLOANSDATA`). If you are using this notebook without virtualized data, you can use the `german_credit_data.csv` CSV file version of the data set that has been included in the project.
   * For your dataset, Click `Insert to code` and choose `Insert Pandas DataFrame`. The code to bring the data into the notebook environment and create a Pandas DataFrame will be added to the cell below.
   * Run the cell and you will see the first five rows of our dataset.
