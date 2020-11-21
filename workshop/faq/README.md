@@ -1,6 +1,6 @@
 # Frequently Asked Questions 
 
-[Click here to join a WebEx call with IBM support team between 10:00 AM - 4:00 PM on Tuesday, Nov 24 2020 (IST)](https://ibm.webex.com/webappng/sites/ibm/meeting/info/55e46bbc68ea42e496e8eae59017ad71?siteurl=ibm&MTID=md3c254364ceb8f04386f847515b33035)
+Office Hours: [Click here to join a WebEx call with IBM support team between 10:00 AM - 4:00 PM on Tuesday, Nov 24 2020 (IST)](https://ibm.webex.com/ibm/j.php?MTID=md3c254364ceb8f04386f847515b33035)
 Office Hours Password: `ddc-office-hours`
 
 - [Frequently Asked Questions](#frequently-asked-questions)
