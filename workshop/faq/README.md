@@ -1,9 +1,5 @@
 # Frequently Asked Questions 
 
-Office Hours: [Click here to join a WebEx call with IBM support team between 10:00 AM - 4:00 PM on Tuesday, Nov 24 2020 (IST)](https://ibm.webex.com/ibm/j.php?MTID=md3c254364ceb8f04386f847515b33035)
-
-Office Hours Password: `ddc-office-hours`
-
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [I see only two notebooks, is that ok?](#i-see-only-two-notebooks-is-that-ok)
   - [I got an error 'IndexError: list index out of range' when I run Jupytor notebook to save the model (Chapter 5: Analyze - [Lab] Building AI Model in Jupyter Notebooks) in step  "4.4 Save the Model"](#i-got-an-error-indexerror-list-index-out-of-range-when-i-run-jupytor-notebook-to-save-the-model-chapter-5-analyze---lab-building-ai-model-in-jupyter-notebooks-in-step-44-save-the-model)
