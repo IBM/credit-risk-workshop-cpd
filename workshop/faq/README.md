@@ -1,6 +1,6 @@
 # Frequently Asked Questions & Helpful Tips / Tricks
 
-1. [I dont have the Jupyter notebooks in my project. How can I import them ?](#manually-mporting-jupyter-notebooks)
+1. [I dont have the Jupyter notebooks in my project. How can I import them ?](#manually-importing-jupyter-notebooks)
 1. [How can I see what the Jupyter notebooks output should be?](#jupyter-notebooks-with-output)
 
 ***
