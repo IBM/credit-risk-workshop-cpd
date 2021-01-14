@@ -8,7 +8,8 @@ This section is broken up into the following steps:
 - [Automate model building with AutoAI](#automate-model-building-with-autoai)
   - [1. Run AutoAI Experiment](#1-run-autoai-experiment)
   - [2. Save AutoAI Model](#2-save-autoai-model)
-  - [3. Promote the model](#3-promote-the-model)
+  - [3. Save AutoAI notebook](#3-save-autoai-notebook)
+  - [4. Promote the model](#4-promote-the-model)
   - [Conclusion](#conclusion)
 
 > **Note:** The lab instructions below assume you have completed the pre-work section already, if not, be sure to complete the pre-work first to create a project and a deployment space.
@@ -70,21 +71,45 @@ This section is broken up into the following steps:
 
 ![Model evaluation](../.gitbook/assets/images/autoai/autoai-toppipeline-details.png)
 
-* In order to deploy this model, click on the `Save as` button and select the `Model` option to save it.
+* In order to deploy this model, click on the `Save as` button.
 
 ![Save model](../.gitbook/assets/images/autoai/autoai-pipeline-save-model.png)
 
-* In the `Save as model` window you can accept the default values or give your model a meaningful name/description and then click the `Save` button.
+* Choose the `Model` tile, accept the default name or change it if you like. Add optional description or tags, and click `Create`.
 
 ![Save model name](../.gitbook/assets/images/autoai/autoai-save-model-name.png)
 
-* You will receive a notification to indicate that your model is saved to your project. Go back to your project main page by clicking on the project name on the navigator on the top left:
+* You will receive a notification to indicate that your model is saved to your project. Go back to your project main page by clicking on the `View in project` link. 
 
-![Select Project](../.gitbook/assets/images/autoai/autoai-project-navigator.png)
+![View in Project](../.gitbook/assets/images/autoai/autoai-view-saved-model-in-project.png)
+
+* Alternately, closing the window will expose the path back to the project at the top of the screen.
+
+![Navigate to Project](../.gitbook/assets/images/autoai/autoai-navigate-to-project.png)
 
 * You will see the new model under `Models` section of the `Assets` page.
 
-## 3. Promote the model
+## 3. Save AutoAI notebook
+
+* To save the AutoAI experiment as a notebook, go back to the window for the pipeline you have chosen, and click `Save as`.
+
+![Save notebook](../.gitbook/assets/images/autoai/autoai-pipeline-save-model.png)
+
+* Choose the `Notebook` tile, accept the default name or change it if you like. Add optional description or tags, and click `Create`.
+
+![Name and create notebook](../.gitbook/assets/images/autoai/autoai-save-as-notebook.png)
+
+* You will receive a notification to indicate that your notebook is saved to your project. Go back to your project main page by clicking on the `View in project` link. 
+
+![View in Project](../.gitbook/assets/images/autoai/autoai-view-saved-notebook-in-project.png)
+
+* Alternately, closing the window will expose the path back to the project at the top of the screen.
+
+![Navigate to Project](../.gitbook/assets/images/autoai/autoai-navigate-to-project.png)
+
+* The notebook will be saved to your project, and can be examined in detail, changed and modified, and used to create a new model. See the documentations for [Modifying and running an AutoAI generated notebook](./running-autoai-notebook.md) for details.
+
+## 4. Promote the model
 
 * Now that we have saved our model, we can promote it to our deployment space for deployment. Under the `Models` section of the `Assets` page, click the name of your saved model:
 
