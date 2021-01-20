@@ -11,13 +11,13 @@ During the pre-work section of this workshop, you create a project based on an e
 
 * At your project overview page, click the `Add to project` button, and choose the `Notebook` option.
 
-![Add to project](../.gitbook/assets/images/general/project-add-assets-to-project.png)
+![Add to project](../images/general/project-add-assets-to-project.png)
 
 * On the next panel: select the `From URL` tab, give your notebook a name, provide the notebook URL, and leave the default Python environment:
 
 >*Note: The URL and name shown in the screenshot may not match your scenario. Use the table below to determine what URL to use.*
 
-![Add notebook name and URL](../.gitbook/assets/images/openscale/openscale-add-notebook-url.png)
+![Add notebook name and URL](../images/openscale/openscale-add-notebook-url.png)
 
 * Use the following table to find the URL to use for each of the Workshop notebooks:
 

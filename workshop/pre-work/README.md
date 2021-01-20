@@ -18,7 +18,7 @@ Various parts of this workshop will require the attendee to upload files or run 
 
 * [Option 2] To download the repository as a zip file, go to the [GitHub repo for this workshop](https://github.com/IBM/credit-risk-workshop-cpd) and download the archived version of the workshop and extract it on your laptop.
 
-![download workshop zip](../.gitbook/assets/images/prework/github-zip-download.png)
+![download workshop zip](../images/prework/github-zip-download.png)
 
 > **Note: If its not automatically done for you, make sure you extract or unzip the zip file after its downloaded.**
 
@@ -30,7 +30,7 @@ At this point of the workshop we will be using Cloud Pak for Data for the remain
 
 > *NOTE: Your instructor will provide a URL and credentials to log into Cloud Pak for Data!*
 
-![Cloud Pak for Data login](../.gitbook/assets/images/navigation/cpd-login.png)
+![Cloud Pak for Data login](../images/navigation/cpd-login.png)
 
 ### Create a New Project
 
@@ -38,31 +38,31 @@ In Cloud Pak for Data, we use the concept of a project to collect / organize the
 
 * Go the (☰) navigation menu and click on the *Projects* link.
 
-![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> Projects](../images/navigation/menu-projects.png)
 
 * Click on the *New project* button on the top right.
 
-![Start a new project](../.gitbook/assets/images/prework/new-project.png)
+![Start a new project](../images/prework/new-project.png)
 
 * Select the `Analytics project` radio button and click the **Next** button.
 
-![New analytics project](../.gitbook/assets/images/prework/new-project-type.png)
+![New analytics project](../images/prework/new-project-type.png)
 
 * We are going to create a project from an existing file (which contains the assets we will use throughout this workshop), as opposed to creating an empty project. Select the _*Create a project from a sample or file*_ option.
 
-![Create project from file](../.gitbook/assets/images/prework/new-project-from-file.png)
+![Create project from file](../images/prework/new-project-from-file.png)
 
 * Click on the **browse** link and in the file browser popup, navigate to where you cloned or downloaded this repository in the previous section. From within that root directory, navigate to the `projects/` sub-directory and choose the `CreditRiskProject.zip` file. Then click the **open** button.
 
-![Browse for project files](../.gitbook/assets/images/prework/browse-project-zip.png)
+![Browse for project files](../images/prework/browse-project-zip.png)
 
 * Give the project a name and click the `Create` button.
 
-![Project name](../.gitbook/assets/images/prework/project-import-name.png)
+![Project name](../images/prework/project-import-name.png)
 
 * From the project creation succesfully created pop up window, click on the *View new project* button.
 
-![Import project success](../.gitbook/assets/images/prework/project-import-success.png)
+![Import project success](../images/prework/project-import-success.png)
 
 ### Create a Deployment Space
 
@@ -70,29 +70,29 @@ Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and mana
 
 * Go the (☰) navigation menu and click `Analyze` -> `Analytics deployments`.
 
-![(☰) Menu -> Analytics deployments](../.gitbook/assets/images/navigation/menu-analytics-deployments.png)
+![(☰) Menu -> Analytics deployments](../images/navigation/menu-analytics-deployments.png)
 
 * Click on the `New deployment space` button.
 
-![Add New deployment space](../.gitbook/assets/images/prework/new-deployment-space.png)
+![Add New deployment space](../images/prework/new-deployment-space.png)
 
 * We will create an empty deployment space, so click on the `Create an empty space` option.
 
-![Create empty deployment space](../.gitbook/assets/images/prework/new-deployment-space-empty.png)
+![Create empty deployment space](../images/prework/new-deployment-space-empty.png)
 
 * Give your deployment space a unique name, optional description, then click the `Create` button.
 
-![Deployment space name](../.gitbook/assets/images/prework/deployment-space-name.png)
+![Deployment space name](../images/prework/deployment-space-name.png)
 
 * Next, we will add a collaborator to the new deployment space. Collaborators allow others to view/edit/manage the assets being deployed. In this workshop, we want the models we deploy to be visible and monitored in the OpenScale model monitoring lab.
 
 * Click on the `Access control` tab and then click on `Add collaborators` on the right.
 
-![Deployment space access control](../.gitbook/assets/images/prework/deployment-space-access-control.png)
+![Deployment space access control](../images/prework/deployment-space-access-control.png)
 
 * Enter "admin" as a Collaborator input field and select the `Admin` user from the drop down list. Then click on the `Add to list` button.
 
-![Deployment space collaborators](../.gitbook/assets/images/prework/deployment-space-add-collaborator.png)
+![Deployment space collaborators](../images/prework/deployment-space-add-collaborator.png)
 
 > *NOTE: We are adding the user that configured the machine learning instance for OpenScale monitoring. In this case, the user is the admin user.*
 
