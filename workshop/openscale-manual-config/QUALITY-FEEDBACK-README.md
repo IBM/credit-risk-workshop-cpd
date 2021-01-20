@@ -16,17 +16,17 @@ The submodule contains the following steps:
 
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
-![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> Projects](../images/navigation/menu-projects.png)
 
 * From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
 * Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `openscale-quality-feedback` notebook.
 
-![Notebook Open](../.gitbook/assets/images/openscale-config/openscale-config-quality-notebook.png)
+![Notebook Open](../images/openscale-config/openscale-config-quality-notebook.png)
 
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
-![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
+![Notebook loaded](../images/openscale/openscale-fullconfignotebook-loaded.png)
 
 ## 2. Run the Notebook
 
@@ -50,19 +50,19 @@ _**Please note that there are several places in the notebook where you need to u
 
 * In the same browser \(but a separate tab\), open the `Services` tab by clicking the `Services` icon on the top right.
 
-![Service](../.gitbook/assets/images/navigation/services.png)
+![Service](../images/navigation/services.png)
 
 * Find and click on the `Watson OpenScale` tile.
 
-![Openscale Tile](../.gitbook/assets/images/openscale/services-wos-tile.png)
+![Openscale Tile](../images/openscale/services-wos-tile.png)
 
 * Launch the OpenScale UI tooling by clicking on the *`Launch`* button
 
-![Openscale Launch](../.gitbook/assets/images/openscale/services-wos-launch.png)
+![Openscale Launch](../images/openscale/services-wos-launch.png)
 
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the deployment you configured in the jupyter notebook when you ran it in the previous section. Click on the `Quality` section of the tile to bring up the *Fairness monitor*.
 
-![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-quality-monitors.png)
+![Explore OpenScale Model monitors](../images/openscale-config/openscale-config-explore-quality-monitors.png)
 
   > *Note: Do not worry if the name you see does not match exactly with the screenshot. The deployment name you see will correspond to the variable used in the Jupyter notebook.*
 
@@ -72,11 +72,11 @@ _**Please note that there are several places in the notebook where you need to u
 
 * Look for a time slot that shows a quality alert (i.e. below the red threshold line). The monitor only runs once per hour, so there may only be one teal colored "dot" representing a single run when you first visit the graph. Click on it for more details.
 
-![Quality area under ROC](../.gitbook/assets/images/openscale-config/openscale-config-quality-area-under-roc.png)
+![Quality area under ROC](../images/openscale-config/openscale-config-quality-area-under-roc.png)
 
 * We can see statistics for this time slot including *Area under ROC*, *TPR*, *FPR*, *Recall*, *Precision*, and more:
 
-![Quality statitstics](../.gitbook/assets/images/openscale-config/openscale-config-quality-statistics.png)
+![Quality statitstics](../images/openscale-config/openscale-config-quality-statistics.png)
 
 * Other time slots can be examined to gather the relevant quality statistics.
 
@@ -86,11 +86,11 @@ _**Please note that there are several places in the notebook where you need to u
 
 * Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
 
-![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+![Back to project](../images/ml/navigate-to-project.png)
 
 * Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
 
-![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+![Stop environment](../images/ml/stop-notebook-environment.png)
 
 * Click the `Stop` button on the subsequent pop up window.
 
