@@ -22,17 +22,17 @@ You only need to create one DB2 Warehouse instance, follow the instructions for 
 
 * Once the service is provisioned, Go to `Service Credentials` and click `New credential +`. Open `View credentials` and copy the credentials (this is your connection details) for use later.
 
-   ![Get DB2 Warehouse credentials](../workshop/.gitbook/assets/images/connections/db2whoc-credentials.png)
+   ![Get DB2 Warehouse credentials](../workshop/images/connections/db2whoc-credentials.png)
 
 #### Load Data
 
 * Now go to `Manage` and click `Open Console`:
 
-   ![DB2 Warehouse Cloud open console](../workshop/.gitbook/assets/images/connections/db2whoc-manage-console.png)
+   ![DB2 Warehouse Cloud open console](../workshop/images/connections/db2whoc-manage-console.png)
 
 * From the upper-left (☰) hamburger menu click `Load` -> `Load data`:
 
-   ![DB2 Warehouse Cloud load data](../workshop/.gitbook/assets/images/connections/db2whoc-load-data.png)
+   ![DB2 Warehouse Cloud load data](../workshop/images/connections/db2whoc-load-data.png)
 
 * Choose `Browse file` and navigate to where you cloned this repository, then to `data/split/` and choose `applicant_financial_data.csv`, then click `Next`.
 
@@ -50,7 +50,7 @@ You only need to create one DB2 Warehouse instance, follow the instructions for 
 
 * In the DB2 Warehouse console, from the upper-left (☰) hamburger menu click `Connection Info` -> `Connection Information`. Then click `Download SSL Certificate`:
 
-   ![DB2 get SSL certificate](../workshop/.gitbook/assets/images/connections/db2whoc-get-ssl-cert.png)
+   ![DB2 get SSL certificate](../workshop/images/connections/db2whoc-get-ssl-cert.png)
 
 * You'll need to convert the SSL certificate from `.crt` to a `.pem` file using [openssl](https://www.openssl.org/). Run the following command:
 
@@ -68,11 +68,11 @@ These instructions are for loading the data into the local CP4D version of DB2 W
 
 * Got to `Services` and click on `DB2 Warehouse` and click `Open`:
 
-   ![Open Service DB2 Warehouse](../workshop/.gitbook/assets/images/connections/db2whlocal-open-console.png)
+   ![Open Service DB2 Warehouse](../workshop/images/connections/db2whlocal-open-console.png)
 
 * Under `Menu` choose `Load` and `Load Data`:
 
-   ![Menu Load Data](../workshop/.gitbook/assets/images/connections/db2whlocal-load-data.png)
+   ![Menu Load Data](../workshop/images/connections/db2whlocal-load-data.png)
 
 * Choose `Browse file` and navigate to where you cloned this repository, then to `data/split/` and choose `applicant_financial_data.csv`, then click `Next`.
 
@@ -90,11 +90,11 @@ These instructions are for loading the data into the local CP4D version of DB2 W
 
 * In *My instances* go to the *Provisioned instances* tab. Highlight you local DB2 Warehouse and click the 3 vertical dots on the far right, and then click `View Details`:
 
-  ![Provisioned local DB2 details](../workshop/.gitbook/assets/images/connections/db2whlocal-view-details.png)
+  ![Provisioned local DB2 details](../workshop/images/connections/db2whlocal-view-details.png)
 
 * Either keep this window open in a separate tab, or copy the required Connection info: *Host*, *Port*, *Database name*, *Username*, and *Password*. You can get the port from the *JDBC Connection URL*, i.e for the URL `jdbc:db2://os-workshop-nov22worker-05.cpd-nov22.com:30290/BLUDB` the port is the number after the colin in the URL `30290`:
 
-  ![DB2 Connection credentials](../workshop/.gitbook/assets/images/connections/db2whlocal-conn-details.png)
+  ![DB2 Connection credentials](../workshop/images/connections/db2whlocal-conn-details.png)
 
 ## Create DB2 Instance
 
@@ -106,6 +106,6 @@ If you are running the OpenScale Lab, you will need a DB2 Server instance (DB2 W
 
 * Once the service is provisioned, Go to `Service Credentials` and click `New credential +`. Open `View credentials` and copy the credentials for use later.
 
-  ![Get DB2 Warehouse credentials](../workshop/.gitbook/assets/images/connections/db2-server-credential.png)
+  ![Get DB2 Warehouse credentials](../workshop/images/connections/db2-server-credential.png)
 
 __THIS SECTION IS COMPLETE, GO BACK AND CONTINUE WITH THE [ADMIN GUIDE](./README.md)__
