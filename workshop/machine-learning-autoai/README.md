@@ -28,9 +28,9 @@ This section is broken up into the following steps:
 
 ![Naming your experiment](../.gitbook/assets/images/autoai/autoai-name-experiment.png)
 
-* To configure the experiment, we must first give it the dataset that will be used to train the machine learning model. We will be using one of the CSV file datasets we have preloaded into the project. Click on the `Select from project` option.
+* To configure the experiment, we must first give it the dataset that will be used to train the machine learning model. We will be using the CSV file that we have preloaded into the project. Click on the `Select from project` option.
 
-![Select data](../.gitbook/assets/images/autoai/autoai-select-dataset-project.png)
+![Select data](../.gitbook/assets/images/autoai/autoai-select-data-project.png)
 
 * In the dialog, select the `german_credit_data_noid.csv` file and click the `Select asset` button.
 
