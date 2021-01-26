@@ -1,12 +1,11 @@
 
 # Analyzing Credit Risk with Cloud Pak for Data on OpenShift
 
-Welcome to our workshop! In this workshop we'll be using the Cloud Pak for Data platform to Collect Data, Organize Data, Analyze Data, and Infuse AI into our applications. The goals of this workshop are:
+In this workshop we'll be using the Cloud Pak for Data platform to Analyze Data and Infuse AI into our applications. The goals of this workshop are:
 
-* Visualize data with Data Refinery
-* Create and deploy a machine learning model
-* Monitor the model
-* Create a Python app to use the model
+* Create and a machine learning model using AutoAI
+* Test the deployed model
+* (Optional) Create a Python app to use the model
 
 ## About this workshop
 
@@ -74,8 +73,6 @@ This file has the following attributes:
 |   |   |
 | - | - |
 | [Pre-work](pre-work/README.md) | Creating a project, downloading the data set, seeding a database |
-| [Data Visualization with Data Refinery](./data-visualization-and-refinery/README.md) | Refining the data, vizualizing and profiling the data |
-| [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md) | Building a model with Spark, deploying the model with Watson Maching Learning, testing the model with a Python Flask app |
 | [Machine Learning with AutoAI](machine-learning-autoai/README.md) | Use AutoAi to quickly generate a Machine Learning pipeline and model |
 | [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md) | Deploy and machine learning models using several approaches |
 
