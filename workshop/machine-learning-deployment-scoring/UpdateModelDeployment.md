@@ -54,7 +54,7 @@ Once a deployment is created for a model, there may be consumers/clients of that
 
 ![Analytics Analyze deployments](../.gitbook/assets/images/navigation/menu-analytics-deployments.png)
 
-* Choose the deployment space you setup previously by clicking on the name of your space. You will see the models you promoted to this space in the assets panel. Lets check the deployment you creaetd previously. Click on the `Deployment` tab and select the deployment name you previously created.
+* Choose the deployment space you setup previously by clicking on the name of your space. You will see the models you promoted to this space in the assets panel. Lets check the deployment you created previously. Click on the `Deployment` tab and select the deployment name you previously created.
 
 ![deployment name](../.gitbook/assets/images/deployment/deployment-name-overview.png)
 
