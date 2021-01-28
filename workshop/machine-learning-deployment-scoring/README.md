@@ -18,6 +18,8 @@ This module is broken up into several sections that explore the different model 
 
 3. [(Optional) Integrate Model to an External Application](#optional-integrate-model-to-python-flask-application)
 
+4. [(Optional) Update Model Deployment](#optional-update-online-model-deployment)
+
 > **Note:** The lab instructions below assume you have completed the pre-work section already, if not, be sure to complete the pre-work first to create a project and a deployment space.
 
 ## Online Model Deployment
@@ -285,6 +287,13 @@ It's best practice to store configurable information as environment variables, i
 * Either use the default values pre-filled in the input form, or modify the value and then click the `Submit` button. The python application will invoke the predictive model and a risk prediction & probability is returned:
 
 ![Get the risk percentage as a result](../.gitbook/assets/images/deployment/flaskapp-output.png)
+
+## (Optional) Update Online Model Deployment
+
+We have seen how to deploy our machine learning models so they can be called by external consumers. Specifically, we have seen how to create an online deployment which will make an instance of the model available to make predictions in real time via an API. Over time, these models will eventually need to be updated for any number of reasons. In this section, we will explore how you can update the deployment of models without disrupting consumers of the API.
+
+See the documentations for [updating model deployments](./UpdateModelDeployment.md) for details.
+
 
 ## Conclusion
 
