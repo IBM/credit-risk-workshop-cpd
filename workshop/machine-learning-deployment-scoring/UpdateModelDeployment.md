@@ -1,6 +1,6 @@
 # Updating your models and deployments
 
-In this module, we will explore how we can update a model or deployment once it has been released/created. Model operations and lifecycle management includes many different aspects that would need to be addressed, including but not limited to: determining when a model needs to be replaced, testing models, comparing model performance, deployment testing (for example canary testing), and much more. In this lab we will focus just on the capabilities to update the model or the deployment, not on the methodology or testing approach.
+In this module, we will explore how we can update a model or deployment once it has been released/created. Model operations and lifecycle management includes many different aspects that would need to be addressed, including, but not limited to: determining when a model needs to be replaced, testing models, comparing model performance, deployment testing (for example canary testing), and much more. In this lab we will focus just on the capabilities to update the model or the deployment, not on the methodology or testing approach.
 
 > **Note:** The lab instructions below assume you have completed the Machine Learning with AutoAI labs. You should have already created a model and an online deployment which we will update in this lab.
 
@@ -70,7 +70,7 @@ Once a deployment is created for a model, there may be consumers/clients of that
 
 ![replace asset](../.gitbook/assets/images/deployment/deployment-replace-asset.png)
 
-* You can now select the asset that will replace the existing model for this deployment. One thing to note is that you should only select an asset that is using a framework compatible with the existing deployed mdoel and that the input schema exists and matches between the new and deployed model. Otherwise, you the deployment may fail. Click the checkbox next to the model you promoted to this space in the section above (in this case, Pipeline 8). Then click the `Replace` button.
+* You can now select the asset that will replace the existing model for this deployment. One thing to note is that you should only select an asset that is using a framework compatible with the existing deployed mdoel and that the input schema exists and matches between the new and deployed model. Otherwise, the deployment may fail. Click the checkbox next to the model you promoted to this space in the section above (in this case, Pipeline 8). Then click the `Replace` button.
 
 ![select replacement](../.gitbook/assets/images/deployment/deployment-replace-asset-select.png)
 
