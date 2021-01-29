@@ -37,25 +37,29 @@ Various parts of this workshop will require the attendee to upload files or run 
 
 * Launch a browser and navigate to [IBM Cloud Pak for Data as a Service](https://dataplatform.cloud.ibm.com/login?context=cpdaas).
 
-* Click the `Select Region` button and choose between `Dallas` and `Frankfurt`, whichever one is closest to you.
+* Click the `Select Region` button and choose whichever one is closest to you.
+
 * Then you can log into your IBM Cloud account using your IBMid. If you don't have one, you can click on `Sign up and try for free` to create a free IBM Cloud account.
 
 ![CPDaaS login](../.gitbook/assets/images/navigation/cpdaas-login.png)
 
-* The apps required for IBM Cloud Pak for Data will be provisioned for you. Once you see a message that says that the apps are ready to use, click on `Go to IBM Cloud Pak for Data`.
+* Some of the services required for IBM Cloud Pak for Data will be provisioned for you. Once you see a message that says that the apps are ready to use, click on `Go to IBM Cloud Pak for Data`.
 
 ![CPDaaS ready](../.gitbook/assets/images/navigation/cpdaas-ready.png)
 
-* Once you are on IBM Cloud Pak for Data, on the top right corner click on your avatar, and then click on `Profile and settings`. Go to the `Services` tab.
+* Go the (☰) navigation menu on the top left corner of the Cloud Pak for Data UI. Expand *Services* and then click on `Service instances`.
 
-If the `Machine Learning` service instance is not listed under `You Cloud Pak for Data Services` then find it in the `Try our Available Services` section and click on the `Add` button. 
+![(☰) Menu -> service instances](../.gitbook/assets/images/navigation/menu-service-instances.png)
+
+* If you see an instance of *Watson Machine Learning* you are ready to use it, and you can skip to [3. Create a Project and Deployment Space](#3-create-a-project-and-deployment-space). If you do not have an instance of *Watson Machine Learning*, click on the `Add service +` button.
 
 ![CPDaaS WML instance add](../.gitbook/assets/images/prework/cpdaas-wml-instance-add.png)
 
-Next, note down the name of the `Machine Learning` service instance in your `Cloud Pak for Data` section. This is the blue hyperlink underneeth the `Machine Learning` card title. You will need to provide this name in future steps.
+* Search or scroll until you find the tile for *Machine Learning* and click on it.
 
-![CPDaaS WML instance name](../.gitbook/assets/images/prework/cpdaas-wml-instance-name.png)
+![Watson Machine Learning](../.gitbook/assets/images/prework/cpdaas-wml-tile.png)
 
+* Choose the same region as you chose for your Cloud Pak for Data as a Service platform, select the *Free* tier unless your organization has already used their 1 free tier, change the name and add tags if you like. The *Default* resource group should be correct, and then click `Create`.
 
 ## 3. Create a Project and Deployment Space
 
