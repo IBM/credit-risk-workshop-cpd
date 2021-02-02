@@ -138,7 +138,7 @@ curl -k -X POST --header 'Content-Type: application/json' --header 'Accept: appl
 
 * A json string will be returned with the response, including a  prediction from the model (i.e a "Risk" or "No Risk" at the end indicating the prediction of this loan representing risk).
 
-## (Optional) Batch Model Deployment
+<!-- ## (Optional) Batch Model Deployment
 
 Another approach to expose the model to be consumed by other users/applications is to create a batch deployment. This type of deployment will make an instance of the model available to make predictions against data assets or groups of records. The model prediction requests are scheduled as jobs, which are executed asynchronously. For the lab, we will break this into two steps: 
 1. Creating the batch deployment
@@ -197,7 +197,7 @@ With the notebook open, spend a minute looking through the sections of the noteb
 
 
 > **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions so you can see the stop kernel option.*
-> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
+> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png) -->
 
 ## (Optional) Integrate Model to Python Flask Application
 
