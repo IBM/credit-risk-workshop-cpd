@@ -203,6 +203,14 @@ You can also access the online model deployment directly through the REST API. T
 > **IMPORTANT: This SAMPLE application only runs on python 3.6 and above, so the instructions here are for python 3.6+ only. You will need to have Python 3.6 or later already installed on your machine**
 > *Note: The instructions below assume you have completed the pre-work module and thus have the Git repository already on your machine (cloned or downloaded).*
 
+### Download the frontend application
+
+In order to follow along with this section, use one of the following links to get a copy of the front end application that is used in this lab.
+
+Use the `[Download]` link to get the file. If the link isn't working for you, try clicking the `[Mirror]` to get it from out backup servers.
+
+- Python Application [[Download]](http://ibm.biz/ddc-cp4daas-python-app) | [[Mirror]](http://ibm.biz/ddc-cp4daas-python-app-mirror)
+
 ### Install Dependencies
 
 The general recommendation for Python development is to use a virtual environment ([`venv`](https://docs.python.org/3/tutorial/venv.html)). To install and initialize a virtual environment, use the `venv` module on Python 3:
