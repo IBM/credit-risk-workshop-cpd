@@ -8,6 +8,7 @@
 
 * [Machine Learning with AutoAI](machine-learning-autoai/README.md)
 * [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md)
+* [Deployment Versioning](machine-learning-deployment-scoring/UpdateModelDeployment.md)
 
 ## Resources
 
