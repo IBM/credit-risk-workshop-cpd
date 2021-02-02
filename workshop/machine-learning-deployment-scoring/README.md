@@ -12,13 +12,9 @@ This module is broken up into several sections that explore the different model 
    * Test the deployed model web UI
    * (Optional) Test model using cURL
 
-2. [(Optional) Batch Deployment for a Model](#optional-batch-model-deployment)
-   * Create Batch Deployment
-   * Create and Schedule a Job
+2. [(Optional) Integrate Model to an External Application](#optional-integrate-model-to-python-flask-application)
 
-3. [(Optional) Integrate Model to an External Application](#optional-integrate-model-to-python-flask-application)
-
-4. [(Optional) Update Model Deployment](#optional-update-online-model-deployment)
+3. [(Optional) Update Model Deployment](#optional-update-online-model-deployment)
 
 > **Note:** The lab instructions below assume you have completed the pre-work section already, if not, be sure to complete the pre-work first to create a project and a deployment space.
 
@@ -138,7 +134,8 @@ curl -k -X POST --header 'Content-Type: application/json' --header 'Accept: appl
 
 * A json string will be returned with the response, including a  prediction from the model (i.e a "Risk" or "No Risk" at the end indicating the prediction of this loan representing risk).
 
-<!-- ## (Optional) Batch Model Deployment
+<!-- 
+## (Optional) Batch Model Deployment
 
 Another approach to expose the model to be consumed by other users/applications is to create a batch deployment. This type of deployment will make an instance of the model available to make predictions against data assets or groups of records. The model prediction requests are scheduled as jobs, which are executed asynchronously. For the lab, we will break this into two steps: 
 1. Creating the batch deployment
