@@ -12,13 +12,9 @@ This module is broken up into several sections that explore the different model 
    * Test the deployed model web UI
    * (Optional) Test model using cURL
 
-2. [(Optional) Batch Deployment for a Model](#optional-batch-model-deployment)
-   * Create Batch Deployment
-   * Create and Schedule a Job
+2. [(Optional) Integrate Model to an External Application](#optional-integrate-model-to-python-flask-application)
 
-3. [(Optional) Integrate Model to an External Application](#optional-integrate-model-to-python-flask-application)
-
-4. [(Optional) Update Model Deployment](#optional-update-online-model-deployment)
+3. [(Optional) Update Model Deployment](#optional-update-online-model-deployment)
 
 > **Note:** The lab instructions below assume you have completed the pre-work section already, if not, be sure to complete the pre-work first to create a project and a deployment space.
 
@@ -138,6 +134,7 @@ curl -k -X POST --header 'Content-Type: application/json' --header 'Accept: appl
 
 * A json string will be returned with the response, including a  prediction from the model (i.e a "Risk" or "No Risk" at the end indicating the prediction of this loan representing risk).
 
+<!-- 
 ## (Optional) Batch Model Deployment
 
 Another approach to expose the model to be consumed by other users/applications is to create a batch deployment. This type of deployment will make an instance of the model available to make predictions against data assets or groups of records. The model prediction requests are scheduled as jobs, which are executed asynchronously. For the lab, we will break this into two steps: 
@@ -197,7 +194,7 @@ With the notebook open, spend a minute looking through the sections of the noteb
 
 
 > **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve resources! You can do this by going to the Asset page of the project, selecting the three vertical dots under the Action column for the notebook you have been running and selecting to `Stop Kernel` from the Actions menu. If you see a lock icon on the notebook, click it to unlock the notebook before you click the Actions so you can see the stop kernel option.*
-> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png)
+> ![Stop kernel](../.gitbook/assets/images/ml/stop-notebook-kernel.png) -->
 
 ## (Optional) Integrate Model to Python Flask Application
 
@@ -205,6 +202,14 @@ You can also access the online model deployment directly through the REST API. T
 
 > **IMPORTANT: This SAMPLE application only runs on python 3.6 and above, so the instructions here are for python 3.6+ only. You will need to have Python 3.6 or later already installed on your machine**
 > *Note: The instructions below assume you have completed the pre-work module and thus have the Git repository already on your machine (cloned or downloaded).*
+
+### Download the frontend application
+
+In order to follow along with this section, use one of the following links to get a copy of the front end application that is used in this lab.
+
+Use the `[Download]` link to get the file. If the link isn't working for you, try clicking the `[Mirror]` to get it from out backup servers.
+
+- Python Application [[Download]](http://ibm.biz/ddc-cp4daas-python-app) | [[Mirror]](http://ibm.biz/ddc-cp4daas-python-app-mirror)
 
 ### Install Dependencies
 
