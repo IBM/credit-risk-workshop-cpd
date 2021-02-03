@@ -18,17 +18,17 @@ The submodule contains the following steps:
 
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
-![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> Projects](../images/navigation/menu-projects.png)
 
 * From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
 * Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `openscale-fairness-explainability` notebook.
 
-![Notebook Open](../.gitbook/assets/images/openscale-config/openscale-config-explainability-notebook.png)
+![Notebook Open](../images/openscale-config/openscale-config-explainability-notebook.png)
 
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
-![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
+![Notebook loaded](../images/openscale/openscale-fullconfignotebook-loaded.png)
 
 ## 2. Run the Notebook
 
@@ -58,19 +58,19 @@ We've enabled the monitors for Fairness and Explainability, now let's explore th
 
 * In the same browser \(but a separate tab\), open the `Services` tab by clicking the `Services` icon on the top right.
 
-![Service](../.gitbook/assets/images/navigation/services.png)
+![Service](../images/navigation/services.png)
 
 * Find and click on the `Watson OpenScale` tile.
 
-![Openscale Tile](../.gitbook/assets/images/openscale/services-wos-tile.png)
+![Openscale Tile](../images/openscale/services-wos-tile.png)
 
 * Launch the OpenScale UI tooling by clicking on the *`Launch`* button
 
-![Openscale Launch](../.gitbook/assets/images/openscale/services-wos-launch.png)
+![Openscale Launch](../images/openscale/services-wos-launch.png)
 
 * When the dashboard loads, _**Click**_ on the _**'Model Monitors'**_  tab and you will see the deployment you configured in the jupyter notebook when you ran it in the previous section. Click on the `Fairness` section of the tile to bring up the *Fairness monitor*.
 
-![Explore OpenScale Model monitors](../.gitbook/assets/images/openscale-config/openscale-config-explore-model-monitors.png)
+![Explore OpenScale Model monitors](../images/openscale-config/openscale-config-explore-model-monitors.png)
 
   > *Note: Do not worry if the name you see does not match exactly with the screenshot. The deployment name you see will correspond to the variable used in the Jupyter notebook.*
 
@@ -80,43 +80,43 @@ We've enabled the monitors for Fairness and Explainability, now let's explore th
 
 * Look for a time slot that shows bias (i.e. below the red threshold line). The monitor only runs once per hour, so there may only be one teal colored "dot" representing a single run when you first visit the graph. Click on it for more details:
 
-![Fairness monitor click for details](../.gitbook/assets/images/openscale-config/openscale-config-fairness-graph.png)
+![Fairness monitor click for details](../images/openscale-config/openscale-config-fairness-graph.png)
 
 * For a given time slot, we will see a comparison between the 2 groups, in this case, female and male. A bar chart presents information for percent of favorable vs. unfavorable outcomes.
 
 * We can choose our *Data set* from a series of radio buttons, whether *Payload + Perturbed*, *Payload*, *Training*, or *Debiased*. The *Monitored features* can be toggled, and we can change the *Date and time*. Click on the various radio buttons, toggle the monitored features, and change the time to see how the tool works:
 
-![Fairness transactions](../.gitbook/assets/images/openscale-config/openscale-config-bias-female.png)
+![Fairness transactions](../images/openscale-config/openscale-config-bias-female.png)
 
 * Now back to our biased time slot, click on *Debiased* Data Set and *Sex* and view how the use of the Debiased endpoint has made our scoring more fair:
 
-![Debiased Data Set](../.gitbook/assets/images/openscale-config/openscale-config-debiased-female-endpoint.png)
+![Debiased Data Set](../images/openscale-config/openscale-config-debiased-female-endpoint.png)
 
 * Click on the `View Debiased Endpoint` button. Here you can see some *Debiased Endpoint Code Snippet* examples, showing *cURL*, *Java*, and *Python* code that can utilize the endpoint for debiased transactions, enabling a developer to get a machine learning model score that prevents the biased outcome. (You may need to change the *'Code language'* drop down list to see code snippets in different languages):
 
-![Debiased Endpoint code examples](../.gitbook/assets/images/openscale-config/openscale-config-debiased-endpoint-python.png)
+![Debiased Endpoint code examples](../images/openscale-config/openscale-config-debiased-endpoint-python.png)
 
 * Click the `Back` button on your browser to go back to the Transactions details for the Fairness monitor page.
 
 * Click on the `View Transactions` button. We can see the various transactions that took place during this time slot, as well as some aggregate information around "Risk" and "No Risk" for both the Current model and the Debiased model. We can click on `Explain` for one of the transactions for more detailed information (HINT: A "Risk" transaction might be more interesting):
 
-![Explain transaction](../.gitbook/assets/images/openscale-config/openscale-config-view-biased.png)
+![Explain transaction](../images/openscale-config/openscale-config-view-biased.png)
 
   > *Note that the explanation of a transaction requires that 1000's of scoring transactions take place using slightly perturbed data for each of the features. This can take several seconds, or even minutes. Future use of this individual transaction will be cached, so the network latency and overhead from performing the scoring will not be a factor.*
 
 * There is a lot of information available for a single transaction:
 
-![Explain a transaction](../.gitbook/assets/images/openscale-config/openscale-config-explain-transaction.png)
+![Explain a transaction](../images/openscale-config/openscale-config-explain-transaction.png)
 
 * Click the "i" information icons next to *Minimum changes for another outcome* and *Maximum changes allowed for the same outcome* to help understand the use of the *Pertinent Negative* and *Pertinent Positive*:
 
 * You can see information about the *Pertinent Negative*, for example, that shows what the minimum changes would need to be to cause a different outcome, i.e from *Risk* to *No Risk*, or changing *No Risk* to *Risk*. In my example shown, you can see that this is not always calculated:
 
-![Pertinent Negative explanation](../.gitbook/assets/images/openscale-config/openscale-config-pertinent-negative.png)
+![Pertinent Negative explanation](../images/openscale-config/openscale-config-pertinent-negative.png)
 
 * Scroll down and you can see that the *Most important factors influencing prediction* are highlighted, and below is a complet breakdown of all features, with the percent of influence for the score of either *Risk* or *No Risk*:
 
-![Explainability important factors](../.gitbook/assets/images/openscale-config/openscale-config-explainability-breakdown.png)
+![Explainability important factors](../images/openscale-config/openscale-config-explainability-breakdown.png)
 
 * (Optional) If you saved the transaction_id that you copied after running cell *5.5* in the notebook, you can past it into the search bar and press enter:
 
@@ -128,11 +128,11 @@ We've enabled the monitors for Fairness and Explainability, now let's explore th
 
 * Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
 
-![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+![Back to project](../images/ml/navigate-to-project.png)
 
 * Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
 
-![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+![Stop environment](../images/ml/stop-notebook-environment.png)
 
 * Click the `Stop` button on the subsequent pop up window.
 
