@@ -16,17 +16,17 @@ The submodule contains the following steps:
 
 * Go the (☰) navigation menu and click on the *Projects* link and then click on your analytics project.
 
-![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> Projects](../images/navigation/menu-projects.png)
 
 * From your *Project* overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
 * Scroll down to the `Notebooks` section of the page and *Click* on the pencil icon at the right of the `openscale-historic-data` notebook.
 
-![Project from zip assets tab](../.gitbook/assets/images/openscale-config/openscale-config-historic-notebook.png)
+![Project from zip assets tab](../images/openscale-config/openscale-config-historic-notebook.png)
 
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
-![Notebook loaded](../.gitbook/assets/images/openscale/openscale-fullconfignotebook-loaded.png)
+![Notebook loaded](../images/openscale/openscale-fullconfignotebook-loaded.png)
 
 ## 2. Run the Notebook
 
@@ -60,11 +60,11 @@ Now that we've simulated a Machine Learning deployment in production, we can loo
 
 * Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
 
-![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+![Back to project](../images/ml/navigate-to-project.png)
 
 * Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
 
-![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+![Stop environment](../images/ml/stop-notebook-environment.png)
 
 * Click the `Stop` button on the subsequent pop up window.
 

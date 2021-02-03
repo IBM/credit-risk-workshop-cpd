@@ -1,0 +1,122 @@
+# Project information
+site_name: Cloud Pak for Data Credit Risk Workshop
+site_url: https://ibm.github.io/credit-risk-workshop-cpd
+site_author: IBM Developer
+
+# Repository
+repo_name: credit-risk-workshop-cpd
+repo_url: https://github.com/ibm/credit-risk-workshop-cpd
+edit_uri: edit/master/workshop
+docs_dir: workshop
+
+# Navigation
+nav:
+  - Welcome:
+    - About the workshop: README.md
+  - Workshop:
+    - Pre-work: pre-work/README.md
+    - Git integration (using GitLab): gitIntegration/README.md
+    - Data Connection and Virtualization: data-connection-and-virtualization/README.md
+    - Import Data to Project: addData/README.md
+    - Data Visualization with Data Refinery: data-visualization-and-refinery/README.md
+    - Enterprise data governance for Viewers using Watson Knowledge Catalog: watson-knowledge-catalog-user/README.md
+    - Enterprise data governance for Admins using Watson Knowledge Catalog: watson-knowledge-catalog-admin/README.md
+    - Machine Learning with Jupyter: machine-learning-in-jupyter-notebook/README.md
+    - Machine Learning with AutoAI: machine-learning-autoai/README.md
+    - Deploy and Test Machine Learning Models: machine-learning-deployment-scoring/README.md
+    - Monitoring models with OpenScale GUI (Fastpath Monitoring): openscale-fastpath/README.md
+    - Monitoring models with OpenScale GUI (Manual Config):
+      - OpenScale Manual Config Part 1: openscale-manual-config/README.md
+      - OpenScale Manual Config Part 2: openscale-manual-config/FAIRNESS-EXPLAINABILITY-README.md
+      - OpenScale Manual Config Part 3: openscale-manual-config/QUALITY-FEEDBACK-README.md
+      - OpenScale Manual Config Part 4: openscale-manual-config/DRIFT-README.md
+      - OpenScale Manual Config Part 5: openscale-manual-config/HISTORIC-DATA-README.md
+    - Monitoring models with OpenScale (Notebook): openscale-notebook/README.md
+  - Workshop Resources:
+    - FAQs / Tips: faq/README.md
+    - Resources:
+      - IBM Cloud Pak for Data - Information and Trial: https://www.ibm.com/products/cloud-pak-for-data
+      - IBM Cloud Pak for Data - Knowledge Center: https://www.ibm.com/support/knowledgecenter/SSQNUZ
+      - IBM Cloud Pak for Data - Platform API: https://cloud.ibm.com/apidocs/cloud-pak-data
+      - IBM Cloud Pak for Data - Community: https://community.ibm.com/community/user/cloudpakfordata/home
+      - Watson Knowledge Catalog: https://www.ibm.com/cloud/watson-knowledge-catalog
+      - Watson Knowledge Catalog Learning Center: https://developer.ibm.com/clouddataservices/docs/data-catalog/get-started
+      - IBM Developer: https://developer.ibm.com
+      - IBM Developer - Cloud Pak for Data: https://developer.ibm.com/components/cloud-pak-for-data
+      - IBM Garage Architecture - Data: https://www.ibm.com/cloud/architecture/architectures/dataArchitecture
+
+## DO NOT CHANGE BELOW THIS LINE
+
+# Copyright
+copyright: Copyright &copy; 2021 IBM Developer
+
+# Theme
+theme:
+  name: material
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  icon:
+    logo: material/library
+  features:
+    - navigation.tabs
+    #- navigation.instant
+  palette:
+    scheme: default
+    primary: blue
+    accent: blue
+
+# Plugins
+plugins:
+  - search
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ibm
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ibmdeveloper
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/ibm/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/user/developerworks
+    - icon: fontawesome/brands/dev
+      link: https://dev.to/ibmdeveloper
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

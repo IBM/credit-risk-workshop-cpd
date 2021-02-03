@@ -6,11 +6,11 @@ For Cloud Pak for Data to access our data sources (Db2 Warehouse, MongoDB, etd),
 
 * To add a new data source, go to the (☰) menu and click on the *Connections* option.
 
-  ![(☰) Menu -> Collections](../workshop/.gitbook/assets/images/connections/conn-menu.png)
+  ![(☰) Menu -> Collections](../workshop/images/connections/conn-menu.png)
 
 * At the overview, click *Add connection*.
 
-  ![Overview page](../workshop/.gitbook/assets/images/connections/conn-overview-empty.png)
+  ![Overview page](../workshop/images/connections/conn-overview-empty.png)
 
 * Start by giving your new *Connection* a name and select *Db2 Warehouse on Cloud* as your connection type. More fields should apper. Fill the new fields with the same credentials for your own Db2 Warehouse connection from the previous section .
 
@@ -18,24 +18,24 @@ For Cloud Pak for Data to access our data sources (Db2 Warehouse, MongoDB, etd),
 
 * Click `Test Connection` and, after that succeeds, click `Add`.
 
-  ![Add a Db2 Warehouse on Cloud connection](../workshop/.gitbook/assets/images/connections/conn-details.png)
+  ![Add a Db2 Warehouse on Cloud connection](../workshop/images/connections/conn-details.png)
 
 * The new connection will be listed in the overview.
 
-  ![Connection has been added!](../workshop/.gitbook/assets/images/connections/conn-overview-db2.png)
+  ![Connection has been added!](../workshop/images/connections/conn-overview-db2.png)
 
 ### Add MongoDB Connection
 
 * To add a new data source, go to the (☰) menu and click on the *Connections* option.
 
-  ![(☰) Menu -> Collections](../workshop/.gitbook/assets/images/connections/conn-menu.png)
+  ![(☰) Menu -> Collections](../workshop/images/connections/conn-menu.png)
 
 * At the overview, click *Add connection*.
 
-  ![Overview page](../workshop/.gitbook/assets/images/connections/conn-overview-empty.png)
+  ![Overview page](../workshop/images/connections/conn-overview-empty.png)
 
 * Start by giving your new *Connection* a name and select *Mongo* as your connection type. More fields should apper. Fill the new fields with the credentials you saved for the MongoDB connection from the previous section.
 
-  ![Mongo Connection](../workshop/.gitbook/assets/images/connections/mongodb-connection.png)
+  ![Mongo Connection](../workshop/images/connections/mongodb-connection.png)
 
 * Click Save. The new connection will be listed in the overview.

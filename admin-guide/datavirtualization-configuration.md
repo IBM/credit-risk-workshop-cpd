@@ -10,27 +10,27 @@ If you are including the data virtualization module in the workshop, there are s
 
 * Go to the `Services` tab. Under `Data sources` choose the `Data Virtualization` tile. Click the 3 vertical dots and choose `Deploy`.
 
-  ![Deploy DV service](../workshop/.gitbook/assets/images/admin/dv-deploy-service.png)
+  ![Deploy DV service](../workshop/images/admin/dv-deploy-service.png)
 
 * Launch the data virtualization tool to start the configuration process. Go the (☰) navigation menu and click `Collect` -> `Data virtualization`.
 
-  ![(☰) Menu -> Collect -> Data Virtualization](../workshop/.gitbook/assets/images/navigation/dv-menu.png)
+  ![(☰) Menu -> Collect -> Data Virtualization](../workshop/images/navigation/dv-menu.png)
 
 * In the 'Configure service' -> 'Start' page, enable the checkbox for automatic semaphore configuration and click the *`Next`* button.
 
-  ![Configure DV start](../workshop/.gitbook/assets/images/admin/dv-configure-start.png)
+  ![Configure DV start](../workshop/images/admin/dv-configure-start.png)
 
 * In the 'Configure service' -> 'Nodes' page, leave the default single node and resource allocation and click the *`Next`* button.
 
-  ![Configure DV nodes](../workshop/.gitbook/assets/images/admin/dv-configure-nodes.png)
+  ![Configure DV nodes](../workshop/images/admin/dv-configure-nodes.png)
 
 * In the 'Configure service' -> 'Storage' page, you must choose *ibmc-file-gold-gid* as the storage class for both persistent and cache storage. Then click the *`Next`* button.
 
-  ![Configure DV storage](../workshop/.gitbook/assets/images/admin/dv-configure-storage.png)
+  ![Configure DV storage](../workshop/images/admin/dv-configure-storage.png)
 
 * In the 'Configure service' -> 'Summary' page, click the *`Configure`* button.
 
-  ![Configure DV summary](../workshop/.gitbook/assets/images/admin/dv-configure-summary.png)
+  ![Configure DV summary](../workshop/images/admin/dv-configure-summary.png)
 
 * The configuration process may take a while to complete.
 
@@ -40,19 +40,19 @@ We need to add the CP4D user accounts to Data Virtualization, so attendees will 
 
 * Launch the data virtualization tool to start the configuration process. Go the (☰) navigation menu and click `Collect` -> `Data virtualization`.
 
-  ![(☰) Menu -> Collect -> Data Virtualization](../workshop/.gitbook/assets/images/navigation/dv-menu.png)
+  ![(☰) Menu -> Collect -> Data Virtualization](../workshop/images/navigation/dv-menu.png)
 
 * From the Data Virtualization sub-menu, Click on *User management* from the drop down list.
 
-  ![Manage users in Data Virtualization](../workshop/.gitbook/assets/images/admin/dv-manage-users.png)
+  ![Manage users in Data Virtualization](../workshop/images/admin/dv-manage-users.png)
 
 * Click on the *`Add user`* button.
 
-  ![Add users in Data Virtualization](../workshop/.gitbook/assets/images/admin/dv-add-users.png)
+  ![Add users in Data Virtualization](../workshop/images/admin/dv-add-users.png)
 
 * Click the checkbox next to the user records that need to be added (the accounts that will run the data virtualization lab) and ensure all users have the *Engineer* role. Then click the *`Add`* button.
 
-  ![Manage users in Data Virtualization](../workshop/.gitbook/assets/images/admin/dv-engineer-role.png)
+  ![Manage users in Data Virtualization](../workshop/images/admin/dv-engineer-role.png)
 
 ## Add Connection to DV
 
@@ -60,17 +60,17 @@ With the data connections created in a previous section of the admin guide, we n
 
 * Launch the data virtualization tool to start the configuration process. Go the (☰) navigation menu and click `Collect` -> `Data virtualization`.
 
-  ![(☰) Menu -> Collect -> Data Virtualization](../workshop/.gitbook/assets/images/navigation/dv-menu.png)
+  ![(☰) Menu -> Collect -> Data Virtualization](../workshop/images/navigation/dv-menu.png)
 
 * From the Data Virtualization sub-menu, Click on *Data Sources* from the drop down list.
 
 * Click the *`Add new data source`* button on the top right and select the 'From existing connections' option.
 
-  ![Add data sources](../workshop/.gitbook/assets/images/admin/dv-add-data-source.png)
+  ![Add data sources](../workshop/images/admin/dv-add-data-source.png)
 
 * Select the data source we made in the previous section of the admin guide, and click the *`Next`* button.
 
-  ![Add the Db2 Warehouse connection](../workshop/.gitbook/assets/images/admin/dv-select-data-source.png)
+  ![Add the Db2 Warehouse connection](../workshop/images/admin/dv-select-data-source.png)
 
 * The new connection will be listed as a data source for data virtualization.
 
@@ -84,11 +84,11 @@ In this section, we will run through the data virtualization portion of the work
 
   * When you virtualize the tables in the lab, enter `INSTRUCTOR` as the schema instead of accepting the default schema name (i.e USERXXXX).
 
-    ![Add virtualized data to your project](../workshop/.gitbook/assets/images/dv/dv-virtualize-assign.png)
+    ![Add virtualized data to your project](../workshop/images/dv/dv-virtualize-assign.png)
 
   * When you are joining virtual objects, specify `INSTRUCTOR` as the schema instead of accepting the default schema name (i.e USERXXXX).
 
-    ![Review the proposed joined table](../workshop/.gitbook/assets/images/dv/dv-join-assign-review.png)
+    ![Review the proposed joined table](../workshop/images/dv/dv-join-assign-review.png)
 
 ### Grant Access to all Users
 
@@ -98,7 +98,7 @@ In order for all workshop participants to have access to the data that you just 
 
 * Click on the virtualized data you've created, then click the 3 horizontal dots `...` to the right of one, and choose `Manage access`:
 
-  ![Manage access to virtualized data](../workshop/.gitbook/assets/images/dv/dv-manage-access-menu.png)
+  ![Manage access to virtualized data](../workshop/images/dv/dv-manage-access-menu.png)
 
 * Click the `All data virtualization users` radio button and then the `Continue` button in the dialog window.
 

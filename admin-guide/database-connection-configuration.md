@@ -6,11 +6,11 @@ For Cloud Pak for Data to access our data sources (Db2 Warehouse, MongoDB, etd),
 
 * To add a new data source, go to the (☰) navigation menu and click on the *Connections* option.
 
-  ![(☰) Menu -> Collections](../workshop/.gitbook/assets/images/navigation/menu-connections.png)
+  ![(☰) Menu -> Collections](../workshop/images/navigation/menu-connections.png)
 
 * At the overview, click the *`New connection`* button.
 
-  ![Overview page](../workshop/.gitbook/assets/images/connections/conn-new-connection.png)
+  ![Overview page](../workshop/images/connections/conn-new-connection.png)
 
 * Start by giving your new *Connection* a name and select *Db2 Warehouse on Cloud* as your connection type. More fields should apper.
 
@@ -20,7 +20,7 @@ For Cloud Pak for Data to access our data sources (Db2 Warehouse, MongoDB, etd),
 
 * Once you have entered all the conneciton information, you must first click the `Test Connection` button and after that succeeds, click on the *`Save`* button.
 
-  ![Add a Db2 Warehouse on Cloud connection](../workshop/.gitbook/assets/images/connections/conn-details.png)
+  ![Add a Db2 Warehouse on Cloud connection](../workshop/images/connections/conn-details.png)
 
 * The new connection will be listed in the overview.
 
