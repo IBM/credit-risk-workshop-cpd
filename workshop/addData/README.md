@@ -14,25 +14,25 @@ For this section we'll explore the data that is available from the virtualized v
 
 * From the upper-left (☰) navigation menu, click on *`Collect`* -> *`Data virtualization`*.
 
-![(☰) Menu -> Collect -> Data Virtualization](../.gitbook/assets/images/navigation/dv-menu.png)
+![(☰) Menu -> Collect -> Data Virtualization](../images/navigation/dv-menu.png)
 
 * Click on the `My virtualized data` option from the data virtualization sub-menu. Here you should see the data you have virtualized or that you have been given access to (or that the administrator has assigned to you).
 
-![(My virtualized data](../.gitbook/assets/images/dv/dv-menu-myvirtualizeddata.png)
+![(My virtualized data](../images/dv/dv-menu-myvirtualizeddata.png)
 
 * Select the checkbox next to the data sets you want to use in your project and click the *`Assign`* button to start importing it to your project.
 
 > _Note: The name of the data assets to select may vary based on names chosen during data virtualization. The default names to select are: LOANS, APPLICANTFINANCIALDATA, APPLICANTPERSONALDATA, APPLICANTFINANCIALPERSONALDATA AND APPLICANTFINANCIALPERSONALLOANDATA_
 
-![Select the data you want to import](../.gitbook/assets/images/dv/adddata-select-data-assign.png)
+![Select the data you want to import](../images/dv/adddata-select-data-assign.png)
 
 * In the 'Assign virtual objects' screen, choose your analytics project from the drop down list. If there is a `Submit to catalog` checkbox on the top right, unselect it and, finally, click the *`Assign`* button to add the data to your project.
 
-![Assign the data to a project](../.gitbook/assets/images/dv/adddata-assign-to-project.png)
+![Assign the data to a project](../images/dv/adddata-assign-to-project.png)
 
 * In the pop up panel, you will receive a confirmation that the objects have been assigned to your project. Click the *`Go to project`* button.
 
-![Data assigned to a project](../.gitbook/assets/images/dv/adddata-objects-assigned-confirmation.png)
+![Data assigned to a project](../images/dv/adddata-objects-assigned-confirmation.png)
 
 * In the project page, clicking on the `Assets` tab will show the virtualized tables and joined tables that are now in your project (along with other assets that are in the project).
 

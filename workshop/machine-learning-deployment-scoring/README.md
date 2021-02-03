@@ -27,7 +27,7 @@ After a model has been created and saved / promoted to our deployment space, we 
 
 * Navigate to the left-hand (☰) hamburger menu and choose `Analyze` -> `Analytics deployments`:
 
-![Analytics Analyze deployments](../.gitbook/assets/images/navigation/menu-analytics-deployments.png)
+![Analytics Analyze deployments](../images/navigation/menu-analytics-deployments.png)
 
 * Choose the deployment space you setup previously by clicking on the name of your space.
 
@@ -35,15 +35,15 @@ After a model has been created and saved / promoted to our deployment space, we 
 
 > Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.3` runtime.
 
-![Actions Deploy model](../.gitbook/assets/images/deployment/deploy-spark-model.png)
+![Actions Deploy model](../images/deployment/deploy-spark-model.png)
 
 * On the 'Create a deployment' screen, choose `Online` for the `Deployment Type`, give the Deployment a name and optional description and click the *`Create`* button.
 
-![Online Deployment Create](../.gitbook/assets/images/deployment/deploy-online-deployment.png)
+![Online Deployment Create](../images/deployment/deploy-online-deployment.png)
 
 * The Deployment will show as `In progress` and then switch to `Deployed` when done.
 
-![Status Deployed](../.gitbook/assets/images/deployment/deploy-status-deployed.png)
+![Status Deployed](../images/deployment/deploy-status-deployed.png)
 
 ### Test Online Model Deployment
 
@@ -53,7 +53,7 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 
 * To get to the built-in test tool, click on the `Test` tab and then click on the *`Provide input data as JSON`* icon.
 
-![Test deployment with JSON](../.gitbook/assets/images/deployment/deploy-model-test-page.png)
+![Test deployment with JSON](../images/deployment/deploy-model-test-page.png)
 
 * Copy and paste the following data objects into the `Body` panel.
 
@@ -74,10 +74,10 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 
 * Click the *`Predict`* button. The model will be called with the input data and the results will display in the *Result* window. Scroll down to the bottom of the result to see the prediction (i.e "Risk" or "No Risk"):
 
-![Testing the deployed model](../.gitbook/assets/images/deployment/deploy-test-model-prediction.png)
+![Testing the deployed model](../images/deployment/deploy-test-model-prediction.png)
 
 > *Note: For some deployed models (for example AutoAI based models), you can provide the request payload using a generated form by clicking on the `Provide input using form` icon and providing values for the input fields of the form. If the form is not available for the model you deployed, the icon will remain grayed out.*
-> ![Input to the fields](../.gitbook/assets/images/deployment/deploy-test-input-form.png)
+> ![Input to the fields](../images/deployment/deploy-test-input-form.png)
 
 ### (Optional) Test Online Model Deployment using cURL
 
@@ -105,7 +105,7 @@ export WML_AUTH_TOKEN=<value-of-access-token>
 
 * Back on the model deployment page, gather the `URL` to invoke the deployed model from the *API reference* by copying the `Endpoint`.
 
-![Model Deployment Endpoint](../.gitbook/assets/images/deployment/deploy-model-endpoint.png)
+![Model Deployment Endpoint](../images/deployment/deploy-model-endpoint.png)
 
 * Now save that endpoint to a variable named `URL` in your terminal by exporting it.
 
@@ -132,7 +132,7 @@ Lets start by creating the deployment:
 
 * Navigate to the left-hand (☰) hamburger menu and choose `Analyze` -> `Analytics deployments`:
 
-![Analytics Analyze deployments](../.gitbook/assets/images/navigation/menu-analytics-deployments.png)
+![Analytics Analyze deployments](../images/navigation/menu-analytics-deployments.png)
 
 * Choose the deployment space you created previously by clicking on the name of the space.
 
@@ -140,15 +140,15 @@ Lets start by creating the deployment:
 
 > Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.3` runtime.
 
-![Actions Deploy model](../.gitbook/assets/images/deployment/deploy-spark-model.png)
+![Actions Deploy model](../images/deployment/deploy-spark-model.png)
 
 * On the 'Create a deployment' screen: choose `Batch` for the `Deployment Type`, give the deployment a name and optional description. From the 'Hardware definition' drop down, select the smallest option (`1 standard CPU, 4GB RAM` in this case though for large or frequent batch jobs, you might choose to scale the hardware up). Click the *`Create`* button.
 
-![Batch Deployment Create](../.gitbook/assets/images/deployment/deploy-batch-deployment.png)
+![Batch Deployment Create](../images/deployment/deploy-batch-deployment.png)
 
 * Once the status shows as `Deployed` you will be able to start submitting jobs to the deployment.
 
-![Status Deployed](../.gitbook/assets/images/deployment/deploy-batch_dep_status.png)
+![Status Deployed](../images/deployment/deploy-batch_dep_status.png)
 
 ### Create and Schedule a Job
 
@@ -162,13 +162,13 @@ The Jupyter notebook is already included as an asset in the project you imported
 
 * Go the (☰) navigation menu and click on the `Projects` link and then click on your analytics project.
 
-![(☰) Menu -> Projects](../.gitbook/assets/images/navigation/menu-projects.png)
+![(☰) Menu -> Projects](../images/navigation/menu-projects.png)
 
 * From the project overview page, click on the `Assets` tab to open the assets page where your project assets are stored and organized.
 
 * Scroll down to the `Notebooks` section of the page and click on the pencil icon at the right of the `machinelearning-creditrisk-batchscoring` notebook.
 
-![Notebook Open](../.gitbook/assets/images/deployment/deploy_batch_open_nb.png)
+![Notebook Open](../images/deployment/deploy_batch_open_nb.png)
 
 * When the Jupyter notebook is loaded and the kernel is ready, we will be ready to start executing it in the next section.
 
@@ -180,7 +180,7 @@ With the notebook open, spend a minute looking through the sections of the noteb
 
 * Section `1.0 Install required packages` will install some of the libraries we are going to use in the notebook (many libraries come pre-installed on Cloud Pak for Data). Note that we upgrade the installed version of Watson Machine Learning Python Client. Ensure the output of the first code cell is that the python packages were successfully installed.
 
-![NB Section 1 Complete](../.gitbook/assets/images/deployment/deploy-batchnb-packageinstall.png)
+![NB Section 1 Complete](../images/deployment/deploy-batchnb-packageinstall.png)
 
 * Section `2.0 Create Batch Deployment Job` will create a job for the batch deployment. To do that, we will use the Watson Machine Learning client to get our deployment and create a job.
 
@@ -193,15 +193,15 @@ With the notebook open, spend a minute looking through the sections of the noteb
 
   * In section 2.3, be sure to update the `DEPLOYMENT_NAME` variable with the name of the batch deployment you created previously (copy and past the name which is within the output of the previous code cell).
 
-![NB Section 2 Complete](../.gitbook/assets/images/deployment/deploy-batchnb-dsname-set.png)
+![NB Section 2 Complete](../images/deployment/deploy-batchnb-dsname-set.png)
 
-![NB Section 2 Complete](../.gitbook/assets/images/deployment/deploy-batchnb-depname-set.png)
+![NB Section 2 Complete](../images/deployment/deploy-batchnb-depname-set.png)
 
 * Continue to run the rest of the cells in section 2 which will load the batch input data set and create the job. The last code cell in section 2 will show that the job is in a queued state.
 
 * Section `3.0 Monitor Batch Job Status` will start polling the job status until it completes or fails. The code cell will output the status every 5 seconds as the job goes from queued to running to completed or failed.
 
-![Batch Job Status](../.gitbook/assets/images/deployment/deploy_batch_results_poll.png)
+![Batch Job Status](../images/deployment/deploy_batch_results_poll.png)
 
 * Once the job completes, continue to run the cells until the end of the notebook.
 
@@ -211,11 +211,11 @@ With the notebook open, spend a minute looking through the sections of the noteb
 
 * Navigate back to your project information page by clicking on your project name from the navigation drill down on the top left of the page.
 
-![Back to project](../.gitbook/assets/images/ml/navigate-to-project.png)
+![Back to project](../images/ml/navigate-to-project.png)
 
 * Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
 
-![Stop environment](../.gitbook/assets/images/ml/stop-notebook-environment.png)
+![Stop environment](../images/ml/stop-notebook-environment.png)
 
 * Click the `Stop` button on the subsequent pop up window.
 
@@ -306,7 +306,7 @@ It's best practice to store configurable information as environment variables, i
 
 * Either use the default values pre-filled in the input form, or modify the value and then click the `Submit` button. The python application will invoke the predictive model and a risk prediction & probability is returned:
 
-![Get the risk percentage as a result](../.gitbook/assets/images/deployment/flaskapp-output.png)
+![Get the risk percentage as a result](../images/deployment/flaskapp-output.png)
 
 ## Conclusion
 
