@@ -209,7 +209,7 @@ In order to follow along with this section, use one of the following links to ge
 
 Use the `[Download]` link to get the file. If the link isn't working for you, try clicking the `[Mirror]` to get it from out backup servers.
 
-- Python Application [[Download]](http://ibm.biz/ddc-cp4daas-python-app) | [[Mirror]](http://ibm.biz/ddc-cp4daas-python-app-mirror)
+- Python Application [[Download]](http://ibm.biz/ddc-fs-cp4daas-python-app) | [[Mirror]](http://ibm.biz/ddc-fs-cp4daas-python-app-mirror)
 
 ### Install Dependencies
 
@@ -258,21 +258,20 @@ It's best practice to store configurable information as environment variables, i
 * Here's an example of a completed lines of the .env file.
 
   ```bash
-  # Required: Provide your web service URL for scoring.
+  # 1. Required: Provide your web service URL for scoring.
   # E.g., MODEL_URL=https://<cluster_url>/v4/deployments/<deployment_space_guid>/predictions
-  MODEL_URL=https://cp4d.cp4dworkshops.com/v4/deployments/5f939979-14c2-4538-a2af-a970aeb59abd/predictions
+  MODEL_URL=https://us-south.ml.cloud.ibm.com/ml/v4/deployments/35e4cadc-1024-4102-b782-958ab5c68fc7/predictions?version=2021-02-03
 
-  # Required: Please fill in EITHER section A OR B below:
 
-  # #### A: Authentication using username and password
-  #   Fill in the authntication url, your CloudPak4Data username, and CloudPak4Data password.
+  # 2. Required: fill in EITHER section A OR B below:
+
+  # ### A: Authentication using API_TOKEN
+  #   Fill in your API Token. You don't need to update the TOKEN_REQUEST_URL
   #   Example:
-  #     AUTH_URL=<cluster_url>/v1/preauth/validateAuth
-  #     AUTH_USERNAME=my_username
-  #     AUTH_PASSWORD=super_complex_password
-  AUTH_URL=https://cp4d.cp4dworkshops.com/v1/preauth/validateAuth
-  AUTH_USERNAME=username_001
-  AUTH_PASSWORD=my_secure_password_!
+  #     TOKEN_REQUEST_URL=https://iam.ng.bluemix.net/identity/token
+  #     API_TOKEN=<Your API Key>
+  TOKEN_REQUEST_URL=https://iam.ng.bluemix.net/identity/token
+  API_TOKEN=_EbKb6tQWS_e7abzP2-DjWx46dMGt59-XJwE9karbWwT
   ```
 
 ### Start Application
@@ -283,7 +282,7 @@ It's best practice to store configurable information as environment variables, i
   python creditriskapp.py
   ```
 
-* Use your browser to go to [http://0.0.0.0:5000](http://0.0.0.0:5000) and try it out.
+* Use your browser to go to [http://localhost:5000](http://localhost:5000) and try it out.
 
   > **TIP**: Use `ctrl`+`c` to stop the Flask server when you are done.
 

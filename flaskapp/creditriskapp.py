@@ -186,6 +186,10 @@ class riskForm():
             result_vals = result_json['predictions'][0]['values']
 
             result_dict = dict(zip(result_keys, result_vals[0]))
+            
+            #support for AutoAI
+            if "prediction" in result_dict.keys():
+                result_dict["predictedLabel"] = result_dict["prediction"]
 
             loan_risk = result_dict["predictedLabel"].lower()
             no_percent = result_dict["probability"][0] * 100
