@@ -246,7 +246,7 @@ It's best practice to store configurable information as environment variables, i
   cp env.sample .env
   ```
 
-* Edit `.env` to and fill in the `MODEL_URL` as well as the `AUTH_URL`, `AUTH_USERNAME`, and `AUTH_PASSWORD`.
+* Edit `.env` to and fill in the `MODEL_URL` as well as the `TOKEN_REQUEST_URL`, and `API_TOKEN`.
 
   * `MODEL_URL` is your web service URL for scoring which you got from the section above
   * `TOKEN_REQUEST_URL` is the URL for the identity management service where you can request your access tokens. This should not need to be changed
