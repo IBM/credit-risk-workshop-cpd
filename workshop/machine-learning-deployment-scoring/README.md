@@ -249,10 +249,9 @@ It's best practice to store configurable information as environment variables, i
 * Edit `.env` to and fill in the `MODEL_URL` as well as the `AUTH_URL`, `AUTH_USERNAME`, and `AUTH_PASSWORD`.
 
   * `MODEL_URL` is your web service URL for scoring which you got from the section above
-  * `AUTH_URL` is the preauth url of your CloudPak4Data and will look like this: `https://<cluster_url>/v1/preauth/validateAuth`
-  * `AUTH_USERNAME` is your username with which you login to the CloudPak4Data environment
-  * `AUTH_PASSWORD` is your password with which you login to the CloudPak4Data environment
-
+  * `TOKEN_REQUEST_URL` is the URL for the identity management service where you can request your access tokens. This should not need to be changed
+  * `API_TOKEN` is the API Key that we generated earlier to authenticate with IBM Cloud
+  
   >Note: Alternatively, you can fill in the `AUTH_TOKEN` instead of `AUTH_URL`, `AUTH_USERNAME`, and `AUTH_PASSWORD`. You will have generated this token in the section above. However, since tokens expire after a few hours and you would need to restart your app to update the token, this option is not suggested. Instead, if you use the username/password option, the app can generate a new token every time for you so it will always have a non-expired ones.
 
 * Here's an example of a completed lines of the .env file.
@@ -262,9 +261,7 @@ It's best practice to store configurable information as environment variables, i
   # E.g., MODEL_URL=https://<cluster_url>/v4/deployments/<deployment_space_guid>/predictions
   MODEL_URL=https://us-south.ml.cloud.ibm.com/ml/v4/deployments/35e4cadc-1024-4102-b782-958ab5c68fc7/predictions?version=2021-02-03
 
-
   # 2. Required: fill in EITHER section A OR B below:
-
   # ### A: Authentication using API_TOKEN
   #   Fill in your API Token. You don't need to update the TOKEN_REQUEST_URL
   #   Example:
