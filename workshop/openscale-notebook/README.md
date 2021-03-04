@@ -1,6 +1,6 @@
 # Configure OpenScale in a Jupyter Notebook
 
-There are several ways of configuring Watson OpenScale to monitor machine learning deployments, including the FastPath automatic configuration, using the GUI tool, a more manual configuration using the APIs, and some combintation of these. For this exercise we're going to configure our OpenScale service by running a Jupyter Notebook. This provides examples of using the OpenScale Python APIs programatically.
+There are several ways of configuring Watson OpenScale to monitor machine learning deployments, including the automatic configuration, using the GUI tool, a more manual configuration using the APIs, and some combintation of these. For this exercise we're going to configure our OpenScale service by running a Jupyter Notebook. This provides examples of using the OpenScale Python APIs programatically.
 
 This lab is comprised of the following steps:
 
