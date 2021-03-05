@@ -1,6 +1,6 @@
 # Admin Guide - Watson OpenScale Configuration
 
-For the Watson OpenScale modules in the workshop, we need to run through the fastpath configuration that will deploy the sample model, configure openscale to monitor that sample model, and load some historical data.
+For the Watson OpenScale modules in the workshop, we need to run through the auto setup configuration that will deploy the sample model, configure openscale to monitor that sample model, and load some historical data.
 
 * In the Cloud Pak for Data instance, click on the `Services` icon.
 
@@ -28,7 +28,7 @@ For the Watson OpenScale modules in the workshop, we need to run through the fas
 
 >*Note: If you used a DB2 Warehouse on Cloud, you will need to select the 'Use SSL' checkbox but dont need to provide a certificate.*
 
-* The fast path auto setup of a model will take some time to run.
+* The auto setup of a model will take some time to run.
 
   ![Openscale Auto Setup Running](../workshop/images/openscale/openscale-autosetup-running.png)
 
