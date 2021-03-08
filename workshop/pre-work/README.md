@@ -36,31 +36,31 @@ At this point of the workshop we will be using Cloud Pak for Data for the remain
 
 In Cloud Pak for Data, we use the concept of a project to collect / organize the resources used to achieve a particular goal (resources to build a solution to a problem). Your project resources can include data, collaborators, and analytic assets like notebooks and models, etc.
 
-* Go the (☰) navigation menu and click on the *Projects* link.
+* Go the (☰) navigation menu and under the *Projects* section click on *`All Projects`*.
 
 ![(☰) Menu -> Projects](../images/navigation/menu-projects.png)
 
-* Click on the *New project* button on the top right.
+* Click on the **`New project`** button on the top right.
 
 ![Start a new project](../images/prework/new-project.png)
 
-* Select the `Analytics project` radio button and click the **Next** button.
+* Select the `Analytics project` radio button and click the **`Next`** button.
 
 ![New analytics project](../images/prework/new-project-type.png)
 
-* We are going to create a project from an existing file (which contains the assets we will use throughout this workshop), as opposed to creating an empty project. Select the _*Create a project from a sample or file*_ option.
+* We are going to create a project from an existing file (which contains the assets we will use throughout this workshop), as opposed to creating an empty project. Select the *`Create a project from a sample or file`* option.
 
 ![Create project from file](../images/prework/new-project-from-file.png)
 
-* Click on the **browse** link and in the file browser popup, navigate to where you cloned or downloaded this repository in the previous section. From within that root directory, navigate to the `projects/` sub-directory and choose the `CreditRiskProject.zip` file. Then click the **open** button.
+* Click on the *`browse`* link and in the file browser popup, navigate to where you cloned or downloaded this repository in the previous section. From within that root directory, navigate to the `projects/` sub-directory and choose the `CreditRiskProject.zip` file. Then click the **`open`** button.
 
 ![Browse for project files](../images/prework/browse-project-zip.png)
 
-* Give the project a name and click the `Create` button.
+* Give the project a name and click the **`Create`** button.
 
 ![Project name](../images/prework/project-import-name.png)
 
-* From the project creation succesfully created pop up window, click on the *View new project* button.
+* From the project creation succesfully created pop up window, click on the **`View new project`** button.
 
 ![Import project success](../images/prework/project-import-success.png)
 
@@ -68,35 +68,40 @@ In Cloud Pak for Data, we use the concept of a project to collect / organize the
 
 Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and manage the deployment of a set of related deployable assets. These assets can be data files, machine learning models, etc.
 
-* Go the (☰) navigation menu and click `Analyze` -> `Analytics deployments`.
+* Go the (☰) navigation menu and click **`Deployments`**.
 
 ![(☰) Menu -> Analytics deployments](../images/navigation/menu-analytics-deployments.png)
 
-* Click on the `New deployment space` button.
+* Click on the **`New deployment space`** button.
 
 ![Add New deployment space](../images/prework/new-deployment-space.png)
 
-* We will create an empty deployment space, so click on the `Create an empty space` option.
+* We will create an empty deployment space, so click on the **`Create an empty space`** option.
 
 ![Create empty deployment space](../images/prework/new-deployment-space-empty.png)
 
-* Give your deployment space a unique name, optional description, then click the `Create` button.
+* Give your deployment space a unique name, optional description, then click the **`Create`** button.
 
 ![Deployment space name](../images/prework/deployment-space-name.png)
 
+* From the deployment space creation pop up window, click on the **`View new space`** button.
+
+![Import project success](../images/prework/depspace-create-success.png)
+
+
 * Next, we will add a collaborator to the new deployment space. Collaborators allow others to view/edit/manage the assets being deployed. In this workshop, we want the models we deploy to be visible and monitored in the OpenScale model monitoring lab.
 
-* Click on the `Access control` tab and then click on `Add collaborators` on the right.
+* Click on the `Access control` tab and then click on **`Add collaborators`** on the right.
 
 ![Deployment space access control](../images/prework/deployment-space-access-control.png)
 
-* Enter "admin" as a Collaborator input field and select the `Admin` user from the drop down list. Then click on the `Add to list` button.
+* Enter "admin" as a Collaborator input field and select the `Admin` user from the drop down list. Then click on the **`Add to list`** button.
 
 ![Deployment space collaborators](../images/prework/deployment-space-add-collaborator.png)
 
 > *NOTE: We are adding the user that configured the machine learning instance for OpenScale monitoring. In this case, the user is the admin user.*
 
-* Click the `Add` button to finish adding the collaborator. You should be brought back to the deployment space page and see your user ID along with the `Admin` user as collaborators for this space.
+* Click the **`Add`** button to finish adding the collaborator. You should be brought back to the deployment space page and see your user ID along with the `Admin` user as collaborators for this space.
 
 ## Conclusion
 
