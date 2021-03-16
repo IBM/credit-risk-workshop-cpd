@@ -43,7 +43,7 @@ In Cloud Pak for Data, we use the concept of a project to collect / organize the
 
 ![Create project from file](../images/prework/new-project-from-file.png)
 
-* Click on the *`browse`* link and in the file browser popup, navigate to where you downloaded the `CreditRiskProject.zip` file in the previous section. Then click the **`open`** button.
+* Click on the *`browse`* link and in the file browser pop-up, navigate to where you downloaded the `CreditRiskProject.zip` file in the previous section, then click the **`open`** button.
 
 ![Browse for project files](../images/prework/browse-project-zip.png)
 
