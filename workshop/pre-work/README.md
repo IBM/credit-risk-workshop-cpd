@@ -5,22 +5,13 @@ Before we get started, we will download some assets and complete some setup for 
 1. [Download or Clone the Repository](#1-download-or-clone-the-repository)
 1. [Create an Analytics Project and Deployment Space](#2-create-a-project-and-deployment-space)
 
-## 1. Download or Clone the Repository
+## 1. Download Workshop Assets
 
-Various parts of this workshop will require the attendee to upload files or run scripts that we've stored in the repository. To download the repository and its assets, you have two options. Option 1, if you have the [`git`](https://git-scm.com) command line interface on your laptop, you can clone the repository directly. Option 2, if you don't have git you can access the [GitHub repository](https://github.com/IBM/credit-risk-workshop-cpd) page to download the zip file.
+Various parts of this workshop will require the attendee to upload files or run scripts. These artifacts have been collected in the following zip file which you can download by clicking the link below and saving the zip file locally to your machine.
 
-* [Option 1] If you have the git CLI, run the following commands from a terminal or command prompt:
+* [Cloud Pak for Data Analytics Project](https://github.com/IBM/credit-risk-workshop-cpd/raw/master/projects/CreditRiskProject.zip)
 
-   ```bash
-   git clone https://github.com/IBM/credit-risk-workshop-cpd.git
-   cd credit-risk-workshop-cpd
-   ```
-
-* [Option 2] To download the repository as a zip file, go to the [GitHub repo for this workshop](https://github.com/IBM/credit-risk-workshop-cpd) and download the archived version of the workshop and extract it on your laptop.
-
-![download workshop zip](../images/prework/github-zip-download.png)
-
-> **Note: If its not automatically done for you, make sure you extract or unzip the zip file after its downloaded.**
+> **Note: The analytics project zip file does not to be unzipped/expanded. It will be directly uploaded to the Cloud Pak for Data platform as a zip file. For reference, all these assets are also in the [GitHub repo for this workshop](https://github.com/IBM/credit-risk-workshop-cpd).**
 
 ## 2. Create a Project and Deployment Space
 
@@ -52,7 +43,7 @@ In Cloud Pak for Data, we use the concept of a project to collect / organize the
 
 ![Create project from file](../images/prework/new-project-from-file.png)
 
-* Click on the *`browse`* link and in the file browser popup, navigate to where you cloned or downloaded this repository in the previous section. From within that root directory, navigate to the `projects/` sub-directory and choose the `CreditRiskProject.zip` file. Then click the **`open`** button.
+* Click on the *`browse`* link and in the file browser pop-up, navigate to where you downloaded the `CreditRiskProject.zip` file in the previous section, then click the **`open`** button.
 
 ![Browse for project files](../images/prework/browse-project-zip.png)
 
@@ -87,7 +78,6 @@ Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and mana
 * From the deployment space creation pop up window, click on the **`View new space`** button.
 
 ![Import project success](../images/prework/depspace-create-success.png)
-
 
 * Next, we will add a collaborator to the new deployment space. Collaborators allow others to view/edit/manage the assets being deployed. In this workshop, we want the models we deploy to be visible and monitored in the OpenScale model monitoring lab.
 
