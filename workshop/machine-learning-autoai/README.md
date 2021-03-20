@@ -68,15 +68,11 @@ This section is broken up into the following steps:
 
 ![Model evaluation](../images/autoai/autoai-toppipeline-details.png)
 
-* In order to deploy this model, click on the *`Save as`* button and select the `Model` option to save it.
+* In order to deploy this model, click on the *`Save as`* button. On the next scren, select the `Model` option. Keep the default name or change it, add an optional description and tags, and click `Create` to save it.
 
 ![Save model](../images/autoai/autoai-pipeline-save-model.png)
 
-* In the 'Save as model' window you can accept the default values or give your model a meaningful name/description and then click the `Save` button.
-
-![Save model name](../images/autoai/autoai-save-model-name.png)
-
-* You receive a notification to indicate that your model is saved to your project. Go back to your project main page by clicking on the project name on the navigator on the top left:
+* You receive a notification to indicate that your model is saved to your project. You can return to your project using the notification by clicking `View in project`, or go back to your project main page by clicking on the project name on the navigator on the top left.
 
 ![Select Project](../images/autoai/autoai-project-navigator.png)
 
@@ -92,21 +88,9 @@ This section is broken up into the following steps:
 
 ![Deploying the model](../images/autoai/autoai-promote-to-space.png)
 
-* You will receive a message that assets can not yet be promoted, until you associate a deployment space to your project. In order to associate your project with a deployment space. Click the *`Associate Deployment Space`* button.
+> ***Note: This is assuming you have already created a deployment space in the *pre-work* section of the workshop. 
 
-![Associate Deployment Space](../images/autoai/autoai-associate-deployment-space.png)
-
-* Click on the `Existing` tab and choose your deployment space and then click the `Associate` button.
-
-![Select Deployment Space](../images/autoai/autoai-select-deployment-space.png)
-
-> ***Note: This is assuming you have already created a deployment space in the *pre-work* section of the workshop. Also that you have not associated that deployment space with any other project, since there default screen will not show deployment spaces that are already associated.***
-
-* Once the deployment space is associated, you will be brought back to the same model page, once again click on the `Promote to deployment space`.
-
-![Deploying the model](../images/autoai/autoai-promote-to-space.png)
-
-* Click on the *`Promote to space`* button.
+* Add an optional description or tags if you'd like. Click on the *`Promote`* button.
 
 ![Promote model](../images/autoai/autoai-promote-to-space-confirm.png)
 
