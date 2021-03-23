@@ -250,10 +250,11 @@ The general recommendation for Python development is to use a virtual environmen
 
   > **TIP** To terminate the virtual environment use the `deactivate` command.
 
-* To install the Python requirements, from a terminal (or command prompt) navigate to where you cloned/downloaded the Git repository. Run the following commands:
+* Unzip the python application zip file that you downloaded in the pre-work section.
+
+* To install the Python requirements, from a terminal (or command prompt) navigate to where you unzipped the python application. Run the following commands:
 
   ```bash
-  cd flaskapp
   pip install -r requirements.txt
   ```
 
