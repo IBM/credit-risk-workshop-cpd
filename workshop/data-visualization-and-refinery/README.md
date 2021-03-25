@@ -13,15 +13,21 @@ This section is broken up into the following steps:
 
 ## 1. Load Data
 
-* Go the (☰) navigation menu and click on the `Projects` link and then click on your analytics project.
+* Go the (☰) navigation menu and under the *Projects* section click on *`All Projects`*.
 
 ![(☰) Menu -> Projects](../images/navigation/menu-projects.png)
 
+* Click the project name you created in the pre-work section.
+
 * From the `Project` home, under the `Assets` tab, ensure the `Data assets` section is expanded or click on the arrow to toggle it and open up the list of data assets.
 
-* Click the check box next to the merged data asset  *`XXXAPPLICANTFINANCIALPERSONALLOAN`* (the name of the file may vary, `XXX` may be your username or the username of the person who granted you data access) to check it, then click the 3 vertical dots to the right, and select the `Refine` option from the menu.
+* Click the merged data data asset  *`XXXAPPLICANTFINANCIALPERSONALLOANDATA`* (the name of the file may vary, `XXX` may be your initials or the initials of the person who granted you data access) to open it. If this is the first time you are opening the data asset, you will be asked to unlock the connection with your personal credentials. Click the `Use your Cloud Pak for Data credentials to authenticate to the data source` checkbox and then click the *`Connect`* button.
 
-![Launch the action menu](../images/dr/dr-launch-table.png)
+![Authenticate connection](../images/dr/dr-auth-data-connection.png)
+
+* Once the preview of the data asset opens, click on the *`Refine`* button on the top right of the table.
+
+![Launch the action button](../images/dr/dr-launch-button.png)
 
 * Data Refinery will launch and open to the `Data` tab. It will also display the information panel with details of the data refinery flow and where the output of the flow will be placed. Go ahead and click the `X` to the right of the `Information` panel to close it.
 
@@ -37,11 +43,15 @@ We'll start out in the `Data` tab where we wrangle, shape and refine our data. A
 
 ![Command line filter](../images/dr/dr-cli-filter.png)
 
-* A `filter` operation syntax will be displayed in the Command line. Clicking on the operation name within the Command line will give hints on the syntax and how to use the command. For instance, to filter for customers who have paid credits up to date, build the expression shown below. To inact the filter, you would `Apply` the expression. For now, click Cancel to clear out the command line.
+* A `filter` operation syntax will be displayed in the Command line. Clicking on the operation name within the Command line will give hints on the syntax and how to use the command. For instance, to filter for customers who have paid credits up to date, build the expression shown below. To inact the filter, you would `Apply` the expression.
 
 ```R
 filter(`CreditHistory` == 'credits_paid_to_date')
 ```
+
+* We can remove this custom filter by clicking on the trash icon on the `Custom code` step of our data workflow.
+
+![Clear custom filter](../images/dr/dr-clearcustomfilter.png)
 
 * We will use the UI to explore and transform the data. Click the `+Operation` button.
 
@@ -87,29 +97,31 @@ Data Refinery allows you to run jobs at scheduled times, and save the output. In
 
 ![Click jobs icon](../images/dr/dr-save-and-create-job.png)
 
-* Give the job a name and optional description. Note that you can `Edit` the steps in this Data Refinery flow at this time. Also, note the output name, which in this case is *USER1006.JRTAPPLICANTFINANCIALPERSONALLOAN_shaped.csv*. Click the `Create and Run` button.
+* Give the job a name and optional description, then click the *`Next`* button.
+
+![jobs name](../images/dr/dr-savejob-name.png)
+
+* The job will configure a default input and output data asset, as well as the runtime environment. Click the *`Next`* button.
+
+![jobs name](../images/dr/dr-savejob-environment.png)
+
+* We can set the job to run on a schedule. For now, leave the schedule off and click the *`Next`* button.
+
+![jobs name](../images/dr/dr-savejob-schedule.png)
+
+* Click the *`Create and Run`* button to save and run this job.
 
 ![Create and Run Refinery job](../images/dr/dr-create-and-run-job.png)
 
-* The job will be listed as `Status` *`Running`* and then the *Status* will change to *`Completed`*.
-
-![Click Edit to schedule job](../images/dr/dr-job-running.png)
-
-* You can click `Edit` next to *Scheduled to run*. Notice that you can toggle the *Schedule to run* switch and choose a date and time to run this transformation as a job or even change the compute environment for this transformation. We will not run this as a job, go ahead and click the `Cancel` button
-
-![Choose job scheduled time](../images/dr/dr-job-settings.png)
+* This refinery flow will be saved to your project in the `Data Refinery flows` section of the project overview page. From that section you could revisit the flow to edit the steps or even see any execution jobs you have run. For now, we will move on to exploring our data.
 
 ## 3. Profile Data
 
-* Go back to the top level of the data refinery view by clicking on the flow asset under the `'Associated Asset'` section in the scheduled job page.
-
-![Back to refinery flow](../images/dr/dr-flow-assset.png)
-
-* Clicking on the `Profile` tab will bring up a view of several statistics and histograms for the attributes in your data.
+* Back on the top level of the data refinery view, click on the `Profile` tab to bring up a view of several statistics and histograms for the attributes in your data.
 
 ![Data Refinery Profile tab](../images/dr/dr-profile.png)
 
-* You can get insight into the data from the views and statistics:
+* Once the data profile loads, you can get insight into the data from the views and statistics:
 
   * The median age of the applicants is 36, with the bulk under 49.
 
@@ -121,27 +133,27 @@ Data Refinery allows you to run jobs at scheduled times, and save the output. In
 
 Let's do some visual exploration of our data using charts and graphs. Note that this is an exploratory phase and we're looking for insights in out data. We can accomplish this in Data Refinery interactively without coding.
 
-* Choose the `Visualizations` tab to bring up the page where you can select columns that you want to visualize. Add `LoanAmount` as the first column and click `Add Column` to add another column. Next add `LoanDuration` and click Visualize. The system will pick a suggested plot for you based on your data and show more suggested plot types at the top.
+* Choose the `Visualizations` tab to bring up the page where you can select columns that you want to visualize. Select `LoanAmount` from the "Columns to visualize" drop down list as the first column and click `Add another column` to add another column. Next add `LoanDuration` and click the *`Visualize data`* button. The system will pick a suggested plot for you based on your data and show more suggested plot types at the top.
 
 ![Select columns](../images/dr/dr-vis-choose-column-loan.png)
 
-* Remember that we are most interested in knowing how these features impact a loan being at the risk. So, let's add the `Risk` as a color on top of our current scatter plot. That should help us visually see if there's something of interest here. From the left, click the Color Map section and select Risk. Also, to see the full data, drag the right side of the data selector at the bottom all the way to the right, in order to show all the data inside your plot.
+* Remember that we are most interested in knowing how these features impact a loan being at the risk. So, let's add the `Risk` as a color on top of our current scatter plot. That should help us visually see if there's something of interest here. From the left panel, click the `Color Map` drop down and select `Risk`. Also, to see the full data, drag the right side of the data selector at the bottom all the way to the right, in order to show all the data inside your plot.
 
 ![Amount v Duration Scatter](../images/dr/dr-vis-loan-amountduration-scatter.png)
 
-* We notice that there are more purple on this plot towards the top right, than there is on the bottom left. This is a good start as it shows that there is probably a relationship between the riskiness of a loan and its duration and amount. It appears that the higher the amount and duration, the riskier the loan. Interesting, let's dig in further in how the loan duration could play into the riskiness of a loan.
+* We notice that there are more blue (risk) on this plot towards the top right, than there is on the bottom left. This is a good start as it shows that there is probably a relationship between the riskiness of a loan and its duration and amount. It appears that the higher the amount and duration, the riskier the loan. Interesting, let's dig in further in how the loan duration could play into the riskiness of a loan.
 
-* Let's plot a histogram of the `LoanDuration` to see if we can notice anything. First, select `Histogram` from the `Chart Type` *(Note: Click the `Continue` button to switch charts)*.
+* Let's plot a histogram of the `LoanDuration` to see if we can notice anything. First, select `Histogram` from the `Chart Type`.
 
 * On the left, select `LoanDuration` for the 'X-axis', select `Risk` in the 'Split By' section, check the `Stacked` option, uncheck the `Show kde curve` toggle, uncheck the `Show distribution curve` toggle. You should see a chart that looks like the following image.
 
 ![Visualize loan duration](../images/dr/dr-vis-loanduration-hist.png)
 
-* It looks like the longer the duration the larger the blue bar (risky loan count) become and the smaller the purple bars (non risky loan count) become. That indicate loans with longer duration are in general more likely to be risky. However, we need more information.
+* It looks like the longer the duration the larger the blue bar (risky loan count) become and the smaller the dark blue bars (non risky loan count) become. That indicate loans with longer duration are in general more likely to be risky. However, we need more information.
 
 * We next explore if there is some insight in terms of the riskiness of a loan based on its duration when broken down by the loan purpose. To do so, let's create a Heat Map plot.
 
-* At the top of the page, in the `Chart Type` section, open the arrows on the right, select `Heat Map`, and click on the `Continue` button in the subsequent 'Switch charts?' window.
+* At the top of the page, in the `Chart Type` section, open the arrows on the right, select `Heat Map`.
 
 ![Switch to heat map](../images/dr/dr-vis-switch-heatmap.png)
 
@@ -153,15 +165,13 @@ Let's do some visual exploration of our data using charts and graphs. Note that 
 
 * In general, for each row, the bigger the color difference between the right and left column, the more likely that loan duration plays a role for the riskiness of the loan category.
 
-* Now let's look into customizing our plot. Under the Actions panel, notice that you can perform tasks such as `Start over`, `Download chart details`, `Download chart image`, or set `Global visualization preferences` *(Note: Hover over the icons to see the names)*.
+* Now let's look into customizing our plot. Under the Actions panel, notice that you can perform tasks such as `Start over`, `Download chart details`, `Download chart image`, or set `Global visualization preferences` *(Note: Hover over the icons to see the names)*. Click on the drop down arrow next to `Action`. Then click on the `Global visualization preferences` option from the menu.
 
-* Click on the `gear` icon in the `Actions` panel. We see that we can do things in the `Global visualization preferences` for `Titles`, `Tools`, `Theme`, and `Notifications`. Click on the `Theme` tab and update the color scheme to `Dark`. Then click the `Apply` button, now the colors for all of our charts will reflect this. Play around with various Themes and find one that you like.
+![Visualize theme preferences](../images/dr/dr-vis-actions-menu.png)
+
+* We see that we can do things in the `Global visualization preferences` for `Titles`, `Tools`, `Theme`, and `Notifications`. Click on the `Theme` tab and update the color scheme to `Dark`. Then click the `Apply` button, now the colors for all of our charts will reflect this. Play around with various Themes and find one that you like.
 
 ![Visualize set theme and choose preferences](../images/dr/dr-vis-choose-theme.png)
-
-* Finally, to save our plot as an image, click on the image icon on the top right, highlighted below, and then save the image.
-
-![Save visualization](../images/dr/dr-vis-save.png)
 
 ## Conclusion
 
