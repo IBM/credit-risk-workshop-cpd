@@ -22,7 +22,7 @@ First we'll create a catalog and load some data
 
 ### Create the catalog
 
-* Go to the upper-left (☰) hamburger menu and choose `Organize` -> `All catalogs`.
+* Go to the upper-left (☰) hamburger menu and choose `Catalogs` -> `All catalogs`.
 
 ![open catalog menu](../images/wkc-admin/wkc-admin-open-catalog-menu.png)
 
@@ -102,7 +102,11 @@ A user can now add this to a project like any other asset from a catalog.
 
 ![click data name to open](../images/wkc-admin/wkc-admin-click-data-name-to-open.png)
 
-* A preview of the data will open, with metadata and the first few rows.
+* An overview of the data will open with metadata and Governance artifacts.
+
+![overview of data](../images/wkc-admin/wkc-admin-data-overview.png)
+
+* Click on the `Asset` tab to see a preview of the first 1000 rows.
 
 ![preview of data](../images/wkc-admin/wkc-admin-data-preview.png)
 
@@ -116,9 +120,9 @@ The fundamental abstraction in Watson Knowledge Catalog is the Category. A categ
 
 ### Import categories
 
-* Import a category for your assets by going to the upper-left (☰) hamburger menu, choose `Organize` -> `Data and AI Governance` -> `Categories`, then the click `Import` button.
+* Import a category for your assets by going to the upper-left (☰) hamburger menu, choose `Governance` -> `Categories`, then the click the `Add category` button and choose `Import from file`. 
 
-![Import categories](../images/wkc-admin/wkc-import-categories.png)
+![Import categories](../images/wkc-admin/wkc-admin-import-categories.png)
 
 * Click the `Add file` and navigate to where you cloned/downloaded the workshop repository, choosing `data/wkc/glossary-organize-categories.csv`. Click the `Next` button.
 
@@ -134,41 +138,47 @@ The fundamental abstraction in Watson Knowledge Catalog is the Category. A categ
 
 ### Add category manually
 
-* In addition to importing, you can manually create categories. Add a category for your assets by going to the upper-left (☰) hamburger menu, choose `Organize` -> `Data and AI Governance` -> `Categories`, then click the `Create category` button on the top right.
+* In addition to importing, you can manually create categories. Add a category for your assets by going to the upper-left (☰) hamburger menu, choose `Governance` -> `Categories`, then click the `Add category` button and then `New category`.
 
-![organize data categories](../images/wkc-admin/wkc-menu-organize-categories.png)
+![organize data categories](../images/wkc-admin/wkc-admin-menu-organize-categories.png)
 
 * Give your category a name, such as *Personal Data*, and an optional description, and then click the `Save` button.
 
 ![new category billing](../images/wkc-admin/wkc-admin-new-category-personal-data.png)
 
-* Now, if you hit the `Create category` link on the *Personal Data* category screen, you can create a subcategory, such as *Residence Information*.
+* Now, if you hit the `Create category` link on the *Personal Data* category screen under *Subcategories*, you can create a subcategory, such as *Residence Information*.
 
 ![sub category residence information](../images/wkc-admin/wkc-admin-new-subcategory-residence-information.png)
 
 * For the *Personal Data* category you can select a *Type*, such as `Business term`.
 
-![select business term type](../images/wkc-admin/wkc-admin-category-select-type.png)
+![select business term type](../images/wkc-admin/wkc-admin-category-add-artifact.png)
 
-* We can also create classifications for assets, similar to *Confidential*, *Personally Identifiable Information*, or *Sensitive Personal Information* in a similar way, by going to the upper-left (☰) hamburger menu, choose `Organize` -> `Data and AI Governance` -> `Classifications`.
+* We can also create classifications for assets, similar to *Confidential*, *Personally Identifiable Information*, or *Sensitive Personal Information* in a similar way, by going to the upper-left (☰) hamburger menu, choose `Governance` -> `Classifications`.
 
-![select classification](../images/wkc-admin/wkc-navigate-classifications.png)
+![select classification](../images/wkc-admin/wkc-admin-navigate-classifications.png)
 
-* Click on the `New classification` button on the top right and then `Create new classification` from the drop down menu. These classifications can then be added to your category as a *Type*:
+* Click on the `Create classification` button on the top right and then `New classification` from the drop down menu. These classifications can then be added to your category as a *Type*:
 
-![select classification type](../images/wkc-admin/wkc-add-classifications.png)
+![select classification type](../images/wkc-admin/wkc-admin-add-classifications.png)
 
 ## 4. Add data classes
 
 When you profile your assets, a data class will be inferred from the contents where possible. We'll see more on this later. You can also add your own data classes.
 
-* Add a data class for your assets by going to the upper-left (☰) hamburger menu, choose `Organize` -> `Data and AI Governance` -> `Data class`, then click the `New data class` button and subsequent `Create newdata class` option from the drop down menu.
+* Add a data class for your assets by going to the upper-left (☰) hamburger menu, choose `Governance` -> `Data classes`, then click the `Add data class` button and then the`New data class` option from the drop down menu.
 
-![organize data classes](../images/wkc-admin/wkc-menu-organize-data-classes.png)
+![organize data classes](../images/wkc-admin/wkc-admin-menu-organize-data-classes.png)
 
-* Give your new data class a name, i.e. *alphanumeric*, and an optional Primary category and/or description, and click `Save as draft`.
+* Give your new data class a name, i.e. *alphanumeric*, and then click `Change` for Primary category.
 
-![new data class](../images/wkc-admin/wkc-create-data-class.png)
+![new data class](../images/wkc-admin/wkc-admin-create-data-class.png)
+
+* Choose the *Personal Data* primary category and click `Add`.
+
+![Change primary category](../images/wkc-admin/wkc-admin-change-primary-category.png)
+
+* Now you can click `Save as draft`.
 
 * Once the data class is created, we can optionally: add *Stewards* for this class, and associate *classifications* and *business terms*. When you are ready, click the `Publish` button and again `Publish` in the pop up window.
 
@@ -176,7 +186,7 @@ When you profile your assets, a data class will be inferred from the contents wh
 
 * Now let's add that data class to a column in our *applicant_personal_data.csv* asset.
 
-* Go back to the catalog you created earlier (i.e *CreditDataCatalog*) and open it ((☰) hamburger menu `Organize` -> `All catalogs` and choose `CreditDataCatalog`). Under the *Browse assets* tab, click on the data set *applicant_personal_data.csv* to get the column/row preview. Find the *CustomerID* column and click the down arrow next to "Customer Number" and then *View all*:
+* Go back to the catalog you created earlier (i.e *CreditDataCatalog*) and open it ((☰) hamburger menu `Catalogs` -> `All catalogs` and choose `CreditDataCatalog`). Under the *Browse assets* tab, click on the data set *applicant_personal_data.csv*, and then the `Asset` tab, to get the column/row preview. Find the *CustomerID* column and click the down arrow next to "Customer Number" and then *View all*:
 
 ![change data class](../images/wkc-admin/wkc-admin-existing-data-class.png)
 
@@ -190,15 +200,15 @@ You can use [Business terms](https://dataplatform.cloud.ibm.com/docs/content/wsj
 
 You already saw how to create a category and make it a *business term*. You can also create the business term as it's own entity.
 
-* From the upper-left (☰) hamburger menu, choose `Organize` -> `Data and AI Governance` -> `Business terms`:
+* From the upper-left (☰) hamburger menu, choose `Governance` -> `Business terms`:
 
 ![organize Data Business terms](../images/wkc-admin/wkc-admin-organize-data-business-terms.png)
 
-* Click on the upper-right `New business term` button and then the `Create new business term` option in the drop down menu.
+* Click on the upper-right `Add business term` button and then the `New business term` option in the drop down menu.
 
-![create business term](../images/wkc-admin/wkc-create-business-term.png)
+![create business term](../images/wkc-admin/wkc-admin-create-business-term.png)
 
-* Give the new Business term a name such as *Contact Information* and optional description (**NOTE: If you are working with others on the same platform, prepend your term with something unique, i.e scottda-ContactInfo**). Click the `Save as draft` button.
+* Give the new Business term a name such as *Contact Information* and optional description (**NOTE: If you are working with others on the same platform, prepend your term with something unique, i.e scottda-ContactInfo**). Click `Change` under *Primary category* and choose *Personal data*, then Click the `Save as draft` button.
 
 ![name new business term](../images/wkc-admin/wkc-admin-name-business-term.png)
 
@@ -206,7 +216,7 @@ You already saw how to create a category and make it a *business term*. You can 
 
 ![publish business term](../images/wkc-admin/wkc-admin-publish-business-term.png)
 
-* Go back to the catalog you created earlier (i.e *CreditDataCatalog*) and open it ((☰) hamburger menu `Organize` -> `All catalogs` and choose `CreditDataCatalog`). Under the *Browse assets* tab, click on the data set *applicant_personal_data.csv* to get the column/row preview. Find the *Email* column and click the *Column information* icon (looks like an "eye").
+* Go back to the catalog you created earlier (i.e *CreditDataCatalog*) and open it ((☰) hamburger menu `Catalog` -> `All catalogs` and choose `CreditDataCatalog`). Under the *Browse assets* tab, click on the data set *applicant_personal_data.csv*, and then the `Asset` tab, to get the column/row preview. Find the *Email* column and click the *Column information* icon (looks like an "eye").
 
 ![choose email columnn information](../images/wkc-admin/wkc-admin-email-column-information.png)
 
@@ -218,7 +228,7 @@ You already saw how to create a category and make it a *business term*. You can 
 
 ![search business terms](../images/wkc-admin/wkc-admin-search-contact-to-assign-term.png)
 
-* Close that window once the term has been applied. Now, do the same thing to add the *Contact Information* Business term to the *Telephone* column.
+* Click `Close` in that window once the term has been applied. Now, do the same thing to add the *Contact Information* Business term to the *Telephone* column.
 
 * You will now be able to search for these terms from within the platform. For example, going back to your top level *CreditDataCatalog*, in the search bar with the comment "What assets are you searching for?" enter your unique *<unique_string>Contact Information* term:
 
@@ -234,13 +244,13 @@ We can now create rules to control how a user can access data.
 
 ### How to create a Business term review
 
-* From the upper-left (☰) hamburger menu, choose `Organize` -> `Data and AI Governance` -> `Business terms`.
+* From the upper-left (☰) hamburger menu, choose `Governance` -> `Business terms`.
 
-* Click on the upper-right `+ Create Business term` button.
+* Click on the upper-right `Add business term` button and then the `New business term` option in the drop down menu.
 
-* Give the new Business term the name *CustomerID* and optional description, and click `Save as draft`. In the next window, click `Publish`.
+* Give the new Business term the name *CustomerID* and optional description. Click `Change` under *Primary category* and choose *Personal data*, then Click the `Save as draft` button. In the next window, click `Publish`.
 
-* Now go back to your *CreditDataCatalog* by opening it up to the column view ((☰) hamburger menu `Organize` -> `All catalogs` and choose `CreditDataCatalog`). Under the *Browse assets* tab, click on the data set *applicant_personal_data.csv* to get the column/row preview. Find the *CustomerID* column and click the *Column information* icon (looks like an "eye").
+* Go back to the catalog you created earlier (i.e *CreditDataCatalog*) and open it ((☰) hamburger menu `Catalog` -> `All catalogs` and choose `CreditDataCatalog`). Under the *Browse assets* tab, click on the data set *applicant_personal_data.csv*, and then the `Asset` tab, to get the column/row preview. Find the *CustomerID* column and click the *Column information* icon (looks like an "eye").
 
 * In the window that opens, click the *edit* icon (looks like a "pencil") next to *Business terms* .
 
@@ -248,9 +258,9 @@ We can now create rules to control how a user can access data.
 
 ### Adding a rule
 
-* From the upper-left (☰) hamburger menu, choose `Organize` -> `Data and AI Governance` -> `Rules`.
+* From the upper-left (☰) hamburger menu, choose `Governance` -> `Rules`.
 
-* Click the `New rule` button on the top right and then select the  `Create new rule` option from the drop down menu.
+* Click the `Add rule` button on the top right and then select the  `New rule` option from the drop down menu.
 
 * In the 'Create a new rule' page, select the `Data protection rule` option.
 
@@ -260,7 +270,7 @@ We can now create rules to control how a user can access data.
 
 * Under *Rule builder* > *Condition1*: For the `If` condition, select *Business term* *Contains any* *CustomerID*. Under *Action*, for the `then` panel, select *mask data* *in columns containing* *alphanumeric*. Choose the tile for `Substitute`, which will make a non-identifiable hash. This obscures the actual CustomerID, but allows actions like database joins to still work. Click the `Create rule` button.
 
-![define rule for masking customerID](../images/wkc-admin/wkc-rule-substitute-customer-id.png)
+![define rule for masking customerID](../images/wkc-admin/wkc-admin-rule-substitute-customer-id.png)
 
 * Now if we go back to our *applicant_personal_data.csv* asset in the catalog at the *CustomerID* column, it will look the same as before. But a non-admin user will see the "lock" icon and see that the customerID has now been substituted with a hash value.
 

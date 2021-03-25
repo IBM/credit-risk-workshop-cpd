@@ -17,7 +17,7 @@ During the pre-work section of this workshop, you create a project based on an e
 
 >*Note: The URL and name shown in the screenshot may not match your scenario. Use the table below to determine what URL to use.*
 
-![Add notebook name and URL](../images/openscale/openscale-add-notebook-url.png)
+![Add notebook name and URL](../images/general/add-notebook-url.png)
 
 * Use the following table to find the URL to use for each of the Workshop notebooks:
 
