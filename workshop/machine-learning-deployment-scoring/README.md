@@ -25,15 +25,17 @@ This module is broken up into several sections that explore the different model 
 
 After a model has been created and saved / promoted to our deployment space, we will want to deploy the model so it can be used by others. For this section, we will be creating an online deployment. This type of deployment will make an instance of the model available to make predictions in real time via an API. Although we will use the Cloud Pak for Data UI to deploy the model, the same can be done programmatically.
 
-* Navigate to the left-hand (☰) hamburger menu and choose `Analyze` -> `Analytics deployments`:
+* Navigate to the left-hand (☰) hamburger menu and click on `Deployments`.
 
 ![Analytics Analyze deployments](../images/navigation/menu-analytics-deployments.png)
 
-* Choose the deployment space you setup previously by clicking on the name of your space.
+* Click on the `Spaces` tab and then choose the deployment space you setup previously by clicking on the name of your space.
+
+![Deployments space](../images/deployment/select-depspace.png)
 
 * From your deployment space overview, in the table, find the model name for the model you previously built and now want to create a deployment against. Use your mouse to hover over the right side of that table row and click the `Deploy` rocket icon (the icons are not visible by default until you hover over them).
 
-> Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.3` runtime.
+> Note: There may be more than one model listed in the 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whichever model is available that is using a `spark-mllib_2.4` software specification.
 
 ![Actions Deploy model](../images/deployment/deploy-spark-model.png)
 
@@ -41,7 +43,7 @@ After a model has been created and saved / promoted to our deployment space, we 
 
 ![Online Deployment Create](../images/deployment/deploy-online-deployment.png)
 
-* The Deployment will show as `In progress` and then switch to `Deployed` when done.
+* Click on the `Deployments` tab. The online deployment will show as `In progress` and then switch to `Deployed` when done.
 
 ![Status Deployed](../images/deployment/deploy-status-deployed.png)
 
@@ -55,7 +57,7 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 
 ![Test deployment with JSON](../images/deployment/deploy-model-test-page.png)
 
-* Copy and paste the following data objects into the `Body` panel.
+* Copy and paste the following data objects into the `Body` panel (replace the text that was in the input panel).
 
 > *Note: Make sure the input below is the only content in the field. Do not append it to the default content `{ "input_data": [] }` that may already be in the field.*
 
@@ -76,7 +78,7 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 
 ![Testing the deployed model](../images/deployment/deploy-test-model-prediction.png)
 
-> *Note: For some deployed models (for example AutoAI based models), you can provide the request payload using a generated form by clicking on the `Provide input using form` icon and providing values for the input fields of the form. If the form is not available for the model you deployed, the icon will remain grayed out.*
+> *Note: For some deployed models (for example AutoAI based models), you can provide the request payload using a generated form by clicking on the `Provide input using form` icon and providing values for the input fields of the form. If the form is not available for the model you deployed, the icon will not be displayed.*
 > ![Input to the fields](../images/deployment/deploy-test-input-form.png)
 
 ### (Optional) Test Online Model Deployment using cURL
@@ -85,7 +87,7 @@ Now that the model is deployed, we can also test it from external applications. 
 
 > NOTE: Windows users will need the *cURL* command. It's recommended to [download gitbash](https://gitforwindows.org/) for this, as you'll also have other tools and you'll be able to easily use the shell environment variables in the following steps. Also note that if you are not using gitbash, you may need to change *export* commands to *set* commands.
 
-* In a terminal window (or command prompt in Windows), run the following command to get a token to access the API. Replace `<username>` and `<password>` with the username and password you used to log into the CP4D cluster. Replace `<cluster-url>` with just the hostname of the CPD cluster (value from your web browser bar)
+* In a terminal window (or command prompt in Windows), run the following command to get a token to access the API. Replace `<username>` and `<password>` with the username and password you used to log into the Cloud pak for data cluster. Replace `<cluster-url>` with just the hostname of the cloud pak for data cluster (i.e the url from your web browser address bar)
 
 ```bash
 curl -k -X GET https://<cluster-url>/v1/preauth/validateAuth -u <username>:<password>
@@ -130,15 +132,17 @@ Another approach to expose the model to be consumed by other users/applications 
 
 Lets start by creating the deployment:
 
-* Navigate to the left-hand (☰) hamburger menu and choose `Analyze` -> `Analytics deployments`:
+* Navigate to the left-hand (☰) hamburger menu and click on `Deployments`.
 
 ![Analytics Analyze deployments](../images/navigation/menu-analytics-deployments.png)
 
-* Choose the deployment space you created previously by clicking on the name of the space.
+* Click on the `Spaces` tab and then choose the deployment space you setup previously by clicking on the name of your space.
+
+![Deployments space](../images/deployment/select-depspace.png)
 
 * From your deployment space overview, in the table, find the model name for the model you previously built and now want to create a deployment against. Use your mouse to hover over the right side of that table row and click the `Deploy` rocket icon (the icons are not visible by default until you hover over them).
 
-> Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.3` runtime.
+> Note: There may be more than one model listed in them 'Models' section. This can happen if you have run the Jupyter notebook more than once or if you have run through both the Jupyter notebook and AutoAI modules to create models. Although you could select any of the models you see listed in the page, the recommendation is to start with whicever model is available that is using a `spark-mllib_2.4` software specification.
 
 ![Actions Deploy model](../images/deployment/deploy-spark-model.png)
 
@@ -160,13 +164,15 @@ Next we can schedule a job to run against our batch deployment. We could create 
 
 The Jupyter notebook is already included as an asset in the project you imported earlier.
 
-* Go the (☰) navigation menu and click on the `Projects` link and then click on your analytics project.
+* Go the (☰) navigation menu and under the *Projects* section click on *`All Projects`*.
 
 ![(☰) Menu -> Projects](../images/navigation/menu-projects.png)
 
-* From the project overview page, click on the `Assets` tab to open the assets page where your project assets are stored and organized.
+* Click the project name you created in the pre-work section.
 
-* Scroll down to the `Notebooks` section of the page and click on the pencil icon at the right of the `machinelearning-creditrisk-batchscoring` notebook.
+* From your `Project` overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
+
+* Scroll down to the `Notebooks` section of the page and click on the pencil icon at the right of the `machinelearning-creditrisk-sparkmlmodel` notebook.
 
 ![Notebook Open](../images/deployment/deploy_batch_open_nb.png)
 
@@ -213,7 +219,7 @@ With the notebook open, spend a minute looking through the sections of the noteb
 
 ![Back to project](../images/ml/navigate-to-project.png)
 
-* Click on the 'Environments' tab near the top of the page. Then in the 'Active environment runtimes' section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
+* Click on the `Environments` tab near the top of the page. Then in the `Active environment runtimes` section, you will see the environment used by your notebook (i.e the `Tool` value is `Notebook`). Click on the three vertical dots at the right of that row and select the `Stop` option from the menu.
 
 ![Stop environment](../images/ml/stop-notebook-environment.png)
 
@@ -244,10 +250,11 @@ The general recommendation for Python development is to use a virtual environmen
 
   > **TIP** To terminate the virtual environment use the `deactivate` command.
 
-* To install the Python requirements, from a terminal (or command prompt) navigate to where you cloned/downloaded the Git repository. Run the following commands:
+* Unzip the python application zip file that you downloaded in the pre-work section.
+
+* To install the Python requirements, from a terminal (or command prompt) navigate to where you unzipped the python application. Run the following commands:
 
   ```bash
-  cd flaskapp
   pip install -r requirements.txt
   ```
 
