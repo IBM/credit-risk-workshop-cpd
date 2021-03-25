@@ -46,7 +46,7 @@ _**Please note that some of the comments in the notebook are directions for you 
 
 ### Get Transactions for Explainability
 
-Under `8.9 Identify transactions for Explainability` run the cell. It will produce a series of UIDs for indidvidual ML scoring transactions. Copy one or more of them to examine in the next section.
+Under `7.8 Identify transactions for Explainability` run the cell. It will produce a series of UIDs for indidvidual ML scoring transactions. Copy one or more of them to examine in the next section.
 
 ## Stop the Environment
 
