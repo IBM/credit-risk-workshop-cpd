@@ -10,9 +10,11 @@ For this part of the exercise we're going to use a Jupyter notebook to create th
 
 ### Open the Jupyter notebook
 
-* Go the (☰) navigation menu, expand the `Projects` section and then click the project you created in the pre-work.
+* Go the (☰) navigation menu and under the *Projects* section click on *`All Projects`*.
 
 ![(☰) Menu -> Projects](../images/navigation/menu-projects.png)
+
+* Click the project name you created in the pre-work section.
 
 * From your `Project` overview page, click on the *`Assets`* tab to open the assets page where your project assets are stored and organized.
 
@@ -36,21 +38,25 @@ You will run cells individually by highlighting each cell, then either click the
 
 * Section `1.0 Install required packages` will install some of the libraries we are going to use in the notebook (many libraries come pre-installed on Cloud Pak for Data). Note that we upgrade the installed version of Watson Machine Learning Python Client. Ensure the output of the first code cell is that the python packages were successfully installed.
 
-  * Run the code cells in section 1.1 and 1.2. Ensuring that the cells complete before continuing.
+    * Run the code cells in section 1.1 and 1.2. Ensuring that the cells complete before continuing.
 
-![Imported packages](../images/ml/mljupyter-packages-installed.png)
+    ![Imported packages](../images/ml/mljupyter-packages-installed.png)
 
 * Section `2.0 Load and Clean data` will load the data set we will use to build out machine learning model. In order to import the data into the notebook, we are going to use the code generation capability of Watson Studio.
 
-  * Highlight the code cell below by clicking it. Ensure you place the cursor below the first comment line.
-  * Click the `01/00` "Find data" icon in the upper right of the notebook to find the data asset you need to import.
-  * If you are using virtualized data, then choose your virtualized merged view (i.e. `USERXXXX.APPLICANTFINANCIALPERSONALLOANSDATA`). If you are using this notebook without virtualized data, you can use the `german_credit_data.csv` CSV file version of the data set that has been included in the project.
-  * For your dataset, Click `Insert to code` and choose `Insert Pandas DataFrame`. The code to bring the data into the notebook environment and create a Pandas DataFrame will be added to the cell below.
-  * Run the cell and you will see the first five rows of our dataset.
+    * Highlight the code cell below by clicking it. Ensure you place the cursor below the first comment line.
 
-![Add the data as a Pandas DataFrame](../images/ml/mljupyter-insert-dataframe.png)
+    * Click the `01/00` "Find data" icon in the upper right of the notebook to find the data asset you need to import.
 
-![Generated code to handle Pandas DataFrame](../images/ml/mljupyter-generated-code-dataframe.png)
+    * If you are using virtualized data, then choose your virtualized merged view (i.e. `USERXXXX.APPLICANTFINANCIALPERSONALLOANSDATA`). If you are using this notebook without virtualized data, you can use the `german_credit_data.csv` CSV file version of the data set that has been included in the project.
+
+    * For your dataset, Click `Insert to code` and choose `Insert Pandas DataFrame`. The code to bring the data into the notebook environment and create a Pandas DataFrame will be added to the cell below.
+
+    * Run the cell and you will see the first five rows of our dataset.
+
+    ![Add the data as a Pandas DataFrame](../images/ml/mljupyter-insert-dataframe.png)
+
+    ![Generated code to handle Pandas DataFrame](../images/ml/mljupyter-generated-code-dataframe.png)
 
 * Since we are using generated code to import the data, you will need to update the next cell to assign the `df` variable. Copy the variable that was generated in the previous cell ( it will look like `df=data_df_1`, `data_df_2`, etc) and assign it to the `df` variable (for example `df=df_data_1`).
 
@@ -62,8 +68,8 @@ You will run cells individually by highlighting each cell, then either click the
 
 * Section `3.0 Create a model` cells will run through the steps to build a model pipeline.
 
-  * We will split our data into training and test data, encode the categorial string values, create a model using the Random Forest Classifier algorithm, and evaluate the model against the test set.
-  * Run all the cells in section 3 to build the model.
+    * We will split our data into training and test data, encode the categorial string values, create a model using the Random Forest Classifier algorithm, and evaluate the model against the test set.
+    * Run all the cells in section 3 to build the model.
 
 ![Building the pipeline and model](../images/ml/mljupyter-buid-pipeline-and-model.png)
 
@@ -71,10 +77,10 @@ You will run cells individually by highlighting each cell, then either click the
 
 * Section `4.0 Save the model` will save the model to your project.
 
-* We will be saving and deploying the model to the Watson Machine Learning service within our Cloud Pak for Data platform. In the next code cell, be sure to update the `wml_credentials` variable.
+* We will be saving and deploying the model to the Watson Machine Learning service within our Cloud Pak for Data platform. In the first code cell in section 4.1, be sure to update the `wml_credentials` variable as follows:
 
-  * The url should be the full hostname of the Cloud Pak for Data instance, which you can copy from your browsers address bar (for example, it may look like this: `https://zen.clustername.us-east.containers.appdomain.cloud`)
-  * The username and password should be the same credentials you used to log into Cloud Pak for Data.
+    * The url should be the full hostname of the Cloud Pak for Data instance, which you can copy from your browsers address bar (for example, it may look like this: `https://zen.clustername.us-east.containers.appdomain.cloud`)
+    * The username and password should be the same credentials you used to log into Cloud Pak for Data.
 
 * You will update the `MODEL_NAME` and `DEPLOYMENT_SPACE_NAME` variables. For the `MODEL_NAME`, create a unique and easily identifiable model name. For the `DEPLOYMENT_SPACE_NAME`, copy the name of your deployment space which was output in the previous code cell.
 
