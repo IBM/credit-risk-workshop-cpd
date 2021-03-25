@@ -12,11 +12,11 @@ For this section we'll explore the data that is available from the virtualized v
 
 ### Assign the data to your project
 
-* From the upper-left (☰) navigation menu, click on *`Collect`* -> *`Data virtualization`*.
+* To launch the data virtualization tool, go the (☰) navigation menu and under the *`Data`* section click on `Data virtualization`.
 
 ![(☰) Menu -> Collect -> Data Virtualization](../images/navigation/dv-menu.png)
 
-* Click on the `My virtualized data` option from the data virtualization sub-menu. Here you should see the data you have virtualized or that you have been given access to (or that the administrator has assigned to you).
+* From the data virtualization sub-menu at the top left of the page, click on the menu drop down list and choose *`My virtualized data`*. Here you should see the data you have virtualized or that you have been given access to (or that the administrator has assigned to you).
 
 ![(My virtualized data](../images/dv/dv-menu-myvirtualizeddata.png)
 
@@ -26,9 +26,13 @@ For this section we'll explore the data that is available from the virtualized v
 
 ![Select the data you want to import](../images/dv/adddata-select-data-assign.png)
 
-* In the 'Assign virtual objects' screen, choose your analytics project from the drop down list. If there is a `Submit to catalog` checkbox on the top right, unselect it and, finally, click the *`Assign`* button to add the data to your project.
+* In the 'Assign virtual objects' screen, choose your analytics project from the drop down list. Then click the *`Assign`* button to add the data to your project.
 
 ![Assign the data to a project](../images/dv/adddata-assign-to-project.png)
+
+* In the `Publish virtual assets to catalog` pop up panel, select the *`Publish`* button to publish these assets to the catalog.
+
+![Publish to catalog](../images/dv/adddata-assignproject-publishdialog.png)
 
 * In the pop up panel, you will receive a confirmation that the objects have been assigned to your project. Click the *`Go to project`* button.
 
