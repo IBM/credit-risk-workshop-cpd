@@ -15,29 +15,31 @@ In this section, we will gather data from several tables across data sources. We
 
 ### Create Virtualized Tables
 
-* To launch the data virtualization tool, go the (☰) navigation menu and click `Collect` -> `Data virtualization`.
+* To launch the data virtualization tool, go the (☰) navigation menu and under the *`Data`* section click on `Data virtualization`.
 
 ![(☰) Menu -> Collect -> Data Virtualization](../images/navigation/dv-menu.png)
 
-* From the Data virtualization sub-menu, Click on the *Menu* drop down list and choose *Virtualize*.
+* From the Data virtualization sub-menu at the top left of the page, click on the menu drop down list and choose *`Virtualize`*.
 
 ![Menu -> Virtualize](../images/dv/dv-virtualize-menu.png)
 
-* Several tables names will be displayed across any of the data sources that are included in the data virtualization server. You will notice that on the right panel, we can filter the tables being displayed by selecting the datasource.
+* Several tables names will be displayed across any of the data sources that are included in the data virtualization server. You will notice that on the top of the panel, we can filter the tables being displayed by selecting the database type.
 
 * To simplify the search for tables you will use, click on the `Schemas` column header to sort the tables by Schema. Then find the tables we will be using for this workshop: `APPLICANTFINANCIALDATA`, `APPLICANTPERSONALDATA` and `LOANS`, which are under the `CP4DCREDIT` schema. Select the checkboxes next to these three tables, and then click on *`Add to cart`* followed by the *`View Cart`* button.
 
-> *Note: You may need to page through the available tables by clicking on the right arrow at the bottom of the tables view.*
+> *Note: You may need to page through the available tables by clicking on the right arrow at the bottom of the tables view. Or changing the number of `Items per page` to a larger value at the bottom left of the tables view.*
 
 ![Choose the tables to virtualize](../images/dv/dv-virtualize-tables.png)
 
-* The next panel prompts you to select where to assign the virtualized tables. Select the `My virtualized data` radio button. If there is a `Submit to catalog` checkbox on the top right, unselect it and finally click the *`Virtualize`* button to add the virtualized tables to your data (we left the default values, so the tables will be virtualized under your own user schema with the same table names as the original tables).
+* The next panel prompts you to select where to assign the virtualized tables. Select the `My virtualized data` radio button and click the *`Virtualize`* button to add the virtualized tables to your data (we left the default values, so the tables will be virtualized under your own user schema with the same table names as the original tables).
 
 ![Add virtualized data to your project](../images/dv/dv-virtualize-assign.png)
 
-* You'll be notified that the virtual tables have been created. Let's see the new virtualized tables from the Data Virtualization tool by clicking *`View my virtualized data`* button.
+* A pop up dialog panel will indicate that the virtual tables have been created. Let's see the new virtualized tables by clicking the *`View my virtualized data`* button.
 
 ![We've got virtualized data](../images/dv/dv-virtualize-complete.png)
+
+> *Note: You may receive a notification at the top of the page that the virtual assets were published to the catalog. Feel free to dismiss the notification by clicking on the `X`*
 
 ### Create Joined Virtual Views
 
@@ -47,19 +49,19 @@ Now we're going to **join** the tables we previously virtualized, so we have a f
 
 ![Choose to join two tables](../images/dv/dv-join-select-tables.png)
 
-* To join the tables we need to pick a key that is common to both data sets. Here we choose to map `CustomerID` from the first table to `CustomerID` on the second table. Do this by clicking on one and dragging it to another. When the line is drawn click on the *Next* button.
+* To join the tables we need to pick a key that is common to both data sets. Here we choose to map `CustomerID` from the first table to `CustomerID` on the second table. Do this by clicking on one and dragging it to another. We will leave the default of having all the column names selected. When the line is drawn, click on the *`Next`* button.
 
 ![Map the two customerID keys](../images/dv/dv-join-select-columns.png)
 
-* In the next panel we will accept the existing names for our columns. Click the *`Next`* button to continue.
+* In the next panel, although we could change the names of our columns, we will accept the existing names for our columns. Click the *`Next`* button to continue.
 
 ![Review joined column names](../images/dv/dv-join-col-names-review.png)
 
-* In the next panel we'll give our joined data view a unique name (to be consistent with SQL standards, pick an all uppercase name), choose someething like: `XXXAPPLICANTFINANCIALPERSONALDATA` (where `XXX` is my *All Upper Case* user ID or intitials). Also select the `My virtualized data` radio button. If there is a `Submit to catalog` checkbox on the top right, unselect it and finally click the *`Create view`* button to add the virtualized aggregate view to your data.
+* In the next panel we'll give our joined data view a unique name (to be consistent with SQL standards, pick an all uppercase name), choose someething like: `XXXAPPLICANTFINANCIALPERSONALDATA` (where `XXX` is your initials in *all upper case*). Also select the `My virtualized data` radio button and then click the *`Create view`* button to add the virtualized aggregate view to your data.
 
 ![Review the proposed joined table](../images/dv/dv-join-assign-review.png)
 
-* You'll be notified that the join view creation has succeeded! Click on *View my virutalized data* button.
+* A pop up dialog panel will indicate that the join view creation has succeeded! Click on *`View my virutalized data`* button.
 
 ![The data join succeeded!](../images/dv/dv-join-created-1.png)
 
@@ -67,15 +69,15 @@ Now we're going to **join** the tables we previously virtualized, so we have a f
 
 ![Join final tables](../images/dv/dv-join-select-tables-2.png)
 
-* Again join the two tables by selecting/mapping the `CustomerID` from the first table to `CustomerID` on the second table. Do this by clicking on one and dragging it to another. When the line is drawn click on the *Next* button.
+* Again join the two tables by selecting/mapping the `CustomerID` from the first table to `CustomerID` on the second table. Do this by clicking on one and dragging it to another.  We will leave the default of having all the column names selected. When the line is drawn, click on the *`Next`* button.
 
 ![Map the two customerID keys](../images/dv/dv-join-select-columns-2.png)
 
-* In the next panel we will accept the existing names for our columns. Click the *`Next`* button to continue.
+* In the next panel, although we could change the names of our columns, we will accept the existing names for our columns. Click the *`Next`* button to continue.
 
-* In the next panel we'll give our joined data view a unique name (to be consistent with SQL standards, pick an all uppercase name), choose someething like: `XXXAPPLICANTFINANCIALPERSONALLOANSDATA` (where `XXX` is my *All Upper Case* user ID or intitials). Also select the `My virtualized data` radio button. If there is a `Submit to catalog` checkbox on the top right, unselect it and finally click the *`Create view`* button to add the virtualized aggregate view to your data.
+* In the next panel we'll give our joined data view a unique name (to be consistent with SQL standards, pick an all uppercase name), choose someething like: `XXXAPPLICANTFINANCIALPERSONALLOANSDATA` (where `XXX` is your initials in *all upper case*). Also select the `My virtualized data` radio button and then click the *`Create view`* button to add the virtualized aggregate view to your data.
 
-* You'll be notified that the join view creation has succeeded! Click on *`View my virtualized data`* button.
+* A pop up dialog panel will indicate that the join view creation has succeeded! Click on *`View my virtualized data`* button.
 
 * From the `My virtualized data` page you should now see all three virtualized tables and two joined tables. Do not go to the next section until you have all the tables.
 
@@ -87,15 +89,15 @@ Now we're going to **join** the tables we previously virtualized, so we have a f
 
 In order for other users to have access to the data that you just virtualized, you need to grant them access. Follow these steps to make your Virtualized data visible to them.
 
-* To launch the data virtualization tool, go the (☰) navigation menu and click `Collect` -> `Data virtualization`.
+* To launch the data virtualization tool, go the (☰) navigation menu and under the *`Data`* section click on `Data virtualization`.
 
 ![(☰) Menu -> Collect -> Data Virtualization](../images/navigation/dv-menu.png)
 
-* From the Data virtualization sub-menu, Click on the *Menu* drop down list and choose *`My virtualized data`*.
+* From the Data virtualization sub-menu at the top left of the page, click on the menu drop down list and choose *`My virtualized data`*.
 
 ![My virtualized data](../images/dv/dv-menu-myvirtualizeddata.png)
 
-* For one of the virtualized data assets you've created, click the 3 vertical dots on the right (*Note: you will have to hover over the area all the way on the right of the table row to see the dots.*) and choose `Manage access`.
+* For one of the virtualized data assets you've created, click the 3 vertical dots on the right and choose `Manage access`.
 
 ![Manage access to virtualized data](../images/dv/dv-manage-access-menu.png)
 
@@ -103,7 +105,7 @@ In order for other users to have access to the data that you just virtualized, y
 
 ![Grant Access to specific users](../images/dv/dv-manage-access-add-user.png)
 
-* Select the user (or multiple users) you wish to grant access to and click the `Add users` button.
+* In the popup dialog window, click the checkbox next to the user (or multiple users) you wish to grant access to and then click the `Add users` button.
 
 ![Select Users to Grant Access to](../images/dv/dv-manage-access-select-users.png)
 
