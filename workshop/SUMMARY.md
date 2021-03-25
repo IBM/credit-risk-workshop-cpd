@@ -3,7 +3,6 @@
 ## Getting Started
 
 * [Pre-work](pre-work/README.md)
-* [Git integration (using GitLab)](gitIntegration/README.md)
 
 ## Credit Risk Workshop
 
