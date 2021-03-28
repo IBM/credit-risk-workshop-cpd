@@ -4,7 +4,7 @@
 
 ## Add Cluster User Accounts
 
-* Go the (☰) menu and under manage the `Administer` section, click on the `Manage Users` option from the menu. Then click on the *`New user`* button on the top right.
+* Go the (☰) menu and under manage the `Administration` section, click on the `User management` option from the menu. Then click on the *`New user`* button on the top right.
 
 ![Add a user](../workshop/images/admin/manage-add-users.png)
 
