@@ -351,5 +351,5 @@ If all columns have been assigned a data class, proceed to do the following:
 
 * Add the experience user to the Enterprise catalog as an Editor
 * Add the experience user to the Enterprise Catalog Data project as an Editor. They will not be able to view the Data Flow as a Viewer.
-
+* Go to hamburger menu -> Governance -> Categories and choose the `Mortgage Default Analysis` category. Click the `+` by *Collaborators* , Check *All Users*, and click `Add`.
 **This completes the Organize run book. You are done! and can now take the Organize experience flow to validate everything works. Log out as admin and login as the experience user.**
