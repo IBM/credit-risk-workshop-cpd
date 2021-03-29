@@ -51,11 +51,11 @@ Import the following governance artifacts in the order listed below:
 
 #### Import Categories
 
-Go to Organize > Data and AI governance > Categories
+Go to Governance > Categories
 
-1. Click on the Import button.
+1. Click on the Add Category button -> Import from file.
 1. Click on the Add file button.
-1. Select the glossary-organize-categores.csv file and click Open.
+1. Select the glossary-organize-categories.csv file and click Open.
 1. Click Next.
 1. Select the Replace all values option.
 1. Click on Import. It should complete successfully with 4 new categories.
@@ -67,7 +67,7 @@ Go to Organize > Data and AI governance > Categories
 
 #### Import Business Terms
 
-Go to Organize > Data and AI governance > Business terms
+Go to Governance >  > Business terms
 
 1. Click on the `New business term` -> `Import from file` button.
 1. Click on the Add file button.
@@ -77,14 +77,14 @@ Go to Organize > Data and AI governance > Business terms
 1. Click on Import. It should complete successfully with 28 new drafts.
 1. Click Go to Task button.
 1. Click the Publish button. Wait until you see the success message…
-1. Go to Organize > Data and AI governance > Business terms
+1. Go to  Governance > Business terms
 1. From the Published tab, scroll to the bottom of the business term list and you should see at the bottom that there are 28 published business terms.
 
   > *Note: You may have to refresh the page if you do not see all 28 business terms.
 
 #### Import Policy
 
-Go to Organize > Data and AI governance > Policies
+Go to  Governance > Policies
 
 1. Click on the `New policy` -> `Import from file` button.
 1. Click on the Add file button.
@@ -94,12 +94,12 @@ Go to Organize > Data and AI governance > Policies
 1. Click on Import. It should complete successfully with 1 new draft.  
 1. Click Go to Task button.
 1. Click the Publish button. Wait until you see the success message…
-1. Go to Organize > Data and AI governance > Policies
+1. Go to  Governance > Policies
 1. From the Published tab, you should see 1 policy named Protection of Sensitive Information.
 
 #### Import Data Governance Rules
 
-Go to Organize > Data and AI governance > Rules
+Go to  Governance > Rules
 
 1. Click on the `New rule` -> `Import from file` button.
 1. Click on the Add file button.
@@ -109,7 +109,7 @@ Go to Organize > Data and AI governance > Rules
 1. Click on Import. It should complete successfully with 4 new drafts.
 1. Click Go to Task button.
 1. Click the Publish button. Wait until you see the success message…
-1. Go to Organize > Data and AI governance > Rules
+1. Go to  Governance > Rules
 1. From the Published tab, you should see 4 governance rules all starting with names like All….
 
 ### Assign Classification and Data Classes to Business Terms
@@ -201,7 +201,7 @@ Go to `Organize` > `Data and AI governance` > `Policies`
 
 ### Create the Enterprise Catalog Data Project
 
-We will use an exported project that contains the connection and tables that will be published to the Enterprise catalog and the connection and 2 tables you will also add to the Default catalog. Go to `Projects`
+We will use an exported project that contains the connection and tables that will be published to the Enterprise catalog and the connection and 2 tables you will also add to the Platform assets catalog. Go to `Projects`
 
 1. Click on `+ New project` and `Analytics project`.
 1. Click on Create a project from a sample or file
@@ -250,30 +250,28 @@ Perform the following steps in order to ensure that the Mortgage data is publish
 1. Select the CUSTOMER table.
 1. Select the MORTGAGE_APPLICANT table.
 1. Select the Publish button.
-1. Make sure the Governance catalog is the selected this time as the target catalog.
+1. Make sure the Platform assets catalog is the selected this time as the target catalog.
 1. Click the Publish button.
 
 ### Modify the Default Catalog Data Assets
 
-We need to add business terms to the 2 tables we published to the Default catalog.
+We need to add business terms to the 2 tables we published to the Platform assets catalog.
 
-* Go to Organize > All catalogs and select the Default catalog.
+* Go to Organize > All catalogs and select the Platform assets catalog.
 
 #### CUSTOMER Table
 
 1. Click on the CUSTOMER table.
-1. At the table level, click the pencil icon next to the Business terms area in the Overview section.
+1. At the Overview tab, click *Governance artifacts* -> `+Business terms`.
 1. Place your cursor in the area and start typing the name of following business terms. As you find them, Select them:
 `Credit Card Number`, `Email Address`, `Phone Number`, `Social Security Number`
-1. When you have added all 4, click on the Apply button.
 
 #### MORTGAGE_APPLICANT Table
 
 1. Click on the MORTGAGE_APPLICANT table.
-1. At the table level, click the pencil icon next to the Business terms area in the Overview section.
+1. At the Overview tab, click *Governance artifacts* -> `+Business terms`.
 1. Place your cursor in the area and start typing the name of following business terms. As you find them, Select them:
 `Email Address`, `Phone Number`, `Social Security Number`.
-1. When you have added all 3, click on the Apply button.
 
 #### Validate the Information Assets are in IGC
 
@@ -301,23 +299,22 @@ Now that all the data is published to the Enterprise catalog we need to modify s
 #### CUSTOMER Table
 
 1. Click on the CUSTOMER table.
-1. At the table level, click the pencil icon next to the Business terms area in the Overview section.
-1. Place your cursor in the area and start typing the name of following business terms. As you find them, Select them: `Credit Card Number`, `Email Address`, `Phone Number`, `Social Security Number`
-1. When you have added all 4, click on the Apply button.
-1. At the column level, in the Overview section: Click on the icon that looks like an eye for each columns below and:
+1. At the Overview tab, click *Governance artifacts* -> `+Business terms`.
+1. Place your cursor in the area and start typing the name of following business terms. As you find them, Select them and click `+Add`: `Credit Card Number`, `Email Address`, `Phone Number`, `Social Security Number`
+1. At the column level, in the *Asset* section: Click on the icon that looks like an eye for each columns below and:
     * Assign the Email Address business Term to the EMAIL_ADDRESS column
     * Assign the Phone Number business Term to the PHONE_NUMBER column
     * Assign the Social Security Number business Term to the NATIONAL_ID column
     * Assign the Credit Card Number business Term to the CREDITCARD_NUMBER column
     * Assign the Credit Card Expiration Date business Term to the CREDITCARD_EXP column
     * Assign the Credit Card Valiation Number business Term to the CREDITCARD_CVV column
-    * Assign the US State Code business Term to the STATE_CODE column
+    * Assign the State Code business Term to the STATE_CODE column
 1. Go to the Review tab and do the following:
-    * Give it a rating of 4 Stars by clicking on the 4th star to the right.
+    * Give it a rating of 4 Stars under the *Review* tab by clicking on the 4th star to the right.
     * Enter this text for the review text (including the period at the end) - Contains the governed and trusted customer data to use for customer attrition and auto insurance claim fraud analysis projects. It can’t be used for mortgage default analysis because applicants have not become customers. It also is a subset of the US master customer table. (including the period at the end)
     * Click on the Submit button.
 1. Go to the Profile tab and do the following:
-    * Make sure the profile has been run. If it has not, click on the buttom to force a run of the profile and make sure it completes and that all columns have been assigned a data class.
+    * Make sure the profile has been run. It should run automatically when you first access the *Profile* tab.
 
 If all columns have been assigned a data class, proceed to do the following:
 
@@ -329,17 +326,17 @@ If all columns have been assigned a data class, proceed to do the following:
 
 1. Click on the MORTGAGE_CUSTOMER table.
 1. Go to the Review tab and do the following:
-    * Give it a rating of 4 Stars by clicking on the 4th star to the right.
+    * Give it a rating of 4 Stars by clicking on the 4th star to the right under the *Review* tab.
     * Enter this text for the review text - Contains everything needed to perform accurate mortgage default analysis. However, for deeper analysis, it could use more information related to the applicant, so it must be used in conjunction with the MORTGAGE_APPLICANT data. (including the period at the end)
     * Click on the Submit button.
 
 #### MORTGAGE_APPLICANT Table
 
 1. Click on the MORTGAGE_APPLICANT table.
+1. At the Overview tab, click *Governance artifacts* -> `+Business terms`.
 1. At the table level, click the pencil icon next to the Business terms area in the Overview section.
-1. Place your cursor in the area and start typing the name of following business terms. As you find them, Select them: `Email Address`,  `Phone Number`, `Social Security Number`
-1. When you have added all 3, click on the Apply button.
-1. At the column level, in the Overview section: Click on the icon that looks like an eye for each column below and:
+1. Place your cursor in the area and start typing the name of following business terms. As you find them, Select them and click `+Add`: `Email Address`,  `Phone Number`, `Social Security Number`
+1. At the column level, in the *Asset* section: Click on the icon that looks like an eye for each column below and:
     * Assign the Email Address business term to the EMAIL_ADDRESS column
     * Assign the Phone Number business term to the PHONE_NUMBER column
     * Assign the Social Security Number business term to the SOCIAL_SECURITY_NUMBER column
@@ -348,7 +345,7 @@ If all columns have been assigned a data class, proceed to do the following:
     * Enter this text for the review text - Contains governed and trusted data related to mortgage applicants to use for the mortgage default analytics project. It contains sensitive information but it is masked, with real data replaced with fictional by contextually correct data that will not affect analytical results. (including the period at the end)
     * Click on the Submit button.
 1. Go to the Profile tab and do the following:
-    * Make sure the profile has been run. If it has not, click on the button to force a run of the profile and make sure it completes and that all columns have been assigned a data class.
+    * Make sure the profile has been run. It should run automatically when you first access the *Profile* tab.
 
 ## User Permissions
 
