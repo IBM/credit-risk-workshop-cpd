@@ -76,6 +76,6 @@ If you are running the OpenScale Lab, you may want to use a local DB2 Server ins
 
   ![Local DB2 information](../workshop/images/connections/db2local-conninformation.png)
 
-* Take not of the connection information, it will be used later on.
+* Take note of the connection information, it will be used later on.
 
 __THIS SECTION IS COMPLETE, GO BACK AND CONTINUE WITH THE [ADMIN GUIDE](./README.md)__
