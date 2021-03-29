@@ -4,7 +4,7 @@ For Cloud Pak for Data to access our data sources (Db2 Warehouse, MongoDB, etd),
 
 ## Add DB2 Warehouse Connection
 
-* To add a new data source, go to the (☰) navigation menu and click on the *Connections* option.
+* To add a new data source, go the (☰) navigation menu and under the *Data* section click on *`Platform connections`*.
 
   ![(☰) Menu -> Collections](../workshop/images/navigation/menu-connections.png)
 
@@ -12,13 +12,15 @@ For Cloud Pak for Data to access our data sources (Db2 Warehouse, MongoDB, etd),
 
   ![Overview page](../workshop/images/connections/conn-new-connection.png)
 
-* Start by giving your new *Connection* a name and select *Db2 Warehouse on Cloud* as your connection type. More fields should apper.
+* Start by selecting *Db2 Warehouse* as your connection type.
 
-* Enter the Host, Port, Database, Username and Password values for the connection (*Note: these are the values you saved when you provisioned the instance*).
+* On the following screen, provide your new connection a name. Also enter the Host, Port, Database, Username and Password values for the connection (*Note: these are the values you saved when you provisioned the instance*).
 
-* Click the check box for `Use SSL`. Next click `Select file` and navigate to where you converted the SSL certificate for DB2 Warehouse from a `.crt` file to a `.pem` file (probably called DigiCertGlobalRootCA.pem).
+* Ensure the check box for `Use SSL` is selected, then copy and paste the contents of the SSL certificate for DB2 Warehouse (probably called DigiCertGlobalRootCA.pem).
 
-* Once you have entered all the conneciton information, you must first click the `Test Connection` button and after that succeeds, click on the *`Save`* button.
+  >_Note: You can open the pem file in a text editor to copy the credentials content_
+
+* Once you have entered all the connection information, you must first click the `Test Connection` button and after that succeeds, click on the *`Save`* button.
 
   ![Add a Db2 Warehouse on Cloud connection](../workshop/images/connections/conn-details.png)
 
