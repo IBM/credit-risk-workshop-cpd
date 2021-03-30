@@ -6,8 +6,9 @@ This section is comprised of the following steps:
 
 1. [Find the Right Data](#1-find-the-right-data)
 1. [Understand the Data](#2-understand-the-data)
-1. [Trust the Data Quality](#3-trust-the-data-quality)
-1. [Understand the Data Content](#4-understand-the-data-content)
+//1. [Trust the Data Quality](#3-trust-the-data-quality)
+//1. [Understand the Data Content](#4-understand-the-data-content)
+1. [Understand the Data Content](#3-understand-the-data-content)
 
 ## 1. Find the Right Data
 
@@ -25,9 +26,9 @@ We need to find the right data and business information related to the Mortgage 
 
 * First and foremost, we need to verify that all the data needed for the project has been cataloged and available to the project team to use. We can do this very easily by refining the search to only display mortgage data that exists across all catalogs.
 
-* From the search drop down menu select Catalogs > All catalogs.
+* From the search drop down menu select `Governance` > `All governance artifacts`.
 
-![Search all catalogs](../images/wkc-user/wkc-user-search-all-catalogs.png)
+![Search all catalogs](../images/wkc-user/wkc-user-search-all-governance.png)
 
 * All data assets across catalogs meeting the criteria are displayed. This is the data we are looking for.
 
@@ -35,9 +36,9 @@ We need to find the right data and business information related to the Mortgage 
 
 * However, before we proceed to the catalog we need to also find all the business information related to the project to review the terms and content of the data and identify if there are any policies and rules set by the business that the project team needs to be aware of and adhere to.
 
-* Click on the Any type filter and select the Business term type from the list to refine the results.
+* From the search drop down menu select `Governance` > `Business terms`.
 
-![Search business terms](../images/wkc-user/wkc-user-search-any-type-business-term.png)
+![Search business terms](../images/wkc-user/wkc-user-search-business-term.png)
 
 * Notice that the governance team has been hard at work and has defined 25 business terms related to the mortgage data the project will be using. Also notice that they are tagged with the key word Mortgage to easily find them
 
@@ -51,13 +52,9 @@ We need to find the right data and business information related to the Mortgage 
 
 * Click on the Any type filter and select the Category type from the list to refine the results.
 
-* Click on the Any type filter and select the Policy type from the list to refine the results.
+![Filter Category Policy Rule](../images/wkc-user/wkc-user-filter-category.png)
 
-* Click on the Any type filter and select the Rule type from the list to refine the results.
-
-![Filter Category Policy Rule](../images/wkc-user/wkc-user-filter-category-policy-rule.png)
-
-* Notice that there is a Mortgage Default Analysis category defined that contains all the business information related to the project and a category named Sensitive Information that is a subcategory, along with a business policy related to the Protection of Sensitive Information and three rules outlining the protection of Email Addresses, Phone Numbers and Social Security Numbers. This is a good indication that the mortgage data being used by the project contains sensitive information that needs to be protected.
+* Notice that there is a Mortgage Default Analysis category defined that contains all the business information related to the project and a category named Sensitive Information that is a subcategory. This is a good indication that the mortgage data being used by the project contains sensitive information that needs to be protected.
 
 ## 2. Understand the Data
 
@@ -81,6 +78,7 @@ In this section you will use the Business glossary to gain a deeper understandin
 
 * A Social Security Number term appears in the list with tags of Mortgage applicant and Sensitive information. This is an indication that the Mortgage Applicant table has a social security number.
 
+<!--- TODO. Get this working on the cluster, and updated docs
 * Click on the Social Security Number business term with the two tags applied from the list.
 
 * Click on the Related Content tab.
@@ -154,10 +152,12 @@ To review the data quality results:
 * Click on the IBM Cloud Pak for Data title, or the (☰) hamburger menu -> `Home`, to get ready for the next section.
 
 ## 4. Understand the Data Content
+-->
+## 3. Understand the Data Content
 
 You have gained an understanding of the policies and rules and information related to sensitive data and validated and trust the data quality. In this section we will go to the Enterprise catalog, which is where we identified all the data we need resides, and use all of the features it provides to gain an even better understanding of the data content and have even more confidence in the data based on what others are saying and by utilizing the AI assisted recommendations, automatic profiling and additional data content statistics provided.
 
-* Click the (☰) hamburger menu in the upper left corner and click `Organize` -> `All catalogs`
+* Click the (☰) hamburger menu in the upper left corner and click `Catalog` -> `All catalogs`
 
 * Click on the `Enterprise` catalog.
 
@@ -177,7 +177,7 @@ Watson Knowledge Catalog provides suggested assets to you based on recommendatio
 
 * Click on the `MORTGAGE_APPLICANT` table to review its content and metadata.
 
-* You are brought into the Overview section of the MORTGAGE_APPLICANT table. You may see that Data masking is in progress and that 3 columns are being masked. The asset is being masked by the Protect Sensitive Personal Information data protection rule being enforced by the data governance team. Because you are not authorized to view the sensitive information, the data is being protected.
+* You are brought into the Overview section of the MORTGAGE_APPLICANT table. Click on the `Asset` tab. You may see that Data masking is in progress and that 3 columns are being masked. The asset is being masked by the Protect Sensitive Personal Information data protection rule being enforced by the data governance team. Because you are not authorized to view the sensitive information, the data is being protected.
 
 * The data that is masked is indicated with a lock icon next to their column names; EMAIL_ADDRESS, PHONE_NUMBER and SOCIAL_SECURITY_NUMBER. Scroll to the right to view all the masked columns.
 
