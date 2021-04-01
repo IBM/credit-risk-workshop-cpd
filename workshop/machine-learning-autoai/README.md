@@ -6,8 +6,9 @@ AutoAI is a capability that automates various tasks to ease the workflow for dat
 This section is broken up into the following steps:
 
 1. [Run AutoAI Experiment](#1-run-autoai-experiment)
-2. [Save AutoAI Model](#2-save-autoai-model)
-3. [Promote the Model](#3-promote-the-model)
+1. [Save AutoAI Model](#2-save-autoai-model)
+1. [Save AutoAI notebook](#3-save-autoai-notebook)
+1. [Promote the Model](#4-promote-the-model)
 
 >*Note: The lab instructions below assume you have a project already with the assets necessary to build a model. If not, follow the instructions in the pre-work section to create a project.*
 
@@ -78,7 +79,27 @@ This section is broken up into the following steps:
 
 * You will see the new model under *Models* section of the *Assets* page:
 
-## 3. Promote the model
+## 3. Save AutoAI notebook
+
+* To save the AutoAI experiment as a notebook, go back to the window for the pipeline you have chosen, and click `Save as`.
+
+![Save notebook](../images/autoai/autoai-pipeline-save-model.png)
+
+* Choose the `Notebook` tile, accept the default name or change it if you like. Add optional description or tags, and click `Create`.
+
+![Name and create notebook](../images/autoai/autoai-save-as-notebook.png)
+
+* You will receive a notification to indicate that your notebook is saved to your project. Go back to your project main page by clicking on the `View in project` link. 
+
+![View in Project](../images/autoai/autoai-view-saved-notebook-in-project.png)
+
+* Alternately, closing the window will expose the path back to the project at the top of the screen.
+
+![Navigate to Project](../images/autoai/autoai-navigate-to-project.png)
+
+* The notebook will be saved to your project, and can be examined in detail, changed and modified, and used to create a new model. See the documentations for [Modifying and running an AutoAI generated notebook](./running-autoai-notebook.md) for details.
+
+## 4. Promote the model
 
 * Now that we have saved our model, we will next need to make the model available in our deployment space so it can be deployed. Under the *Models* section of the *Assets* page, click the name of your saved model.
 
