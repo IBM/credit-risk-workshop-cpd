@@ -2,17 +2,15 @@
 
 For the Watson OpenScale modules in the workshop, we need to run through the auto setup configuration that will deploy the sample model, configure openscale to monitor that sample model, and load some historical data.
 
-* In the Cloud Pak for Data instance, click on the `Services` icon.
+> Note: Watson OpenScale now allows for provisioning multiple instances of the service. The steps below assume we will configure the default service instance (which is automatically provisioned after installation).
+
+* In the Cloud Pak for Data instance, go the (☰) menu and under `Services` section, click on the `Instances` menu option.
 
   ![Service](../workshop/images/navigation/services.png)
 
-* Find and click on the `Watson OpenScale` tile.
+* Find the `OpenScale-default` instance from the instances table and click the three vertical dots to open the action menu, then click on the `Open` option.
 
-  ![Openscale Tile](../workshop/images/openscale/services-wos-tile.png)
-
-* Launch the OpenScale UI tooling by clicking on the *`Launch`* button
-
-  ![Openscale Launch](../workshop/images/openscale/services-wos-launch.png)
+  ![Openscale Tile](../workshop/images/openscale/services-wos-instance.png)
 
 * Since this is the first time we are launching OpenScale, you will be presented with a welcome message, where we can launch the auto setup process. Click on the *`Auto setup`* button.
 
@@ -22,7 +20,7 @@ For the Watson OpenScale modules in the workshop, we need to run through the aut
 
   ![Openscale Auto Setup WML](../workshop/images/openscale/openscale-autosetup-wml.png)
 
-* In the 'Connect to your database' panel, enter the connection details for your database (this is the database you provisioned in a previous section of the admin guide). Click on the *`Next`* button.
+* In the 'Connect to your database' panel, enter the connection details for your local DB2 database (this is the database you provisioned in a previous section of the admin guide). Click on the *`Next`* button.
 
   ![Openscale Auto Setup DB](../workshop/images/openscale/openscale-autosetup-db.png)
 
