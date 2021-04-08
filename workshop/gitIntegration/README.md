@@ -1,5 +1,7 @@
 # Git Repository Integration
 
+***IMPORTANT NOTE: This module has been archived and is no longer being actively maintained. The readme will be left below for reference only.***
+
 A Cloud Pak for Data project can be integrated with a git repository. The Git integration must be done at project creation time.
 
 ## Generate GitLab Token
