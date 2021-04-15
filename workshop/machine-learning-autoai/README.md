@@ -30,15 +30,23 @@ This section is broken up into the following steps:
 
 ![Select data](../images/autoai/autoai-select-dataset-project.png)
 
-* In the dialog, select the `german_credit_data_noid.csv` file and click the `Select asset` button.
+* In the dialog, select the `german_credit_data.csv` file and click the `Select asset` button.
 
 ![Select data](../images/autoai/autoai-select-dataset.png)
 
 * Once the dataset is read in, we will need to indicate what we want the model to predict. Under *Select prediction column* panel, find and click on the `Risk` row.
 
-* AutoAI will set up defaults values for the experiment based on the dataset and the column selected for the prediction. This includes the type of model to build, the metrics to optimize against, the test/train split, etc. You could view/change these values under 'Experiment settings', however, for now we will accept the defaults and click the *`Run experiment`* button.
+* AutoAI will set up defaults values for the experiment based on the dataset and the column selected for the prediction. This includes the type of model to build, the metrics to optimize against, the test/train split, etc. To view/change these values, click the *`Experiment settings`* button.
 
-![Choose Churn column and run](../images/autoai/autoai-choose-prediction-and-run.png)
+![Choose Churn column and run](../images/autoai/autoai-choose-prediction-and-configure.png)
+
+* On the `Data source settings` panel, in the `Select columns to include` section, deselect the checkbox for the `CustomerID` column name. This will remove the customer ID column from being used as a feature for the model. Although we could change other aspects of the experiment, we will accept the remaining default values and click the `Save settings` button.
+
+![Choose features and save](../images/autoai/autoai-exp-settings-columns.png)
+
+* To start the experiment, click on the `Run experiment` button.
+
+![Run experiment](../images/autoai/autoai-exp-run.png)
 
 * The AutoAI experiment will now run. AutoAI will run through steps to prepare the dataset, split the dataset into training / evaluation groups and then find the best performing algorithms / estimators for the type of model. It will then build the following series of candidate pipelines for each of the top N performing algorithms (where N is a number chosen in the configuration which defaults to 2):
 
