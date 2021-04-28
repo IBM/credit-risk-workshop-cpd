@@ -138,11 +138,13 @@ The fundamental abstraction in Watson Knowledge Catalog is the Category. A categ
 
 ### Add category manually
 
-* In addition to importing, you can manually create categories. Add a category for your assets by going to the upper-left (☰) hamburger menu, choose `Governance` -> `Categories`, then click the `Add category` button and then `New category`.
+> NOTE: Categories, Business Terms, Data Classes, and othe Governance artifacts are global in scope. When you are asked to create one, pre-pend your initials or some unique tag, or it will fail. For example, below I would use `scottda-Personal Data` in place of `XXX-Personal Data`.
+
+In addition to importing, you can manually create categories. Add a category for your assets by going to the upper-left (☰) hamburger menu, choose `Governance` -> `Categories`, then click the `Add category` button and then `New category`.
 
 ![organize data categories](../images/wkc-admin/wkc-admin-menu-organize-categories.png)
 
-* Give your category a name, such as *Personal Data*, and an optional description, and then click the `Save` button.
+* Give your category a name pre-pended with initials or a unique tag, such as *XXX-Personal Data*, and an optional description, and then click the `Save` button.
 
 ![new category billing](../images/wkc-admin/wkc-admin-new-category-personal-data.png)
 
@@ -164,13 +166,15 @@ The fundamental abstraction in Watson Knowledge Catalog is the Category. A categ
 
 ## 4. Add data classes
 
+> NOTE: Categories, Business Terms, Data Classes, and othe Governance artifacts are global in scope. When you are asked to create one, pre-pend your initials or some unique tag, or it will fail. For example, below I would use `scottda-alphanumeric` in place of `XXX-alphanumeric`.
+
 When you profile your assets, a data class will be inferred from the contents where possible. We'll see more on this later. You can also add your own data classes.
 
 * Add a data class for your assets by going to the upper-left (☰) hamburger menu, choose `Governance` -> `Data classes`, then click the `Add data class` button and then the`New data class` option from the drop down menu.
 
 ![organize data classes](../images/wkc-admin/wkc-admin-menu-organize-data-classes.png)
 
-* Give your new data class a name, i.e. *alphanumeric*, and then click `Change` for Primary category.
+* Give your new data class a name pre-pended with initials or a tag, i.e. *XXX-alphanumeric*, and then click `Change` for Primary category.
 
 ![new data class](../images/wkc-admin/wkc-admin-create-data-class.png)
 
@@ -196,6 +200,8 @@ When you profile your assets, a data class will be inferred from the contents wh
 
 ## 5. Add Business terms
 
+> NOTE: Categories, Business Terms, Data Classes, and othe Governance artifacts are global in scope. When you are asked to create one, pre-pend your initials or some unique tag, or it will fail. For example, below I would use `scottda-Contact Information` in place of `XXX-Contact Information`.
+
 You can use [Business terms](https://dataplatform.cloud.ibm.com/docs/content/wsj/governance/dmg16.html) to standardize definitions of business concepts so that your data is described in a uniform and easily understood way across your enterprise.
 
 You already saw how to create a category and make it a *business term*. You can also create the business term as it's own entity.
@@ -208,7 +214,7 @@ You already saw how to create a category and make it a *business term*. You can 
 
 ![create business term](../images/wkc-admin/wkc-admin-create-business-term.png)
 
-* Give the new Business term a name such as *Contact Information* and optional description (**NOTE: If you are working with others on the same platform, prepend your term with something unique, i.e scottda-ContactInfo**). Click `Change` under *Primary category* and choose *Personal data*, then Click the `Save as draft` button.
+* Give the new Business term a name pre-pended with initials or a tag, such as *XXX-Contact Information* and optional description. Click `Change` under *Primary category* and choose *Personal data*, then Click the `Save as draft` button.
 
 ![name new business term](../images/wkc-admin/wkc-admin-name-business-term.png)
 
@@ -224,7 +230,7 @@ You already saw how to create a category and make it a *business term*. You can 
 
 ![edit business terms](../images/wkc-admin/wkc-admin-assign-terms-to-column.png)
 
-* Enter *Contact Information* (or your uniquely named term such as *scottda-ContactInfo*) term you created earlier under *Business terms* and the term will be searched for. Click on the `Contact Information` term that is found, and click `Apply`:
+* Enter *XXX-Contact Information* (your uniquely named term such as *scottda-ContactInfo*) term you created earlier under *Business terms* and the term will be searched for. Click on the `Contact Information` term that is found, and click `Apply`:
 
 ![search business terms](../images/wkc-admin/wkc-admin-search-contact-to-assign-term.png)
 
@@ -240,7 +246,9 @@ You already saw how to create a category and make it a *business term*. You can 
 
 We can now create rules to control how a user can access data.
 
-* Create a business term called *CustomerID* and assign it to your *CustomerID* column in the data set using the instructions above. See below if you need details, but try it yourself first, and skip to *Adding a rule* below if you do not need a reminder.
+> NOTE: Workshop teammates can simply reuse 1 term to associate with a rule, i.e. *CustomerID*, or you can proceed below to create a uniquely named one.
+
+* Create a business term called *XXX-CustomerID*, or re-use one of your workshop teammates buisness terms for this expercise. Assign it to your *CustomerID* column in the data set using the instructions above. See below if you need details, but try it yourself first, and skip to *Adding a rule* below if you do not need a reminder.
 
 ### How to create a Business term review
 
@@ -248,7 +256,7 @@ We can now create rules to control how a user can access data.
 
 * Click on the upper-right `Add business term` button and then the `New business term` option in the drop down menu.
 
-* Give the new Business term the name *CustomerID* and optional description. Click `Change` under *Primary category* and choose *Personal data*, then Click the `Save as draft` button. In the next window, click `Publish`.
+* Give the new Business term the name *XXX-CustomerID* and optional description. Click `Change` under *Primary category* and choose *Personal data*, then Click the `Save as draft` button. In the next window, click `Publish`.
 
 * Go back to the catalog you created earlier (i.e *CreditDataCatalog*) and open it ((☰) hamburger menu `Catalog` -> `All catalogs` and choose `CreditDataCatalog`). Under the *Browse assets* tab, click on the data set *applicant_personal_data.csv*, and then the `Asset` tab, to get the column/row preview. Find the *CustomerID* column and click the *Column information* icon (looks like an "eye").
 
@@ -266,7 +274,7 @@ We can now create rules to control how a user can access data.
 
 ![Data protection rule](../images/wkc-admin/wkc-new-dataprotection-rule.png)
 
-* Give your rule a *Name*, leave the *Type* set to `Access`, and add a *Business definition*.
+* Give your rule a unique *XXX-Name*, leave the *Type* set to `Access`, and add a *Business definition*.
 
 * Under *Rule builder* > *Condition1*: For the `If` condition, select *Business term* *Contains any* *CustomerID*. Under *Action*, for the `then` panel, select *mask data* *in columns containing* *alphanumeric*. Choose the tile for `Substitute`, which will make a non-identifiable hash. This obscures the actual CustomerID, but allows actions like database joins to still work. Click the `Create rule` button.
 
