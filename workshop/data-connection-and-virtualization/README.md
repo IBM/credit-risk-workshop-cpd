@@ -4,11 +4,6 @@ This section will cover aspects of collecting data in Cloud Pak for Data. Specif
 
 > **Note: To complete this section, an Admin or Data Engineer role needs to be assigned to your user account. The workshop instructor will assign this role as appropriate.**
 
-The section is broken up into the following steps:
-
-1. [Virtualize Data](#virtualizing-data)
-1. [Grant Access to Virtualized Data](#grant-access-to-the-virtualized-data)
-
 ## Virtualizing Data
 
 In this section, we will gather data from several tables across data sources. We will use data virtualization to access these tables and then create joined views against those virtualized tables.
@@ -83,36 +78,8 @@ Now we're going to **join** the tables we previously virtualized, so we have a f
 
 ![Our data sets at the end of this section](../images/dv/dv-virtualized-data-all.png)
 
-## Grant access to the virtualized data
-
->*Note: This section only needs to be completed if there are non-Admin or non-Data Engineer users you are working in a group with. The instructors would have indicated that it needs to be completed to give those users access to the data you have virtualized above.*
-
-In order for other users to have access to the data that you just virtualized, you need to grant them access. Follow these steps to make your Virtualized data visible to them.
-
-* To launch the data virtualization tool, go the (☰) navigation menu and under the *`Data`* section click on `Data virtualization`.
-
-![(☰) Menu -> Collect -> Data Virtualization](../images/navigation/dv-menu.png)
-
-* From the Data virtualization sub-menu at the top left of the page, click on the menu drop down list and choose *`My virtualized data`*.
-
-![My virtualized data](../images/dv/dv-menu-myvirtualizeddata.png)
-
-* For one of the virtualized data assets you've created, click the 3 vertical dots on the right and choose `Manage access`.
-
-![Manage access to virtualized data](../images/dv/dv-manage-access-menu.png)
-
-* Click the `Specific users` button and click the `Add user` button.
-
-![Grant Access to specific users](../images/dv/dv-manage-access-add-user.png)
-
-* In the popup dialog window, click the checkbox next to the user (or multiple users) you wish to grant access to and then click the `Add users` button.
-
-![Select Users to Grant Access to](../images/dv/dv-manage-access-select-users.png)
-
-* Repeat the above steps to give access to the remaining virtualized tables and views (all five that you created).
-
 ## Conclusion
 
-In this section we learned how to make connection to databases that contain our data, how to virtualize them, and how to allow other to collaborate with us and use the virtualized data.
+In this section we learned how to make connection to databases that contain our data, how to virtualize them, and how to use the virtualized data.
 
 Remember that you can add data from different databases and servers if you need to. Moreover, you can virtualized these data from different sources together as well! The goal is to take care of bringing the data to the platform early on so all the data scientists can use it without reinventing the wheel while you keep full control of who has access to what data.

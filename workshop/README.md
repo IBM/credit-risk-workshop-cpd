@@ -72,20 +72,36 @@ This file has the following attributes:
 
 ## Agenda
 
-|   |   |
-| - | - |
-| [Pre-work](pre-work/README.md) | Creating a project, downloading the data set, seeding a database |
-| [Data Connection and Virtualization](data-connection-and-virtualization/README.md) | Creating a new connection, virtualizing the data, importing the data into the project |
-| [Import Data to Project](addData/README.md) | Import the data into your project |
-| [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) | Refining the data, vizualizing and profiling the data |
-| [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md) | Use and Enterprise data catalog to search, manage, and protect data |
-| [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md) | Create new Categories, Business terms, Policies and Rules in Watson Knowledge Catalog |
-| [Machine Learning with Jupyter](machine-learning-in-Jupyter-notebook/README.md) | Building a model with Spark, deploying the model with Watson Maching Learning, testing the model with a Python Flask app |
-| [Machine Learning with AutoAI](machine-learning-autoai/README.md) | Use AutoAi to quickly generate a Machine Learning pipeline and model |
-| [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md) | Deploy and machine learning models using several approaches |
-| [Monitoring models with OpenScale GUI (Auto setup Monitoring)](openscale-fastpath/README.md) | Quickly deploy an OpenScale demo with Auto setup|
-| [Monitoring models with OpenScale GUI (Manual Config)](openscale-gui-manual-config/README.md) | Use the OpenScale tool to monitor deployed machine learning models |
-| [Monitoring models with OpenScale (Notebook)](openscale-notebook/README.md) | See the OpenScale APIs in a Jupyter notebook and manually configure the monitors |
+|  |   |   |
+| -  | - | - |
+| 00:05 | Welcome | Welcome to the Cloud Pak for Data workshop |
+| 00:20 | Lecture - Intro and Overview | Introduction to Cloud Pak for Data and an Overview of this workshop |
+| 00:20 | Lab - [Pre-work](pre-work/README.md) |Clone or Download the repo, create a project, create a deployment space |
+|00:10 | Walkthrough - [Pre-work](pre-work/README.md) |Clone or Download the repo, create a project, create a deployment space |
+| 00:20 | Lecture - Data Refinery and Data Virtualization  | Data Refinery and Data Virtualization |
+| 00:30 | Lab - [Data Connection and Virtualization](data-connection-and-virtualization/README.md) and [importing the data into the project](addData/README.md) | Creating a new connection, virtualizing the data, importing the data into the project |
+| 00:10 | Walkthrough - [Data Connection and Virtualization](data-connection-and-virtualization/README.md) | Creating a new connection, virtualizing the data, importing the data into the project |
+| 00:15 | Lab - [Import Data into Project](addData/README.md) | Importing data in your projects |
+| 00:05 | Walkthrough - [Import Data into Project](addData/README.md) | Importing data in your projects |
+| 00:15 | Lab - [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) | Refining the data, vizualizing and profiling the data |
+| 00:10 | Walkthrough - [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) | Refining the data, vizualizing and profiling the data |
+| 00:15 | Lecture - Watson Knowledge Catalog | Enterprise governance with Watson Knowledge Catalog |
+| 00:20 | Lab - [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md) | Use and Enterprise data catalog to search, manage, and protect data |
+| 00:05 | Walkthrough - [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md) | Use and Enterprise data catalog to search, manage, and protect data |
+| 00:20 | Lab - [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md) | Create new Categories, Business terms, Policies and Rules in Watson Knowledge Catalog |
+| 00:05 | Walkthrough - [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md) | Create new Categories, Business terms, Policies and Rules in Watson Knowledge Catalog |
+| 00:15 | Lecture - Machine Learning | Machine Learning and Deep Learning concepts |
+| 00:20 | Lab - [Machine Learning with Jupyter](machine-learning-in-Jupyter-notebook/README.md) | Building a model with Spark, deploying the model with Watson Maching Learning, testing the model with a Python Flask app |
+| 00:10 | Walkthrough - [Machine Learning with Jupyter](machine-learning-in-Jupyter-notebook/README.md) | Building a model with Spark, deploying the model with Watson Maching Learning, testing the model with a Python Flask app |
+| 00:20 | Lab - AutoAI - [Machine Learning with AutoAI](machine-learning-autoai/README.md) | Use AutoAi to quickly generate a Machine Learning pipeline and model |
+| 00:10 | Walkthrough - [Machine Learning with AutoAI](machine-learning-autoai/README.md) | Use AutoAi to quickly generate a Machine Learning pipeline and model |
+| 00:30 | Lab - [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md) | Deploy and machine learning models using several approaches |
+| 00:10 | Walkthrough - [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md) | Deploy and machine learning models using several approaches |
+| 00:15 | Lab - [Monitoring models with OpenScale GUI (Auto setup Monitoring)](openscale-fastpath/README.md) | Quickly deploy an OpenScale demo with Auto setup|
+| 00:10 | Walkthrough - [Monitoring models with OpenScale GUI (Auto setup Monitoring)](openscale-fastpath/README.md) | Quickly deploy an OpenScale demo with Auto setup|
+| 00:30 | Lab - [Monitoring models with OpenScale (Notebook)](openscale-notebook/README.md) | See the OpenScale APIs in a Jupyter notebook and manually configure the monitors |
+| 00:10 | Walkthrough -  [Monitoring models with OpenScale (Notebook)](openscale-notebook/README.md) | See the OpenScale APIs in a Jupyter notebook and manually configure the monitors |
+| 00:10 | Closing | Other capabilities, review, and next steps |
 
 ## Compatability
 
