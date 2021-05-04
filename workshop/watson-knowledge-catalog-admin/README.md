@@ -118,13 +118,19 @@ A user can now add this to a project like any other asset from a catalog.
 
 The fundamental abstraction in Watson Knowledge Catalog is the Category. A category is analogous to a folder. You can add categories as needed, or you can import them in .csv format.
 
-### Import categories
+### Import categories (optional)
+
+To import categories with unique names, you will need to be comfortable with running a command in a terminal window. Please skip this if you are not familiar with that process.
+
+* All category names are global in scope, so you'll need to import a file with unique names. Go to where you cloned or downloaded this repository, and navigate to the file `data/wkc/glossary-organize-categories.csv`. Run the script `data/wkc/prepend-user-tag.py` using your intials or some other tag in order to create a unique file. For example, I might run `./prepend-user-tag -T scottda`. If you do not add a tag with the `-T` parameter, a unique file with unique Category names will be generated with a python time.time() string.
+
+![run prepend-user-tag script](../images/wkc-admin/wkc-admin-prepend-user-tag.png)
 
 * Import a category for your assets by going to the upper-left (☰) hamburger menu, choose `Governance` -> `Categories`, then the click the `Add category` button and choose `Import from file`. 
 
 ![Import categories](../images/wkc-admin/wkc-admin-import-categories.png)
 
-* Click the `Add file` and navigate to where you cloned/downloaded the workshop repository, choosing `data/wkc/glossary-organize-categories.csv`. Click the `Next` button.
+* Click the `Add file` and navigate to where you cloned/downloaded the workshop repository, choosing the file that you have created using the `prepend-user-tag.py` script, i.e `data/wkc/scottda-glossary-organize-categories.csv` would be the file I created by running `./prepend-user-tag.py -T scottda`. Click the `Next` button.
 
 ![Import select file](../images/wkc-admin/wkc-import-select-file.png)
 
