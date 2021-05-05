@@ -7,7 +7,7 @@ This section is broken up into the following steps:
 
 1. [Run AutoAI Experiment](#1-run-autoai-experiment)
 1. [Save AutoAI Model](#2-save-autoai-model)
-1. [Save AutoAI notebook](#3-save-autoai-notebook)
+1. [Save AutoAI Notebook](#3-save-autoai-notebook)
 1. [Promote the Model](#4-promote-the-model)
 
 >*Note: The lab instructions below assume you have a project already with the assets necessary to build a model. If not, follow the instructions in the pre-work section to create a project.*
@@ -91,17 +91,13 @@ This section is broken up into the following steps:
 
 * To save the AutoAI experiment as a notebook, go back to the window for the pipeline you have chosen, and click `Save as`.
 
-![Save notebook](../images/autoai/autoai-pipeline-save-model.png)
+![Save notebook](../images/autoai/autoai-toppipeline-details.png)
 
 * Choose the `Notebook` tile, accept the default name or change it if you like. Add optional description or tags, and click `Create`.
 
 ![Name and create notebook](../images/autoai/autoai-save-as-notebook.png)
 
-* You will receive a notification to indicate that your notebook is saved to your project. Go back to your project main page by clicking on the `View in project` link. 
-
-![View in Project](../images/autoai/autoai-view-saved-notebook-in-project.png)
-
-* Alternately, closing the window will expose the path back to the project at the top of the screen.
+* You will receive a notification to indicate that your notebook is saved to your project. Close the pipeline details window to expose the path back to the project at the top of the screen. Click on your project name to navigate to the project overview page.
 
 ![Navigate to Project](../images/autoai/autoai-navigate-to-project.png)
 
