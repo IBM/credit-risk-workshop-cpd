@@ -83,16 +83,16 @@ This file has the following attributes:
 | 00:10 | Walkthrough - [Data Connection and Virtualization](data-connection-and-virtualization/README.md) | Creating a new connection, virtualizing the data, importing the data into the project |
 | 00:15 | Lab - [Import Data into Project](addData/README.md) | Importing data in your projects |
 | 00:05 | Walkthrough - [Import Data into Project](addData/README.md) | Importing data in your projects |
-| 00:15 | Lab - [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) | Refining the data, vizualizing and profiling the data |
-| 00:10 | Walkthrough - [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) | Refining the data, vizualizing and profiling the data |
+| 00:15 | Lab - [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) | Refining the data, visualizing and profiling the data |
+| 00:10 | Walkthrough - [Data Visualization with Data Refinery](data-visualization-and-refinery/README.md) | Refining the data, visualizing and profiling the data |
 | 00:15 | Lecture - Watson Knowledge Catalog | Enterprise governance with Watson Knowledge Catalog |
 | 00:20 | Lab - [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md) | Use and Enterprise data catalog to search, manage, and protect data |
 | 00:05 | Walkthrough - [Enterprise data governance for Viewers using Watson Knowledge Catalog](watson-knowledge-catalog-user/README.md) | Use and Enterprise data catalog to search, manage, and protect data |
 | 00:20 | Lab - [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md) | Create new Categories, Business terms, Policies and Rules in Watson Knowledge Catalog |
 | 00:05 | Walkthrough - [Enterprise data governance for Admins using Watson Knowledge Catalog](watson-knowledge-catalog-admin/README.md) | Create new Categories, Business terms, Policies and Rules in Watson Knowledge Catalog |
 | 00:15 | Lecture - Machine Learning | Machine Learning and Deep Learning concepts |
-| 00:20 | Lab - [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md) | Building a model with Spark, deploying the model with Watson Maching Learning, testing the model with a Python Flask app |
-| 00:10 | Walkthrough - [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md) | Building a model with Spark, deploying the model with Watson Maching Learning, testing the model with a Python Flask app |
+| 00:20 | Lab - [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md) | Building a model with Spark, deploying the model with Watson Machine Learning, testing the model with a Python Flask app |
+| 00:10 | Walkthrough - [Machine Learning with Jupyter](machine-learning-in-jupyter-notebook/README.md) | Building a model with Spark, deploying the model with Watson Machine Learning, testing the model with a Python Flask app |
 | 00:20 | Lab - AutoAI - [Machine Learning with AutoAI](machine-learning-autoai/README.md) | Use AutoAi to quickly generate a Machine Learning pipeline and model |
 | 00:10 | Walkthrough - [Machine Learning with AutoAI](machine-learning-autoai/README.md) | Use AutoAi to quickly generate a Machine Learning pipeline and model |
 | 00:30 | Lab - [Deploy and Test Machine Learning Models](machine-learning-deployment-scoring/README.md) | Deploy and machine learning models using several approaches |
