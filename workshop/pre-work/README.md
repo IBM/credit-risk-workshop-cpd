@@ -7,9 +7,10 @@ Before we get started, we will download some assets and complete some setup for 
 
 ## 1. Download Workshop Assets
 
-Various parts of this workshop will require the attendee to upload files or run scripts. These artifacts have been collected in the following zip file which you can download by clicking the link below and saving the zip file locally to your machine.
+Various parts of this workshop will require the attendee to upload files or run scripts. These artifacts have been collected in the following zip files which you can download by clicking the link below and saving the zip files locally to your machine.
 
 * [Cloud Pak for Data Analytics Project](https://github.com/IBM/credit-risk-workshop-cpd/raw/master/projects/CreditRiskProject.zip)
+* [Sample Python Application](https://github.com/IBM/credit-risk-workshop-cpd/raw/master/application/PythonFlaskApp.zip)
 
 > **Note: The analytics project zip file does not to be unzipped/expanded. It will be directly uploaded to the Cloud Pak for Data platform as a zip file. For reference, all these assets are also in the [GitHub repo for this workshop](https://github.com/IBM/credit-risk-workshop-cpd).**
 
