@@ -91,6 +91,8 @@ This section is broken up into the following steps:
 
 * To save the AutoAI experiment as a notebook, go back to the window for the pipeline you have chosen, and click `Save as`.
 
+> *Note: You can get back to the pipeline window by going to your project overview page, clicking on the AutoAI experiment and clicking the pipeline from the leaderboard*
+
 ![Save notebook](../images/autoai/autoai-toppipeline-details.png)
 
 * Choose the `Notebook` tile, accept the default name or change it if you like. Add optional description or tags, and click `Create`.
