@@ -36,4 +36,20 @@ For the Watson OpenScale modules in the workshop, we need to run through the aut
 
 * Click through the insights dashboard for the deployed models to make sure the pages load.
 
+* Next, we need to give the workshop users access to the OpenScale instance. go the (☰) menu and under `Services` section, click on the `Instances` menu option.
+
+  ![Service](../workshop/images/navigation/services.png)
+
+* Find the `OpenScale-default` instance from the instances table and click the three vertical dots to open the action menu, then click on the `Manage access` option.
+
+  ![Openscale Tile](../workshop/images/openscale/services-wos-manageaccess.png)
+
+* To add users to the service instance, click the `Add users` button.
+
+  ![Openscale Tile](../workshop/images/openscale/services-wos-addusers.png)
+
+* For all of the workshop user accounts, select the `Editor` role for each user and then click the `Add` button.
+
+  ![Openscale Tile](../workshop/images/openscale/services-wos-userrole.png)
+
 __THIS SECTION IS COMPLETE, GO BACK AND CONTINUE WITH THE [ADMIN GUIDE](./README.md)__
