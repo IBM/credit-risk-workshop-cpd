@@ -50,10 +50,10 @@ This section is broken up into the following steps:
 
 * The AutoAI experiment will now run. AutoAI will run through steps to prepare the dataset, split the dataset into training / evaluation groups and then find the best performing algorithms / estimators for the type of model. It will then build the following series of candidate pipelines for each of the top N performing algorithms (where N is a number chosen in the configuration which defaults to 2):
 
-  * Baseline model (Pipeline 1)
-  * Hyperparameter optimization (Pipeline 2)
-  * Automated feature engineering (Pipeline 3)
-  * Hyperparameter optimization on top of engineered features(Pipeline 4)
+    * Baseline model (Pipeline 1)
+    * Hyperparameter optimization (Pipeline 2)
+    * Automated feature engineering (Pipeline 3)
+    * Hyperparameter optimization on top of engineered features(Pipeline 4)
 
 * The UI will show progress as different algorithms/evaluators are selected and as different pipelines are created & evaluated. You can view the performance of the pipelines that have completed by expanding each pipeline section in the leaderboard.
 
@@ -90,6 +90,8 @@ This section is broken up into the following steps:
 ## 3. Save AutoAI notebook
 
 * To save the AutoAI experiment as a notebook, go back to the window for the pipeline you have chosen, and click `Save as`.
+
+> *Note: You can get back to the pipeline window by going to your project overview page, clicking on the AutoAI experiment and clicking the pipeline from the leaderboard*
 
 ![Save notebook](../images/autoai/autoai-toppipeline-details.png)
 
