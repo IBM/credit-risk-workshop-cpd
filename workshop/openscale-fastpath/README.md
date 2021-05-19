@@ -7,12 +7,13 @@ It is presumed that OpenScale Auto setup and Watson Machine Learning have alread
 
 * To launch the OpenScale service, go the (☰) navigation menu and click `Services` -> `Instances`.
 
-![(☰) Services -> Instances](../images/navigation/services.png
+![(☰) Services -> Instances](../images/navigation/services.png)
 
 * Click the 3 horizontal dots next to the OpenScale instance that your Administrator has provisioned and click `Open`.
 
 ![OpenScale instance](../images/openscale/openscale-instance-open.png)
 
+<!--
 * Click on the (?) Support tab on the left, and choose `Tour this page.
 
 ![Support -> Tour this page](../images/openscale/openscale-support-tour.png)
@@ -20,6 +21,7 @@ It is presumed that OpenScale Auto setup and Watson Machine Learning have alread
 * The OpenScale tour will begin. Follow the tour, and when it is done we'll do some exploration of the tools.
 
 ![Begin Tour this page](../images/openscale/openscale-begin-tour.png)
+-->
 
 Now lets interact with the tools.
 
@@ -39,7 +41,11 @@ Now lets interact with the tools.
 
 ![OpenScale Fairness Monitor](../images/openscale/openscale-fairness-details.png)
 
-* Once you click on one of the time periods, you will see a list of Transactions. Look for one of the Monitored Group - Female with a "Group Bias" check mark and Prediction of "Risk". Click `Explain prediction`. If the time period on the graph for Fairness Monitoring doesn't contain such an element, go back and choose another time period until you can find one. This will make the explanation more interesting.
+* Once you click on one of the time periods, you will see details of the Fairness monitor, including a bar chart that shows how many females recieved the "No Risk" outcome vs. males. You can click `view calculation` to see how the fairness score is calculated. Click on `View payload transactions`.
+
+![OpenScale Fairness Monitor chart](../images/openscale/openscale-fairness-chart.png)
+
+* You will see a list of Transactions. Look for one of the Monitored Group - Female with a "Group Bias" check mark and Prediction of "Risk". Click `Explain prediction`. If the time period on the graph for Fairness Monitoring doesn't contain such an element, go back and choose another time period until you can find one. This will make the explanation more interesting.
 
 ![OpenScale Fairness Detail](../images/openscale/openscale-fairness-detail-page.png)
 

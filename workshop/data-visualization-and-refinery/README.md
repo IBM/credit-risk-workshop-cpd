@@ -143,6 +143,8 @@ Let's do some visual exploration of our data using charts and graphs. Note that 
 
 * We notice that there are more blue (risk) on this plot towards the top right, than there is on the bottom left. This is a good start as it shows that there is probably a relationship between the riskiness of a loan and its duration and amount. It appears that the higher the amount and duration, the riskier the loan. Interesting, let's dig in further in how the loan duration could play into the riskiness of a loan.
 
+> *Note: The colors used in your visualization may be different. Be sure to look at chart legend for clarification*
+
 * Let's plot a histogram of the `LoanDuration` to see if we can notice anything. First, select `Histogram` from the `Chart Type`.
 
 * On the left, select `LoanDuration` for the 'X-axis', select `Risk` in the 'Split By' section, check the `Stacked` option, uncheck the `Show kde curve` toggle, uncheck the `Show distribution curve` toggle. You should see a chart that looks like the following image.
