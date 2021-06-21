@@ -1,3 +1,5 @@
+# WARNING: This Module is Unsupported and has been Deprecated.
+
 # Configure Quality monitoring and Feedback logging
 
 Watson OpenScale utilizes several monitors to gather data about machine learning inferences and the GUI tool can then present that data in a form that is useful. In this sub-module we will use a Jupyter notebook to configure the monitor for Quality and enable Feedback logging.
