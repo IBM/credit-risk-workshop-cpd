@@ -1,3 +1,5 @@
+# WARNING: This Module is Unsupported and has been Deprecated. 
+
 # Trust in AI & Watson OpenScale
 
 This lab will demonstrate how to monitor your deployed machine learning model using Watson OpenScale. We will run several Jupyter notebooks to show the OpenScale APIs and how they configure various monitors. For each notebook, we'll use the OpenScale GUI tool to explore the results.
