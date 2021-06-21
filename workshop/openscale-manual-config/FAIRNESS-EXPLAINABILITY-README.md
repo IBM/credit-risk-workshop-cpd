@@ -1,3 +1,5 @@
+# WARNING: This Module is Unsupported and has been Deprecated.
+
 # Configure Fairness and Explainability monitors for OpenScale
 
 Watson OpenScale utilizes several monitors to gather data about machine learning inferences and the GUI tool can then present that data in a form that is useful. In this sub-module we will use a Jupyter notebook to configure the monitor for Fairness, allowing us to choose a feature to monitor. In our loan risk scenario, we'll monitor the *Risk* feature and look at 2 groups. For *Gender*, we'll designate `Male` as the majority group and `Female` as the minority group, and then use the Fairness monitor to make sure that the majority group does not recieve a favorable outcome more often than the minority group, within a tolerance of 5%. We'll also designate the *Age* group of people *18-25* the minority and *26-75* the majority to look for bias against those in the minority age cohort.
