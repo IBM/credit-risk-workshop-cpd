@@ -1,3 +1,5 @@
+# WARNING: This Module is Unsupported and has been Deprecated.
+
 # Load Historic Data for OpenScale
 
 For a deployed machine learning model, OpenScale will record all of the requests for scoring and the results in the datamart using feedback logging. In this submodule, we'll emulate a production system that has been used for a week to score many requests, allowing the various configured monitors to present some interesting data. Note that this Historic Data submodule can be run at any time.
