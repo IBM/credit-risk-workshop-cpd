@@ -1,3 +1,6 @@
+# WARNING: This repository is no longer maintained :warning:
+> This repository will not be updated. The repository will be kept available in read-only mode.
+
 # Cloud Pak for Data Workshop
 
 Workshop on Cloud Pak for Data using German credit risk
