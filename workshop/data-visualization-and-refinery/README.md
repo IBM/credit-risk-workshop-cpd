@@ -1,13 +1,7 @@
 # Data Visualization and Data Refinery
 
-Let's take a quick detour to the *Data Refinery* tool. Data Refinery can quickly filter and mutate data, create quick visualizations, and do other data cleansing tasks from an easy to use user interface.
-
-This section is broken up into the following steps:
-
-1. [Load the data](#1-load-data)
-1. [Refine the data](#2-refine-data)
-1. [Profile the data](#3-profile-data)
-1. [Visualize the data](#4-visualize-data)
+Let's take a quick detour to the *Data Refinery* tool. Data Refinery can quickly filter and mutate data, create quick 
+visualizations, and do other data cleansing tasks from an easy-to-use user interface.
 
 >*Note: The lab instructions below assume you have a project already and have data you will refine. If not, follow the instructions in the pre-work and import data to project sections to create a project and assign data to your project.*
 
@@ -17,19 +11,19 @@ This section is broken up into the following steps:
 
 ![(☰) Menu -> Projects](../images/navigation/menu-projects.png)
 
-* Click the project name you created in the pre-work section.
+* Click the project name you created in the pre-work section to open it.
+
+![Project select](../images/general/project-select.png)
 
 * From the `Project` home, under the `Assets` tab, ensure the `Data assets` section is expanded or click on the arrow to toggle it and open up the list of data assets.
 
-* Click the merged data data asset  *`XXXAPPLICANTFINANCIALPERSONALLOANDATA`* (the name of the file may vary, `XXX` may be your initials or the initials of the person who granted you data access) to open it. If this is the first time you are opening the data asset, you will be asked to unlock the connection with your personal credentials. Click the `Use your Cloud Pak for Data credentials to authenticate to the data source` checkbox and then click the *`Connect`* button.
+* Click the merged data asset  *`XXXAPPLICANTFINANCIALPERSONALLOANDATA`* (the name of the file may vary, `XXX` may be your initials or the initials of the person who granted you data access) to open it. If this is the first time you are opening the data asset, you will be asked to unlock the connection. Select 'Username/password' from the dropdown, click the `Use your Cloud Pak for Data credentials to authenticate to the data source` checkbox and then click the *`Connect`* button.
 
-![Authenticate connection](../images/dr/dr-auth-data-connection.png)
-
-* Once the preview of the data asset opens, click on the *`Refine`* button on the top right of the table.
+* Once the preview of the data asset opens, click on the *`Prepare data`* button on the top right of the table.
 
 ![Launch the action button](../images/dr/dr-launch-button.png)
 
-* Data Refinery will launch and open to the `Data` tab. It will also display the information panel with details of the data refinery flow and where the output of the flow will be placed. Go ahead and click the `X` to the right of the `Information` panel to close it.
+* Data Refinery will launch and open to the `Data` tab. It will also display the information panel with details of the data refinery flow and where the output of the flow will be placed. Click the `X` to the right of the `About this asset` panel to close it.
 
 ![Data Refinery view](../images/dr/dr-open-table.png)
 
@@ -43,51 +37,33 @@ We'll start out in the `Data` tab where we wrangle, shape and refine our data. A
 
 ![Command line filter](../images/dr/dr-cli-filter.png)
 
-* A `filter` operation syntax will be displayed in the Command line. Clicking on the operation name within the Command line will give hints on the syntax and how to use the command. For instance, to filter for customers who have paid credits up to date, build the expression shown below. To inact the filter, you would `Apply` the expression.
+* A `filter` operation syntax will be displayed in the Command line. Clicking on each element of the operation will give hints on the syntax and how to use the command. For instance, to filter for customers who have paid credits up to date, build the expression shown below. To enact the filter, you would `Apply` the expression.
 
 ```R
 filter(`CreditHistory` == 'credits_paid_to_date')
 ```
 
-* We can remove this custom filter by clicking on the trash icon on the `Custom code` step of our data workflow.
+* We can remove this custom filter by clicking on 'Delete' from the drop-down menu on the `Custom code` step of our data workflow.
 
 ![Clear custom filter](../images/dr/dr-clearcustomfilter.png)
 
-* We will use the UI to explore and transform the data. Click the `+Operation` button.
-
-![Choose Operation button](../images/dr/dr-choose-operation-button.png)
-
-* Let's use the `Filter` operation to check some values. Click on `Filter` in the left panel.
-
-![Filter Operation](../images/dr/dr-filter-operation.png)
-
-* We want to make sure that there are no empty values in the `StreetAddress` column. Select the `StreetAddress` column from the `Column` drop down list, select *`Is empty`* from the `Operator` drop down list, and then click the `Apply` button.
-
-![Filter is empty](../images/dr/dr-filter-is-empty.png)
-
-> *Note: If there are records where the selected column is empty, they will be displayed after clicking the apply button. If there are no records for this filter, it means that the rows being sampled do not have any empty values for the selected column.*
-
-* Now, click on the counter-clockwise "back" arrow to remove the filter. Alternately, we can also remove the filter by clicking the trash icon for the Filter step in the `Steps` panel on the right.
-
-![Click back arrow](../images/dr/dr-click-back-arrow.png)
-
-* We can remove these records with empty values. Click the `+Operation` again and this time select the `Remove empty rows` operation. Select the `StreetAddress` column, then click the `Next` button and finally the `Apply` button.
+* We can remove records with empty values in a particular column. Scroll over to the `StreetAddress` column, click on the three dots to open the action menu, and select `Remove empty rows`. You will see an entry added to the `Steps` view.
 
 ![Remove empty rows](../images/dr/dr-remove-empty-rows.png)
 
-* Let's say we've decide that there are columns that we don't want to leave in our dataset ( maybe because they might not be usefule features in our Machine Learning model, or because we don't want to make those data attributes accessible to others, or any other reason). We'll remove the `FirstName`, `LastName`, `Email`, `StreetAddress`, `City`, `State`, `PostalCode` columns.
+* Let's say we've decided that there are columns that we don't want to leave in our dataset ( maybe because they might not be useful features in our Machine Learning model or because we don't want to make those data attributes accessible to others). We'll remove the `FirstName`, `LastName`, `Email`, `StreetAddress`, `City`, `State`, `PostalCode` columns.
 
-* For each columnn to be removed: Click the `+Operation` button, then select the `Remove` operation. Click the `Change column selection` option.
+* For each column to be removed: Click the `New step` button at the bottom of the page. Find the column in the table, click on the three dots to see the action menu, then select `Remove column`.
 
-![Remove Column](../images/dr/dr-remove-change-column.png)
+![New step](../images/dr/dr-new-step.png)
 
-* In the `Select column` drop down, choose one of the columns to remove (i.e `FirstName`). Click the `Next` button and then the `Apply` button. The columns will be removed. Repeat for each of the above columns.
+![Search operations](../images/dr/dr-search-operations.png)
+
+![Select column](../images/dr/dr-select-column.png)
 
 * At this point, you have a data transformation flow with 8 steps. As we saw in the last section, we keep track of each of the steps and we can even undo (or redo) an action using the circular arrows. To see the steps in the data flow that you have performed, click the `Steps` button. The operations that you have performed on the data will be shown.
 
 ![Flow](../images/dr/dr-final-flow.png)
-
-* You can modify these steps in real time and save for future use.
 
 ### Schedule Jobs
 
@@ -108,6 +84,10 @@ Data Refinery allows you to run jobs at scheduled times, and save the output. In
 * We can set the job to run on a schedule. For now, leave the schedule off and click the *`Next`* button.
 
 ![jobs name](../images/dr/dr-savejob-schedule.png)
+
+* We can get notifications from job runs. For now, skip the notification configuration and click the *`Next`* button.
+
+![jobs name](../images/dr/dr-savejob-notify.png)
 
 * Click the *`Create and Run`* button to save and run this job.
 
