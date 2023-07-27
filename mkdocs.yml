@@ -1,12 +1,12 @@
 # Project information
 site_name: Cloud Pak for Data Credit Risk Workshop
-site_url: https://ibm.github.io/credit-risk-workshop-cpd
+site_url: https://cloud-native-toolkit.github.io/credit-risk-workshop-cpd
 site_author: IBM Developer
 
 # Repository
 repo_name: credit-risk-workshop-cpd
-repo_url: https://github.com/ibm/credit-risk-workshop-cpd
-edit_uri: edit/master/workshop
+repo_url: https://github.com/cloud-native-toolkit/credit-risk-workshop-cpd
+edit_uri: edit/main/workshop
 docs_dir: workshop
 
 # Navigation
