@@ -54,6 +54,7 @@ theme:
     logo: material/library
   features:
     - navigation.tabs
+    - navigation.footer
     #- navigation.instant
   palette:
     scheme: default
