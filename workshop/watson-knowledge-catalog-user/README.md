@@ -2,12 +2,6 @@
 
 This exercise demonstrates how to solve the problems of enterprise data governance using Watson Knowledge Catalog on the Cloud Pak for Data platform. We'll explain how to use governance, data quality and active policy management in order to help your organization protect and govern sensitive data, trace data lineage and manage data lakes. This knowledge will help users quickly discover, curate, categorize and share data assets, data sets, analytical models and their relationships with other members of your organization. It serves as a single source of truth for data engineers, data stewards, data scientists and business analysts to gain self-service access to data they can trust.
 
-This section is comprised of the following steps:
-
-1. [Find the Right Data](#1-find-the-right-data)
-1. [Understand the Data](#2-understand-the-data)
-1. [Understand the Data Content](#3-understand-the-data-content)
-
 ## 1. Find the Right Data
 
 We need to find the right data and business information related to the Mortgage Default analysis project. You can use the global search to search across catalogs, projects and the business glossary to find all assets that you may be interested in.
@@ -18,15 +12,9 @@ We need to find the right data and business information related to the Mortgage 
 
 * The search returns all data and information assets related to the search criteria across all catalogs, projects and governance artifacts. Scroll down through the list to take a closer look at what was found.
 
-* You can further refine your search results by using the filters supplied by type, tag, catalog, project etc.
+* You can further refine your search results by using the filters supplied by type, owner, and modification time.
 
 ![Mortgage search results](../images/wkc-user/wkc-user-search-results.png)
-
-* First and foremost, we need to verify that all the data needed for the project has been cataloged and available to the project team to use. We can do this very easily by refining the search to only display mortgage data that exists across all catalogs.
-
-* From the search drop down menu select `Governance` > `All governance artifacts`.
-
-![Search all catalogs](../images/wkc-user/wkc-user-search-all-governance.png)
 
 * All data assets across catalogs meeting the criteria are displayed. This is the data we are looking for.
 
@@ -34,7 +22,7 @@ We need to find the right data and business information related to the Mortgage 
 
 * However, before we proceed to the catalog we need to also find all the business information related to the project to review the terms and content of the data and identify if there are any policies and rules set by the business that the project team needs to be aware of and adhere to.
 
-* From the search drop down menu select `Governance` > `Business terms`.
+* From the menu on the left, select `Business terms`.
 
 ![Search business terms](../images/wkc-user/wkc-user-search-business-term.png)
 
@@ -44,11 +32,11 @@ We need to find the right data and business information related to the Mortgage 
 
   * Note that the Email Address, Phone Number and Social Security Number have all been tagged as Sensitive information.
 
-* Click on the Clear all button to get ready for the next search task.
+![Sort scroll and clear business terms](../images/wkc-user/wkc-sensitive-information-business-terms.png)
 
-![Sort scroll and clear business terms](../images/wkc-user/wkc-user-sort-scroll-business-terms.png)
+* Click on the `All` all button to get ready for the next search task.
 
-* Click on the Any type filter and select the Category type from the list to refine the results.
+* Click on the Category type from the list to refine the results.
 
 ![Filter Category Policy Rule](../images/wkc-user/wkc-user-filter-category.png)
 
@@ -62,98 +50,27 @@ You can be confident in your data when you know where it comes from, that it com
 
 ### Understand Data Policies and Rules
 
-In this section you will use the Business glossary to gain a deeper understanding of the business terminology defined by the data steward and the governance team responsible for establishing policies and rules to govern and protect the data. Since we see that there is an indication of sensitive information Let’s take a closer look at the Sensitive Information category content.
+In this section you will use the Business glossary to gain a deeper understanding of the business terminology defined by the data steward and the governance team responsible for establishing policies and rules to govern and protect the data. Since we see that there is an indication of sensitive information let’s take a closer look at the Sensitive Information category content.
 
 * Click on the Sensitive Information category from the list.
 
 ![Click Sensitive Information](../images/wkc-user/wkc-user-search-choose-sensitive.png)
 
-* The description clearly states that this subcategory contains references to business terms that relate to data that will be used by the project team that need to be governed by data protection rules. Let’s get more information on the Social Security Number.
+* The description of the category clearly states that this subcategory contains references to business terms that relate to data that will be used by the project team that need to be governed by data protection rules. It also shows the related governance artifacts. Click on the `Social Security Number' artifact.
 
-* In the global search area, enter the words `social security number` and press the enter key.
+![Sensitive Information category](../images/wkc-user/wkc-category-sensitive-information.png)
 
-![Global search social security](../images/wkc-user/wkc-user-search-social-security.png)
+* Click on the `Related content` tab and click on the `Protection of Sensitive Information` policy. 
 
-* A Social Security Number term appears in the list with tags of Mortgage applicant and Sensitive information. This is an indication that the Mortgage Applicant table has a social security number.
+![Social Security Number business term](../images/wkc-user/wkc-business-term-social-security.png)
 
-<!--- TODO. Get this working on the cluster, and updated docs
-* Click on the Social Security Number business term with the two tags applied from the list.
+* Click on the `Protection of Sensitive Information` policy. See the rules, data protection rules, and related artifacts associated with the policy.
 
-* Click on the Related Content tab.
+![Protection of Sensitive Information](../images/wkc-user/wkc-protection-of-sensitive-information.png)
 
-* Click on the arrow next to the `MORTGAGE_APPLICANT` table in the Catalog assets section. There is definitely a SOCIAL_SECURITY_NUMBER column that resides in this table.
-
-![Related Content SSN](../images/wkc-user/wkc-user-ssn-related-content.png)
-
-* Click on the CUSTOMER table in the Additional information assets section.
-
-![Click Additonal Info CUSTOMER](../images/wkc-user/wkc-user-bus-ssn-additional-info-customer.png)
-
-* It has been assigned the four business terms that relate to sensitive information. It has 28 columns and is from the CUSTOMER schema from the BLUDB database. Let’s investigate further and Explore and visualize these relationships.
-
-* Click on the ellipses (…) in the top right corner and select the Explore relationships menu item:
-
-![Click ellispses CUSTOMER info](../images/wkc-user/wkc-user-customer-info-ellipses.png)
-
-* A new tab will open in your browser and display the relationship graph:
-
-* Click the magnifying glass with a + sign in the lower left corner to increase the graph size.
-
-* Click the plus sign next to Database Columns to expand it and view all the columns.
-
-* Click on the Center graph button in the lower left corner to center the graph for easier viewing.
-
-![CUSTOMER relationship graph](../images/wkc-user/wkc-user-customer-relationship-graph.png)
-
-* The table also contains EMAIL_ADDRESS, CREDIT_CARD_NUMBER, and PHONE_NUMBER data that we know is sensitive.
-
-![Expand CUSTOMER columns](../images/wkc-user/wkc-user-expand-relationship-colunns.png)
-
-* Close this tab in your browser and go back to the source tab that got you here.
-
-* Click on the IBM Cloud Pak for Data title, or the (☰) hamburger menu -> `Home`, to get ready for the next section.
-
-## 3. Trust the Data Quality
-
-The data quality analyst has informed the project team that the mortgage data quality meets the company’s standards and the data content was thoroughly analyzed and assessed before it was published to the catalog after it was discovered. You can see the results of that discovery and analysis in the Data Curation section of the Organize component of Cloud Pak for Data.
-
-To review the data quality results:
-
-* Click the (☰) hamburger menu in the upper left corner and click `Organize` -> `Curation` -> `Data discovery`.
-
-![Click Organize Curation Data dicovery](../images/wkc-user/wkc-user-click-data-discovery.png)
-
-* Click on the `View automated discovery results` link in the top right corner.
-
-![Click automated discovery results](../images/wkc-user/wkc-user-click-discovery-results.png)
-
-* Click on the Discovery results ID for view the Mortgage Default Analysis quality results. (*Note: Look for a discovery root using `CUSTOMER`, `INSURANCE` and `MORTGAGE`)
-
-![Disovery results for Mortgage Default Analysis](../images/wkc-user/wkc-user-disco-results-mortgage.png)
-
-* Click on the Review discovery results button under Actions in the bottom right corner for the `MORTGAGE` asset.
-
-![Click review Discovery results](../images/wkc-user/wkc-user-review-disco-results.png)
-
-* You immediately see the Quality score for each table analyzed with the lowest score being 98% and the highest being 100%. Also notice that business terms have been assigned at the table level.
-
-* Since we know the MORTGAGE_APPLICANT table is a new addition to the project, that was just requested, and it contains sensitive information, we will drill down into the details of the analysis
-
-* Click on the Arrow next to the MORTGAGE_APPLICANT table to expand it and review the column analysis.
-
-![Discovery expand MORTGAGE_APPLICANT table](../images/wkc-user/wkc-user-mortgage-discovery-details.png)
-
-* You are presented with a Quality score for each column analyzed. The quality looks satisfactory and meets the quality standard thresholds and the data classes and business terms are accurately assigned and complete. This is important to ensure the data is autonomously protected and that the governance artifacts are related to data assets they apply to.
-
-* Scroll down to see the remaining columns.
-
-* Click on the IBM Cloud Pak for Data title, or the (☰) hamburger menu -> `Home`, to get ready for the next section.
-
-## 4. Understand the Data Content
--->
 ## 3. Understand the Data Content
 
-You have gained an understanding of the policies and rules and information related to sensitive data and validated and trust the data quality. In this section we will go to the Enterprise catalog, which is where we identified all the data we need resides, and use all of the features it provides to gain an even better understanding of the data content and have even more confidence in the data based on what others are saying and by utilizing the AI assisted recommendations, automatic profiling and additional data content statistics provided.
+You have gained an understanding of the policies and rules and information related to sensitive data and validated and trust the data quality. In this section we will go to the Enterprise catalog, which is where we identified all the data we need resides, and use all the features it provides to gain an even better understanding of the data content and have even more confidence in the data based on what others are saying and by utilizing the AI assisted recommendations, automatic profiling and additional data content statistics provided.
 
 * Click the (☰) hamburger menu in the upper left corner and click `Catalog` -> `All catalogs`
 

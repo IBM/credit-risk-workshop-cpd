@@ -4,16 +4,6 @@ This exercise demonstrates how to solve the problems of enterprise data governan
 
 You will need the *Admin* role to create a catalog.
 
-This section is comprised of the following steps:
-
-1. [Set up Catalog](#1-set-up-catalog)
-1. [Add Data Assets](#2-add-data-assets)
-1. [Add collaborators and control access](#3-add-collaborators-and-review-data)
-1. [Add categories](#4-add-categories)
-1. [Add data classes](#5-add-data-classes)
-1. [Add Business terms](#6-add-business-terms)
-1. [Add rules for policies](#7-add-rules-for-policies)
-
 ## 1. Set up Catalog
 
 > NOTE: The default catalog is your enterprise catalog. It is created automatically after you install the Watson Knowledge Catalog service and is the only catalog to which advanced data curation tools apply. The default catalog is governed so that data protection rules are enforced. The information assets view shows additional properties of the assets in the default catalog to aid curation. Any subsequent catalogs that you create can be governed or ungoverned, do not have an information assets view, and supply basic data curation tools.

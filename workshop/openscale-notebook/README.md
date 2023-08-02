@@ -2,12 +2,6 @@
 
 There are several ways of configuring Watson OpenScale to monitor machine learning deployments, including the automatic configuration, using the GUI tool, a more manual configuration using the APIs, and some combintation of these. For this exercise we're going to configure our OpenScale service by running a Jupyter Notebook. This provides examples of using the OpenScale Python APIs programatically.
 
-This lab is comprised of the following steps:
-
-1. [Open the notebook](#1-open-the-notebook)
-2. [Update credentials](#2-update-credentials)
-3. [Run the notebook](#3-run-the-notebook)
-
 > *Note: It is assumed that you have followed the instructions in the pre-work section to create a project based on an existing project file. If you did not use the project import or do not see the Jupyter notebooks mentioned in this module, see the `Workshop Resources` -> `FAQs / Tips` section for instructions to import the necessary notebooks. Also note that the Jupyter notebooks included in the project have been cleared of output. If you would like to see the notebook that has already been completed with output, see the `Workshop Resources` -> `FAQs / Tips` section for links to the completed notebooks.*
 
 ## 1. Open the Notebook

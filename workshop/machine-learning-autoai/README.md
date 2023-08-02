@@ -3,13 +3,6 @@
 For this part of the workshop, we'll learn how to use [AutoAI](https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_current/wsj/analyze-data/autoai-overview.html).
 AutoAI is a capability that automates various tasks to ease the workflow for data scientists that are creating machine learning models. It automates steps such as preparing your data for modeling, chooses the best algorithm/estimator for your problem, experiments with pipelines and parameters for the trained models.
 
-This section is broken up into the following steps:
-
-1. [Run AutoAI Experiment](#1-run-autoai-experiment)
-1. [Save AutoAI Model](#2-save-autoai-model)
-1. [Save AutoAI Notebook](#3-save-autoai-notebook)
-1. [Promote the Model](#4-promote-the-model)
-
 >*Note: The lab instructions below assume you have a project already with the assets necessary to build a model. If not, follow the instructions in the pre-work section to create a project.*
 
 ## 1. Run AutoAI Experiment
