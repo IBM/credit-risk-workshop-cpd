@@ -110,11 +110,11 @@ Watson Knowledge Catalog provides suggested assets to you based on recommendatio
 
 ![Mortgage profile with masked columsn](../images/wkc-user/wkc-user-mortgage-profile.png)
 
-* Lineage is captured for every data asset in a catalog. It keeps track of where it came from, any updates or changes that have been made to its metadata and any movement of the data outside of the catalog. Click on the `Activities` tab to view the data asset lineage.
+* Lineage is captured for every data asset in a catalog. It keeps track of where it came from, any updates or changes that have been made to its metadata and any movement of the data outside of the catalog. Click on the `Activities` button to view the data asset lineage.
 
 ![Mortgage data lineage](../images/wkc-user/wkc-user-lineage.png)
 
-* Click on any node to see the detail pane on the right. Do this for every node in the lineage graph to see what is tracked.
+* Click on `See details` on any node to see the detail pane on the right. Do this for every node in the lineage graph to see what is tracked.
 
 ## Conclusion
 
