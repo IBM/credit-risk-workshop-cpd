@@ -1,9 +1,6 @@
 # Pre-work
 
-Before we get started, we will download some assets and complete some setup for our workshop. This section is broken up into the following steps:
-
-1. [Download or Clone the Repository](#1-download-or-clone-the-repository)
-1. [Create an Analytics Project and Deployment Space](#2-create-a-project-and-deployment-space)
+Before we get started, we will download some assets and complete some setup for our workshop.
 
 ## 1. Download Workshop Assets
 
@@ -36,11 +33,7 @@ In Cloud Pak for Data, we use the concept of a project to collect / organize the
 
 ![Start a new project](../images/prework/new-project.png)
 
-* Select the `Analytics project` radio button and click the **`Next`** button.
-
-![New analytics project](../images/prework/new-project-type.png)
-
-* We are going to create a project from an existing file (which contains the assets we will use throughout this workshop), as opposed to creating an empty project. Select the *`Create a project from a sample or file`* option.
+* We are going to create a project from an existing file (which contains the assets we will use throughout this workshop), as opposed to creating an empty project. Select the *`Create a project from a file`* option.
 
 ![Create project from file](../images/prework/new-project-from-file.png)
 
@@ -68,13 +61,9 @@ Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and mana
 
 ![Add New deployment space](../images/prework/new-deployment-space.png)
 
-* We will create an empty deployment space, so click on the **`Create an empty space`** option.
+* Give your deployment space a unique name, optional description, optional deployment stage, then click the **`Create`** button.
 
-![Create empty deployment space](../images/prework/new-deployment-space-empty.png)
-
-* Give your deployment space a unique name, optional description, then click the **`Create`** button.
-
-![Deployment space name](../images/prework/deployment-space-name.png)
+![Deployment space name](../images/prework/deployment-space-stage.png)
 
 * From the deployment space creation pop up window, click on the **`View new space`** button.
 
@@ -82,7 +71,7 @@ Cloud Pak for Data uses the concept of `Deployment Spaces` to configure and mana
 
 * Next, we will add a collaborator to the new deployment space. Collaborators allow others to view/edit/manage the assets being deployed. In this workshop, we want the models we deploy to be visible and monitored in the OpenScale model monitoring lab.
 
-* Click on the `Access control` tab and then click on **`Add collaborators`** on the right.
+* Click on the `Manage` tab, then click on **`Access control`** on the left, and then on **`Add collaborators`** and **`Add users`** on the right.
 
 ![Deployment space access control](../images/prework/deployment-space-access-control.png)
 

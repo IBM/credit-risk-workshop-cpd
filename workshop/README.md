@@ -1,8 +1,5 @@
-# WARNING: This repository is no longer maintained :warning:
-> This repository does not have active maintainers. Pull requests for fixes and enhancements will still be accepted,
-but no active work will be done on this workshop.
 
-This Workshop uses Cloud Pak for Data version 3.5
+This Workshop uses Cloud Pak for Data version 4.7
 
 # Analyzing Credit Risk with Cloud Pak for Data on OpenShift
 

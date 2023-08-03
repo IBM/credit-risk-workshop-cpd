@@ -307,7 +307,7 @@ Now that all the data is published to the Enterprise catalog we need to modify s
     * Assign the Social Security Number business Term to the NATIONAL_ID column
     * Assign the Credit Card Number business Term to the CREDITCARD_NUMBER column
     * Assign the Credit Card Expiration Date business Term to the CREDITCARD_EXP column
-    * Assign the Credit Card Valiation Number business Term to the CREDITCARD_CVV column
+    * Assign the Credit Card Validation Number business Term to the CREDITCARD_CVV column
     * Assign the State Code business Term to the STATE_CODE column
 1. Go to the Review tab and do the following:
     * Give it a rating of 4 Stars under the *Review* tab by clicking on the 4th star to the right.

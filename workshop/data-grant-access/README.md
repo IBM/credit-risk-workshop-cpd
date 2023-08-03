@@ -12,7 +12,7 @@ This section will continue exploring aspects of collecting data on Cloud Pak for
 
 * From the Data virtualization sub-menu at the top left of the page, click on the menu drop down list and choose *`My virtualized data`*.
 
-![My virtualized data](../images/dv/dv-menu-myvirtualizeddata.png)
+![Virtualize view](../images/dv/dv-virtualize-menu.png)
 
 * For one of the virtualized data assets you've created, click the 3 vertical dots on the right and choose `Manage access`.
 
