@@ -11,7 +11,11 @@ AutoAI is a capability that automates various tasks to ease the workflow for dat
 
 ![(☰) Menu -> Projects](../images/navigation/menu-projects.png)
 
-* To start the AutoAI experiment, click the *`Add to Project`* button from the top of the page and select the `AutoAI experiment` option.
+* To start the AutoAI experiment, click the *`New asset`* button from the top of the page.
+
+![Add asset to project](../images/general/project-add-assets-to-project.png)
+
+* From the dialog, select select the `AutoAI experiment` option.
 
 ![Adding a project](../images/autoai/autoai-add-project.png)
 
@@ -19,7 +23,7 @@ AutoAI is a capability that automates various tasks to ease the workflow for dat
 
 ![Naming your services](../images/autoai/autoai-name-experiment.png)
 
-* To configure the experiment, we must first give it the dataset that will be used to train the machine learning model. We will be using one of the CSV file datasets we have preloaded into the project. Click on the `Select from project` option.
+* To configure the experiment, we must first give it the dataset that will be used to train the machine learning model. We will be using one of the CSV file datasets we have preloaded into the project. Click on the `Select data from project` option.
 
 ![Select data](../images/autoai/autoai-select-dataset-project.png)
 
@@ -27,13 +31,13 @@ AutoAI is a capability that automates various tasks to ease the workflow for dat
 
 ![Select data](../images/autoai/autoai-select-dataset.png)
 
-* Once the dataset is read in, we will need to indicate what we want the model to predict. Under *Select prediction column* panel, find and click on the `Risk` row.
+* Once the dataset is read in, we will need to configure the details of the AutoAI experiment. Next, indicate what we want the model to predict. Under "Configure details", select `No` for "Create a time series analysis?". In the *What do you want to predict?* dropdown, find and click on the `Risk` row.
 
 * AutoAI will set up defaults values for the experiment based on the dataset and the column selected for the prediction. This includes the type of model to build, the metrics to optimize against, the test/train split, etc. To view/change these values, click the *`Experiment settings`* button.
 
 ![Choose Churn column and run](../images/autoai/autoai-choose-prediction-and-configure.png)
 
-* On the `Data source settings` panel, in the `Select columns to include` section, deselect the checkbox for the `CustomerID` column name. This will remove the customer ID column from being used as a feature for the model. Although we could change other aspects of the experiment, we will accept the remaining default values and click the `Save settings` button.
+* On the `Data source settings` panel, in the `Select features to include` section, deselect the checkbox for the `CustomerID` column name. This will remove the customer ID column from being used as a feature for the model. Although we could change other aspects of the experiment, we will accept the remaining default values and click the `Save settings` button.
 
 ![Choose features and save](../images/autoai/autoai-exp-settings-columns.png)
 
@@ -62,15 +66,15 @@ AutoAI is a capability that automates various tasks to ease the workflow for dat
 
 * Scroll down to see the *Pipeline leaderboard*. The top performing pipeline is in the first rank.
 
-* The next step is to select the model that gives the best result and view its performance. In this case, Pipeline 4 gave the best result for our experiment. You can view the detailed results by clicking the corresponding pipeline name from the leaderboard:
+* The next step is to select the model that gives the best result and view its performance. In this case, Pipeline 5 gave the best result for our experiment. You can view the detailed results by clicking the corresponding pipeline name from the leaderboard:
 
 ![pipeline leaderboard](../images/autoai/autoai-pipeline-leaderboard-topranked.png)
 
-* The model evaluation page will show metrics for the experiment, confusion matrix, feature transformations that were performed (if any), which features contribute to the model, and more details of the pipeline. Optionally, feel free to click through these views of the pipeline details.
+* The model evaluation page will show metrics for the experiment, confusion matrix, feature transformations that were performed (if any), which features contribute to the model, and more details of the pipeline. Optionally, feel free to click through these views of the pipeline details. In order to deploy this model, click on the *`Save as`* button.
 
 ![Model evaluation](../images/autoai/autoai-toppipeline-details.png)
 
-* In order to deploy this model, click on the *`Save as`* button. On the next scren, select the `Model` option. Keep the default name or change it, add an optional description and tags, and click `Create` to save it.
+On the next screen, select the `Model` option. You can optionally change the name, add an optional description or tags, then click `Create` to save it.
 
 ![Save model](../images/autoai/autoai-pipeline-save-model.png)
 
@@ -86,7 +90,7 @@ AutoAI is a capability that automates various tasks to ease the workflow for dat
 
 > *Note: You can get back to the pipeline window by going to your project overview page, clicking on the AutoAI experiment and clicking the pipeline from the leaderboard*
 
-![Save notebook](../images/autoai/autoai-toppipeline-details.png)
+![Save notebook](../images/autoai/autoai-toppipeline-save-as.png)
 
 * Choose the `Notebook` tile, accept the default name or change it if you like. Add optional description or tags, and click `Create`.
 
@@ -104,7 +108,7 @@ AutoAI is a capability that automates various tasks to ease the workflow for dat
 
 ![choose AI model](../images/autoai/autoai-choose-asset-ai-model.png)
 
-* To make the model available to be deployed, we need to make it available in the deployment space we previously set up. Click on the `Promote to deployment space`:
+* To make the model available to be deployed, we need to promote it to a deployment space we previously set up. Click on the `Promote to deployment space`:
 
 ![Deploying the model](../images/autoai/autoai-promote-to-space.png)
 
